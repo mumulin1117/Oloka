@@ -27,7 +27,7 @@ class GSddguessingComin: UIViewController ,UITextViewDelegate{
         
         
         ///超链接
-        let termlinkLab = UITextView.init(frame: CGRect.init(x: 57, y: UIScreen.main.bounds.height  - safeAreaBottomInset - 40 - 16 , width: UIScreen.main.bounds.width - 57 - 30, height: 40))
+        let termlinkLab = UITextView.init(frame: CGRect.init(x: 57, y: UIScreen.main.bounds.height  - safeAreaBottomInset - 40 - 36 , width: UIScreen.main.bounds.width - 57 - 30, height: 55))
         termlinkLab.isUserInteractionEnabled = true
         termlinkLab.delegate = self
         termlinkLab.backgroundColor = .clear
@@ -64,7 +64,7 @@ class GSddguessingComin: UIViewController ,UITextViewDelegate{
         ]
         
         //selbutton
-        let checkdGSDD = UIButton.init(frame: CGRect.init(x:18, y: termlinkLab.frame.minY, width: 22, height: 22))
+        let checkdGSDD = UIButton.init(frame: CGRect.init(x:18, y: termlinkLab.frame.midY - 10, width: 22, height: 22))
         checkdGSDD.setImage(UIImage.init(named: "StatuijkGDSS_no"), for: .normal)
         checkdGSDD.setImage(UIImage.init(named: "StatuijkGDSS"), for: .selected)
         checkdGSDD.tag = 54
@@ -79,29 +79,30 @@ class GSddguessingComin: UIViewController ,UITextViewDelegate{
         gdssELUA.layer.masksToBounds = true
         gdssELUA.setTitle("ELUA >>", for: .normal)
         gdssELUA.setTitleColor(.lightGray, for: .normal)
-        gdssELUA.titleLabel?.font = UIFont(name: "☞ConstellationTLPro-Medium", size: 15)
+        gdssELUA.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         gdssELUA.addTarget(self, action: #selector(guesssELUA), for: .touchUpInside)
         view.addSubview(gdssELUA)
         
         //emailicon
-        let elilingGSDD = UIImageView(image: UIImage.init(named: "gsddGussFun"))
-        elilingGSDD.frame = CGRect(x: 20, y: checkdGSDD.frame.minY - 46 - 52, width: 52, height: 52)
-        elilingGSDD.contentMode = .scaleAspectFill
+        let elilingGSDD = UIButton.init(frame: CGRect(x: 20, y: checkdGSDD.frame.minY - 46 - 52, width: 52, height: 52))
+        elilingGSDD.setImage(UIImage.init(named: "gsddGussFun"), for: .normal)
+        elilingGSDD.addTarget(self, action: #selector(elaiolloginNadOkayot), for: .touchUpInside)
         view.addSubview(elilingGSDD)
         //quicklog
         let iagreendGSDD = UIButton.init(frame: CGRect.init(x: elilingGSDD.frame.maxX + 18, y: elilingGSDD.frame.minY, width: UIScreen.main.bounds.width - (elilingGSDD.frame.maxX + 18) - 18, height: 52))
-        iagreendGSDD.backgroundColor = UIColor(red: 0.68, green: 0.34, blue: 0.98, alpha: 1)
+        
         iagreendGSDD.setTitle("Tourist login", for: .normal)
-        iagreendGSDD.setBackgroundImage(UIImage.init(named: ""), for: .normal)
+        iagreendGSDD.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
         iagreendGSDD.layer.masksToBounds = true
         iagreendGSDD.layer.cornerRadius = 10
         iagreendGSDD.addTarget(self, action: #selector(QuickadNadOkayot), for: .touchUpInside)
         iagreendGSDD.setTitleColor(.black, for: .normal)
-        iagreendGSDD.titleLabel?.font = UIFont(name: "☞ConstellationTLPro-Bold", size: 17)
+        iagreendGSDD.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         view.addSubview(iagreendGSDD)
         //textcon
         let textcongGSDD = UIImageView(image: UIImage.init(named: "Sing & GuessFun"))
-        textcongGSDD.frame = CGRect(x: 0, y: iagreendGSDD.frame.minY - 39, width: 184, height: 18)
+        textcongGSDD.frame = CGRect(x: 0, y: iagreendGSDD.frame.minY - 46, width: 184, height: 18)
+        textcongGSDD.center.x = self.view.center.x
         textcongGSDD.contentMode = .scaleToFill
         view.addSubview(textcongGSDD)
         
@@ -111,8 +112,34 @@ class GSddguessingComin: UIViewController ,UITextViewDelegate{
     }
     
     @objc func guesssELUA() {
+        let eluDetail = """
+End User License Agreement (EULA)
+
+Effective Date: February 21, 2025
+Latest update: February 21, 2025
+
+1. License Grant
+
+The user obtains a non exclusive, non transferable limited license to use the Oloka application on personal devices, limited to non-commercial entertainment purposes only.
+
+2. Content ownership
+
+The song clips/video content uploaded by users still belong to the original copyright owner
+User generated audio/video content retains ownership but grants Oloka a global distribution license
+All interface designs, algorithms, and trademarks within the application belong to Oloka
+3. Usage restrictions
+
+Prohibited:
+
+Upload infringing music or illegal content
+Crack/modify the core functions of the application
+Using automated scripts to disrupt and challenge fairness
+Posting hate/violent/pornographic and other illegal content
+
+Contact email: Oloka@gmail.com
+"""
         
-        let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "ELUA", texfReadShong: "")
+        let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "ELUA", texfReadShong: eluDetail)
         self.present(kiopGDSS, animated: true)
     }
     
@@ -123,20 +150,35 @@ class GSddguessingComin: UIViewController ,UITextViewDelegate{
     
  
   
+    //to email
     
     @objc  func elaiolloginNadOkayot() {
+        if UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot") != true {
+            gsdd_loadActiveViw.showFailure(message: "please read and agree to our privacy and terms at first!!!")
+            return
+        }
         self.navigationController?.pushViewController(GSDDEmaillogadComin.init(), animated: true)
      
     }
+
     
-    @objc func guesssPrivacyTaped() {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let staeuButon = view.viewWithTag(54) as? UIButton
         
-        let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Privacy Policy", texfReadShong: "")
-        self.present(kiopGDSS, animated: true)
+        staeuButon?.isSelected = UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot")
+       
+        
     }
-    
     //quick login
     @objc  func QuickadNadOkayot() {
+        if UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot") != true {
+            gsdd_loadActiveViw.showFailure(message: "please read and agree to our privacy and terms at first!!!")
+            return
+        }
+        
+        
         gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Logging in...")
         gsdd_loadActiveViw.begin_GSDDAnimating()
         
@@ -164,14 +206,72 @@ class GSddguessingComin: UIViewController ,UITextViewDelegate{
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
             if URL.scheme == "privacy" {
-                let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Privacy Policy", texfReadShong: "")
+                let eluDetail = """
+        Effective Date: February 21, 2025
+
+        1. Types of information collected
+
+        Required data: account information (email/third-party login), device ID, audio/video content
+        Optional data: Geographic location (for local challenges), Address book (recommended by friends)
+        Automatic collection: using logs, clicking on heatmaps, crash reports
+        2. Data usage scenarios
+
+        Provide core functions such as song matching and challenge ranking
+        Personalized recommendations (such as challenges based on music preferences)
+        Analysis of Anti Cheating System
+        Send important service notifications via email
+        3. Third party sharing
+
+        Music copyright verification service provider (automatically sends song clips for copyright comparison)
+        Cloud service provider (AWS/Alibaba Cloud storage user content)
+        Disclosure to judicial authorities when required by law
+        4. User Rights
+
+        Export/delete account data through the settings page
+        Turn off personalized advertising recommendations
+        Revoke geographical location access permission
+
+        Data Protection Officer Email: Oloka@gmail.com
+        """
+                let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Privacy Policy", texfReadShong: eluDetail)
                 self.present(kiopGDSS, animated: true)
                 return false
             }
         
         
         if URL.scheme == "terms" {
-            let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Terms of Service", texfReadShong: "")
+            let eluDetail = """
+    Effective Date: February 21, 2025
+
+    1. Account Responsibility
+
+    Prohibit sharing accounts for challenging and score boosting
+    Must be at least 13 years old (or the legal age in the jurisdiction)
+    Real name reporting of illegal content can earn credit rewards
+    2. Content standards
+
+    Short videos must not contain unauthorized commercial advertisements
+    Private message content is monitored by a 24-hour automatic anti harassment system
+    The longest quoted song in the challenge should not exceed 15 seconds
+    3. Virtual currency rules
+
+    The purchased gold coins cannot be exchanged for cash/refunded
+    The coins obtained through the challenge have an anti fraud mechanism
+    When an account is banned, virtual assets will be automatically reset to zero
+    4. Disclaimer
+
+    We do not guarantee the copyright legality of music clips (dependent on user statements)
+    We are not responsible for any losses caused by private transactions between users
+    The service may temporarily remove specific songs due to copyright issues
+    5. Dispute Resolution
+
+    The challenge function will be frozen for 7 days for the first violation
+    Major disputes submitted to the jurisdiction of the Singapore International Arbitration Centre
+    Applicable California law (unless in conflict with local law)
+    Protocol update notification method: In app pop-up announcement
+    Complaints and Suggestions: Oloka@gmail.com
+    """
+            let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Terms of Service", texfReadShong: eluDetail)
             self.present(kiopGDSS, animated: true)
             return false
         }

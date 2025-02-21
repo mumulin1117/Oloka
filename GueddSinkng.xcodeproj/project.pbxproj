@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048AA0B62D680E4400228F5F /* GSDDBinLinkS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */; };
+		048AA0BA2D68114A00228F5F /* You Need Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B92D68114A00228F5F /* You Need Love.mp3 */; };
+		048AA0BB2D68114A00228F5F /* We know？.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B82D68114A00228F5F /* We know？.mp3 */; };
+		048AA0BF2D68115000228F5F /* Golden Sunshine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0BE2D68115000228F5F /* Golden Sunshine.mp3 */; };
+		048AA0C02D68115000228F5F /* Baby Boy was Bad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0BC2D68115000228F5F /* Baby Boy was Bad.mp3 */; };
+		048AA0C12D68115000228F5F /* Feeling of Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0BD2D68115000228F5F /* Feeling of Love.mp3 */; };
+		048AA0C72D68157900228F5F /* gsddPodermppath15176.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C52D68157900228F5F /* gsddPodermppath15176.mp4 */; };
+		048AA0C82D68157900228F5F /* gsddPodermppath15177.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C62D68157900228F5F /* gsddPodermppath15177.mp4 */; };
+		048AA0C92D68157900228F5F /* gsddPodermppath15173.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C22D68157900228F5F /* gsddPodermppath15173.mp4 */; };
+		048AA0CA2D68157900228F5F /* gsddPodermppath15175.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C42D68157900228F5F /* gsddPodermppath15175.mp4 */; };
+		048AA0CB2D68157900228F5F /* gsddPodermppath15174.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C32D68157900228F5F /* gsddPodermppath15174.mp4 */; };
+		048AA0CD2D681E3400228F5F /* GSDDgussMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0CC2D681E3400228F5F /* GSDDgussMainView.xib */; };
+		048AA0D02D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0CE2D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift */; };
+		048AA0D12D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0CF2D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib */; };
+		048AA0D42D686B6200228F5F /* GSDDGuessNOMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0D22D686B6200228F5F /* GSDDGuessNOMokiotoer.swift */; };
+		048AA0D52D686B6200228F5F /* GSDDGuessNOMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0D32D686B6200228F5F /* GSDDGuessNOMokiotoer.xib */; };
+		048AA0D82D68780600228F5F /* GSDDPoGusSonMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0D72D68780600228F5F /* GSDDPoGusSonMokiotoer.xib */; };
+		048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0D62D68780600228F5F /* GSDDPoGusSonMokiotoer.swift */; };
+		048AA0DB2D687C9D00228F5F /* GSDDBeginRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0DA2D687C9D00228F5F /* GSDDBeginRecordView.swift */; };
+		048AA0E12D6886C800228F5F /* GSDDBegMeagComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0E02D6886C800228F5F /* GSDDBegMeagComin.swift */; };
+		048AA0E52D68898E00228F5F /* GSDDBPoberViserComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0E32D68898E00228F5F /* GSDDBPoberViserComin.swift */; };
+		048AA0E62D68898E00228F5F /* GSDDBPoberViserComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0E42D68898E00228F5F /* GSDDBPoberViserComin.xib */; };
 		04A7E1F52D658228004D5FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A7E1F02D658228004D5FB1 /* Assets.xcassets */; };
 		04A7E1F72D658228004D5FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A7E1F32D658228004D5FB1 /* LaunchScreen.storyboard */; };
 		04A7E1F82D658228004D5FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1EF2D658228004D5FB1 /* AppDelegate.swift */; };
@@ -15,9 +37,33 @@
 		04A7E1FE2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FD2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift */; };
 		04A7E2002D65AD64004D5FB1 /* GSDDloadingComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FF2D65AD64004D5FB1 /* GSDDloadingComin.swift */; };
 		04A7E2032D65B4E8004D5FB1 /* GSDDloMianComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E2022D65B4E8004D5FB1 /* GSDDloMianComin.swift */; };
+		04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */; };
+		93CA419D957BDF47EA02B7C9 /* Pods_GueddSinkng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GSDDBinLinkS.plist; sourceTree = "<group>"; };
+		048AA0B82D68114A00228F5F /* We know？.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "We know？.mp3"; sourceTree = "<group>"; };
+		048AA0B92D68114A00228F5F /* You Need Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "You Need Love.mp3"; sourceTree = "<group>"; };
+		048AA0BC2D68115000228F5F /* Baby Boy was Bad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Baby Boy was Bad.mp3"; sourceTree = "<group>"; };
+		048AA0BD2D68115000228F5F /* Feeling of Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Feeling of Love.mp3"; sourceTree = "<group>"; };
+		048AA0BE2D68115000228F5F /* Golden Sunshine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Golden Sunshine.mp3"; sourceTree = "<group>"; };
+		048AA0C22D68157900228F5F /* gsddPodermppath15173.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15173.mp4; sourceTree = "<group>"; };
+		048AA0C32D68157900228F5F /* gsddPodermppath15174.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15174.mp4; sourceTree = "<group>"; };
+		048AA0C42D68157900228F5F /* gsddPodermppath15175.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15175.mp4; sourceTree = "<group>"; };
+		048AA0C52D68157900228F5F /* gsddPodermppath15176.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15176.mp4; sourceTree = "<group>"; };
+		048AA0C62D68157900228F5F /* gsddPodermppath15177.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15177.mp4; sourceTree = "<group>"; };
+		048AA0CC2D681E3400228F5F /* GSDDgussMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDgussMainView.xib; sourceTree = "<group>"; };
+		048AA0CE2D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDStaruGuessMokiotoer.swift; sourceTree = "<group>"; };
+		048AA0CF2D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDStaruGuessMokiotoer.xib; sourceTree = "<group>"; };
+		048AA0D22D686B6200228F5F /* GSDDGuessNOMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDGuessNOMokiotoer.swift; sourceTree = "<group>"; };
+		048AA0D32D686B6200228F5F /* GSDDGuessNOMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDGuessNOMokiotoer.xib; sourceTree = "<group>"; };
+		048AA0D62D68780600228F5F /* GSDDPoGusSonMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDPoGusSonMokiotoer.swift; sourceTree = "<group>"; };
+		048AA0D72D68780600228F5F /* GSDDPoGusSonMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDPoGusSonMokiotoer.xib; sourceTree = "<group>"; };
+		048AA0DA2D687C9D00228F5F /* GSDDBeginRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDBeginRecordView.swift; sourceTree = "<group>"; };
+		048AA0E02D6886C800228F5F /* GSDDBegMeagComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDBegMeagComin.swift; sourceTree = "<group>"; };
+		048AA0E32D68898E00228F5F /* GSDDBPoberViserComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDBPoberViserComin.swift; sourceTree = "<group>"; };
+		048AA0E42D68898E00228F5F /* GSDDBPoberViserComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDBPoberViserComin.xib; sourceTree = "<group>"; };
 		04A7E1D72D657F6D004D5FB1 /* GueddSinkng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GueddSinkng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A7E1EF2D658228004D5FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A7E1F02D658228004D5FB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +74,10 @@
 		04A7E1FD2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDEmaillogadComin.swift; sourceTree = "<group>"; };
 		04A7E1FF2D65AD64004D5FB1 /* GSDDloadingComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDloadingComin.swift; sourceTree = "<group>"; };
 		04A7E2022D65B4E8004D5FB1 /* GSDDloMianComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDloMianComin.swift; sourceTree = "<group>"; };
+		04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDgussMainView.swift; sourceTree = "<group>"; };
+		9BB007C8B596F2B152D3E80B /* Pods-GueddSinkng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.release.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.release.xcconfig"; sourceTree = "<group>"; };
+		C5730344A668E4D218E29155 /* Pods-GueddSinkng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.debug.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.debug.xcconfig"; sourceTree = "<group>"; };
+		F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GueddSinkng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +85,82 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CA419D957BDF47EA02B7C9 /* Pods_GueddSinkng.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048AA0B72D68113A00228F5F /* GSDDSoube */ = {
+			isa = PBXGroup;
+			children = (
+				048AA0C22D68157900228F5F /* gsddPodermppath15173.mp4 */,
+				048AA0C32D68157900228F5F /* gsddPodermppath15174.mp4 */,
+				048AA0C42D68157900228F5F /* gsddPodermppath15175.mp4 */,
+				048AA0C52D68157900228F5F /* gsddPodermppath15176.mp4 */,
+				048AA0C62D68157900228F5F /* gsddPodermppath15177.mp4 */,
+				048AA0BC2D68115000228F5F /* Baby Boy was Bad.mp3 */,
+				048AA0BD2D68115000228F5F /* Feeling of Love.mp3 */,
+				048AA0BE2D68115000228F5F /* Golden Sunshine.mp3 */,
+				048AA0B82D68114A00228F5F /* We know？.mp3 */,
+				048AA0B92D68114A00228F5F /* You Need Love.mp3 */,
+			);
+			path = GSDDSoube;
+			sourceTree = "<group>";
+		};
+		048AA0DC2D68863700228F5F /* GSMessa */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GSMessa;
+			sourceTree = "<group>";
+		};
+		048AA0DD2D68864C00228F5F /* GSPOstSong */ = {
+			isa = PBXGroup;
+			children = (
+				048AA0D62D68780600228F5F /* GSDDPoGusSonMokiotoer.swift */,
+				048AA0D72D68780600228F5F /* GSDDPoGusSonMokiotoer.xib */,
+				048AA0DA2D687C9D00228F5F /* GSDDBeginRecordView.swift */,
+			);
+			path = GSPOstSong;
+			sourceTree = "<group>";
+		};
+		048AA0DE2D68867C00228F5F /* GSDDGuessSong */ = {
+			isa = PBXGroup;
+			children = (
+				048AA0D22D686B6200228F5F /* GSDDGuessNOMokiotoer.swift */,
+				048AA0D32D686B6200228F5F /* GSDDGuessNOMokiotoer.xib */,
+				048AA0CE2D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift */,
+				048AA0CF2D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib */,
+			);
+			path = GSDDGuessSong;
+			sourceTree = "<group>";
+		};
+		048AA0DF2D68869E00228F5F /* GSDDSendMeag */ = {
+			isa = PBXGroup;
+			children = (
+				048AA0E02D6886C800228F5F /* GSDDBegMeagComin.swift */,
+			);
+			path = GSDDSendMeag;
+			sourceTree = "<group>";
+		};
+		048AA0E22D68897500228F5F /* GSPOstVifdeo */ = {
+			isa = PBXGroup;
+			children = (
+				048AA0E32D68898E00228F5F /* GSDDBPoberViserComin.swift */,
+				048AA0E42D68898E00228F5F /* GSDDBPoberViserComin.xib */,
+			);
+			path = GSPOstVifdeo;
+			sourceTree = "<group>";
+		};
 		04A7E1CE2D657F6D004D5FB1 = {
 			isa = PBXGroup;
 			children = (
 				04A7E1F42D658228004D5FB1 /* GueddSinkng */,
 				04A7E1D82D657F6D004D5FB1 /* Products */,
+				1273D720847E3042669E3E6C /* Pods */,
+				C6DE7DE6F668A754ABF7C65C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +175,7 @@
 		04A7E1F42D658228004D5FB1 /* GueddSinkng */ = {
 			isa = PBXGroup;
 			children = (
+				048AA0B72D68113A00228F5F /* GSDDSoube */,
 				04A7E2012D65B4AC004D5FB1 /* PrivateMGSDDain */,
 				04A7E1EF2D658228004D5FB1 /* AppDelegate.swift */,
 				04A7E1F02D658228004D5FB1 /* Assets.xcassets */,
@@ -76,9 +192,34 @@
 		04A7E2012D65B4AC004D5FB1 /* PrivateMGSDDain */ = {
 			isa = PBXGroup;
 			children = (
+				048AA0E22D68897500228F5F /* GSPOstVifdeo */,
+				048AA0DF2D68869E00228F5F /* GSDDSendMeag */,
+				048AA0DE2D68867C00228F5F /* GSDDGuessSong */,
+				048AA0DD2D68864C00228F5F /* GSPOstSong */,
+				048AA0DC2D68863700228F5F /* GSMessa */,
+				048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */,
 				04A7E2022D65B4E8004D5FB1 /* GSDDloMianComin.swift */,
+				04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */,
+				048AA0CC2D681E3400228F5F /* GSDDgussMainView.xib */,
 			);
 			path = PrivateMGSDDain;
+			sourceTree = "<group>";
+		};
+		1273D720847E3042669E3E6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5730344A668E4D218E29155 /* Pods-GueddSinkng.debug.xcconfig */,
+				9BB007C8B596F2B152D3E80B /* Pods-GueddSinkng.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C6DE7DE6F668A754ABF7C65C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,17 +229,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A7E1EA2D657F6F004D5FB1 /* Build configuration list for PBXNativeTarget "GueddSinkng" */;
 			buildPhases = (
+				D74321560DAF71E0D8853081 /* [CP] Check Pods Manifest.lock */,
 				04A7E1D32D657F6D004D5FB1 /* Sources */,
 				04A7E1D42D657F6D004D5FB1 /* Frameworks */,
 				04A7E1D52D657F6D004D5FB1 /* Resources */,
+				7190D4C2361A795D87FE1486 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GueddSinkng;
-			packageProductDependencies = (
-			);
 			productName = GueddSinkng;
 			productReference = 04A7E1D72D657F6D004D5FB1 /* GueddSinkng.app */;
 			productType = "com.apple.product-type.application";
@@ -143,12 +284,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048AA0E62D68898E00228F5F /* GSDDBPoberViserComin.xib in Resources */,
+				048AA0B62D680E4400228F5F /* GSDDBinLinkS.plist in Resources */,
 				04A7E1F52D658228004D5FB1 /* Assets.xcassets in Resources */,
+				048AA0D12D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib in Resources */,
 				04A7E1F72D658228004D5FB1 /* LaunchScreen.storyboard in Resources */,
+				048AA0BF2D68115000228F5F /* Golden Sunshine.mp3 in Resources */,
+				048AA0C02D68115000228F5F /* Baby Boy was Bad.mp3 in Resources */,
+				048AA0CD2D681E3400228F5F /* GSDDgussMainView.xib in Resources */,
+				048AA0C12D68115000228F5F /* Feeling of Love.mp3 in Resources */,
+				048AA0D52D686B6200228F5F /* GSDDGuessNOMokiotoer.xib in Resources */,
+				048AA0BA2D68114A00228F5F /* You Need Love.mp3 in Resources */,
+				048AA0C72D68157900228F5F /* gsddPodermppath15176.mp4 in Resources */,
+				048AA0C82D68157900228F5F /* gsddPodermppath15177.mp4 in Resources */,
+				048AA0C92D68157900228F5F /* gsddPodermppath15173.mp4 in Resources */,
+				048AA0D82D68780600228F5F /* GSDDPoGusSonMokiotoer.xib in Resources */,
+				048AA0CA2D68157900228F5F /* gsddPodermppath15175.mp4 in Resources */,
+				048AA0CB2D68157900228F5F /* gsddPodermppath15174.mp4 in Resources */,
+				048AA0BB2D68114A00228F5F /* We know？.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7190D4C2361A795D87FE1486 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D74321560DAF71E0D8853081 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GueddSinkng-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04A7E1D32D657F6D004D5FB1 /* Sources */ = {
@@ -156,10 +355,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A7E2032D65B4E8004D5FB1 /* GSDDloMianComin.swift in Sources */,
+				048AA0E52D68898E00228F5F /* GSDDBPoberViserComin.swift in Sources */,
+				048AA0E12D6886C800228F5F /* GSDDBegMeagComin.swift in Sources */,
+				048AA0D02D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift in Sources */,
 				04A7E1F82D658228004D5FB1 /* AppDelegate.swift in Sources */,
+				048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */,
 				04A7E1FC2D6585BB004D5FB1 /* GSDDGSddReadComin.swift in Sources */,
+				04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */,
 				04A7E1FA2D6582DE004D5FB1 /* GSddguessingComin.swift in Sources */,
+				048AA0D42D686B6200228F5F /* GSDDGuessNOMokiotoer.swift in Sources */,
 				04A7E2002D65AD64004D5FB1 /* GSDDloadingComin.swift in Sources */,
+				048AA0DB2D687C9D00228F5F /* GSDDBeginRecordView.swift in Sources */,
 				04A7E1FE2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,19 +386,27 @@
 /* Begin XCBuildConfiguration section */
 		04A7E1EB2D657F6F004D5FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5730344A668E4D218E29155 /* Pods-GueddSinkng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -212,19 +426,27 @@
 		};
 		04A7E1EC2D657F6F004D5FB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB007C8B596F2B152D3E80B /* Pods-GueddSinkng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

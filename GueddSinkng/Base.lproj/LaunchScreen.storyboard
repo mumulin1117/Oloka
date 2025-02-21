@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,14 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diq-sJ-iT7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginiONfGSDD" translatesAutoresizingMaskIntoConstraints="NO" id="diq-sJ-iT7">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launiconBeg" translatesAutoresizingMaskIntoConstraints="NO" id="8BJ-rT-Nlx">
+                                <rect key="frame" x="133.66666666666666" y="291" width="125.99999999999997" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="3Fn-cu-CcF"/>
+                                    <constraint firstAttribute="width" constant="126" id="Y71-5k-vLa"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8BJ-rT-Nlx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0oc-gR-gzs"/>
                             <constraint firstItem="diq-sJ-iT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7at-6n-Wdd"/>
+                            <constraint firstItem="8BJ-rT-Nlx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-30" id="FaJ-hf-rgZ"/>
                             <constraint firstItem="diq-sJ-iT7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="PnL-j3-UBJ"/>
                             <constraint firstAttribute="bottom" secondItem="diq-sJ-iT7" secondAttribute="bottom" id="esu-9n-R4H"/>
                             <constraint firstItem="diq-sJ-iT7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vZI-06-O7J"/>
@@ -36,6 +46,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="launiconBeg" width="126" height="210"/>
+        <image name="loginiONfGSDD" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

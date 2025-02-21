@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>gsddUID</key>
+		<string>779</string>
+		<key>gsddNjmet</key>
+		<string>Breccan</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_0</string>
+		<key>gussMusicname</key>
+		<string>Golden Sunshine</string>
+		<key>gussMusicPath</key>
+		<string>Golden Sunshine</string>
+	</dict>
+	<dict>
+		<key>gsddUID</key>
+		<string>780</string>
+		<key>gsddNjmet</key>
+		<string>Elysia</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_1</string>
+		<key>gussMusicname</key>
+		<string>Baby Boy was Bad</string>
+		<key>gussMusicPath</key>
+		<string>Baby Boy was Bad</string>
+	</dict>
+	<dict>
+		<key>gsddUID</key>
+		<string>781</string>
+		<key>gsddNjmet</key>
+		<string>Leander</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_2</string>
+		<key>gussMusicname</key>
+		<string>Feeling of Love</string>
+		<key>gussMusicPath</key>
+		<string>Feeling of Love</string>
+	</dict>
+	<dict>
+		<key>gsddUID</key>
+		<string>782</string>
+		<key>gsddNjmet</key>
+		<string>Eulalia</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_3</string>
+		<key>gsddPoderCover</key>
+		<string>Poder_gsCover3</string>
+		<key>gsddPodercontentext</key>
+		<string>Listening to oldies but goodies and feeling all the nostalgia. What&apos;s your classic pick? 🎙️</string>
+		<key>gsddPodermp4path</key>
+		<string>gsddPodermppath15173</string>
+		<key>gussMusicname</key>
+		<string>We know？</string>
+		<key>gussMusicPath</key>
+		<string>We know？</string>
+	</dict>
+	<dict>
+		<key>gsddUID</key>
+		<string>783</string>
+		<key>gsddNjmet</key>
+		<string>Jorvik</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_4</string>
+		<key>gsddPoderCover</key>
+		<string>Poder_gsCover4</string>
+		<key>gsddPodercontentext</key>
+		<string>Nailed the guess in one try! Watch me show off my music knowledge. 🤓</string>
+		<key>gsddPodermp4path</key>
+		<string>gsddPodermppath15174</string>
+		<key>gussMusicname</key>
+		<string>You Need Love</string>
+		<key>gussMusicPath</key>
+		<string>You Need Love</string>
+	</dict>
+	<dict>
+		<key>gsddUID</key>
+		<string>784</string>
+		<key>gsddNjmet</key>
+		<string>Marigold</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_5</string>
+		<key>gsddPoderCover</key>
+		<string>Poder_gsCover5</string>
+		<key>gsddPodercontentext</key>
+		<string>Jammin&apos; to the latest hits in the music square. Join the musical fun! 🎧</string>
+		<key>gsddPodermp4path</key>
+		<string>gsddPodermppath15175</string>
+	</dict>
+	<dict>
+		<key>gsddUID</key>
+		<string>785</string>
+		<key>gsddNjmet</key>
+		<string>Zinnia</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_6</string>
+		<key>gsddPoderCover</key>
+		<string>Poder_gsCover6</string>
+		<key>gsddPodercontentext</key>
+		<string>Discovering new songs every day in the music square. What a musical adventure! 🚀</string>
+		<key>gsddPodermp4path</key>
+		<string>gsddPodermppath15176</string>
+	</dict>
+	<dict>
+		<key>gsddUID</key>
+		<string>786</string>
+		<key>gsddNjmet</key>
+		<string>Peregrine</string>
+		<key>gsddPIav</key>
+		<string>ipho_gs_7</string>
+		<key>gsddPoderCover</key>
+		<string>Poder_gsCover7</string>
+		<key>gsddPodercontentext</key>
+		<string>Singing my heart out, but can you guess the song? Leave your answers below! 👇</string>
+		<key>gsddPodermp4path</key>
+		<string>gsddPodermppath15177</string>
+	</dict>
+</array>
+</plist>
