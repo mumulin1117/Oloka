@@ -204,7 +204,7 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         }
         
         releasechangeDGSSzaGSDD.setBackgroundImage(UIImage.init(named: "gointerinser"), for: .normal)
-        releasechangeDGSSzaGSDD.addTarget(self, action: #selector(postchanllgeerinOkayot), for: .touchUpInside)
+        releasechangeDGSSzaGSDD.addTarget(self, action: #selector(postSonenterinOkayot), for: .touchUpInside)
         view.addSubview(releasechangeDGSSzaGSDD)
         releasechangeDGSSzaGSDD.snp.makeConstraints { make in
             make.width.height.equalTo(100.x_GSDD)
@@ -233,7 +233,7 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
     
     //个人中心
     @objc  func personcenterinOkayot() {
-       
+        self.navigationController?.pushViewController(GSDDMeGSDDComin.init(), animated: true)
     }
     //消息中心
     @objc  func meaageenterinOkayot() {
@@ -242,7 +242,7 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
     
     //广场中心
     @objc  func plazyeenterinOkayot() {
-        
+        self.navigationController?.pushViewController(GSDDLisstingPlazyComin.init(), animated: true)
     }
     
     //发布中心son
@@ -251,9 +251,9 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
     }
     
     //发布chanllge
-    @objc  func postchanllgeerinOkayot() {
-        
-    }
+//    @objc  func postchanllgeerinOkayot() {
+//        
+//    }
 
     
     func numberOfItems(in carousel: iCarousel) -> Int {
