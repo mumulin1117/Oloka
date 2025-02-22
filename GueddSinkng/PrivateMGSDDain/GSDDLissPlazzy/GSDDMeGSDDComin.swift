@@ -26,10 +26,15 @@ class GSDDMeGSDDComin: UIViewController {
        
     }
     
+    @objc func tougegleToWallent(ijbnm:UIButton)  {
+        
+        self.navigationController?.pushViewController(GSDDWallentipminein.init(), animated: true)
+    }
     
-    @objc func tougegleToeditin(ijbnm:UIButton)  {
+    //set
+    @objc func tougegleToSetup(ijbnm:UIButton)  {
         
-        
+        self.navigationController?.pushViewController(GSDDsetrtrtuipminein.init(), animated: true)
     }
     
 
@@ -37,6 +42,14 @@ class GSDDMeGSDDComin: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+    
+    @objc  func relationTokayot(vmi:UIButton) {
+        
+        let relaiony = GSDDRealtiongpminein.init()
+        
+        self.navigationController?.popToViewController(relaiony, animated: true)
+    }
+    
 }
 
 
@@ -146,13 +159,13 @@ extension GSDDMeGSDDComin{
                                                
         view.addSubview(wallentFileg)
        
-        wallentFileg.addTarget(self, action: #selector(tougegleToeditin), for: .touchUpInside)
+        wallentFileg.addTarget(self, action: #selector(tougegleToWallent), for: .touchUpInside)
         let itemmant = ( UIScreen.main.bounds.width - 280.x_GSDD)/5
         
         wallentFileg.snp.makeConstraints { make in
             make.width.height.equalTo(70.x_GSDD)
             make.top.equalTo(qiaminnext.snp.bottom).offset(40.y_GSDD)
-            make.right.equalToSuperview().offset(itemmant)
+            make.left.equalToSuperview().offset(itemmant)
         }
         
         let sniamdio = UIImageView(image: UIImage.init(named: "diopmendGSDD"))
@@ -185,7 +198,7 @@ extension GSDDMeGSDDComin{
        
         view.addSubview(sertntFileg)
         
-        sertntFileg.addTarget(self, action: #selector(tougegleToeditin), for: .touchUpInside)
+        sertntFileg.addTarget(self, action: #selector(tougegleToSetup), for: .touchUpInside)
        
         sertntFileg.snp.makeConstraints { make in
             make.width.height.equalTo(70.x_GSDD)
@@ -193,7 +206,7 @@ extension GSDDMeGSDDComin{
             make.left.equalTo(wallentFileg.snp.right).offset(itemmant)
         }
         
-        let seiiconmdio = UIImageView(image: UIImage.init(named: "tougleEdit"))
+        let seiiconmdio = UIImageView(image: UIImage.init(named: "dioSitendGSDD"))
         sertntFileg.addSubview(seiiconmdio)
         seiiconmdio.snp.makeConstraints { make in
             make.width.height.equalTo(32.x_GSDD)
@@ -201,7 +214,7 @@ extension GSDDMeGSDDComin{
             make.centerX.equalToSuperview()
         }
         let settextntnext = UILabel.init()
-        settextntnext.text = "Wallent"
+        settextntnext.text = "Setup"
         settextntnext.textColor = .white
         settextntnext.textAlignment = .center
         settextntnext.font = UIFont.systemFont(ofSize: 14.x_GSDD, weight: .medium)
@@ -224,7 +237,7 @@ extension GSDDMeGSDDComin{
        
         view.addSubview(fanctFileg)
         
-        fanctFileg.addTarget(self, action: #selector(tougegleToeditin), for: .touchUpInside)
+        fanctFileg.addTarget(self, action: #selector(relationTokayot(vmi: )), for: .touchUpInside)
        
         fanctFileg.snp.makeConstraints { make in
             make.width.height.equalTo(70.x_GSDD)
@@ -241,7 +254,7 @@ extension GSDDMeGSDDComin{
         fancnCounttnext.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             
-            make.top.equalTo(fanctFileg.snp.bottom).offset(10.x_GSDD)
+            make.top.equalTo(fanctFileg.snp.top).offset(10.x_GSDD)
         }
        
         let fancntnext = UILabel.init()
@@ -270,7 +283,7 @@ extension GSDDMeGSDDComin{
        
         view.addSubview(followeFileg)
         
-        followeFileg.addTarget(self, action: #selector(tougegleToeditin), for: .touchUpInside)
+        followeFileg.addTarget(self, action: #selector(relationTokayot(vmi: )), for: .touchUpInside)
        
         followeFileg.snp.makeConstraints { make in
             make.width.height.equalTo(70.x_GSDD)
@@ -287,11 +300,11 @@ extension GSDDMeGSDDComin{
         follreCounttnext.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             
-            make.top.equalTo(followeFileg.snp.bottom).offset(10.x_GSDD)
+            make.top.equalTo(followeFileg.snp.top).offset(10.x_GSDD)
         }
        
         let Folloewdentnext = UILabel.init()
-        Folloewdentnext.text = "Fans"
+        Folloewdentnext.text = "Follow"
         Folloewdentnext.textColor = .white
         Folloewdentnext.textAlignment = .center
         Folloewdentnext.font = UIFont.systemFont(ofSize: 14.x_GSDD, weight: .medium)
@@ -337,11 +350,7 @@ extension GSDDMeGSDDComin{
         
         editBootomVIew.takeiearGSDD.addTarget(self, action: #selector(takingProfolePhotoGSDD), for: .touchUpInside)
         editBootomVIew.OKNAmeGSDD.addTarget(self, action: #selector(saveProfoleinfoGSDD), for: .touchUpInside)
-        editBootomVIew.snp.makeConstraints { make in
-            make.leading.trailingMargin.equalToSuperview()
-            make.top.equalTo(self.view.snp.bottom)
-            make.height.equalTo(483)
-        }
+      
     }
     
     @objc func takingProfolePhotoGSDD()  {

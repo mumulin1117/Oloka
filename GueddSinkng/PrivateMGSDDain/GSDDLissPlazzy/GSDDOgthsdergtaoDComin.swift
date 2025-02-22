@@ -18,12 +18,112 @@ class GSDDOgthsdergtaoDComin: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @IBOutlet weak var statusRelati: UIButton!
+    
+    
+    @IBAction func GSddappbackNoing(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    //举报拉嘿
+    @IBAction func GSddRepPoprationNoing(_ sender: UIButton) {
+        
+        
+    }
+    
+    
+    
+    //chat
+    @IBAction func  touggleChatinginger() {
+        self.navigationController?.pushViewController(GSDDCsatminein.init(plazDeinGSDD: self.plazDeinGSDD), animated: true)
+    }
+
+    
+    //vide
+    @IBAction func  touggleVIdeoinger() {
+        self.navigationController?.pushViewController(GSDDCVioloiominein.init(plazDeinGSDD: self.plazDeinGSDD), animated: true)
+    }
+    
+    
+    @IBOutlet weak var sizeGSDDUserpIC: UIImageView!
+    
+    @IBOutlet weak var nameingjhtinhGSDD: UILabel!
+    
+    
+    @IBOutlet weak var flollweingcDGSDD: UILabel!
+    
+    
+    @IBOutlet weak var fanveweingcDGSDD: UILabel!
+    
+    @IBOutlet weak var PlaingGSDD: UIButton!
+    
+    
+    
+    //播放
+    @IBAction func PlaingerGSDD(_ sender: UIButton) {
+        self.navigationController?.pushViewController(GSDDPlazdegtaoDComin.init(plazDeinGSDD: self.plazDeinGSDD), animated: true)
+    }
+    
+    
+    //关注
+    @IBAction func statusRelationGSDD(_ sender: UIButton) {
+        
+        
+    }
+    
+    
+    @IBOutlet weak var userbituefg: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        sizeGSDDUserpIC.image = UIImage(named: plazDeinGSDD.gsddPIav)
+        
+        flollweingcDGSDD.text = "\(Int.random(in: 0...5))"
+        fanveweingcDGSDD.text = "\(Int.random(in: 1...5))"
+        nameingjhtinhGSDD.text = plazDeinGSDD.gsddNjmet
+        
+        statusRelati.layer.cornerRadius  = 21
+        statusRelati.layer.masksToBounds = true
+        
+        userbituefg.text = plazDeinGSDD.gsddVBrief
+        statusRelati.layer.borderWidth = 1.5
+        statusRelati.layer.borderColor = UIColor(red: 0.08, green: 0.96, blue: 0.99, alpha: 1).cgColor
+        
+        
+        
+        
+        
+        
+        sizeGSDDUserpIC.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.height.equalTo(400.y_GSDD)
+        }
+        
+        if self.plazDeinGSDD.gsddPodermp4path == nil {
+            PlaingGSDD.isUserInteractionEnabled = false
+            PlaingGSDD.snp.makeConstraints { make in
+                make.width.height.equalTo(160.x_GSDD)
+                make.centerX.equalToSuperview().inset(16)
+            }
+            PlaingGSDD.setImage(UIImage.init(named: "noshingDataGSDD"), for: .normal)
+           
+        }else{
+            PlaingGSDD.snp.makeConstraints { make in
+                make.width.height.equalTo(160.x_GSDD)
+                make.leading.equalToSuperview().inset(16)
+            }
+            PlaingGSDD.setBackgroundImage(UIImage.init(named: plazDeinGSDD.gsddPoderCover ?? ""), for: .normal)
+           
+            
+        }
+        
+        
     }
 
-
+   
 
 }

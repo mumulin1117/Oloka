@@ -13,6 +13,8 @@
 		<string>Golden Sunshine</string>
 		<key>gussMusicPath</key>
 		<string>Golden Sunshine</string>
+		<key>guessUserBrief</key>
+		<string>If music be the food of love, play on… and let me guess!</string>
 	</dict>
 	<dict>
 		<key>gsddUID</key>
@@ -25,6 +27,8 @@
 		<string>Baby Boy was Bad</string>
 		<key>gussMusicPath</key>
 		<string>Baby Boy was Bad</string>
+		<key>guessUserBrief</key>
+		<string>Melody detective on duty.</string>
 	</dict>
 	<dict>
 		<key>gsddUID</key>
@@ -37,6 +41,8 @@
 		<string>Feeling of Love</string>
 		<key>gussMusicPath</key>
 		<string>Feeling of Love</string>
+		<key>guessUserBrief</key>
+		<string>Can’t stop the beat… or the guessing!</string>
 	</dict>
 	<dict>
 		<key>gsddUID</key>
@@ -55,6 +61,8 @@
 		<string>We know？</string>
 		<key>gussMusicPath</key>
 		<string>We know？</string>
+		<key>guessUserBrief</key>
+		<string>3 seconds to recognize, 3 decades to forget.</string>
 	</dict>
 	<dict>
 		<key>gsddUID</key>
@@ -73,6 +81,8 @@
 		<string>You Need Love</string>
 		<key>gussMusicPath</key>
 		<string>You Need Love</string>
+		<key>guessUserBrief</key>
+		<string>Life is a playlist, guess the next track.</string>
 	</dict>
 	<dict>
 		<key>gsddUID</key>
@@ -87,6 +97,8 @@
 		<string>Jammin&apos; to the latest hits in the music square. Join the musical fun! 🎧</string>
 		<key>gsddPodermp4path</key>
 		<string>gsddPodermppath15175</string>
+		<key>guessUserBrief</key>
+		<string>Wrong answers only, until I get it right.</string>
 	</dict>
 	<dict>
 		<key>gsddUID</key>
@@ -101,6 +113,8 @@
 		<string>Discovering new songs every day in the music square. What a musical adventure! 🚀</string>
 		<key>gsddPodermp4path</key>
 		<string>gsddPodermppath15176</string>
+		<key>guessUserBrief</key>
+		<string>Beats in my veins, lyrics in my soul.</string>
 	</dict>
 	<dict>
 		<key>gsddUID</key>
@@ -115,6 +129,8 @@
 		<string>Singing my heart out, but can you guess the song? Leave your answers below! 👇</string>
 		<key>gsddPodermp4path</key>
 		<string>gsddPodermppath15177</string>
+		<key>guessUserBrief</key>
+		<string>Master of melodies, ruler of rhythms.</string>
 	</dict>
 </array>
 </plist>

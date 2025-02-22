@@ -11,6 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSDDOgthsdergtaoDComin" customModule="GueddSinkng" customModuleProvider="target">
             <connections>
+                <outlet property="PlaingGSDD" destination="kfs-0u-hjR" id="BIk-bh-X4Q"/>
+                <outlet property="fanveweingcDGSDD" destination="Zkt-Kx-T25" id="FFr-0z-saU"/>
+                <outlet property="flollweingcDGSDD" destination="3Zn-jG-yuW" id="f38-gg-TDr"/>
+                <outlet property="nameingjhtinhGSDD" destination="XfE-aq-Yev" id="6Js-b6-jjR"/>
+                <outlet property="sizeGSDDUserpIC" destination="hpf-0i-VOk" id="F0U-y0-uLZ"/>
+                <outlet property="statusRelati" destination="Fht-Yf-Unf" id="jHH-bO-POu"/>
+                <outlet property="userbituefg" destination="UUa-tI-irN" id="5FJ-p0-SHb"/>
                 <outlet property="view" destination="dXG-KT-Ga1" id="6nW-on-Bn7"/>
             </connections>
         </placeholder>
@@ -88,6 +95,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="heijkirepo"/>
+                    <connections>
+                        <action selector="GSddRepPoprationNoing:" destination="-1" eventType="touchUpInside" id="OiV-zs-agk"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY5-he-Wd8">
                     <rect key="frame" x="16" y="48" width="30" height="30"/>
@@ -97,6 +107,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="redBackiOn"/>
+                    <connections>
+                        <action selector="GSddappbackNoing:" destination="-1" eventType="touchUpInside" id="8X0-Vf-reK"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess what I'm singing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-aq-Yev">
                     <rect key="frame" x="47.5" y="435" width="319" height="26"/>
@@ -113,6 +126,9 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="mesGSDDTOm"/>
                     <state key="selected" image="palyingninGSDD"/>
+                    <connections>
+                        <action selector="touggleChatinginger" destination="-1" eventType="touchUpInside" id="oZv-vw-wf8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVF-oY-Mll">
                     <rect key="frame" x="16" y="346" width="64" height="64"/>
@@ -123,6 +139,9 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="chatvierGSDD"/>
                     <state key="selected" image="palyingninGSDD"/>
+                    <connections>
+                        <action selector="touggleVIdeoinger" destination="-1" eventType="touchUpInside" id="hTX-TV-eds"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-Yf-Unf">
                     <rect key="frame" x="228" y="487.5" width="112" height="42"/>
@@ -134,6 +153,9 @@
                     <state key="normal" title="To Follow">
                         <color key="titleColor" red="0.078431372549019607" green="0.96078431372549022" blue="0.9882352941176471" alpha="0.38138627032844385" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="statusRelationGSDD:" destination="-1" eventType="touchUpInside" id="ch3-PE-pjm"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brief" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUa-tI-irN">
                     <rect key="frame" x="21" y="539.5" width="372" height="17"/>
@@ -141,10 +163,13 @@
                     <color key="textColor" white="1" alpha="0.46062246309999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-0u-hjR">
-                    <rect key="frame" x="22" y="608" width="149" height="157"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-0u-hjR">
+                    <rect key="frame" x="16" y="608" width="68" height="68"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="colofulREdGSGG"/>
+                    <connections>
+                        <action selector="PlaingerGSDD:" destination="-1" eventType="touchUpInside" id="ctV-SM-0C0"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ZbO-aZ-4ds"/>

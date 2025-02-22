@@ -24,6 +24,8 @@ struct GSDDAbountUserinfo {
     var gsddNjmet:String
     var gsddPIav:String
     
+    var gsddVBrief:String
+    
     var gussMusicname:String?
     var gussMusicPath:String?
     
@@ -31,10 +33,12 @@ struct GSDDAbountUserinfo {
     var gsddPodercontentext:String?
     var gsddPodermp4path:String?
     
-    init(gsddUID: String, gsddNjmet: String, gsddPIav: String, gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil) {
+    init(gsddUID: String, gsddNjmet: String, gsddPIav: String, gsddVBrief:String
+    ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil) {
         self.gsddUID = gsddUID
         self.gsddNjmet = gsddNjmet
         self.gsddPIav = gsddPIav
+        self.gsddVBrief = gsddVBrief
         self.gussMusicname = gussMusicname
         self.gussMusicPath = gussMusicPath
         self.gsddPoderCover = gsddPoderCover
@@ -59,7 +63,7 @@ struct GSDDDALoaing {
                 
                 let mokler =  GSDDAbountUserinfo.init(gsddUID: item["gsddUID"] ?? "",
                                                       gsddNjmet: item["gsddNjmet"] ?? "",
-                                                      gsddPIav: item["gsddPIav"] ?? "",
+                                                      gsddPIav: item["gsddPIav"] ?? "", gsddVBrief: item["guessUserBrief"] ?? "",
                                                       gussMusicname: item["gussMusicname"],
                                                       gussMusicPath: item["gussMusicPath"],
                                                       gsddPoderCover: item["gsddPoderCover"],

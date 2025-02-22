@@ -67,7 +67,8 @@ class GSDDEfitInfoComin: UIView {
             make.centerX.equalToSuperview()
             make.bottom.equalTo(usersefimgInager.snp.bottom).offset(-26)
         }
-        
+        entertYOuNAmeGSDD.backgroundColor = .white
+        entertYOuNAmeGSDD.text = "Name"
         self.addSubview(entertYOuNAmeGSDD)
         entertYOuNAmeGSDD.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(38)
@@ -89,6 +90,7 @@ class GSDDEfitInfoComin: UIView {
             make.top.equalTo(entertYOuNAmeGSDD.snp.bottom).offset(72.x_GSDD)
             make.leading.trailing.equalToSuperview().inset(80.x_GSDD)
             make.top.equalTo(entertYOuNAmeGSDD.snp.bottom).offset(70.x_GSDD)
+            make.height.equalTo(60)
         }
     }
     
