@@ -155,4 +155,15 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         self.navigationController?.popViewController(animated: true)
     }
 
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.upfloorGSDListview {
+            
+            return
+        }
+        let enterGSDDPlazin = GSDDPlazdegtaoDComin.init(plazDeinGSDD: self.changvlodeoGS[indexPath.row])
+        
+        self.navigationController?.pushViewController(enterGSDDPlazin, animated: true)
+        
+    }
 }

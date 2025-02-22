@@ -22,5 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         return true
     }
+    
+    
+    func manngerMu3chache(){
+        let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let localPath = documentPath + "/LocalRecords"
+        let detaipath = localPath.appending("post.wav")
+    }
 }
 

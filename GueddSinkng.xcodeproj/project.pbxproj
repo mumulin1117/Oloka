@@ -43,8 +43,12 @@
 		CE8FA5EB2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */; };
 		CE8FA5EE2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */; };
 		CE8FA5EF2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */; };
-		CED0E62C2D68D316004C968D /* GSDDMeGSDDComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED0E62B2D68D316004C968D /* GSDDMeGSDDComin.xib */; };
 		CED0E62D2D68D316004C968D /* GSDDMeGSDDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0E62A2D68D316004C968D /* GSDDMeGSDDComin.swift */; };
+		CED0E6302D6956B6004C968D /* GSDDPlazdegtaoDComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED0E62F2D6956B6004C968D /* GSDDPlazdegtaoDComin.xib */; };
+		CED0E6312D6956B6004C968D /* GSDDPlazdegtaoDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0E62E2D6956B6004C968D /* GSDDPlazdegtaoDComin.swift */; };
+		CED0E6342D6959D5004C968D /* GSDDOgthsdergtaoDComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED0E6332D6959D5004C968D /* GSDDOgthsdergtaoDComin.xib */; };
+		CED0E6352D6959D5004C968D /* GSDDOgthsdergtaoDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0E6322D6959D5004C968D /* GSDDOgthsdergtaoDComin.swift */; };
+		CED0E6372D696698004C968D /* GSDDEfitInfoComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0E6362D696698004C968D /* GSDDEfitInfoComin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +92,11 @@
 		CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLisstingPlazyCiceoCell.swift; sourceTree = "<group>"; };
 		CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDLisstingPlazyCiceoCell.xib; sourceTree = "<group>"; };
 		CED0E62A2D68D316004C968D /* GSDDMeGSDDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDMeGSDDComin.swift; path = GueddSinkng/PrivateMGSDDain/GSDDLissPlazzy/GSDDMeGSDDComin.swift; sourceTree = SOURCE_ROOT; };
-		CED0E62B2D68D316004C968D /* GSDDMeGSDDComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDMeGSDDComin.xib; path = GueddSinkng/PrivateMGSDDain/GSDDLissPlazzy/GSDDMeGSDDComin.xib; sourceTree = SOURCE_ROOT; };
+		CED0E62E2D6956B6004C968D /* GSDDPlazdegtaoDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDPlazdegtaoDComin.swift; sourceTree = "<group>"; };
+		CED0E62F2D6956B6004C968D /* GSDDPlazdegtaoDComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDPlazdegtaoDComin.xib; sourceTree = "<group>"; };
+		CED0E6322D6959D5004C968D /* GSDDOgthsdergtaoDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDOgthsdergtaoDComin.swift; path = GueddSinkng/PrivateMGSDDain/GSDDLissPlazzy/GSDDOgthsdergtaoDComin.swift; sourceTree = SOURCE_ROOT; };
+		CED0E6332D6959D5004C968D /* GSDDOgthsdergtaoDComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDOgthsdergtaoDComin.xib; path = GueddSinkng/PrivateMGSDDain/GSDDLissPlazzy/GSDDOgthsdergtaoDComin.xib; sourceTree = SOURCE_ROOT; };
+		CED0E6362D696698004C968D /* GSDDEfitInfoComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDEfitInfoComin.swift; path = GueddSinkng/PrivateMGSDDain/GSDDLissPlazzy/GSDDEfitInfoComin.swift; sourceTree = SOURCE_ROOT; };
 		F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GueddSinkng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,7 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				CED0E62A2D68D316004C968D /* GSDDMeGSDDComin.swift */,
-				CED0E62B2D68D316004C968D /* GSDDMeGSDDComin.xib */,
+				CED0E6322D6959D5004C968D /* GSDDOgthsdergtaoDComin.swift */,
+				CED0E6332D6959D5004C968D /* GSDDOgthsdergtaoDComin.xib */,
+				CED0E6362D696698004C968D /* GSDDEfitInfoComin.swift */,
 			);
 			path = GSMe;
 			sourceTree = "<group>";
@@ -244,6 +254,8 @@
 				CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */,
 				CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */,
 				CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */,
+				CED0E62E2D6956B6004C968D /* GSDDPlazdegtaoDComin.swift */,
+				CED0E62F2D6956B6004C968D /* GSDDPlazdegtaoDComin.xib */,
 			);
 			path = GSDDLissPlazzy;
 			sourceTree = "<group>";
@@ -316,6 +328,7 @@
 				048AA0D12D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib in Resources */,
 				04A7E1F72D658228004D5FB1 /* LaunchScreen.storyboard in Resources */,
 				048AA0BF2D68115000228F5F /* Golden Sunshine.mp3 in Resources */,
+				CED0E6342D6959D5004C968D /* GSDDOgthsdergtaoDComin.xib in Resources */,
 				048AA0C02D68115000228F5F /* Baby Boy was Bad.mp3 in Resources */,
 				048AA0CD2D681E3400228F5F /* GSDDgussMainView.xib in Resources */,
 				CE8FA5EE2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib in Resources */,
@@ -325,8 +338,8 @@
 				048AA0C72D68157900228F5F /* gsddPodermppath15176.mp4 in Resources */,
 				048AA0C82D68157900228F5F /* gsddPodermppath15177.mp4 in Resources */,
 				048AA0C92D68157900228F5F /* gsddPodermppath15173.mp4 in Resources */,
+				CED0E6302D6956B6004C968D /* GSDDPlazdegtaoDComin.xib in Resources */,
 				048AA0D82D68780600228F5F /* GSDDPoGusSonMokiotoer.xib in Resources */,
-				CED0E62C2D68D316004C968D /* GSDDMeGSDDComin.xib in Resources */,
 				048AA0CA2D68157900228F5F /* gsddPodermppath15175.mp4 in Resources */,
 				048AA0CB2D68157900228F5F /* gsddPodermppath15174.mp4 in Resources */,
 				048AA0BB2D68114A00228F5F /* We know？.mp3 in Resources */,
@@ -384,16 +397,19 @@
 			files = (
 				04A7E2032D65B4E8004D5FB1 /* GSDDloMianComin.swift in Sources */,
 				CED0E62D2D68D316004C968D /* GSDDMeGSDDComin.swift in Sources */,
+				CED0E6372D696698004C968D /* GSDDEfitInfoComin.swift in Sources */,
 				048AA0E52D68898E00228F5F /* GSDDBPoberViserComin.swift in Sources */,
 				048AA0E12D6886C800228F5F /* GSDDBegMeagComin.swift in Sources */,
 				048AA0D02D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift in Sources */,
 				CE8FA5E92D68C37900D091FD /* GSDDLisstingPlazyComin.swift in Sources */,
+				CED0E6312D6956B6004C968D /* GSDDPlazdegtaoDComin.swift in Sources */,
 				04A7E1F82D658228004D5FB1 /* AppDelegate.swift in Sources */,
 				048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */,
 				04A7E1FC2D6585BB004D5FB1 /* GSDDGSddReadComin.swift in Sources */,
 				04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */,
 				04A7E1FA2D6582DE004D5FB1 /* GSddguessingComin.swift in Sources */,
 				CE8FA5EF2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift in Sources */,
+				CED0E6352D6959D5004C968D /* GSDDOgthsdergtaoDComin.swift in Sources */,
 				048AA0D42D686B6200228F5F /* GSDDGuessNOMokiotoer.swift in Sources */,
 				04A7E2002D65AD64004D5FB1 /* GSDDloadingComin.swift in Sources */,
 				048AA0DB2D687C9D00228F5F /* GSDDBeginRecordView.swift in Sources */,
