@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GSDDPlazdegtaoDComin: UIViewController {
+class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     
     @IBOutlet weak var ReporitgnVieoGSDD: UIButton!
     
@@ -43,7 +43,9 @@ class GSDDPlazdegtaoDComin: UIViewController {
     
     
     
-    
+    @IBAction func repoertingContentGSDD(_ sender: UIButton) {
+        showReportVideoAlertGSDD()
+    }
     
     
     

@@ -7,7 +7,7 @@
 
 import UIKit
 //chat
-class GSDDCsatminein: UIViewController {
+class GSDDCsatminein: GSDDUserilcomine {
     var plazDeinGSDD:GSDDAbountUserinfo
     init(plazDeinGSDD: GSDDAbountUserinfo) {
         self.plazDeinGSDD = plazDeinGSDD
@@ -36,7 +36,7 @@ class GSDDCsatminein: UIViewController {
 
     //举报拉嘿
     @IBAction func GSddRepPoprationNoing(_ sender: UIButton) {
-        
+        self.showBlockOrReportAlert(targetUserName: plazDeinGSDD.gsddUID)
         
     }
     

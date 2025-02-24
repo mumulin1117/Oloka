@@ -8,7 +8,7 @@
 import UIKit
 
 /// 他人中心
-class GSDDOgthsdergtaoDComin: UIViewController {
+class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     var plazDeinGSDD:GSDDAbountUserinfo
     init(plazDeinGSDD: GSDDAbountUserinfo) {
         self.plazDeinGSDD = plazDeinGSDD
@@ -29,7 +29,8 @@ class GSDDOgthsdergtaoDComin: UIViewController {
     
     //举报拉嘿
     @IBAction func GSddRepPoprationNoing(_ sender: UIButton) {
-        
+      
+        self.showBlockOrReportAlert(targetUserName: plazDeinGSDD.gsddUID)
         
     }
     

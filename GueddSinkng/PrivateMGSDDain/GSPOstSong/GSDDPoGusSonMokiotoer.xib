@@ -15,6 +15,7 @@
                 <outlet property="playingmuscioGSDD" destination="Dfj-CO-iQV" id="4W4-05-vQ5"/>
                 <outlet property="recordGS" destination="Qcd-4e-foV" id="mjM-ce-tHq"/>
                 <outlet property="recordGSD" destination="wU1-JQ-K50" id="hvT-5d-jf3"/>
+                <outlet property="recordTipslblGSD" destination="Qcd-4e-foV" id="3A7-Py-68P"/>
                 <outlet property="resultBackGSDD" destination="EP7-b5-oYx" id="Fx0-3t-NkH"/>
                 <outlet property="resultGSTime" destination="s4l-Ex-eb0" id="glt-Rr-RFz"/>
                 <outlet property="shineStshineview" destination="1qq-ae-ThF" id="xZq-3c-0Uf"/>

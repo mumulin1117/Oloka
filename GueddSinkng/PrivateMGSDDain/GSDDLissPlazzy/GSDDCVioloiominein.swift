@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GSDDCVioloiominein: UIViewController {
+class GSDDCVioloiominein: GSDDUserilcomine {
     
     var plazDeinGSDD:GSDDAbountUserinfo
     
@@ -35,7 +35,7 @@ class GSDDCVioloiominein: UIViewController {
 
     //举报拉嘿
     @IBAction func GSddRepPoprationNoing(_ sender: UIButton) {
-        
+        self.showBlockOrReportAlert(targetUserName: plazDeinGSDD.gsddUID)
         
     }
     

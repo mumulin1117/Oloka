@@ -2,7 +2,7 @@
 //  GSDDStaruGuessMokiotoer.swift
 //  GueddSinkng
 //
-//  Created by mumu on 2025/2/21.
+//  Created by GueddSinkng on 2025/2/21.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import Hero
 
 
 //猜歌详情
-class GSDDStaruGuessMokiotoer: UIViewController, GSDDGuessNOMokiotoerDelegate {
+class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
     func ifSppendToCheckGSDD(boif: Bool) {
         if boif {
             answeiGSDDView.isHidden = false
@@ -113,9 +113,8 @@ class GSDDStaruGuessMokiotoer: UIViewController, GSDDGuessNOMokiotoerDelegate {
     
     
     @IBAction func repoertingContentGSDD(_ sender: UIButton) {
- 
+        showReportMP3AlertGSDD()
     }
-    
     
     
     func startShinkAnnation()  {

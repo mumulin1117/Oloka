@@ -2,7 +2,7 @@
 //  GSDDBeginRecordView.swift
 //  GueddSinkng
 //
-//  Created by mumu on 2025/2/21.
+//  Created by GueddSinkng on 2025/2/21.
 //
 
 import UIKit
@@ -10,6 +10,7 @@ import UIKit
 class GSDDBeginRecordView: UIView {
     let sureGSDDButton = UIButton.init()
     let cancelGSDDButton = UIButton.init()
+    let labelhTimeGSDD = UILabel.init()
     
     let maclGSDDButton = UIImageView(image:UIImage(named: "toGSDDMac"))
     
@@ -20,13 +21,18 @@ class GSDDBeginRecordView: UIView {
         sureGSDDButton.setImage(UIImage.init(named: "sureRecordGSDD"), for: .normal)
         cancelGSDDButton.setImage(UIImage.init(named: "cancelRecordGSDD"), for: .normal)
         
-        
+        labelhTimeGSDD.text = "00:00:00"
+        labelhTimeGSDD.textColor = .white
+        labelhTimeGSDD.textAlignment = .center
+        labelhTimeGSDD.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         
         staimgbagc.contentMode = .scaleAspectFill
         self.addSubview(staimgbagc)
         self.addSubview(sureGSDDButton)
         self.addSubview(cancelGSDDButton)
         self.addSubview(maclGSDDButton)
+        
+        self.addSubview(labelhTimeGSDD)
         staimgbagc.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -49,7 +55,10 @@ class GSDDBeginRecordView: UIView {
             make.bottom.equalToSuperview().offset(-25 - 30)
         }
         
-        
+        labelhTimeGSDD.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(maclGSDDButton.snp.top).offset(-15)
+        }
         
         startShinkAnnation()
         

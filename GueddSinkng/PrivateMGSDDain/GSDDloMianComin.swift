@@ -2,7 +2,7 @@
 //  GSDDloMianComin.swift
 //  GueddSinkng
 //
-//  Created by mumu on 2025/2/19.
+//  Created by GueddSinkng on 2025/2/19.
 //
 
 import UIKit
@@ -49,7 +49,7 @@ struct GSDDAbountUserinfo {
 }
 
 struct GSDDDALoaing {
-    static let chanGSDD = GSDDDALoaing.init()
+    static var chanGSDD = GSDDDALoaing.init()
     
     var loafingDaGSDD:Array<GSDDAbountUserinfo> =  Array<GSDDAbountUserinfo>()
     
