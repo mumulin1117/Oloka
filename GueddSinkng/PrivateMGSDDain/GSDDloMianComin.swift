@@ -33,6 +33,11 @@ struct GSDDAbountUserinfo {
     var gsddPodercontentext:String?
     var gsddPodermp4path:String?
     
+    var toVidreStatusGSDD:Bool = false
+    var ifFolooweUser:Bool = false
+    
+    var ifCollVidre:Bool = false
+    
     init(gsddUID: String, gsddNjmet: String, gsddPIav: String, gsddVBrief:String
     ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil) {
         self.gsddUID = gsddUID

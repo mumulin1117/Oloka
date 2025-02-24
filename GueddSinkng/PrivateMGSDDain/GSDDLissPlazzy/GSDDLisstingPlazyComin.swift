@@ -40,6 +40,10 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         gsddCEll.poinusericonGSDD.image = UIImage(named:self.changvlodeoGS[indexPath.row].gsddPIav )
         gsddCEll.useringNAmeGS.text =
         self.changvlodeoGS[indexPath.row].gsddNjmet
+        
+        
+        gsddCEll.zanGSDD.isSelected = self.changvlodeoGS[indexPath.row].toVidreStatusGSDD
+        gsddCEll.liaortyGSDD.isSelected = self.changvlodeoGS[indexPath.row].ifCollVidre
         return gsddCEll
         
     }
@@ -53,7 +57,10 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
    
     
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        defloorVbolGSDListview?.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

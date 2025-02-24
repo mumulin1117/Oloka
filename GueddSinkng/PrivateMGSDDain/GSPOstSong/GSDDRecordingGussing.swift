@@ -24,7 +24,7 @@ class GSDDRecordingGussing: NSObject {
     
     private var audioPlayer: AVAudioPlayer?
     
-    private var currentRecordingURL: URL?
+     var currentRecordingURL: URL?
     //录音器
     private var audioRecorder: AVAudioRecorder?
     private  var recordTimer: Timer?
@@ -151,9 +151,9 @@ class GSDDRecordingGussing: NSObject {
 
     }
     
-    func playingREcordingAudio() {
-        
-        if let fileURL = currentRecordingURL {
+    func playingREcordingAudio(getfileURL:URL?) {
+       
+        if let fileURL = getfileURL {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
                 audioPlayer?.delegate = self

@@ -1,24 +1,32 @@
 PODS:
   - Hero (1.6.4)
   - iCarousel (1.8.3)
+  - IQKeyboardManager (6.5.19)
+  - Player (0.14.0)
   - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - Hero
   - iCarousel
+  - IQKeyboardManager
+  - Player
   - SnapKit
 
 SPEC REPOS:
   trunk:
     - Hero
     - iCarousel
+    - IQKeyboardManager
+    - Player
     - SnapKit
 
 SPEC CHECKSUMS:
   Hero: 473a0143017e1371d050fcbedb67d317925097f2
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  Player: 37e0acc16ea1495fc241df88fe9f089367513331
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 91529d6cb0515a9fde016979fb3babf9a762e592
+PODFILE CHECKSUM: 74a388beb51ead29312edcecb350ba1537af4e9a
 
 COCOAPODS: 1.16.2

@@ -99,14 +99,24 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
     
     
     @IBAction func startPlayingBMusicGSDD(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        if sender.isSelected {
+        playingmuscioGSDD.isSelected = !playingmuscioGSDD.isSelected
+        if playingmuscioGSDD.isSelected {
+            let path = Bundle.main.path(forResource: mudalGSDD.gussMusicname, ofType: "mp3") ?? ""
+            let urlPathname = URL(fileURLWithPath: path)
+            
+          
+            
+            GSDDRecordingGussing.gussinSS.playingREcordingAudio(getfileURL: urlPathname)
             startShinkAnnation()
         }else{
+            GSDDRecordingGussing.gussinSS.stopPlaingGSDD()
             self.shineStshineview.layer.removeAllAnimations()
             self.usGSDDPivc.layer.removeAllAnimations()
         }
         
+        
+        
+       
         
     }
     

@@ -8,5 +8,8 @@ target 'GueddSinkng' do
   # Pods for GueddSinkng
 pod 'SnapKit'
 pod 'iCarousel'
+pod "IQKeyboardManager"
 pod 'Hero'
+pod "Player"
+
 end

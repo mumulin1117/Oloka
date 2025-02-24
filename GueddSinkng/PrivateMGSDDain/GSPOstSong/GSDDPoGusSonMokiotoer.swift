@@ -156,7 +156,7 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
         
         playingmuscioGSDD.isSelected = !playingmuscioGSDD.isSelected
         if playingmuscioGSDD.isSelected == true {
-            GSDDRecordingGussing.gussinSS.playingREcordingAudio()
+            GSDDRecordingGussing.gussinSS.playingREcordingAudio(getfileURL: GSDDRecordingGussing.gussinSS.currentRecordingURL)
         }else{
             GSDDRecordingGussing.gussinSS.stopPlaingGSDD()
         }
