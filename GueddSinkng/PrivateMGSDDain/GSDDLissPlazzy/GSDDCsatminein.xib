@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSDDCsatminein" customModule="GueddSinkng" customModuleProvider="target">
             <connections>
                 <outlet property="gsddOploip" destination="5c8-Eq-kN4" id="1xh-xl-3E7"/>
+                <outlet property="initTAbleChatGSDD" destination="rS1-iu-0L6" id="cMI-hx-smP"/>
                 <outlet property="nameingjhtinhGSDD" destination="4FI-SA-fC8" id="Vwd-UT-tfr"/>
                 <outlet property="sizeGSDDUserpIC" destination="SnT-z0-g8D" id="6Hp-WX-adg"/>
                 <outlet property="view" destination="dcH-Fh-Xyb" id="qBD-yb-L5a"/>

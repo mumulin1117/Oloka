@@ -147,6 +147,8 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     
     
     @IBAction func opretionColgHHZan(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
         plazDeinGSDD.ifCollVidre = sender.isSelected
         for (kiii,itrme) in GSDDDALoaing.chanGSDD.loafingDaGSDD.enumerated() {
             if itrme.gsddUID == plazDeinGSDD.gsddUID {

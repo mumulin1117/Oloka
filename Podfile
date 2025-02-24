@@ -11,5 +11,6 @@ pod 'iCarousel'
 pod "IQKeyboardManager"
 pod 'Hero'
 pod "Player"
+pod "SwiftyStoreKit"
 
 end

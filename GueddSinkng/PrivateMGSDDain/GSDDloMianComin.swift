@@ -26,6 +26,9 @@ struct GSDDAbountUserinfo {
     
     var gsddVBrief:String
     
+    var loginEmailGSDD:String?
+    var gussUSerPayCount:String = "0"
+    
     var gussMusicname:String?
     var gussMusicPath:String?
     
@@ -39,7 +42,7 @@ struct GSDDAbountUserinfo {
     var ifCollVidre:Bool = false
     
     init(gsddUID: String, gsddNjmet: String, gsddPIav: String, gsddVBrief:String
-    ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil) {
+         ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil,loginEmailGSDD:String? = nil,gussUSerPayCount:String? = nil) {
         self.gsddUID = gsddUID
         self.gsddNjmet = gsddNjmet
         self.gsddPIav = gsddPIav
@@ -49,12 +52,25 @@ struct GSDDAbountUserinfo {
         self.gsddPoderCover = gsddPoderCover
         self.gsddPodercontentext = gsddPodercontentext
         self.gsddPodermp4path = gsddPodermp4path
+        self.loginEmailGSDD = loginEmailGSDD
+        self.gussUSerPayCount = gussUSerPayCount ?? "0"
     }
     
+    
+    init(defauletUser:Dictionary<String,String>) {
+        gsddUID = defauletUser["gsddUID"] ?? ""
+        gsddNjmet = defauletUser["gsddNjmet"] ?? ""
+        gsddPIav = defauletUser["gsddPIav"] ?? ""
+        gsddVBrief = defauletUser["guessUserBrief"] ?? ""
+        gussUSerPayCount = defauletUser["gussUSerPayCount"] ?? "0"
+        loginEmailGSDD = defauletUser["loginEmailGSDD"]
+    }
 }
 
 struct GSDDDALoaing {
     static var chanGSDD = GSDDDALoaing.init()
+    
+    var signinyhuGSDD:GSDDAbountUserinfo?
     
     var loafingDaGSDD:Array<GSDDAbountUserinfo> =  Array<GSDDAbountUserinfo>()
     
@@ -107,6 +123,15 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let tag798 = view.viewWithTag(789) as? UIButton
+        
+        tag798?.setBackgroundImage(GSDDEmaillogadComin.logUserImageIcon, for: .normal)
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hero.isEnabled = true
@@ -120,7 +145,7 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         //persontton
         let personiconGSDD = UIButton.init(frame: CGRect.init(x:13, y: framtipStartinset, width: 44, height: 44))
         personiconGSDD.setBackgroundImage(UIImage.init(named: "topersoniconDGSS"), for: .normal)
-       
+        personiconGSDD.tag = 789
         personiconGSDD.addTarget(self, action: #selector(personcenterinOkayot), for: .touchUpInside)
     
         view.addSubview(personiconGSDD)

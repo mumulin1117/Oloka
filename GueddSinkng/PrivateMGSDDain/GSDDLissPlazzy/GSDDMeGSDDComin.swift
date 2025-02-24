@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class GSDDMeGSDDComin: UIViewController {
     lazy var editBootomVIew = GSDDEfitInfoComin.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 483))
@@ -22,8 +23,12 @@ class GSDDMeGSDDComin: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        ckaobeiinonext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet
+        qiaminnext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief
         
-       
+        fancnCounttnext.text = "\(GSDDEmaillogadComin.fancertListGSDD.count)"
+        follreCounttnext.text = "\(GSDDEmaillogadComin.follwercertListGSDD.count)"
+        usersefimgInager.image =  GSDDEmaillogadComin.logUserImageIcon
     }
     
     @objc func tougegleToWallent(ijbnm:UIButton)  {
@@ -355,14 +360,50 @@ extension GSDDMeGSDDComin{
     
     @objc func takingProfolePhotoGSDD()  {
         
-        
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+    
+        if status == .authorized {
+          
+            let  pickerSSIPVC = UIImagePickerController()
+            
+            pickerSSIPVC.sourceType = .camera
+            
+            pickerSSIPVC.delegate = self
+           
+            present(pickerSSIPVC, animated: true, completion: nil)
+            
+        } else if status == .notDetermined {
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    DispatchQueue.main.async {
+                        let  pickerSSIPVC = UIImagePickerController()
+                        
+                        pickerSSIPVC.sourceType = .camera
+                        
+                        pickerSSIPVC.delegate = self
+                       
+                        self.present(pickerSSIPVC, animated: true, completion: nil)
+                    }
+                }
+            }
+        } else {
+            // 提示用户打开相机权限
+            
+        }
+        "Sorry->->,No ->->album ->->permission!"
     }
     
     
     
     @objc func saveProfoleinfoGSDD()  {
+     
         
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = ckaobeiinonext.text ?? "NULL"
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = qiaminnext.text  ?? "NULL"
         
+        GSDDEmaillogadComin.logUserImageIcon =  usersefimgInager.image
+    
+        GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: ckaobeiinonext.text ?? "NULL", briefGSDD: qiaminnext.text  ?? "NULL", xcoinID: nil)
     }
     
     
@@ -379,5 +420,19 @@ extension GSDDMeGSDDComin{
          }, completion: nil)
        
       }
+    
+}
+
+
+extension GSDDMeGSDDComin:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image : UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
+            picker.dismiss(animated: true, completion: nil)
+            return
+        }
+       
+        usersefimgInager.image = image
+        picker.dismiss(animated: true, completion: nil)
+    }
     
 }

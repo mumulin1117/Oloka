@@ -6,9 +6,15 @@
 //
 
 import UIKit
-
+import SwiftyStoreKit
 class GSDDEmaillogadComin: UIViewController {
-
+    static var logUserImageIcon:UIImage? = UIImage.init(named:"topersoniconDGSS" )
+    
+    static var fancertListGSDD:Array<GSDDAbountUserinfo> = Array<GSDDAbountUserinfo>()
+    static var follwercertListGSDD:Array<GSDDAbountUserinfo> = Array<GSDDAbountUserinfo>()
+    
+    
+    
     let emialDGSS = UITextField.init()
     let passwordlDGSS = UITextField.init()
     
@@ -61,7 +67,7 @@ class GSDDEmaillogadComin: UIViewController {
         emialIconbg.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
             make.top.equalTo(nameGSDD.snp.bottom).offset(64)
-            make.width.equalTo(106)
+            make.width.equalTo(146)
             make.height.equalTo(60)
         }
         
@@ -74,7 +80,7 @@ class GSDDEmaillogadComin: UIViewController {
         epswdalIconbg.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
             make.top.equalTo(emialIconbg.snp.bottom).offset(85)
-            make.width.equalTo(106)
+            make.width.equalTo(146)
             make.height.equalTo(60)
         }
         
@@ -170,6 +176,82 @@ class GSDDEmaillogadComin: UIViewController {
     //log in
     @objc func QuickadNadOkayot()  {
         
+        guard let contenEmailSSIP = emialDGSS.text,
+        let contetntPaseSSIP = passwordlDGSS.text,
+              !contenEmailSSIP.isEmpty,
+        !contetntPaseSSIP.isEmpty else {
+            ""
+            return
+        }
+        if contetntPaseSSIP.count < 6 || contetntPaseSSIP.count > 12 {
+            ""
+            return
+        }
+
+        let emailPreSSIPO = NSPredicate(format:"SELF MATCHES %@", "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
+        
+    
+        if emailPreSSIPO.evaluate(with: contenEmailSSIP) == false {
+           
+           ""
+            return
+        }
+        
+        //判断该邮箱是否注册，注册了，就是登陆-获取本地数据，
+        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+      
+        if let yxaccount = allUserDataSSIP.filter({ dicUserSSIP in
+            return dicUserSSIP["loginEmailGSDD"] == contenEmailSSIP
+        }).first {
+//            LipSigggneSnmingertips.logUoserdataSSIP = yxaccount//注册了，就是登陆-获取本地数据
+            let useid = yxaccount["gsddUID"]
+            if useid == "89985" {//如果是测试账号，添加测试数据
+                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
+                
+                GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
+                GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
+            }
+            
+            UserDefaults.standard.set(useid, forKey: "currentLogGSDDUID")
+            
+            "loging...."
+            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+            
+        }else{
+          //没注册就是创建，
+            let uid = "\(Int.random(in: 355555...455555))"
+            UserDefaults.standard.set(uid, forKey: "currentLogGSDDUID")
+           
+            let newUserSSIP =  ["gsddUID":uid,
+                                                                       
+                                "gsddNjmet":"NULL",
+                                "gsddPIav":"topersoniconDGSS",
+                                "guessUserBrief":"NULL",
+                                "gussUSerPayCount":"0",
+                                "loginEmailGSDD":contenEmailSSIP
+                                  
+            ]
+            
+            allUserDataSSIP.append(newUserSSIP)
+            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+            
+            "sign up...."
+            
+            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: contenEmailSSIP, gussUSerPayCount:"0")
+              
+            
+        }
+        
+       
+        
+        
+        let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
+        rooorGSDD.navigationBar.isHidden = true
+        GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
+        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rooorGSDD
+    
     }
     
     
@@ -177,5 +259,59 @@ class GSDDEmaillogadComin: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    class func completeGSDDTranPay()  {
+         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+     
+             for purchase in purchases {
+                 switch purchase.transaction.transactionState {
+                 case .purchased, .restored:
+                     let downloads = purchase.transaction.downloads
+                     if !downloads.isEmpty {
+                         SwiftyStoreKit.start(downloads)
+                     } else if purchase.needsFinishTransaction {
+                         SwiftyStoreKit.finishTransaction(purchase.transaction)
+                     }
+                 case .failed, .purchasing, .deferred:
+                     break
+                 @unknown default:
+                     break
+                 }
+             }
+                 
+             }
+        
+    }
+    
+    class func updateCurrentGSDDUsering(GSIDDD:String,nameGSDD:String?,briefGSDD:String?,xcoinID:String?){
+        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+      
+        
+        for (iiii,miter) in allUserDataSSIP.enumerated() {
+            
+            if miter["gsddUID"] == GSIDDD {
+                var dic = miter
+                if nameGSDD != nil {
+                    dic["gsddNjmet"] = nameGSDD
+                }
+                
+                if briefGSDD != nil {
+                    dic["guessUserBrief"] = briefGSDD
+                }
+               
+                if xcoinID != nil {
+                    dic["gussUSerPayCount"] = xcoinID
+                }
+                
+                allUserDataSSIP[iiii] = dic
+            }
+        }
+        
+        UserDefaults.standard.set( allUserDataSSIP, forKey: "AllUserLocalDataList")
+        
+ 
+    }
 
 }

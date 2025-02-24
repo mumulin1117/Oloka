@@ -4,6 +4,7 @@ PODS:
   - IQKeyboardManager (6.5.19)
   - Player (0.14.0)
   - SnapKit (5.7.1)
+  - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
   - Hero
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - Player
   - SnapKit
+  - SwiftyStoreKit
 
 SPEC REPOS:
   trunk:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - Player
     - SnapKit
+    - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   Hero: 473a0143017e1371d050fcbedb67d317925097f2
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   Player: 37e0acc16ea1495fc241df88fe9f089367513331
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 74a388beb51ead29312edcecb350ba1537af4e9a
+PODFILE CHECKSUM: 1dbac34bd8f1703cd981fc1d9577b5fd2b4a6d51
 
 COCOAPODS: 1.16.2

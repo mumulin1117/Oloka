@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class GSDDUserilcomine: UIViewController {
 
     override func viewDidLoad() {
@@ -168,6 +169,9 @@ class GSDDUserilcomine: UIViewController {
         self.present(alertGSDD, animated: true)
     }
 
+    
+ 
+    
 }
 
 

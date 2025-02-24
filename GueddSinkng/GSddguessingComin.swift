@@ -187,11 +187,43 @@ Contact email: Oloka@gmail.com
             
             self.gsdd_loadActiveViw.showSuccess(message: "Tourist mode login successful ✔")
             
+            
+            
+            
             let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
             rooorGSDD.navigationBar.isHidden = true
             
             (  (UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = rooorGSDD
         }
+        
+        
+        
+        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+      
+        
+            let uid = "\(Int.random(in: 55...100))"
+            UserDefaults.standard.set(uid, forKey: "currentLogGSDDUID")
+           
+            let newUserSSIP =  ["gsddUID":uid,
+                                                                       
+                                "gsddNjmet":"NULL",
+                                "gsddPIav":"topersoniconDGSS",
+                                "guessUserBrief":"NULL",
+                                "gussUSerPayCount":"0",
+                                "loginEmailGSDD":"tourist090@gmai.com"
+                                  
+            ]
+            
+            allUserDataSSIP.append(newUserSSIP)
+            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+            
+            "sign up...."
+            
+            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")
+              
+            
         
      
     }

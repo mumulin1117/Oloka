@@ -70,7 +70,15 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     
     //关注
     @IBAction func statusRelationGSDD(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         
+        if sender.isSelected {
+            GSDDEmaillogadComin.follwercertListGSDD.append(plazDeinGSDD)
+        }else{
+            GSDDEmaillogadComin.follwercertListGSDD = GSDDEmaillogadComin.follwercertListGSDD.filter({ uise in
+                uise.gsddUID != plazDeinGSDD.gsddUID
+            })
+        }
         
     }
     

@@ -9,7 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSDDAbounreinusuipminein" customModule="GueddSinkng" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSDDAbounreinusuipminein" customModule="GueddSinkng" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="ZQu-r2-hVa" id="Bu3-zT-MZk"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZQu-r2-hVa">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -32,6 +36,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="redBackiOn"/>
+                    <connections>
+                        <action selector="GSddappbackNoing:" destination="-1" eventType="touchUpInside" id="WZo-Tg-Wph"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xno-4x-1nv">
                     <rect key="frame" x="181.66666666666666" y="652" width="30" height="50"/>

@@ -60,7 +60,20 @@ class GSDDGuessNOMokiotoer: UIViewController {
              self.dismiss(animated: true)
          }else{
             //花钱知道答案
+          
+             var CounytDiomend = Int(GSDDDALoaing.chanGSDD.signinyhuGSDD?.gussUSerPayCount ?? "0") ?? 0
              
+             if CounytDiomend  < 100 {
+                 let relaiony = GSDDRealtiongpminein.init()
+                 
+                 self.navigationController?.popToViewController(relaiony, animated: true)
+                 return
+             }
+             
+             
+             CounytDiomend -= 100
+             GSDDDALoaing.chanGSDD.signinyhuGSDD?.gussUSerPayCount = "\(CounytDiomend)"
+             GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: nil, briefGSDD: nil, xcoinID: "\(CounytDiomend)")
              //花钱了
              self.dismiss(animated: true)
              if delegsdd != nil {

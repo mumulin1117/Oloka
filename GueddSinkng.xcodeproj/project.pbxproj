@@ -40,6 +40,8 @@
 		04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */; };
 		04A8DFDD2D6C0B7900876DCD /* GSDDRecordingGussing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFDC2D6C0B7900876DCD /* GSDDRecordingGussing.swift */; };
 		04A8DFDF2D6C1D9300876DCD /* GSDDUserilcomine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFDE2D6C1D9300876DCD /* GSDDUserilcomine.swift */; };
+		04A8DFE22D6C53D500876DCD /* GSDDUserPauioell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */; };
+		04A8DFE32D6C53D500876DCD /* GSDDUserPauioell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFE02D6C53D500876DCD /* GSDDUserPauioell.swift */; };
 		93CA419D957BDF47EA02B7C9 /* Pods_GueddSinkng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */; };
 		CE8FA5E92D68C37900D091FD /* GSDDLisstingPlazyComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5E82D68C37900D091FD /* GSDDLisstingPlazyComin.swift */; };
 		CE8FA5EB2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */; };
@@ -100,6 +102,8 @@
 		04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDgussMainView.swift; sourceTree = "<group>"; };
 		04A8DFDC2D6C0B7900876DCD /* GSDDRecordingGussing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDRecordingGussing.swift; sourceTree = "<group>"; };
 		04A8DFDE2D6C1D9300876DCD /* GSDDUserilcomine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDUserilcomine.swift; path = GueddSinkng/PrivateMGSDDain/GSPOstSong/GSDDUserilcomine.swift; sourceTree = SOURCE_ROOT; };
+		04A8DFE02D6C53D500876DCD /* GSDDUserPauioell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDUserPauioell.swift; path = GueddSinkng/PrivateMGSDDain/GSPOstSong/GSDDUserPauioell.swift; sourceTree = SOURCE_ROOT; };
+		04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDUserPauioell.xib; path = GueddSinkng/PrivateMGSDDain/GSPOstSong/GSDDUserPauioell.xib; sourceTree = SOURCE_ROOT; };
 		9BB007C8B596F2B152D3E80B /* Pods-GueddSinkng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.release.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.release.xcconfig"; sourceTree = "<group>"; };
 		C5730344A668E4D218E29155 /* Pods-GueddSinkng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.debug.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8FA5E82D68C37900D091FD /* GSDDLisstingPlazyComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLisstingPlazyComin.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				CE9E76692D69C38400ED180F /* GSDDWallentipminein.xib */,
 				CE9E766C2D69C41A00ED180F /* GSDDRealtiongpminein.swift */,
 				04A8DFDE2D6C1D9300876DCD /* GSDDUserilcomine.swift */,
+				04A8DFE02D6C53D500876DCD /* GSDDUserPauioell.swift */,
+				04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */,
 			);
 			path = GSMe;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				048AA0E62D68898E00228F5F /* GSDDBPoberViserComin.xib in Resources */,
 				048AA0B62D680E4400228F5F /* GSDDBinLinkS.plist in Resources */,
 				04A7E1F52D658228004D5FB1 /* Assets.xcassets in Resources */,
+				04A8DFE22D6C53D500876DCD /* GSDDUserPauioell.xib in Resources */,
 				CE9E765E2D69AEC100ED180F /* GSDDCsatminein.xib in Resources */,
 				CE9E766A2D69C38400ED180F /* GSDDWallentipminein.xib in Resources */,
 				048AA0D12D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib in Resources */,
@@ -453,6 +460,7 @@
 				048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */,
 				04A7E1FC2D6585BB004D5FB1 /* GSDDGSddReadComin.swift in Sources */,
 				CE9E766D2D69C41A00ED180F /* GSDDRealtiongpminein.swift in Sources */,
+				04A8DFE32D6C53D500876DCD /* GSDDUserPauioell.swift in Sources */,
 				CE9E766B2D69C38400ED180F /* GSDDWallentipminein.swift in Sources */,
 				04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */,
 				04A7E1FA2D6582DE004D5FB1 /* GSddguessingComin.swift in Sources */,
