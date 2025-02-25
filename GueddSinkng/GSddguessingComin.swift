@@ -154,7 +154,7 @@ Contact email: Oloka@gmail.com
     
     @objc  func elaiolloginNadOkayot() {
         if UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot") != true {
-            gsdd_loadActiveViw.showFailure(message: "please read and agree to our privacy and terms at first!!!")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "please read and agree to our privacy and terms at first!!!")
             return
         }
         self.navigationController?.pushViewController(GSDDEmaillogadComin.init(), animated: true)
@@ -174,7 +174,7 @@ Contact email: Oloka@gmail.com
     //quick login
     @objc  func QuickadNadOkayot() {
         if UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot") != true {
-            gsdd_loadActiveViw.showFailure(message: "please read and agree to our privacy and terms at first!!!")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "please read and agree to our privacy and terms at first!!!")
             return
         }
         
@@ -185,15 +185,12 @@ Contact email: Oloka@gmail.com
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
             self.gsdd_loadActiveViw.end_GSDDAnimating()
             
-            self.gsdd_loadActiveViw.showSuccess(message: "Tourist mode login successful ✔")
+            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Tourist mode login successful ✔")
             
             
             
             
-            let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
-            rooorGSDD.navigationBar.isHidden = true
-            
-            (  (UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = rooorGSDD
+            AppDelegate.canenterInForamtVC()
         }
         
         
@@ -201,27 +198,26 @@ Contact email: Oloka@gmail.com
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         
         areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-      
+        let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
         
-            let uid = "\(Int.random(in: 55...100))"
-            UserDefaults.standard.set(uid, forKey: "currentLogGSDDUID")
+            let creteuid = "\(Int.random(in: 55...100))"
+            UserDefaults.standard.set(creteuid, forKey: "currentLogGSDDUID")
            
-            let newUserSSIP =  ["gsddUID":uid,
-                                                                       
+            let createGSDduser =  ["gsddUID":creteuid,
                                 "gsddNjmet":"Tourist mode",
                                 "gsddPIav":"topersoniconDGSS",
-                                "guessUserBrief":"NULL",
+                                "guessUserBrief":bullftext,
                                 "gussUSerPayCount":"0",
                                 "loginEmailGSDD":"tourist090@gmai.com"
                                   
             ]
             
-            areadyExsisteduserInfoGSDD.append(newUserSSIP)
+            areadyExsisteduserInfoGSDD.append(createGSDduser)
             UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
         GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
             
        
-            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")
+            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: creteuid, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")
               
             
         
@@ -303,7 +299,7 @@ Contact email: Oloka@gmail.com
     Protocol update notification method: In app pop-up announcement
     Complaints and Suggestions: Oloka@gmail.com
     """
-            let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Terms of Service", texfReadShong: eluDetail)
+            let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: " Terms  of  Service ", texfReadShong: eluDetail)
             self.present(kiopGDSS, animated: true)
             return false
         }

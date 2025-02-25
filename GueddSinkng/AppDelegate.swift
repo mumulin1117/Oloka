@@ -15,19 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        if UserDefaults.standard.string(forKey: "downAreadGSloadapp") == nil || UserDefaults.standard.string(forKey:"downAreadGSloadapp" ) == "firstTime" {
+        if UserDefaults.standard.string(forKey: "downAreadGSloadapp") == nil  {
             createDemoUserGSDD()
         }
         
         if let  uieidSignin = UserDefaults.standard.string(forKey: "currentLogGSDDUID")  {
            
             self.getLoacalLoginUser(uieidSignin: uieidSignin)
-            let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
-            rooorGSDD.navigationBar.isHidden = true
-            
-            self.window?.rootViewController =  rooorGSDD
-            
-           
+
+            AppDelegate.canenterInForamtVC()
         }else{
             let rooorGSDD = UINavigationController.init(rootViewController: GSddguessingComin.init())
             rooorGSDD.navigationBar.isHidden = true
@@ -46,18 +42,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
    
     private  func createDemoUserGSDD()  {
-        //判断是否是第一次下载App，如果是第一次，创建测试账号
+      
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-        areadyExsisteduserInfoGSDD.append(["gsddNjmet":"Aberria",
-                                "gsddPIav":"SSIPavator9",
-                                "gussUSerPayCount":"100",
+        areadyExsisteduserInfoGSDD.append(["gsddNjmet":"Artrlia",
+                                "gsddPIav":"jiokljertGs",
+                                "gussUSerPayCount":"0",
                                 "loginEmailGSDD":"Oloka@gmail.com",
                                 "guessUserBrief":"I love guessing songs!",
                                 "gsddUID":"89985"
 
                                ])
         
-        UserDefaults.standard.set("notfirsttime", forKey: "downAreadGSloadapp")
+        UserDefaults.standard.set("downAreadGS", forKey: "downAreadGSloadapp")
         
         UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
        
@@ -69,8 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
         IQKeyboardManager.shared().isEnabled = true
-        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ dicUserSSIP in
-            return dicUserSSIP["gsddUID"] == uieidSignin
+        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ ugs in
+            return ugs["gsddUID"] == uieidSignin
         }).first {
             if uieidSignin == "89985" {//如果是测试账号，添加测试数据
                 GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
@@ -84,6 +80,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
+    }
+    
+    
+    class func canenterInForamtVC()  {
+        let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
+        
+        rooorGSDD.navigationBar.isHidden = true
+        
+        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rooorGSDD
+    }
+    
+    
+ 
+    class func descBABAString(upcaseGS:String,orialna:Bool = false,lastercase:String = "descBABAString") -> String {
+        var orgilaCase = orialna
+        var debabscGSDD = ""
+        if lastercase.count < 3 {
+            debabscGSDD.append(lastercase)
+            orgilaCase = true
+        }
+        
+        
+        var needGSDDSbabay = true
+        
+        for singlr in upcaseGS {
+            if needGSDDSbabay {
+                debabscGSDD.append(singlr)
+            }
+            if orgilaCase == true {
+                needGSDDSbabay.toggle()
+            }else{
+                needGSDDSbabay.toggle()
+            }
+           
+        }
+       
+        return debabscGSDD
     }
 }
 

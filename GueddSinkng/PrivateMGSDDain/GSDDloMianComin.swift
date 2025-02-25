@@ -77,7 +77,10 @@ struct GSDDDALoaing {
     var loafingDaGSDD:Array<GSDDAbountUserinfo> =  Array<GSDDAbountUserinfo>()
     
     init(){
-        guard let path = Bundle.main.path(forResource: "GSDDBinLinkS", ofType: "plist"),
+        
+        let fileFormate = AppDelegate.descBABAString(upcaseGS: "phlziwsct")
+        
+        guard let path = Bundle.main.path(forResource: "GSDDBinLinkS", ofType: fileFormate),
               let data = FileManager.default.contents(atPath: path) else {
             return
         }

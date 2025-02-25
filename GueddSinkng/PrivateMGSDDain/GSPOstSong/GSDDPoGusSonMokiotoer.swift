@@ -8,6 +8,17 @@
 import UIKit
 
 import AVFoundation
+
+@objc public protocol GSDRecordingDelegate: AnyObject {
+    @objc  func recordingSongGSDDFailed() // 录音失败
+    @objc  func recordingSongGSDDEnd() // 录音停止
+
+    @objc  func recordingSongGSDDChange()//录音每隔一秒调用
+    
+    
+    @objc  func playingSongGSDDCompleted()//播放完成
+    @objc  func playingSongGSDDError()//播放出错
+}
 /// 发布猜歌
 class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
@@ -17,25 +28,25 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
         //提示 播放完成
         playingmuscioGSDD.isSelected = false
         
-        gsdd_loadActiveViw.showSuccess(message: " Play completed ✔")
+        gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: " Play completed ✔")
     }
     
     func playingSongGSDDError() {
         //提示 播放出错
         playingmuscioGSDD.isSelected = false
         
-        gsdd_loadActiveViw.showFailure(message: "Play error")
+        gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Play error")
     }
     
     func recordingSongGSDDFailed() {
         //提示 录音出错
-        gsdd_loadActiveViw.showFailure(message: "Recording error")
+        gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Recording error")
     }
     
     func recordingSongGSDDEnd() {
         //提示 录音成功结束
         IfHaveRecordingFile = true
-        gsdd_loadActiveViw.showSuccess(message: " Recording successfully ended ✔")
+        gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: " Recording successfully ended ✔")
     }
     
 //    func recordingSongGSDDTooshort() {
@@ -44,7 +55,7 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
     
     func recordingSongGSDDChange() {
         
-        let totlaSeconds = GSDDRecordingGussing.gussinSS.recordSeconds
+        let totlaSeconds = GSDDRecordingGussing.gussinSS.recordTimeSecGS
         
         let hours = totlaSeconds / 3600
         let minutes = (totlaSeconds % 3600) / 60
@@ -113,8 +124,8 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
     @IBAction func startGSDDREcord(_ sender: UIButton) {
         GSDDPoGusSonMokiotoer.requMicphnePerGSDD {
             UIView.animate(withDuration: 1, animations: {
-                GSDDRecordingGussing.gussinSS.delegate = self
-                GSDDRecordingGussing.gussinSS.startRecord()
+                GSDDRecordingGussing.gussinSS.recorAndPlaydelegate = self
+                GSDDRecordingGussing.gussinSS.begin_GSDD_songRecord()
                 self.popReordViewGS.transform = CGAffineTransform(translationX: 0, y: -420)
             }, completion: nil)
             
@@ -139,24 +150,24 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
     
     @IBAction func postSureRecoring(_ sender: UIButton) {
         if let enterContetnt = gsddEnterPostView.text ,enterContetnt.isEmpty != false{
-            gsdd_loadActiveViw.showFailure(message: "Please enter the song name！")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please enter the song name！")
             return
         }
         
         if IfHaveRecordingFile == false {
-            gsdd_loadActiveViw.showFailure(message: "Please sing your song first！")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please sing your song first！")
             
             return
         }
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("upload...")
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS: "uwpvlxozarda.y.f."))
         gsdd_loadActiveViw.begin_GSDDAnimating()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
             self.gsdd_loadActiveViw.end_GSDDAnimating()
             
            
-            let openongslet = UIAlertController(title: "Published successfully", message: "The challenge track you posted will be displayed after review！", preferredStyle: UIAlertController.Style.alert)
-            openongslet.addAction(UIAlertAction(title: "I know", style: .default, handler: { dvvv in
+            let openongslet = UIAlertController(title:  AppDelegate.descBABAString(upcaseGS: "Pquebtloiusshmeydg jsiuxcbczegsushfauplxlcy"), message: "The challenge track you posted will be displayed after review！", preferredStyle: UIAlertController.Style.alert)
+            openongslet.addAction(UIAlertAction(title: AppDelegate.descBABAString(upcaseGS: "Ie jkincopw"), style: .default, handler: { dvvv in
                 self.navigationController?.popViewController(animated: true)
             }))
             
@@ -175,7 +186,7 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
         
         playingmuscioGSDD.isSelected = !playingmuscioGSDD.isSelected
         if playingmuscioGSDD.isSelected == true {
-            GSDDRecordingGussing.gussinSS.playingREcordingAudio(getfileURL: GSDDRecordingGussing.gussinSS.currentRecordingURL)
+            GSDDRecordingGussing.gussinSS.playingREcordingAudio(getfileURL: GSDDRecordingGussing.gussinSS.nowRecordPathGSDDURL)
         }else{
             GSDDRecordingGussing.gussinSS.stopPlaingGSDD()
         }

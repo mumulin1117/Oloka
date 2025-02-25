@@ -16,7 +16,7 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     }
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("")
     }
     
     @IBOutlet weak var statusRelati: UIButton!
@@ -30,7 +30,7 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     //举报拉嘿
     @IBAction func GSddRepPoprationNoing(_ sender: UIButton) {
       
-        self.showBlockOrReportAlert(targetUserName: plazDeinGSDD.gsddUID)
+        self.showBlockOrReportAlert(targeGSDDIUID: plazDeinGSDD.gsddUID)
         
     }
     
@@ -72,7 +72,9 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     @IBAction func statusRelationGSDD(_ sender: UIButton) {
         
         
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        let loadinftext = AppDelegate.descBABAString(upcaseGS: "liorakdiitnzgn.u.e.")
+        
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(loadinftext)
         gsdd_loadActiveViw.begin_GSDDAnimating()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){

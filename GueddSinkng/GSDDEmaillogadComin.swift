@@ -13,14 +13,15 @@ class GSDDEmaillogadComin: UIViewController {
     
     static var logUserImageIcon:UIImage? = UIImage.init(named:"topersoniconDGSS" )
     
-    static var fancertListGSDD:Array<GSDDAbountUserinfo> = Array<GSDDAbountUserinfo>()
-    static var follwercertListGSDD:Array<GSDDAbountUserinfo> = Array<GSDDAbountUserinfo>()
-    
+      
     
     
     let emialDGSS = UITextField.init()
-    let passwordlDGSS = UITextField.init()
     
+    static var fancertListGSDD:Array<GSDDAbountUserinfo> = Array<GSDDAbountUserinfo>()
+    let passwordlDGSS = UITextField.init()
+    static var follwercertListGSDD:Array<GSDDAbountUserinfo> = Array<GSDDAbountUserinfo>()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -180,115 +181,6 @@ class GSDDEmaillogadComin: UIViewController {
        
     }
     
-    
-    
-    //log in
-    @objc func QuickadNadOkayot()  {
-        
-        guard let contenEmailSSIP = emialDGSS.text,
-        let contetntPaseSSIP = passwordlDGSS.text,
-              !contenEmailSSIP.isEmpty,
-        !contetntPaseSSIP.isEmpty else {
-            gsdd_loadActiveViw.showFailure(message: "Please enter your login password and email first!")
-            return
-        }
-        if contetntPaseSSIP.count < 6 || contetntPaseSSIP.count > 12 {
-            gsdd_loadActiveViw.showFailure(message: "The password must be between 6 and 12 digits")
-            return
-        }
-
-        let emailPreSSIPO = NSPredicate(format:"SELF MATCHES %@", "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
-        
-    
-        if emailPreSSIPO.evaluate(with: contenEmailSSIP) == false {
-            gsdd_loadActiveViw.showFailure(message: "The email format entered is incorrect")
-           
-            return
-        }
-        
-        //判断该邮箱是否注册，注册了，就是登陆-获取本地数据，
-        var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-        
-        areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-      
-        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ dicUserSSIP in
-            return dicUserSSIP["loginEmailGSDD"]?.lowercased() == contenEmailSSIP.lowercased()
-        }).first {
-
-            let useid = yxaccount["gsddUID"]
-            if useid == "89985" {//如果是测试账号，添加测试数据
-                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
-                
-                GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
-                GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
-            }
-            
-            UserDefaults.standard.set(useid, forKey: "currentLogGSDDUID")
-            
-            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Logging in...")
-            gsdd_loadActiveViw.begin_GSDDAnimating()
-
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
-                self.gsdd_loadActiveViw.end_GSDDAnimating()
-                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
-                self.gsdd_loadActiveViw.showSuccess(message: "log in successful ✔")
-                
-                
-            }
-            
-            
-        }else{
-          //没注册就是创建，
-            let uid = "\(Int.random(in: 355555...455555))"
-            UserDefaults.standard.set(uid, forKey: "currentLogGSDDUID")
-           
-            let newUserSSIP =  ["gsddUID":uid,
-                                                                       
-                                "gsddNjmet":"NULL",
-                                "gsddPIav":"topersoniconDGSS",
-                                "guessUserBrief":"NULL",
-                                "gussUSerPayCount":"0",
-                                "loginEmailGSDD":contenEmailSSIP
-                                  
-            ]
-            
-            areadyExsisteduserInfoGSDD.append(newUserSSIP)
-            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
-            
-            
-            
-            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("sign up....")
-            gsdd_loadActiveViw.begin_GSDDAnimating()
-
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
-                self.gsdd_loadActiveViw.end_GSDDAnimating()
-                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
-                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: contenEmailSSIP, gussUSerPayCount:"0")
-                self.gsdd_loadActiveViw.showSuccess(message: "sign up successful ✔")
-                
-                
-            }
-            
-              
-            
-        }
-        
-       
-        
-        
-        let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
-        rooorGSDD.navigationBar.isHidden = true
-        
-        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rooorGSDD
-    
-    }
-    
-    
-    @objc  func bagerinOkayot() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    
     class func completeGSDDTranPay()  {
          SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
      
@@ -311,6 +203,107 @@ class GSDDEmaillogadComin: UIViewController {
              }
         
     }
+    
+    //log in
+    @objc func QuickadNadOkayot()  {
+        
+        if let judgeresult = judgeISconditionISOkay().0,judgeresult == false {
+            return
+        }
+
+        let emaFormatJudge = NSPredicate(format:"SELF MATCHES %@", "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
+        
+    
+        if emaFormatJudge.evaluate(with: judgeISconditionISOkay().1) == false {
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "The email format entered is incorrect")
+           
+            return
+        }
+        
+        //判断该邮箱是否注册，注册了，就是登陆-获取本地数据，
+        var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+      
+        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ udhurGS in
+            return udhurGS["loginEmailGSDD"]?.lowercased() == judgeISconditionISOkay().1.lowercased()
+        }).first {
+
+            let uGSDDid = yxaccount["gsddUID"]
+            if uGSDDid == "89985" {//如果是测试账号，添加测试数据
+                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
+                
+                GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
+                GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
+            }
+            
+            UserDefaults.standard.set(uGSDDid, forKey: "currentLogGSDDUID")
+            
+            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Logging in...")
+            gsdd_loadActiveViw.begin_GSDDAnimating()
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                self.gsdd_loadActiveViw.end_GSDDAnimating()
+                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "log in successful ✔")
+                
+                
+            }
+            
+            
+        }else{
+          //没注册就是创建，
+            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("sign up....")
+           
+            let uidCreateFS = "\(Int.random(in: 355555...455555))"
+            gsdd_loadActiveViw.begin_GSDDAnimating()
+            UserDefaults.standard.set(uidCreateFS, forKey: "currentLogGSDDUID")
+            let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
+       
+            areadyExsisteduserInfoGSDD.append(["gsddUID":uidCreateFS,
+                                               
+                                               "gsddNjmet":bullftext,
+                                               "gsddPIav":"topersoniconDGSS",
+                                               "guessUserBrief":bullftext,
+                                               "gussUSerPayCount":"0",
+                                               "loginEmailGSDD":judgeISconditionISOkay().1
+                                                 
+                           ])
+            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
+            
+            
+            
+           
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                self.gsdd_loadActiveViw.end_GSDDAnimating()
+                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
+                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uidCreateFS, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: self.judgeISconditionISOkay().1, gussUSerPayCount:"0")
+                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "sign up successful ✔")
+                
+                
+            }
+            
+              
+            
+        }
+        
+       
+        
+        
+        AppDelegate.canenterInForamtVC()
+    
+    }
+    
+    
+    @objc  func bagerinOkayot() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    
+   
     
     class func updateCurrentGSDDUsering(GSIDDD:String,nameGSDD:String?,briefGSDD:String?,xcoinID:String?){
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
@@ -341,6 +334,22 @@ class GSDDEmaillogadComin: UIViewController {
         UserDefaults.standard.set( areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
         
  
+    }
+    
+    func judgeISconditionISOkay() -> (Bool?,String) {
+        guard let mailGSDD = emialDGSS.text,
+        let pafwGSDD = passwordlDGSS.text,
+              !mailGSDD.isEmpty,
+        !pafwGSDD.isEmpty else {
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please enter your login password and email first!")
+            return (false,"")
+        }
+        if pafwGSDD.count < 6 || pafwGSDD.count > 12 {
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "The password must be between 6 and 12 digits")
+            return (false,mailGSDD)
+        }
+        
+        return (true,mailGSDD)
     }
 
 }

@@ -36,7 +36,7 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var nameingjhtinhGSDD: UILabel!
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("")
     }
     
     @IBOutlet weak var initTAbleChatGSDD: UITableView!
@@ -63,7 +63,7 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
 
     //举报拉嘿
     @IBAction func GSddRepPoprationNoing(_ sender: UIButton) {
-        self.showBlockOrReportAlert(targetUserName: plazDeinGSDD.gsddUID)
+        self.showBlockOrReportAlert(targeGSDDIUID: plazDeinGSDD.gsddUID)
         
     }
     
@@ -145,6 +145,6 @@ class GSDDChikerCell: UITableViewCell {
     
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("")
     }
 }

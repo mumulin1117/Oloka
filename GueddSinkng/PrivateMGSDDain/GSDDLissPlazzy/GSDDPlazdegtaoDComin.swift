@@ -44,7 +44,7 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("")
     }
     
     
@@ -147,7 +147,9 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     
     @IBAction func expressChengHHZan(_ sender: UIButton) {
         
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        let loadinftext = AppDelegate.descBABAString(upcaseGS: "liorakdiitnzgn.u.e.")
+        
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(loadinftext)
         gsdd_loadActiveViw.begin_GSDDAnimating()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
@@ -171,7 +173,9 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     @IBAction func opretionColgHHZan(_ sender: UIButton) {
         
                
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        let loadinftext = AppDelegate.descBABAString(upcaseGS: "liorakdiitnzgn.u.e.")
+        
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(loadinftext)
         gsdd_loadActiveViw.begin_GSDDAnimating()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){

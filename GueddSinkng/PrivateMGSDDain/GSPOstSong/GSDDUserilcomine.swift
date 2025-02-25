@@ -13,9 +13,11 @@ class GSDDUserilcomine: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(adfgBackoing), name: NSNotification.Name.init("addBlockGSDDBackoing"), object: nil)
+       
         
         gsdd_loadActiveViw2.center = self.view.center
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(adfgBackoing), name: NSNotification.Name.init("addBlockGSDDBackoing"), object: nil)
         gsdd_loadActiveViw2.isHidden = true
         view.addSubview(gsdd_loadActiveViw2)
     }
@@ -25,58 +27,53 @@ class GSDDUserilcomine: UIViewController {
     }
 
     // MARK: - 显示拉黑/举报弹窗
-    func showBlockOrReportAlert(targetUserName: String) {
-        let alert = UIAlertController(
+    func showBlockOrReportAlert(targeGSDDIUID: String) {
+        let alertGSDD = UIAlertController(
             title: "Operation options",
             message: "Please select the operation for the user",
             preferredStyle: .actionSheet
         )
-        
-        // 拉黑按钮（红色警示样式）
-        alert.addAction(UIAlertAction(
+        let quFormate = AppDelegate.descBABAString(upcaseGS: "cqadnncoexl")
+        alertGSDD.addAction(UIAlertAction(
             title: "Block users",
             style: .destructive
         ) { [self] _ in
-            confirmBlockUser(userGSDDIDD: targetUserName)
+            confirmGSDDBlock_User(userGSDDIDD: targeGSDDIUID)
         })
         
-        // 举报按钮
-        alert.addAction(UIAlertAction(
+      
+        alertGSDD.addAction(UIAlertAction(
             title: "Report user",
             style: .default
         ) { [self] _ in
-            showReportOptions()
+            show_GSDDReport_Options()
         })
         
-        // 取消按钮
-        alert.addAction(UIAlertAction(
-            title: "cancel",
+   
+        alertGSDD.addAction(UIAlertAction(
+            title: quFormate,
             style: .cancel
         ))
         
-       
-        
-        // 显示弹窗
-        present(alert, animated: true)
-//        UIApplication.shared.keyWindow?.rootViewController?.topperMostGSDController.present(alert, animated: true)
+      
+        present(alertGSDD, animated: true)
+
     }
 
     // MARK: - 二次确认拉黑弹窗
-    private func confirmBlockUser(userGSDDIDD: String) {
-        let alert = UIAlertController(
+    private func confirmGSDDBlock_User(userGSDDIDD: String) {
+        let alertGSDD = UIAlertController(
             title: "Confirm to block?",
             message: "After being blacklisted, messages from the user will no longer be received, and both parties will not be able to view each other's updates",
             preferredStyle: .alert
         )
         
-        alert.addAction(UIAlertAction(title: "cancel", style: .cancel))
-        alert.addAction(UIAlertAction(
+        alertGSDD.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        alertGSDD.addAction(UIAlertAction(
             title: "Confirm to block",
             style: .destructive
         ) { _ in
-            // 执行实际拉黑逻辑
-            
-            
+        
             for (obn,Itemg)  in GSDDDALoaing.chanGSDD.loafingDaGSDD.enumerated() {
                 if Itemg.gsddUID == userGSDDIDD {
                     GSDDDALoaing.chanGSDD.loafingDaGSDD.remove(at: obn)
@@ -86,7 +83,7 @@ class GSDDUserilcomine: UIViewController {
             self.gsdd_loadActiveViw2.begin_GSDDAnimating()
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
                 self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                self.gsdd_loadActiveViw2.showSuccess(message: "Block successful ✔")
+                self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: "Block successful ✔")
 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                     
@@ -102,25 +99,24 @@ class GSDDUserilcomine: UIViewController {
             
         })
         
-        present(alert, animated: true)
+        present(alertGSDD, animated: true)
     }
 
     // MARK: - 举报选项弹窗
-    private func showReportOptions() {
-        let alert = UIAlertController(
+    private func show_GSDDReport_Options() {
+        let alertGSDD = UIAlertController(
             title: "Reason for reporting",
             message: "Please select the reason for reporting this user",
             preferredStyle: .actionSheet
         )
-        
-        // 预设举报类型
+  
         let reasons = [
             "Junk advertising", "pornographic content", "personal attacks",
             "False information", "Other reasons"
         ]
         
         reasons.forEach { reason in
-            alert.addAction(UIAlertAction(
+            alertGSDD.addAction(UIAlertAction(
                 title: reason,
                 style: .default
             ) { _ in
@@ -130,19 +126,19 @@ class GSDDUserilcomine: UIViewController {
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                         self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                        
-                        self.gsdd_loadActiveViw2.showSuccess(message: "Thank you for your supervision. We will review the disease treatment as soon as possible! ✔")
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "dTshoaonkkd jygoful vfqojrr dymodusrd hscujptehrcvfidswigoxnz.s zWsef lwoiwlblo hrveyvfizehwh ztihtea mdpibscebarshew stkrpeeaktemmeenrtt faesg vsaodolnt yausn tpmowspsxirbuleen!e m")
+                        self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: resultsullormate)
                         
                         
                     }
                 }))
             })
         }
+        let quFormate = AppDelegate.descBABAString(upcaseGS: "cqadnncoexl")
+        alertGSDD.addAction(UIAlertAction(title: quFormate, style: .cancel))
         
-        alert.addAction(UIAlertAction(title: "cancel", style: .cancel))
         
-        
-        present(alert, animated: true)
+        present(alertGSDD, animated: true)
     }
 
     // MARK: - 举报视频内容弹窗
@@ -163,8 +159,8 @@ class GSDDUserilcomine: UIViewController {
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                         self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                        
-                        self.gsdd_loadActiveViw2.showSuccess(message: "Thank you for your supervision. We will review the disease treatment as soon as possible! ✔")
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "dTshoaonkkd jygoful vfqojrr dymodusrd hscujptehrcvfidswigoxnz.s zWsef lwoiwlblo hrveyvfizehwh ztihtea mdpibscebarshew stkrpeeaktemmeenrtt faesg vsaodolnt yausn tpmowspsxirbuleen!e m")
+                        self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: resultsullormate)
                         
                         
                     }
@@ -173,9 +169,9 @@ class GSDDUserilcomine: UIViewController {
             
             alertGSDD.addAction(action)
         }
-        
+        let quFormate = AppDelegate.descBABAString(upcaseGS: "cqadnncoexl")
       
-        alertGSDD.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        alertGSDD.addAction(UIAlertAction(title: quFormate, style: .cancel))
         self.present(alertGSDD, animated: true)
     }
     
@@ -197,8 +193,8 @@ class GSDDUserilcomine: UIViewController {
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                         self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                        
-                        self.gsdd_loadActiveViw2.showSuccess(message: "Thank you for your supervision. We will review the disease treatment as soon as possible! ✔")
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "dTshoaonkkd jygoful vfqojrr dymodusrd hscujptehrcvfidswigoxnz.s zWsef lwoiwlblo hrveyvfizehwh ztihtea mdpibscebarshew stkrpeeaktemmeenrtt faesg vsaodolnt yausn tpmowspsxirbuleen!e m")
+                        self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: resultsullormate)
                         
                         
                     }
@@ -207,9 +203,9 @@ class GSDDUserilcomine: UIViewController {
             
             alertGSDD.addAction(action)
         }
-        
+        let quFormate = AppDelegate.descBABAString(upcaseGS: "cqadnncoexl")
       
-        alertGSDD.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        alertGSDD.addAction(UIAlertAction(title: quFormate, style: .cancel))
         self.present(alertGSDD, animated: true)
     }
 

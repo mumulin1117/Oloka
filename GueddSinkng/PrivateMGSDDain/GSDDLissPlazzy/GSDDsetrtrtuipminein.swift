@@ -8,6 +8,7 @@
 import UIKit
 
 class GSDDsetrtrtuipminein: UIViewController {
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
 
     @IBOutlet weak var priGSDD: UIButton!
     
@@ -29,9 +30,10 @@ class GSDDsetrtrtuipminein: UIViewController {
 
         priGSDD.layer.cornerRadius = 27
         priGSDD.layer.masksToBounds = true
-        
+        gsdd_loadActiveViw.center = self.view.center
         
         ptermGSDD.layer.cornerRadius = 27
+        gsdd_loadActiveViw.isHidden = true
         ptermGSDD.layer.masksToBounds = true
         
         
@@ -46,7 +48,9 @@ class GSDDsetrtrtuipminein: UIViewController {
         loaingupoutGSDD.layer.cornerRadius = 25
         priGSDD.layer.masksToBounds = true
         
-        
+       
+       
+        view.addSubview(gsdd_loadActiveViw)
         
         
     }
@@ -116,7 +120,7 @@ Applicable California law (unless in conflict with local law)
 Protocol update notification method: In app pop-up announcement
 Complaints and Suggestions: Oloka@gmail.com
 """
-        let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Terms of Service", texfReadShong: eluDetail)
+        let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: " Terms  of  Service", texfReadShong: eluDetail)
         self.present(kiopGDSS, animated: true)
        
     }
@@ -129,11 +133,12 @@ Complaints and Suggestions: Oloka@gmail.com
     
     @IBAction func gsddDeleter(_ sender: UIButton) {
         
-        let ssipoAlera = UIAlertController(title: "Permanently delete account", message: "This operation will permanently delete all your data, including personal information, history, and purchased content. This operation is irrevocable", preferredStyle:.alert)
-       
-        ssipoAlera.addAction(UIAlertAction(title: "confirm deletion", style: .default, handler: { ddtion in
-            "delete"
+        let deleteacconutGSDDAlera = UIAlertController(title: "Permanently delete account", message: "This operation will permanently delete all your data, including personal information, history, and purchased content. This operation is irrevocable", preferredStyle:.alert)
+        let loadinftext = AppDelegate.descBABAString(upcaseGS: "cpomncfzilremo ydgeulveytliioun")
+        deleteacconutGSDDAlera.addAction(UIAlertAction(title: loadinftext, style: .default, handler: { ddtion in
             
+           
+
             var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
             
             areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
@@ -154,12 +159,23 @@ Complaints and Suggestions: Oloka@gmail.com
             let rooorGSDD = UINavigationController.init(rootViewController: GSddguessingComin.init())
             rooorGSDD.navigationBar.isHidden = true
             
-            ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rooorGSDD
+            self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("deleteing in...")
+            self.gsdd_loadActiveViw.begin_GSDDAnimating()
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                self.gsdd_loadActiveViw.end_GSDDAnimating()
+                
+                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Account has been deleted successful ✔")
+                
+                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rooorGSDD
+            }
+            
+           
             
         }))
         
-        ssipoAlera.addAction(UIAlertAction(title: "Keep account", style: .default))
-        self.present(ssipoAlera, animated: true)
+        deleteacconutGSDDAlera.addAction(UIAlertAction(title: "Keep account", style: .default))
+        self.present(deleteacconutGSDDAlera, animated: true)
     }
     
     @IBAction func gsddLogout(_ sender: UIButton) {

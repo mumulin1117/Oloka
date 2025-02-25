@@ -11,8 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSDDCVioloiominein" customModule="GueddSinkng" customModuleProvider="target">
             <connections>
+                <outlet property="mineUseringGSDDD" destination="FAu-wM-hd4" id="bFP-cS-ign"/>
                 <outlet property="nameingjhtinhGSDD" destination="xBR-31-ogT" id="eWH-wv-xdY"/>
                 <outlet property="sizeGSDDUserpIC" destination="MgB-H1-hTv" id="MRm-sW-bDM"/>
+                <outlet property="stausConntLablGD" destination="aJD-bk-rCB" id="aeS-zf-Epn"/>
                 <outlet property="view" destination="xP1-e3-xPz" id="jid-y0-RB2"/>
             </connections>
         </placeholder>
@@ -66,7 +68,7 @@
                         <action selector="GSddappbackNoing:" destination="-1" eventType="touchUpInside" id="zXb-cS-VjU"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAu-wM-hd4">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAu-wM-hd4">
                     <rect key="frame" x="186" y="141" width="178" height="211"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="178" id="KQH-vU-y1e"/>
@@ -85,6 +87,12 @@
                         <action selector="GSddRepPothweyuing:" destination="-1" eventType="touchUpInside" id="ni7-JG-yMq"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connecting....." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-bk-rCB">
+                    <rect key="frame" x="127.00000000000001" y="625" width="139.33333333333337" height="20"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="HnM-7F-5R3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,6 +102,8 @@
                 <constraint firstItem="PMu-MB-n3c" firstAttribute="centerY" secondItem="oLe-wt-moT" secondAttribute="centerY" id="2T5-rs-nd9"/>
                 <constraint firstItem="HnM-7F-5R3" firstAttribute="trailing" secondItem="hqZ-eS-PcC" secondAttribute="trailing" constant="16" id="3hS-Sl-xUW"/>
                 <constraint firstItem="MgB-H1-hTv" firstAttribute="top" secondItem="xP1-e3-xPz" secondAttribute="top" id="5iN-4v-iQG"/>
+                <constraint firstItem="aJD-bk-rCB" firstAttribute="centerX" secondItem="xP1-e3-xPz" secondAttribute="centerX" id="6Kj-4t-Q9U"/>
+                <constraint firstItem="PMu-MB-n3c" firstAttribute="top" secondItem="aJD-bk-rCB" secondAttribute="bottom" constant="42" id="6uV-VH-OCi"/>
                 <constraint firstItem="x3U-RI-vVE" firstAttribute="centerY" secondItem="oLe-wt-moT" secondAttribute="centerY" id="ACE-nt-aeK"/>
                 <constraint firstItem="oLe-wt-moT" firstAttribute="leading" secondItem="PMu-MB-n3c" secondAttribute="trailing" constant="45.670000000000002" id="DVw-0E-AU6"/>
                 <constraint firstItem="HnM-7F-5R3" firstAttribute="trailing" secondItem="FAu-wM-hd4" secondAttribute="trailing" constant="29" id="H61-q0-XyZ"/>

@@ -23,6 +23,7 @@ class GSDDBPoberViserComin: UIViewController {
     
     @IBOutlet weak var puinstContenGSDD: UITextView!
     
+    var postsSlidertausd:UISlider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,11 @@ class GSDDBPoberViserComin: UIViewController {
         
         muViGSDDoName.leftViewMode = .always
         muViGSDDoName.leftView = UIView(frame: CGRect.init(x: 0, y: 0, width: 50, height: 60))
+        
+        
         gsdd_loadActiveViw.center = self.view.center
+        
+        
         gsdd_loadActiveViw.isHidden = true
         muViGSDDoName.attributedPlaceholder =  NSAttributedString(string: "Enter a title for the video", attributes: [.foregroundColor:UIColor(red: 1, green: 1, blue: 1, alpha: 1)])
         view.addSubview(gsdd_loadActiveViw)
@@ -45,21 +50,27 @@ class GSDDBPoberViserComin: UIViewController {
     
     
     @IBAction func pickGSDDviedeo(_ sender: Any) {
-       
+        if postsSlidertausd == nil {
+            postsSlidertausd = UISlider.init()
+        }
+        
+        postsSlidertausd?.minimumValue = 1
+        postsSlidertausd?.maximumValue = 100
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-           
+            postsSlidertausd?.value = 50
             var configuration = PHPickerConfiguration()
-          
+            postsSlidertausd?.value = 51
             configuration.filter = .videos // 只显示视频
+            postsSlidertausd?.value = 52
             configuration.selectionLimit = 1 // 选择数量
-            
+            postsSlidertausd?.value = 53
             let picker = PHPickerViewController(configuration: configuration)
             picker.delegate = self
             present(picker, animated: true)
             return
         }
-        
-        gsdd_loadActiveViw.showFailure(message: "Please open your album permission first to obtain local videos!")
+        postsSlidertausd?.value = 54
+        gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS: "Pllbezalsueo uoppiejns kyroauqrm laclobuulmn sptecrgmiinstsqiroxnj hfpigrfsltn sttoe tovbvtlauivnk ylvotctaolo ivoiednefomss!"))
        
     }
     
@@ -75,13 +86,13 @@ class GSDDBPoberViserComin: UIViewController {
 
     @IBAction func finnallyPosterGSD(_ sender: UIButton) {
         if beingUpvviode == false {
-            gsdd_loadActiveViw.showFailure(message: "Please upload the video you want to share first!")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please upload the video you want to share first!")
             return
         }
         
         if muViGSDDoName.text == nil || muViGSDDoName.text?.isEmpty == true{
             
-            gsdd_loadActiveViw.showFailure(message: "Enter a title for the video")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Enter a title for the video")
             return
         }
         
@@ -91,8 +102,10 @@ class GSDDBPoberViserComin: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
             self.gsdd_loadActiveViw.end_GSDDAnimating()
-            let openongslet = UIAlertController(title: "Published successfully", message: "The challenge track you posted will be displayed after review！", preferredStyle: UIAlertController.Style.alert)
-            openongslet.addAction(UIAlertAction(title: "I know", style: .default, handler: { dvvv in
+            let openongslet = UIAlertController(title:AppDelegate.descBABAString(upcaseGS: "Pfuabklyiisxhvegdk lsguxckcoeksaszfeunlhlvy") , message: "You posted will be displayed after review！", preferredStyle: UIAlertController.Style.alert)
+            
+           let ikonl = AppDelegate.descBABAString(upcaseGS: "Iv xkinjoew")
+            openongslet.addAction(UIAlertAction(title: ikonl, style: .default, handler: { dvvv in
                 self.navigationController?.popViewController(animated: true)
             }))
             
@@ -116,71 +129,46 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
         guard let result = results.first else { return }
         let itemProvider = result.itemProvider
         
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("uploading......")
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS: "uapllaooatdwiqnygw.k.r.z.h.m."))
         gsdd_loadActiveViw.begin_GSDDAnimating()
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
-            self.gsdd_loadActiveViw.end_GSDDAnimating()
-            
-          
-       
-
-        
         
         if itemProvider.hasItemConformingToTypeIdentifier(UTType.movie.identifier) {
-            itemProvider.loadFileRepresentation(forTypeIdentifier: UTType.movie.identifier) { [weak self] url, error in
-                guard let self = self, let url = url else {
-                    DispatchQueue.main.async {
-                        
-                        self?.gsdd_loadActiveViw.showFailure(message: "Video format error!")
-                    }
+            itemProvider.loadFileRepresentation(forTypeIdentifier: UTType.movie.identifier) { [unowned self] url, error in
+                guard let url = url else {
+                    shingFAilureAlert()
+                    return
+                }
+                guard let avassetGSDD =  vdteteAeest(url: url) else {
+                    shingFAilureAlert()
                     return
                 }
                 
-                // 创建临时副本（系统可能会清除原始文件）
-                let tempDirectory = FileManager.default.temporaryDirectory
-                
-                
-                
-                let targetURL = tempDirectory.appendingPathComponent(url.lastPathComponent)
-                do {
-                    
-                    try FileManager.default.copyItem(at: url, to: targetURL)
-                    
-                    let asset = AVAsset(url: targetURL)
-                    let avassetGSDD = AVAssetImageGenerator(asset: asset)
-              
-                    avassetGSDD.appliesPreferredTrackTransform = true
-                
-                    let timeCMGSDD = CMTime(seconds: 0, preferredTimescale: 600) //
-                    avassetGSDD.generateCGImagesAsynchronously(forTimes: [NSValue(time: timeCMGSDD)]) { _, image, _, result, error in
-                        if let error = error {
-                            
-                            
-                            self.gsdd_loadActiveViw.showFailure(message: "Video format error!")
+//                let targetURL = FileManager.default.temporaryDirectory.appendingPathComponent(url.lastPathComponent)
+//                do {
+//                    
+//                    try FileManager.default.copyItem(at: url, to: targetURL)
+//                  
+//                    let avassetGSDD = AVAssetImageGenerator(asset: AVAsset(url: targetURL))
+//              
+//                    avassetGSDD.appliesPreferredTrackTransform = true
+//                
+//                    
+                avassetGSDD.generateCGImagesAsynchronously(forTimes: [NSValue(time: CMTime(seconds: 0, preferredTimescale: 600))]) { _, image, _, result, error in
+                        if error != nil || image == nil {
+                            self.shingFAilureAlert()
                             return
                         }
                        
-                        guard let cgImage = image else { return }
-                        let uiImage = UIImage(cgImage: cgImage)
+                      
+                        let uiImage = UIImage(cgImage: image!)
                         
-                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
-                            self.beingUpvviode = true
-                            self.uoloadVideoGSDD.setImage(UIImage.init(named: "colofulREdGSGG"), for: .normal)
-                            self.voverVidsdGSDD.image = uiImage
-                          
-                            self.gsdd_loadActiveViw.showSuccess(message: "Add successful ✔")
-                        }
+                        self.shingGSDDREsult(uimange: uiImage)
                     }
-//
-                } catch {
-                    DispatchQueue.main.async {
-                        
-                        
-                        self.gsdd_loadActiveViw.showFailure(message: "Failed to copy video file!")
-                    }
-                    return
-                }
+//                } catch {
+//                    shingFAilureAlert()
+//                    return
+//                }
                 
             }
             
@@ -188,12 +176,49 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
             
         }
         
-        
-            self.gsdd_loadActiveViw.showFailure(message: "Deal with video failure!")
-       
-        }
+        shingFAilureAlert()
         
     }
     
+    
+    
+    func shingGSDDREsult(uimange:UIImage) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
+            self.beingUpvviode = true
+            self.uoloadVideoGSDD.setImage(UIImage.init(named: "colofulREdGSGG"), for: .normal)
+            self.voverVidsdGSDD.image = uimange
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Add Video share successful ✔")
+        }
+    }
    
+    
+    
+    func shingFAilureAlert()  {
+        DispatchQueue.main.async {
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+       
+            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Deal with this video failure!")
+        }
+       
+      
+    }
+    
+    func vdteteAeest(url:URL)->AVAssetImageGenerator?  {
+        let targetURL = FileManager.default.temporaryDirectory.appendingPathComponent(url.lastPathComponent)
+        do {
+            
+            try FileManager.default.copyItem(at: url, to: targetURL)
+          
+            let avassetGSDD = AVAssetImageGenerator(asset: AVAsset(url: targetURL))
+      
+            avassetGSDD.appliesPreferredTrackTransform = true
+        
+            return avassetGSDD
+            
+        } catch {
+            
+            return nil
+        }
+    }
 }

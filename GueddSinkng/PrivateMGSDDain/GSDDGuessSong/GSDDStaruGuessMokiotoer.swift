@@ -47,7 +47,7 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("")
     }
     
     override func viewDidLoad() {
@@ -105,7 +105,7 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
                 }
             }else{
                 
-                gsdd_loadActiveViw.showFailure(message: "Please enter the song name you guessed!")
+                gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please enter the song name you guessed!")
             }
             return
         }

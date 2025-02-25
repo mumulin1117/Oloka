@@ -21,7 +21,7 @@ class GSDDBeginRecordView: UIView {
         sureGSDDButton.setImage(UIImage.init(named: "sureRecordGSDD"), for: .normal)
         cancelGSDDButton.setImage(UIImage.init(named: "cancelRecordGSDD"), for: .normal)
         
-        labelhTimeGSDD.text = "00:00:00"
+        labelhTimeGSDD.text = AppDelegate.descBABAString(upcaseGS: "0t0l:o0k0v:f0d0")
         labelhTimeGSDD.textColor = .white
         labelhTimeGSDD.textAlignment = .center
         labelhTimeGSDD.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
@@ -81,7 +81,7 @@ class GSDDBeginRecordView: UIView {
     
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("")
     }
     
 }

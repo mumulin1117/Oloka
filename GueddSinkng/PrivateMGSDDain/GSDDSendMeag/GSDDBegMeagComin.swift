@@ -8,21 +8,22 @@
 import UIKit
 
 class GSDDBegMeagComin: UIViewController {
-
+    private let nameringGSDD = UIImageView(image: UIImage.init(named: "mengbanGSDD"))
+    let CaomingInager = UIImageView(image: UIImage.init(named: "noshingDataGSDD"))
+    let emionext = UILabel.init()
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
         //背景
-        let nameringGSDD = UIImageView(image: UIImage.init(named: "mengbanGSDD"))
-        nameringGSDD.frame = self.view.bounds
-        nameringGSDD.contentMode = .scaleAspectFill
+        
+       
         view.addSubview(nameringGSDD)
         
         
         //backutton
         let bagcloGSDD = UIButton.init(frame: CGRect.init(x:18, y: framtipStartinset, width: 30, height: 30))
-        bagcloGSDD.setBackgroundImage(UIImage.init(named: "backDSGG"), for: .normal)
+    
        
         bagcloGSDD.addTarget(self, action: #selector(bagerinOkayot), for: .touchUpInside)
     
@@ -30,19 +31,26 @@ class GSDDBegMeagComin: UIViewController {
         
         
         
-        let emionext = UILabel.init()
-        emionext.text = "Message"
-        emionext.textColor = .white
-        emionext.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        
+        emionext.text = AppDelegate.descBABAString(upcaseGS: "Mtejsmsbaigye")
+       
+        
         view.addSubview(emionext)
         emionext.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(bagcloGSDD)
         }
+        screat()
         
-        
-        let CaomingInager = UIImageView(image: UIImage.init(named: "noshingDataGSDD"))
-        
+        emionext.textColor = .white
+        bagcloGSDD.setBackgroundImage(UIImage.init(named: "backDSGG"), for: .normal)
+        emionext.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        nameringGSDD.frame = self.view.bounds
+        nameringGSDD.contentMode = .scaleAspectFill
+    }
+    
+    
+    func screat()  {
         view.addSubview(CaomingInager)
         CaomingInager.snp.makeConstraints { make in
             make.width.equalTo(156.x_GSDD)
@@ -50,7 +58,6 @@ class GSDDBegMeagComin: UIViewController {
             make.center.equalToSuperview()
         }
     }
-    
 
     @objc  func bagerinOkayot() {
         self.navigationController?.popViewController(animated: true)

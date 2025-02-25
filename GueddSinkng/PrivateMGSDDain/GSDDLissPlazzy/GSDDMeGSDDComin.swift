@@ -9,6 +9,9 @@ import UIKit
 import PhotosUI
 
 class GSDDMeGSDDComin: UIViewController {
+    
+    let avifOkaStatus = AVCaptureDevice.authorizationStatus(for: .video)
+    
     lazy var editBootomVIew = GSDDEfitInfoComin.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 483))
     
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
@@ -143,8 +146,10 @@ extension GSDDMeGSDDComin{
         }
 
         //name
+        let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
         
-        ckaobeiinonext.text = "NULL"
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(bullftext)
+        ckaobeiinonext.text = bullftext
         ckaobeiinonext.textColor = .white
         ckaobeiinonext.textAlignment = .center
         ckaobeiinonext.font = UIFont.systemFont(ofSize: 32.x_GSDD, weight: .medium)
@@ -156,7 +161,7 @@ extension GSDDMeGSDDComin{
         }
         //签名
        
-        qiaminnext.text = "null"
+        qiaminnext.text = bullftext
         qiaminnext.textColor = .white
         qiaminnext.textAlignment = .center
         qiaminnext.font = UIFont.systemFont(ofSize: 14.x_GSDD, weight: .medium)
@@ -376,35 +381,23 @@ extension GSDDMeGSDDComin{
     
     @objc func takingProfolePhotoGSDD()  {
         
-        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        
     
-        if status == .authorized {
+        if avifOkaStatus == .authorized {
           
-            let  pickerSSIPVC = UIImagePickerController()
+            presentGSDDImagePicker()
             
-            pickerSSIPVC.sourceType = .camera
-            
-            pickerSSIPVC.delegate = self
-           
-            present(pickerSSIPVC, animated: true, completion: nil)
-            
-        } else if status == .notDetermined {
+        } else if avifOkaStatus == .notDetermined {
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 if granted {
                     DispatchQueue.main.async {
-                        let  pickerSSIPVC = UIImagePickerController()
-                        
-                        pickerSSIPVC.sourceType = .camera
-                        
-                        pickerSSIPVC.delegate = self
-                       
-                        self.present(pickerSSIPVC, animated: true, completion: nil)
+                        self.presentGSDDImagePicker()
                     }
                 }
             }
         } else {
             // 提示用户打开相机权限
-            gsdd_loadActiveViw.showFailure(message: "Sorry,No album permission!")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Sorry,No album permission!")
         }
         
     }
@@ -412,14 +405,14 @@ extension GSDDMeGSDDComin{
     
     
     @objc func saveProfoleinfoGSDD()  {
-     
+        let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
         
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = self.editBootomVIew.entertYOuNAmeGSDD.text  ?? "NULL"
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = self.editBootomVIew.entertYOuBriefGSDD.text  ?? "NULL"
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = self.editBootomVIew.entertYOuNAmeGSDD.text  ?? bullftext
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = self.editBootomVIew.entertYOuBriefGSDD.text  ?? bullftext
         
         GSDDEmaillogadComin.logUserImageIcon =  self.editBootomVIew.usersefimgInager.image
     
-        GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: ckaobeiinonext.text ?? "NULL", briefGSDD: qiaminnext.text  ?? "NULL", xcoinID: nil)
+        GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: ckaobeiinonext.text ?? bullftext, briefGSDD: qiaminnext.text  ?? bullftext, xcoinID: nil)
         
         
         ckaobeiinonext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet
@@ -432,6 +425,16 @@ extension GSDDMeGSDDComin{
     }
     
     
+    
+    fileprivate func  presentGSDDImagePicker() {
+        let  pickerSSIPVC = UIImagePickerController()
+        
+        pickerSSIPVC.sourceType = .camera
+        
+        pickerSSIPVC.delegate = self
+       
+        present(pickerSSIPVC, animated: true, completion: nil)
+    }
     
     @objc func cancelGSDD()  {//编辑页面消失
         UIView.animate(withDuration: 1, animations: {

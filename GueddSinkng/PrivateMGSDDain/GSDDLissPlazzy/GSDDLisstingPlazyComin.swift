@@ -154,9 +154,9 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         gsdd_loadActiveViw.center = self.view.center
         gsdd_loadActiveViw.isHidden = true
         view.addSubview(gsdd_loadActiveViw)
+        let loadinftext = AppDelegate.descBABAString(upcaseGS: "liorakdiitnzgn.u.e.")
         
-        
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(loadinftext)
         gsdd_loadActiveViw.begin_GSDDAnimating()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
