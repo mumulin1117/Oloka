@@ -71,8 +71,8 @@
                         <constraint firstAttribute="height" constant="60" id="YVP-tt-pxk"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="gsdd_zan"/>
-                    <state key="selected" image="gsdd_zan_ol"/>
+                    <state key="normal" backgroundImage="gsdd_zan"/>
+                    <state key="selected" backgroundImage="gsdd_zan_ol"/>
                     <connections>
                         <action selector="expressChengHHZan:" destination="-1" eventType="touchUpInside" id="UNe-Lz-rQ5"/>
                     </connections>
@@ -107,22 +107,24 @@
                                 <constraint firstAttribute="width" constant="18" id="nkz-70-18w"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1+Joined " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-Bh-T86">
-                            <rect key="frame" x="29" y="8" width="153" height="13"/>
-                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="13"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1+Joined " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-Bh-T86">
+                            <rect key="frame" x="29" y="3" width="158" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
                             <color key="textColor" white="1" alpha="0.70735012760000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
+                            <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.51741837479999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="NX2-EP-mnR" firstAttribute="leading" secondItem="vnh-Bh-T86" secondAttribute="trailing" constant="7" id="6nk-aI-s7e"/>
+                        <constraint firstItem="NX2-EP-mnR" firstAttribute="leading" secondItem="vnh-Bh-T86" secondAttribute="trailing" constant="2" id="6nk-aI-s7e"/>
                         <constraint firstItem="bcP-hV-IxU" firstAttribute="leading" secondItem="biP-aA-6Es" secondAttribute="leading" constant="8" id="CEf-Fk-GZi"/>
                         <constraint firstAttribute="width" constant="215" id="V0U-eK-4Oj"/>
                         <constraint firstItem="NX2-EP-mnR" firstAttribute="centerY" secondItem="biP-aA-6Es" secondAttribute="centerY" id="boz-sq-HFU"/>
                         <constraint firstItem="bcP-hV-IxU" firstAttribute="centerY" secondItem="biP-aA-6Es" secondAttribute="centerY" id="g1H-pM-dgI"/>
                         <constraint firstAttribute="height" constant="29" id="sQZ-BF-5zp"/>
-                        <constraint firstItem="vnh-Bh-T86" firstAttribute="centerY" secondItem="bcP-hV-IxU" secondAttribute="centerY" id="vQ0-de-8QF"/>
+                        <constraint firstItem="vnh-Bh-T86" firstAttribute="height" secondItem="biP-aA-6Es" secondAttribute="height" id="uAm-KX-bMY"/>
+                        <constraint firstItem="vnh-Bh-T86" firstAttribute="centerY" secondItem="bcP-hV-IxU" secondAttribute="centerY" constant="3" id="vQ0-de-8QF"/>
                         <constraint firstAttribute="trailing" secondItem="NX2-EP-mnR" secondAttribute="trailing" constant="8" id="vqR-93-zYP"/>
                         <constraint firstItem="vnh-Bh-T86" firstAttribute="leading" secondItem="bcP-hV-IxU" secondAttribute="trailing" constant="3" id="z24-UU-qyz"/>
                     </constraints>
@@ -134,8 +136,8 @@
                         <constraint firstAttribute="width" constant="60" id="yzA-np-aUG"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="colGSDD"/>
-                    <state key="selected" image="colGSDD_selo"/>
+                    <state key="normal" backgroundImage="colGSDD"/>
+                    <state key="selected" backgroundImage="colGSDD_selo"/>
                     <connections>
                         <action selector="opretionColgHHZan:" destination="-1" eventType="touchUpInside" id="Kg0-IF-PLK"/>
                     </connections>

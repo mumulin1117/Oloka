@@ -18,6 +18,9 @@ struct PayingGSDDIte{
     }
 }
 class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         allPayGSDDINf.count
     }
@@ -33,10 +36,12 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
         self.view.isUserInteractionEnabled = false
         let current = allPayGSDDINf[indexPath.row]
         
-//        SVProgressHUD.show(withStatus: "Paying...")
-       
+
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Paying...")
+        gsdd_loadActiveViw.begin_GSDDAnimating()
         SwiftyStoreKit.purchaseProduct(current.idGSTDD, atomically: true) { psResult in
             self.view.isUserInteractionEnabled = true
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
             if case .success(let psPurch) = psResult {
                 let psdownloads = psPurch.transaction.downloads
                 
@@ -55,17 +60,14 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
                 self.dimonedGSDD.text = "\(CounytDiomend)"
             
                 GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: nil, briefGSDD: nil, xcoinID: "\(CounytDiomend)")
-//                SVProgressHUD.showSuccess(withStatus: "Pay successful!")
-                               
-                
+
+                self.gsdd_loadActiveViw.showSuccess(message: "Pay successful ✔")
             }else if case .error(let error) = psResult {
                 self.view.isUserInteractionEnabled = true
                 
                 if error.code != .paymentCancelled {
-                    
-//                    SVProgressHUD.showError(withStatus: error.localizedDescription)
-                }else {
-//                    SVProgressHUD.dismiss()
+                    self.gsdd_loadActiveViw.showFailure(message: error.localizedDescription)
+
                 }
                 
                
@@ -109,6 +111,10 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
     
         allBuifView.delegate = self
         allBuifView.dataSource = self
+        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
     }
 
     @IBAction func GSddappbackNoing(_ sender: UIButton) {

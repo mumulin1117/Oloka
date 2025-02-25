@@ -9,11 +9,15 @@ import UIKit
 
 
 class GSDDUserilcomine: UIViewController {
-
+    private let gsdd_loadActiveViw2 = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     override func viewDidLoad() {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(adfgBackoing), name: NSNotification.Name.init("addBlockGSDDBackoing"), object: nil)
+        
+        gsdd_loadActiveViw2.center = self.view.center
+        gsdd_loadActiveViw2.isHidden = true
+        view.addSubview(gsdd_loadActiveViw2)
     }
     
     @objc func adfgBackoing()  {
@@ -78,9 +82,22 @@ class GSDDUserilcomine: UIViewController {
                     GSDDDALoaing.chanGSDD.loafingDaGSDD.remove(at: obn)
                 }
             }
-            
+            self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+            self.gsdd_loadActiveViw2.begin_GSDDAnimating()
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                NotificationCenter.default.post(name: NSNotification.Name.init("addBlockGSDDBackoing"), object: nil)
+                self.gsdd_loadActiveViw2.end_GSDDAnimating()
+                self.gsdd_loadActiveViw2.showSuccess(message: "Block successful ✔")
+
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                    
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name.init("addBlockGSDDBackoing"), object: nil)
+                    
+                    
+                }
+                
+                
+                
             }))
             
         })
@@ -108,7 +125,16 @@ class GSDDUserilcomine: UIViewController {
                 style: .default
             ) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                   
+                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw2.begin_GSDDAnimating()
+
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                        self.gsdd_loadActiveViw2.end_GSDDAnimating()
+                        
+                        self.gsdd_loadActiveViw2.showSuccess(message: "Thank you for your supervision. We will review the disease treatment as soon as possible! ✔")
+                        
+                        
+                    }
                 }))
             })
         }
@@ -132,7 +158,16 @@ class GSDDUserilcomine: UIViewController {
         reasonsGSDD.forEach { reason in
             let action = UIAlertAction(title: reason, style: .default) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                   
+                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw2.begin_GSDDAnimating()
+
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                        self.gsdd_loadActiveViw2.end_GSDDAnimating()
+                        
+                        self.gsdd_loadActiveViw2.showSuccess(message: "Thank you for your supervision. We will review the disease treatment as soon as possible! ✔")
+                        
+                        
+                    }
                 }))
             }
             
@@ -157,7 +192,16 @@ class GSDDUserilcomine: UIViewController {
         reasonsGSDD.forEach { reason in
             let action = UIAlertAction(title: reason, style: .default) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                   
+                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw2.begin_GSDDAnimating()
+
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                        self.gsdd_loadActiveViw2.end_GSDDAnimating()
+                        
+                        self.gsdd_loadActiveViw2.showSuccess(message: "Thank you for your supervision. We will review the disease treatment as soon as possible! ✔")
+                        
+                        
+                    }
                 }))
             }
             

@@ -66,7 +66,7 @@ class GSDDGuessNOMokiotoer: UIViewController {
              if CounytDiomend  < 100 {
                  let relaiony = GSDDWallentipminein.init()
                  
-                 self.navigationController?.popToViewController(relaiony, animated: true)
+                 self.navigationController?.pushViewController(relaiony, animated: true)
                  return
              }
              

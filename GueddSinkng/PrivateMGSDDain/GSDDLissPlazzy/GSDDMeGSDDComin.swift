@@ -10,6 +10,8 @@ import PhotosUI
 
 class GSDDMeGSDDComin: UIViewController {
     lazy var editBootomVIew = GSDDEfitInfoComin.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 483))
+    
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     let ckaobeiinonext = UILabel.init()//name
     
     let qiaminnext = UILabel.init()//brie
@@ -117,6 +119,10 @@ extension GSDDMeGSDDComin{
         
         
         addGSDDUIin()
+        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
     }
     
     
@@ -398,9 +404,9 @@ extension GSDDMeGSDDComin{
             }
         } else {
             // 提示用户打开相机权限
-            
+            gsdd_loadActiveViw.showFailure(message: "Sorry,No album permission!")
         }
-        "Sorry->->,No ->->album ->->permission!"
+        
     }
     
     
@@ -449,9 +455,12 @@ extension GSDDMeGSDDComin:UIImagePickerControllerDelegate, UINavigationControlle
             picker.dismiss(animated: true, completion: nil)
             return
         }
-       
-        usersefimgInager.image = image
-        picker.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.editBootomVIew.usersefimgInager.image = image
+            self.usersefimgInager.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+        
     }
     
 }

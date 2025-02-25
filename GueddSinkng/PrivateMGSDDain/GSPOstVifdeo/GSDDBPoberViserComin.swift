@@ -10,7 +10,7 @@ import PhotosUI
 class GSDDBPoberViserComin: UIViewController {
     
     private var beingUpvviode:Bool = false
-    
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
 
     @IBOutlet weak var uoloadVideoGSDD: UIButton!
     
@@ -31,7 +31,12 @@ class GSDDBPoberViserComin: UIViewController {
         
         muViGSDDoName.leftViewMode = .always
         muViGSDDoName.leftView = UIView(frame: CGRect.init(x: 0, y: 0, width: 50, height: 60))
-
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        muViGSDDoName.attributedPlaceholder =  NSAttributedString(string: "Enter a title for the video", attributes: [.foregroundColor:UIColor(red: 1, green: 1, blue: 1, alpha: 1)])
+        view.addSubview(gsdd_loadActiveViw)
+        
+        
     }
     
     
@@ -53,8 +58,9 @@ class GSDDBPoberViserComin: UIViewController {
             present(picker, animated: true)
             return
         }
-        "Sorry->->,No ->->album ->->permission!"
         
+        gsdd_loadActiveViw.showFailure(message: "Please open your album permission first to obtain local videos!")
+       
     }
     
     
@@ -68,8 +74,34 @@ class GSDDBPoberViserComin: UIViewController {
     
 
     @IBAction func finnallyPosterGSD(_ sender: UIButton) {
+        if beingUpvviode == false {
+            gsdd_loadActiveViw.showFailure(message: "Please upload the video you want to share first!")
+            return
+        }
         
+        if muViGSDDoName.text == nil || muViGSDDoName.text?.isEmpty == true{
+            
+            gsdd_loadActiveViw.showFailure(message: "Enter a title for the video")
+            return
+        }
         
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Publishing......")
+        gsdd_loadActiveViw.begin_GSDDAnimating()
+        muViGSDDoName.resignFirstResponder()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+            let openongslet = UIAlertController(title: "Published successfully", message: "The challenge track you posted will be displayed after review！", preferredStyle: UIAlertController.Style.alert)
+            openongslet.addAction(UIAlertAction(title: "I know", style: .default, handler: { dvvv in
+                self.navigationController?.popViewController(animated: true)
+            }))
+            
+            
+                                  
+            self.present(openongslet, animated: true)
+           
+            
+        }
         
     }
     
@@ -84,13 +116,23 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
         guard let result = results.first else { return }
         let itemProvider = result.itemProvider
         
-        "uploading......"
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("uploading......")
+        gsdd_loadActiveViw.begin_GSDDAnimating()
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+            
+          
+       
+
+        
         
         if itemProvider.hasItemConformingToTypeIdentifier(UTType.movie.identifier) {
             itemProvider.loadFileRepresentation(forTypeIdentifier: UTType.movie.identifier) { [weak self] url, error in
                 guard let self = self, let url = url else {
                     DispatchQueue.main.async {
-                        "Video format error!"
+                        
+                        self?.gsdd_loadActiveViw.showFailure(message: "Video format error!")
                     }
                     return
                 }
@@ -113,7 +155,9 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
                     let timeCMGSDD = CMTime(seconds: 0, preferredTimescale: 600) //
                     avassetGSDD.generateCGImagesAsynchronously(forTimes: [NSValue(time: timeCMGSDD)]) { _, image, _, result, error in
                         if let error = error {
-                            "Add video successed!"
+                            
+                            
+                            self.gsdd_loadActiveViw.showFailure(message: "Video format error!")
                             return
                         }
                        
@@ -125,16 +169,15 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
                             self.uoloadVideoGSDD.setImage(UIImage.init(named: "colofulREdGSGG"), for: .normal)
                             self.voverVidsdGSDD.image = uiImage
                           
-                            "Add video successed!"
-                           
+                            self.gsdd_loadActiveViw.showSuccess(message: "Add successful ✔")
                         }
                     }
 //
                 } catch {
                     DispatchQueue.main.async {
                         
-                        "Failed to copy video file!"
                         
+                        self.gsdd_loadActiveViw.showFailure(message: "Failed to copy video file!")
                     }
                     return
                 }
@@ -145,9 +188,10 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
             
         }
         
-        "Deal with video failure!"
         
-        
+            self.gsdd_loadActiveViw.showFailure(message: "Deal with video failure!")
+       
+        }
         
     }
     

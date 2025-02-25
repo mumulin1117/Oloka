@@ -35,6 +35,7 @@ struct GSDDAbountUserinfo {
     var gsddPoderCover:String?
     var gsddPodercontentext:String?
     var gsddPodermp4path:String?
+    var gsdd4pathVideoName:String?
     
     var toVidreStatusGSDD:Bool = false
     var ifFolooweUser:Bool = false
@@ -42,7 +43,7 @@ struct GSDDAbountUserinfo {
     var ifCollVidre:Bool = false
     
     init(gsddUID: String, gsddNjmet: String, gsddPIav: String, gsddVBrief:String
-         ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil,loginEmailGSDD:String? = nil,gussUSerPayCount:String? = nil) {
+         ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil,loginEmailGSDD:String? = nil,gussUSerPayCount:String? = nil,gsdd4pathVideoName:String? = nil) {
         self.gsddUID = gsddUID
         self.gsddNjmet = gsddNjmet
         self.gsddPIav = gsddPIav
@@ -54,6 +55,7 @@ struct GSDDAbountUserinfo {
         self.gsddPodermp4path = gsddPodermp4path
         self.loginEmailGSDD = loginEmailGSDD
         self.gussUSerPayCount = gussUSerPayCount ?? "0"
+        self.gsdd4pathVideoName = gsdd4pathVideoName
     }
     
     
@@ -89,7 +91,9 @@ struct GSDDDALoaing {
                                                       gussMusicPath: item["gussMusicPath"],
                                                       gsddPoderCover: item["gsddPoderCover"],
                                                       gsddPodercontentext: item["gsddPodercontentext"],
-                                                      gsddPodermp4path: item["gsddPodermp4path"]
+                                                      gsddPodermp4path: item["gsddPodermp4path"],
+                                                      gsdd4pathVideoName:item["gsdd4pathVideoName"]
+                                                      
                 )
                 
                 loafingDaGSDD.append(mokler)

@@ -219,8 +219,8 @@ Contact email: Oloka@gmail.com
             areadyExsisteduserInfoGSDD.append(newUserSSIP)
             UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
         GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
-            "sign up...."
             
+       
             GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")
               
             

@@ -70,8 +70,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1+Joined " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28P-gg-PZZ">
-                                <rect key="frame" x="29" y="8" width="153" height="13"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="13"/>
+                                <rect key="frame" x="29" y="11.666666666666686" width="158" height="12"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="0.70735012760000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,10 +81,10 @@
                             <constraint firstAttribute="trailing" secondItem="PPx-Um-Z0B" secondAttribute="trailing" constant="8" id="3d3-ij-9qD"/>
                             <constraint firstItem="ouc-Ln-Tea" firstAttribute="centerY" secondItem="FyQ-OL-YUd" secondAttribute="centerY" id="9ar-pW-xgk"/>
                             <constraint firstAttribute="height" constant="29" id="ARF-gb-JuC"/>
-                            <constraint firstItem="28P-gg-PZZ" firstAttribute="centerY" secondItem="ouc-Ln-Tea" secondAttribute="centerY" id="G92-Dg-rOo"/>
+                            <constraint firstItem="28P-gg-PZZ" firstAttribute="centerY" secondItem="ouc-Ln-Tea" secondAttribute="centerY" constant="3" id="G92-Dg-rOo"/>
                             <constraint firstItem="ouc-Ln-Tea" firstAttribute="leading" secondItem="FyQ-OL-YUd" secondAttribute="leading" constant="8" id="LN4-ux-HVG"/>
                             <constraint firstItem="28P-gg-PZZ" firstAttribute="leading" secondItem="ouc-Ln-Tea" secondAttribute="trailing" constant="3" id="U6D-bL-NDn"/>
-                            <constraint firstItem="PPx-Um-Z0B" firstAttribute="leading" secondItem="28P-gg-PZZ" secondAttribute="trailing" constant="7" id="cgb-wj-pqH"/>
+                            <constraint firstItem="PPx-Um-Z0B" firstAttribute="leading" secondItem="28P-gg-PZZ" secondAttribute="trailing" constant="2" id="cgb-wj-pqH"/>
                             <constraint firstAttribute="width" constant="215" id="jGR-SB-5A5"/>
                             <constraint firstItem="PPx-Um-Z0B" firstAttribute="centerY" secondItem="FyQ-OL-YUd" secondAttribute="centerY" id="qmS-0w-F1A"/>
                         </constraints>

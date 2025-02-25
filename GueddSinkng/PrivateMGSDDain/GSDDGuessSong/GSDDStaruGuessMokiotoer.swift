@@ -16,7 +16,7 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
             answeiGSDDView.isHidden = false
         }
     }
-    
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     @IBOutlet weak var usGSDDPivc: UIImageView!
     
     @IBOutlet weak var rightAnswertGSDDlbl: UILabel!
@@ -57,6 +57,9 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
         redPinkBackGS.addTarget(self, action: #selector(redPinkBackGSRile), for: .touchUpInside)
         rightAnswertGSDDlbl.text = mudalGSDD.gussMusicname
         setupManiPLayScreenViewGSDD()
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
     }
     
     private func setupManiPLayScreenViewGSDD() {
@@ -69,6 +72,7 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
     
     
    @objc func redPinkBackGSRile()  {
+       GSDDRecordingGussing.gussinSS.stopPlaingGSDD()
        self.dismiss(animated: true)
     }
 
@@ -79,19 +83,29 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
         if sender == self.bottomDoneGSDD {
             if let con = enterGSDDIcon.text, con.isEmpty == false{
                 if con == self.mudalGSDD.gussMusicname {
-                    let modalpresent = GSDDGuessNOMokiotoer.init(isCorrentGSDD: true)
-                    modalpresent.modalPresentationStyle = .overCurrentContext
+                    
+                    let modalpresent =   GSDDGuessNOMokiotoer.init(isCorrentGSDD: true)
+                    
+                   
+                    
                     modalpresent.delegsdd = self
-                    self.present(modalpresent, animated: true)
+                    
+                    let navivc = UINavigationController.init(rootViewController: modalpresent)
+                    navivc.navigationBar.isHidden =  true
+                    navivc.modalPresentationStyle = .fullScreen
+                    self.present(navivc, animated: true)
                 }else{
                     let modalpresent = GSDDGuessNOMokiotoer.init(isCorrentGSDD: false)
-                    modalpresent.modalPresentationStyle = .overCurrentContext
+                   
                     modalpresent.delegsdd = self
-                    self.present(modalpresent, animated: true)
+                    let navivc = UINavigationController.init(rootViewController: modalpresent)
+                    navivc.navigationBar.isHidden =  true
+                    navivc.modalPresentationStyle = .fullScreen
+                    self.present(navivc, animated: true)
                 }
             }else{
                 
-                
+                gsdd_loadActiveViw.showFailure(message: "Please enter the song name you guessed!")
             }
             return
         }

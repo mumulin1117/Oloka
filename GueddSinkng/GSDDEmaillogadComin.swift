@@ -8,6 +8,9 @@
 import UIKit
 import SwiftyStoreKit
 class GSDDEmaillogadComin: UIViewController {
+    
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    
     static var logUserImageIcon:UIImage? = UIImage.init(named:"topersoniconDGSS" )
     
     static var fancertListGSDD:Array<GSDDAbountUserinfo> = Array<GSDDAbountUserinfo>()
@@ -20,7 +23,8 @@ class GSDDEmaillogadComin: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         //背景
         let nameringGSDD = UIImageView(image: UIImage.init(named: "loginiONfGSDD"))
         nameringGSDD.frame = self.view.bounds
@@ -169,6 +173,11 @@ class GSDDEmaillogadComin: UIViewController {
             make.left.equalTo(pasweion.snp.right).offset(11)
             make.centerY.equalTo(pasweion)
         }
+        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
+       
     }
     
     
@@ -180,11 +189,11 @@ class GSDDEmaillogadComin: UIViewController {
         let contetntPaseSSIP = passwordlDGSS.text,
               !contenEmailSSIP.isEmpty,
         !contetntPaseSSIP.isEmpty else {
-            ""
+            gsdd_loadActiveViw.showFailure(message: "Please enter your login password and email first!")
             return
         }
         if contetntPaseSSIP.count < 6 || contetntPaseSSIP.count > 12 {
-            ""
+            gsdd_loadActiveViw.showFailure(message: "The password must be between 6 and 12 digits")
             return
         }
 
@@ -192,8 +201,8 @@ class GSDDEmaillogadComin: UIViewController {
         
     
         if emailPreSSIPO.evaluate(with: contenEmailSSIP) == false {
+            gsdd_loadActiveViw.showFailure(message: "The email format entered is incorrect")
            
-           ""
             return
         }
         
@@ -205,7 +214,7 @@ class GSDDEmaillogadComin: UIViewController {
         if let yxaccount = areadyExsisteduserInfoGSDD.filter({ dicUserSSIP in
             return dicUserSSIP["loginEmailGSDD"]?.lowercased() == contenEmailSSIP.lowercased()
         }).first {
-//            LipSigggneSnmingertips.logUoserdataSSIP = yxaccount//注册了，就是登陆-获取本地数据
+
             let useid = yxaccount["gsddUID"]
             if useid == "89985" {//如果是测试账号，添加测试数据
                 GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
@@ -216,8 +225,17 @@ class GSDDEmaillogadComin: UIViewController {
             
             UserDefaults.standard.set(useid, forKey: "currentLogGSDDUID")
             
-            "loging...."
-            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Logging in...")
+            gsdd_loadActiveViw.begin_GSDDAnimating()
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                self.gsdd_loadActiveViw.end_GSDDAnimating()
+                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+                self.gsdd_loadActiveViw.showSuccess(message: "log in successful ✔")
+                
+                
+            }
+            
             
         }else{
           //没注册就是创建，
@@ -237,9 +255,20 @@ class GSDDEmaillogadComin: UIViewController {
             areadyExsisteduserInfoGSDD.append(newUserSSIP)
             UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
             
-            "sign up...."
-            GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
-            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: contenEmailSSIP, gussUSerPayCount:"0")
+            
+            
+            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("sign up....")
+            gsdd_loadActiveViw.begin_GSDDAnimating()
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                self.gsdd_loadActiveViw.end_GSDDAnimating()
+                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
+                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: contenEmailSSIP, gussUSerPayCount:"0")
+                self.gsdd_loadActiveViw.showSuccess(message: "sign up successful ✔")
+                
+                
+            }
+            
               
             
         }

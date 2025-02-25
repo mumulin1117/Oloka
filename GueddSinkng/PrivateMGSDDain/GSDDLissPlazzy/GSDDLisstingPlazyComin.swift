@@ -8,6 +8,8 @@
 import UIKit
 
 class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    
     var changvlodeoGS:Array<GSDDAbountUserinfo>{
         return  GSDDDALoaing.chanGSDD.loafingDaGSDD.filter { DictionGSDD in
             return DictionGSDD.gsddPodermp4path != nil
@@ -34,7 +36,7 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         
         gsddCEll.videokoCoverGSDD.image = UIImage.init(named:self.changvlodeoGS[indexPath.row].gsddPIav )
         
-        gsddCEll.vioklNamenGSDD.text =  self.changvlodeoGS[indexPath.row].gussMusicname
+        gsddCEll.vioklNamenGSDD.text =  self.changvlodeoGS[indexPath.row].gsdd4pathVideoName
         gsddCEll.videghuContenGS.text =  self.changvlodeoGS[indexPath.row].gsddPodercontentext
         
         gsddCEll.poinusericonGSDD.image = UIImage(named:self.changvlodeoGS[indexPath.row].gsddPIav )
@@ -139,7 +141,7 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         defloorVbolGSDListview?.backgroundColor = .clear
         defloorVbolGSDListview?.dataSource = self
         defloorVbolGSDListview?.register(UINib.init(nibName: "GSDDLisstingPlazyCiceoCell", bundle: nil), forCellWithReuseIdentifier: "defloorVbolGSDListviewID")
-        
+        defloorVbolGSDListview?.isHidden = true
         view.addSubview(defloorVbolGSDListview!)
         defloorVbolGSDListview?.snp.makeConstraints({ make in
             make.bottom.equalToSuperview()
@@ -149,7 +151,21 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
             make.top.equalTo(upfloorGSDListview!.snp.bottom).offset(26)
         })
         
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
         
+        
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        gsdd_loadActiveViw.begin_GSDDAnimating()
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+            
+            self.defloorVbolGSDListview?.isHidden = false
+            
+            
+        }
     }
     
     

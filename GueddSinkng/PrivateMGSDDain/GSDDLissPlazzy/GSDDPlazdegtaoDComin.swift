@@ -8,7 +8,7 @@
 import UIKit
 import Player
 class GSDDPlazdegtaoDComin: GSDDUserilcomine {
-    
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     @IBOutlet weak var ReporitgnVieoGSDD: UIButton!
     
     @IBOutlet weak var vioklNamenGSDD: UILabel!//
@@ -61,6 +61,8 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
         super.viewDidAppear(animated)
         
         self.playerGSDD.playFromBeginning()
+
+       
     }
     
     
@@ -101,12 +103,15 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
         
         videokoCoverGSDD.image = UIImage.init(named:plazDeinGSDD.gsddPIav )
         
-        vioklNamenGSDD.text =  plazDeinGSDD.gussMusicname
+        vioklNamenGSDD.text =  plazDeinGSDD.gsdd4pathVideoName
         videghuContenGS.text =  plazDeinGSDD.gsddPodercontentext
         
         poinusericonGSDD.image = UIImage(named:plazDeinGSDD.gsddPIav )
         useringNAmeGS.text = plazDeinGSDD.gsddNjmet
-        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
+
     }
 
     
@@ -141,28 +146,50 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     
     
     @IBAction func expressChengHHZan(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
         
-        plazDeinGSDD.toVidreStatusGSDD = sender.isSelected
-        
-        for (kiii,itrme) in GSDDDALoaing.chanGSDD.loafingDaGSDD.enumerated() {
-            if itrme.gsddUID == plazDeinGSDD.gsddUID {
-                GSDDDALoaing.chanGSDD.loafingDaGSDD[kiii] = plazDeinGSDD
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        gsdd_loadActiveViw.begin_GSDDAnimating()
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+            
+            sender.isSelected = !sender.isSelected
+            
+            self.plazDeinGSDD.toVidreStatusGSDD = sender.isSelected
+            
+            for (kiii,itrme) in GSDDDALoaing.chanGSDD.loafingDaGSDD.enumerated() {
+                if itrme.gsddUID == self.plazDeinGSDD.gsddUID {
+                    GSDDDALoaing.chanGSDD.loafingDaGSDD[kiii] = self.plazDeinGSDD
+                }
             }
         }
+        
         
     }
     
     
     @IBAction func opretionColgHHZan(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
         
-        plazDeinGSDD.ifCollVidre = sender.isSelected
-        for (kiii,itrme) in GSDDDALoaing.chanGSDD.loafingDaGSDD.enumerated() {
-            if itrme.gsddUID == plazDeinGSDD.gsddUID {
-                GSDDDALoaing.chanGSDD.loafingDaGSDD[kiii] = plazDeinGSDD
+               
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        gsdd_loadActiveViw.begin_GSDDAnimating()
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+
+
+            sender.isSelected = !sender.isSelected
+            
+            self.plazDeinGSDD.ifCollVidre = sender.isSelected
+            for (kiii,itrme) in GSDDDALoaing.chanGSDD.loafingDaGSDD.enumerated() {
+                if itrme.gsddUID == self.plazDeinGSDD.gsddUID {
+                    GSDDDALoaing.chanGSDD.loafingDaGSDD[kiii] = self.plazDeinGSDD
+                }
             }
+
         }
+        
+        
     }
 
 }

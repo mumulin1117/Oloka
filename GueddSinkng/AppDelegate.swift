@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         areadyExsisteduserInfoGSDD.append(["gsddNjmet":"Aberria",
                                 "gsddPIav":"SSIPavator9",
-                                "gussUSerPayCount":"300",
+                                "gussUSerPayCount":"100",
                                 "loginEmailGSDD":"Oloka@gmail.com",
                                 "guessUserBrief":"I love guessing songs!",
                                 "gsddUID":"89985"

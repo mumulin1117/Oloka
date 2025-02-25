@@ -14,7 +14,7 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
         self.plazDeinGSDD = plazDeinGSDD
         super.init(nibName: nil, bundle: nil)
     }
-    
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -70,6 +70,16 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     
     //关注
     @IBAction func statusRelationGSDD(_ sender: UIButton) {
+        
+        
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("loading...")
+        gsdd_loadActiveViw.begin_GSDDAnimating()
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+            
+            
+        }
         sender.isSelected = !sender.isSelected
         
         if sender.isSelected {
@@ -133,7 +143,9 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
            
             
         }
-        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
         
     }
 

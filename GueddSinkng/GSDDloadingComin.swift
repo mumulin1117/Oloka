@@ -30,9 +30,9 @@ class GSDDloadingComin: UIView {
         self.backgroundColor = UIColor.black.withAlphaComponent(0.7) // 背景色
         self.layer.cornerRadius = 10 // 圆角
         defaultGSDIndicator.center = CGPoint.init(x: self.center.x, y: self.center.y - 20)
-        defaultGSDDeLabel.frame = CGRect(x: 12, y: defaultGSDIndicator.frame.maxY + 10, width: self.bounds.width - 24, height: 50)
-        successGSDDeLabel.frame = CGRect(x: 12, y: defaultGSDIndicator.frame.maxY - 20, width: self.bounds.width - 24, height: 50)
-        failureGSDDeLabel.frame = CGRect(x: 12, y: defaultGSDIndicator.frame.maxY - 20, width: self.bounds.width - 24, height: 50)
+        defaultGSDDeLabel.frame = CGRect(x: 12, y: defaultGSDIndicator.frame.maxY + 10, width: self.bounds.width - 24, height: 65)
+        successGSDDeLabel.frame = CGRect(x: 12, y: defaultGSDIndicator.frame.maxY - 20, width: self.bounds.width - 24, height: 65)
+        failureGSDDeLabel.frame = CGRect(x: 12, y: defaultGSDIndicator.frame.maxY - 20, width: self.bounds.width - 24, height: 65)
         failureGSDDeLabel.numberOfLines = 0
         successGSDDeLabel.numberOfLines = 0
         defaultGSDDeLabel.numberOfLines = 0
