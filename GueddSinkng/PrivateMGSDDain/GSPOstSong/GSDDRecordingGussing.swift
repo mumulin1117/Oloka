@@ -11,7 +11,7 @@ import AVFoundation
 @objc public protocol GSDRecordingDelegate: AnyObject {
     @objc  func recordingSongGSDDFailed() // 录音失败
     @objc  func recordingSongGSDDEnd() // 录音停止
-    @objc  func recordingSongGSDDTooshort() // 录音时间太短（少于10秒）
+//    @objc  func recordingSongGSDDTooshort() // 录音时间太短（少于10秒）
     @objc  func recordingSongGSDDChange()//录音每隔一秒调用
     
     
@@ -93,10 +93,10 @@ class GSDDRecordingGussing: NSObject {
      //MARK: -   录音结束
     public func stopSoundRecord() {
         
-        if self.recordSeconds < 5 {
-            self.delegate?.recordingSongGSDDTooshort()
-            return
-        }
+//        if self.recordSeconds < 5 {
+//            self.delegate?.recordingSongGSDDTooshort()
+//            return
+//        }
         
         if recordTimer != nil {
             recordTimer?.invalidate()
@@ -116,10 +116,10 @@ class GSDDRecordingGussing: NSObject {
     //MARK: -   cancel
     public func cancelSoundGSDDRecord() {
         
-        if self.recordSeconds < 10 {
-            self.delegate?.recordingSongGSDDTooshort()
-            return
-        }
+//        if self.recordSeconds < 10 {
+//            self.delegate?.recordingSongGSDDTooshort()
+//            return
+//        }
         
         if recordTimer != nil {
             recordTimer?.invalidate()

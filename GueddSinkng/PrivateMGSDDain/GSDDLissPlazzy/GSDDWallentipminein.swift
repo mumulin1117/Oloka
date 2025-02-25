@@ -103,7 +103,7 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
         allBuifView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         allBuifView.register(UINib.init(nibName: "GSDDUserPauioell", bundle: nil), forCellWithReuseIdentifier: "GSDDUserPauioellID")
         
-        
+        allBuifView.contentInset = UIEdgeInsets(top: 30, left: 12, bottom: 100, right: 12)
         
         dimonedGSDD.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gussUSerPayCount
     
@@ -118,4 +118,20 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
+}
+
+
+extension GSDDWallentipminein:UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        12
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: (UIScreen.main.bounds.width - 4*12)/3, height: 150)
+    }
 }

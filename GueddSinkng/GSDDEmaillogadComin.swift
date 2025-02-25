@@ -198,12 +198,12 @@ class GSDDEmaillogadComin: UIViewController {
         }
         
         //判断该邮箱是否注册，注册了，就是登陆-获取本地数据，
-        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         
-        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+        areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
       
-        if let yxaccount = allUserDataSSIP.filter({ dicUserSSIP in
-            return dicUserSSIP["loginEmailGSDD"] == contenEmailSSIP
+        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ dicUserSSIP in
+            return dicUserSSIP["loginEmailGSDD"]?.lowercased() == contenEmailSSIP.lowercased()
         }).first {
 //            LipSigggneSnmingertips.logUoserdataSSIP = yxaccount//注册了，就是登陆-获取本地数据
             let useid = yxaccount["gsddUID"]
@@ -234,11 +234,11 @@ class GSDDEmaillogadComin: UIViewController {
                                   
             ]
             
-            allUserDataSSIP.append(newUserSSIP)
-            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+            areadyExsisteduserInfoGSDD.append(newUserSSIP)
+            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
             
             "sign up...."
-            
+            GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
             GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: contenEmailSSIP, gussUSerPayCount:"0")
               
             
@@ -249,7 +249,7 @@ class GSDDEmaillogadComin: UIViewController {
         
         let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
         rooorGSDD.navigationBar.isHidden = true
-        GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
+        
         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rooorGSDD
     
     }
@@ -284,12 +284,12 @@ class GSDDEmaillogadComin: UIViewController {
     }
     
     class func updateCurrentGSDDUsering(GSIDDD:String,nameGSDD:String?,briefGSDD:String?,xcoinID:String?){
-        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         
-        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+        areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
       
         
-        for (iiii,miter) in allUserDataSSIP.enumerated() {
+        for (iiii,miter) in areadyExsisteduserInfoGSDD.enumerated() {
             
             if miter["gsddUID"] == GSIDDD {
                 var dic = miter
@@ -305,11 +305,11 @@ class GSDDEmaillogadComin: UIViewController {
                     dic["gussUSerPayCount"] = xcoinID
                 }
                 
-                allUserDataSSIP[iiii] = dic
+                areadyExsisteduserInfoGSDD[iiii] = dic
             }
         }
         
-        UserDefaults.standard.set( allUserDataSSIP, forKey: "AllUserLocalDataList")
+        UserDefaults.standard.set( areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
         
  
     }

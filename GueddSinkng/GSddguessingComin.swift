@@ -198,9 +198,9 @@ Contact email: Oloka@gmail.com
         
         
         
-        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         
-        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+        areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
       
         
             let uid = "\(Int.random(in: 55...100))"
@@ -208,7 +208,7 @@ Contact email: Oloka@gmail.com
            
             let newUserSSIP =  ["gsddUID":uid,
                                                                        
-                                "gsddNjmet":"NULL",
+                                "gsddNjmet":"Tourist mode",
                                 "gsddPIav":"topersoniconDGSS",
                                 "guessUserBrief":"NULL",
                                 "gussUSerPayCount":"0",
@@ -216,9 +216,9 @@ Contact email: Oloka@gmail.com
                                   
             ]
             
-            allUserDataSSIP.append(newUserSSIP)
-            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
-            
+            areadyExsisteduserInfoGSDD.append(newUserSSIP)
+            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
+        GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
             "sign up...."
             
             GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uid, gsddNjmet: "NULL", gsddPIav: "topersoniconDGSS", gsddVBrief: "NULL",loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")

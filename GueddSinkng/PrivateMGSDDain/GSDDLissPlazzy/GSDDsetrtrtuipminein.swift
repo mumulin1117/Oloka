@@ -134,17 +134,17 @@ Complaints and Suggestions: Oloka@gmail.com
         ssipoAlera.addAction(UIAlertAction(title: "confirm deletion", style: .default, handler: { ddtion in
             "delete"
             
-            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+            var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
             
-            allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+            areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
             
             let useiIDING = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID
-            for (ing,itemt) in allUserDataSSIP.enumerated() {
+            for (ing,itemt) in areadyExsisteduserInfoGSDD.enumerated() {
                 if itemt["gsddUID"] == useiIDING {
-                    allUserDataSSIP.remove(at: ing)
+                    areadyExsisteduserInfoGSDD.remove(at: ing)
                 }
             }
-            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
             
             GSDDDALoaing.chanGSDD.signinyhuGSDD = nil
             GSDDEmaillogadComin.logUserImageIcon = nil

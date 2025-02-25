@@ -32,9 +32,9 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
         IfHaveRecordingFile = true
     }
     
-    func recordingSongGSDDTooshort() {
-        //提示 小于5秒不行
-    }
+//    func recordingSongGSDDTooshort() {
+//        //提示 小于5秒不行
+//    }
     
     func recordingSongGSDDChange() {
         

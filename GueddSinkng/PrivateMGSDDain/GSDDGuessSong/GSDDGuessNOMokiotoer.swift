@@ -64,7 +64,7 @@ class GSDDGuessNOMokiotoer: UIViewController {
              var CounytDiomend = Int(GSDDDALoaing.chanGSDD.signinyhuGSDD?.gussUSerPayCount ?? "0") ?? 0
              
              if CounytDiomend  < 100 {
-                 let relaiony = GSDDRealtiongpminein.init()
+                 let relaiony = GSDDWallentipminein.init()
                  
                  self.navigationController?.popToViewController(relaiony, animated: true)
                  return

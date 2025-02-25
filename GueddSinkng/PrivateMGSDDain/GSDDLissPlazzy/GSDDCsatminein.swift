@@ -8,12 +8,16 @@
 import UIKit
 //chat
 class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelegate {
+    var gsddBuilding:Array<String> = Array<String>()
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        gsddBuilding.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let tabcell = tableView.dequeueReusableCell(withIdentifier: "GSDDChikerCellID", for: indexPath) as! GSDDChikerCell
+        tabcell.gsddLacontenSay.text = gsddBuilding[indexPath.row]
+        return tabcell
     }
     
     var plazDeinGSDD:GSDDAbountUserinfo
@@ -47,6 +51,11 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
         initTAbleChatGSDD.estimatedRowHeight = 77
         initTAbleChatGSDD.rowHeight = UITableView.automaticDimension
         
+        initTAbleChatGSDD.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        initTAbleChatGSDD.layer.cornerRadius = 20
+        
+        
+        
         
         nameingjhtinhGSDD.text = plazDeinGSDD.gsddNjmet
         sizeGSDDUserpIC.image = UIImage(named: plazDeinGSDD.gsddPIav)
@@ -73,6 +82,14 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
     //seng
     @IBAction func postmeaasge(_ sender: UIButton) {
         
+        if gsddOploip.text?.isEmpty  == true || gsddOploip.text == nil {
+            return
+        }
+        gsddBuilding.append( gsddOploip.text!)
+        initTAbleChatGSDD.reloadData()
+        gsddOploip.text = nil
+        gsddOploip.resignFirstResponder()
+        
         
         
         
@@ -92,22 +109,23 @@ class GSDDChikerCell: UITableViewCell {
         backgroundColor = .clear
         
         contentView.addSubview(gsddView)
-       
+        gsddLacontenSay.numberOfLines = 0
         
-        gsddView.addSubview(gsddLacontenSay)
+        contentView.addSubview(gsddLacontenSay)
         
         gsddLacontenSay.font = UIFont(name: "☞Gilroy-Medium", size: 16)
         gsddLacontenSay.textColor = .white
-        
+        gsddView.layer.borderWidth = 2
         gsddView.backgroundColor = UIColor.clear
         gsddView.layer.cornerRadius = 16
         gsddView.layer.masksToBounds = true
+        gsddView.layer.borderColor = UIColor(red: 0.59, green: 0.82, blue: 1, alpha: 1).cgColor
         gsddView.contentMode = .scaleAspectFill
         
         gsddLacontenSay.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(21)
-            make.bottom.top.equalToSuperview().inset(24)
             make.trailing.equalToSuperview().inset(32)
+            make.bottom.top.equalToSuperview().inset(24)
+            
             make.width.lessThanOrEqualTo(296)
             make.width.greaterThanOrEqualTo(70)
         }

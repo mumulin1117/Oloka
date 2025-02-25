@@ -25,10 +25,12 @@ class GSDDMeGSDDComin: UIViewController {
         super.viewWillAppear(animated)
         ckaobeiinonext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet
         qiaminnext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief
+        usersefimgInager.image =  GSDDEmaillogadComin.logUserImageIcon
+        
         
         fancnCounttnext.text = "\(GSDDEmaillogadComin.fancertListGSDD.count)"
         follreCounttnext.text = "\(GSDDEmaillogadComin.follwercertListGSDD.count)"
-        usersefimgInager.image =  GSDDEmaillogadComin.logUserImageIcon
+        
     }
     
     @objc func tougegleToWallent(ijbnm:UIButton)  {
@@ -51,8 +53,16 @@ class GSDDMeGSDDComin: UIViewController {
     @objc  func relationTokayot(vmi:UIButton) {
         
         let relaiony = GSDDRealtiongpminein.init()
+        if vmi.tag == 45 {
+            relaiony.relaitonStrFS = "Fans"
+            relaiony.ModelgGSDD = GSDDEmaillogadComin.fancertListGSDD
+        }
         
-        self.navigationController?.popToViewController(relaiony, animated: true)
+        if vmi.tag == 46 {
+            relaiony.relaitonStrFS = "Follow"
+            relaiony.ModelgGSDD = GSDDEmaillogadComin.follwercertListGSDD
+        }
+        self.navigationController?.pushViewController(relaiony, animated: true)
     }
     
 }
@@ -241,7 +251,7 @@ extension GSDDMeGSDDComin{
         fanctFileg.layer.masksToBounds = true
        
         view.addSubview(fanctFileg)
-        
+        fanctFileg.tag = 45
         fanctFileg.addTarget(self, action: #selector(relationTokayot(vmi: )), for: .touchUpInside)
        
         fanctFileg.snp.makeConstraints { make in
@@ -287,7 +297,7 @@ extension GSDDMeGSDDComin{
         followeFileg.layer.masksToBounds = true
        
         view.addSubview(followeFileg)
-        
+        followeFileg.tag = 46
         followeFileg.addTarget(self, action: #selector(relationTokayot(vmi: )), for: .touchUpInside)
        
         followeFileg.snp.makeConstraints { make in
@@ -398,12 +408,21 @@ extension GSDDMeGSDDComin{
     @objc func saveProfoleinfoGSDD()  {
      
         
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = ckaobeiinonext.text ?? "NULL"
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = qiaminnext.text  ?? "NULL"
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = self.editBootomVIew.entertYOuNAmeGSDD.text  ?? "NULL"
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = self.editBootomVIew.entertYOuBriefGSDD.text  ?? "NULL"
         
-        GSDDEmaillogadComin.logUserImageIcon =  usersefimgInager.image
+        GSDDEmaillogadComin.logUserImageIcon =  self.editBootomVIew.usersefimgInager.image
     
         GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: ckaobeiinonext.text ?? "NULL", briefGSDD: qiaminnext.text  ?? "NULL", xcoinID: nil)
+        
+        
+        ckaobeiinonext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet
+        qiaminnext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief
+        usersefimgInager.image =  GSDDEmaillogadComin.logUserImageIcon
+      
+        
+        cancelGSDD()
+        
     }
     
     

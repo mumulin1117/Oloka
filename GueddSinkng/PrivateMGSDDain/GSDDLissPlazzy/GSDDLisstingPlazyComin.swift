@@ -60,6 +60,7 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         defloorVbolGSDListview?.reloadData()
+        upfloorGSDListview?.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,7 +148,11 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
             
             make.top.equalTo(upfloorGSDListview!.snp.bottom).offset(26)
         })
+        
+        
     }
+    
+    
 
     @objc  func takeinginOkayot() {
         

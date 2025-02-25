@@ -48,7 +48,9 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     }
     
     
-    
+  @objc  func pushtoUseringfo()  {
+        self.navigationController?.pushViewController(GSDDOgthsdergtaoDComin.init(plazDeinGSDD: plazDeinGSDD), animated: true)
+    }
     
     
     @IBAction func repoertingContentGSDD(_ sender: UIButton) {
@@ -67,6 +69,10 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        poinusericonGSDD.isUserInteractionEnabled = true
+        poinusericonGSDD.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pushtoUseringfo)))
+        
+        useringNAmeGS.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pushtoUseringfo)))
 //        self.playerGSDD.playerDelegate = self
 //        self.playerGSDD.playbackDelegate = self
         
@@ -129,6 +135,8 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
         
         
     }
+    
+    
     
     
     

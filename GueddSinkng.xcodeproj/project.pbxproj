@@ -510,7 +510,7 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -550,7 +550,7 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";

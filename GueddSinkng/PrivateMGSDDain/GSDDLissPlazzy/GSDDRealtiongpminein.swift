@@ -14,7 +14,11 @@ class GSDDRealtiongpminein: UIViewController {
         didSet{
             if let datrt = ModelgGSDD  {
                 for (oiii,item) in datrt.enumerated() {
-                    let butonh = GSDDREaltionButton.init(frame: CGRect.init(x: 15 + (15 + 70)*oiii, y: Int(framtipStartinset) + 30 + 30, width: 70, height: 70))
+                    let butonh = GSDDREaltionButton.init(frame: CGRect.init(x: 15 + (15 + 90)*oiii, y: Int(framtipStartinset) + 30 + 30, width:90, height: 130))
+                    butonh.tag = oiii
+                    butonh.topAbtior.image = UIImage(named: item.gsddPIav)
+                    butonh.addTarget(self, action: #selector(ginoUseringop), for: .touchUpInside)
+                    butonh.aviotherAbtior.text = item.gsddNjmet
                     view.addSubview(butonh)
                     
                 }
@@ -23,6 +27,21 @@ class GSDDRealtiongpminein: UIViewController {
         }
     }
     
+    var relaitonStrFS:String?{
+        didSet{
+            emionext.text = relaitonStrFS
+        }
+    }
+    
+    
+    @objc func ginoUseringop(hyio:UIButton)  {
+        guard let mingui = ModelgGSDD?[hyio.tag] else {
+            return
+        }
+        self.navigationController?.pushViewController(GSDDOgthsdergtaoDComin.init(plazDeinGSDD: mingui), animated: true)
+        
+    }
+    let emionext = UILabel.init()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,8 +62,7 @@ class GSDDRealtiongpminein: UIViewController {
         
         
         
-        let emionext = UILabel.init()
-        emionext.text = "Fans"
+       
         emionext.textColor = .white
         emionext.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         view.addSubview(emionext)
@@ -87,8 +105,20 @@ class GSDDREaltionButton: UIButton {
         aviotherAbtior.textColor = .white
         aviotherAbtior.textAlignment = .center
         aviotherAbtior.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        addSubview(topAbtior)
+        addSubview(aviotherAbtior)
         
+        topAbtior.snp.makeConstraints { make in
+            make.width.height.equalTo(60.x_GSDD)
+            make.top.equalToSuperview().offset(12)
+            make.centerX.equalToSuperview()
+        }
         
+        aviotherAbtior.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(12)
+            make.top.equalTo(topAbtior.snp.bottom).offset(8)
+            make.centerX.equalToSuperview()
+        }
     }
     
     required init?(coder: NSCoder) {

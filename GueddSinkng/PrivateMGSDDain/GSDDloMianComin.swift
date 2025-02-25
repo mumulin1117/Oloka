@@ -144,10 +144,11 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         
         //persontton
         let personiconGSDD = UIButton.init(frame: CGRect.init(x:13, y: framtipStartinset, width: 44, height: 44))
-        personiconGSDD.setBackgroundImage(UIImage.init(named: "topersoniconDGSS"), for: .normal)
+        personiconGSDD.setBackgroundImage(GSDDEmaillogadComin.logUserImageIcon, for: .normal)
         personiconGSDD.tag = 789
         personiconGSDD.addTarget(self, action: #selector(personcenterinOkayot), for: .touchUpInside)
-    
+        personiconGSDD.layer.cornerRadius = 22
+        personiconGSDD.layer.masksToBounds = true
         view.addSubview(personiconGSDD)
         
         //meaaagetton
@@ -166,7 +167,9 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         //label
         let titRead = UILabel.init()
         titRead.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        titRead.text = "Hi,welcome!😀"
+        titRead.text = "Hi,welcome!😀 ->"
+        titRead.isUserInteractionEnabled = true
+        titRead.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(personcenterinOkayot)))
         titRead.textColor = UIColor.white
         titRead.textAlignment = .left
         

@@ -75,22 +75,29 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
 
 
     @IBAction func suretDonerGSDD(_ sender: UIButton) {
-        if let con = enterGSDDIcon.text, con.isEmpty == false{
-            if con == self.mudalGSDD.gussMusicname {
-                let modalpresent = GSDDGuessNOMokiotoer.init(isCorrentGSDD: true)
-                modalpresent.modalPresentationStyle = .overCurrentContext
-                modalpresent.delegsdd = self
-                self.present(modalpresent, animated: true)
+        
+        if sender == self.bottomDoneGSDD {
+            if let con = enterGSDDIcon.text, con.isEmpty == false{
+                if con == self.mudalGSDD.gussMusicname {
+                    let modalpresent = GSDDGuessNOMokiotoer.init(isCorrentGSDD: true)
+                    modalpresent.modalPresentationStyle = .overCurrentContext
+                    modalpresent.delegsdd = self
+                    self.present(modalpresent, animated: true)
+                }else{
+                    let modalpresent = GSDDGuessNOMokiotoer.init(isCorrentGSDD: false)
+                    modalpresent.modalPresentationStyle = .overCurrentContext
+                    modalpresent.delegsdd = self
+                    self.present(modalpresent, animated: true)
+                }
             }else{
-                let modalpresent = GSDDGuessNOMokiotoer.init(isCorrentGSDD: false)
-                modalpresent.modalPresentationStyle = .overCurrentContext
-                modalpresent.delegsdd = self
-                self.present(modalpresent, animated: true)
+                
+                
             }
-        }else{
-            
-            
+            return
         }
+        
+        redPinkBackGSRile()
+       
         
         
         

@@ -104,12 +104,16 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
         
         
         
-        
+        if   GSDDEmaillogadComin.follwercertListGSDD.filter({ uise in
+            uise.gsddUID == plazDeinGSDD.gsddUID
+        }).count > 0{
+            self.statusRelati.isSelected = true
+        }
         
         
         sizeGSDDUserpIC.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(400.y_GSDD)
+            make.height.equalTo(300.y_GSDD)
         }
         
         if self.plazDeinGSDD.gsddPodermp4path == nil {

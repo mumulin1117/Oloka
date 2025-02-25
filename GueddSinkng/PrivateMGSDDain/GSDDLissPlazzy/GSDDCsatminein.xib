@@ -26,7 +26,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shaingKaiohMebhg" translatesAutoresizingMaskIntoConstraints="NO" id="lzS-X4-y4t">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SnT-z0-g8D">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SnT-z0-g8D">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="265"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="265" id="nbU-1M-6cx"/>
@@ -56,7 +56,7 @@
                         <action selector="GSddappbackNoing:" destination="-1" eventType="touchUpInside" id="2Ma-hT-zAg"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess what I'm singing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FI-SA-fC8">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FI-SA-fC8">
                     <rect key="frame" x="16" y="204.33333333333334" width="279.66666666666669" height="25.333333333333343"/>
                     <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,7 +98,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rS1-iu-0L6">
-                    <rect key="frame" x="0.0" y="257" width="393" height="491"/>
+                    <rect key="frame" x="0.0" y="277" width="393" height="471"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
@@ -126,7 +126,7 @@
                 <constraint firstItem="SnT-z0-g8D" firstAttribute="trailing" secondItem="LCP-Wi-HYX" secondAttribute="trailing" id="bx2-f2-S92"/>
                 <constraint firstItem="4FI-SA-fC8" firstAttribute="centerY" secondItem="afB-yP-1JE" secondAttribute="centerY" id="dVW-Fp-DEl"/>
                 <constraint firstAttribute="bottom" secondItem="lzS-X4-y4t" secondAttribute="bottom" id="ilv-Ad-Zek"/>
-                <constraint firstItem="rS1-iu-0L6" firstAttribute="top" secondItem="afB-yP-1JE" secondAttribute="bottom" constant="8" id="jFT-vA-beD"/>
+                <constraint firstItem="rS1-iu-0L6" firstAttribute="top" secondItem="afB-yP-1JE" secondAttribute="bottom" constant="28" id="jFT-vA-beD"/>
                 <constraint firstItem="lzS-X4-y4t" firstAttribute="leading" secondItem="LCP-Wi-HYX" secondAttribute="leading" id="std-KP-6Kt"/>
                 <constraint firstItem="rS1-iu-0L6" firstAttribute="leading" secondItem="LCP-Wi-HYX" secondAttribute="leading" id="wT1-ky-cdo"/>
                 <constraint firstItem="acj-3D-gtD" firstAttribute="leading" secondItem="LCP-Wi-HYX" secondAttribute="leading" constant="16" id="x8d-cb-xP2"/>
