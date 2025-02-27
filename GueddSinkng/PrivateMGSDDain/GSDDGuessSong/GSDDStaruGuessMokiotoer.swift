@@ -38,6 +38,11 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
     
     @IBOutlet weak var answeiGSDDView: UIView!
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        playingmuscioGSDD.isSelected = false
+        GSDDRecordingGussing.gussinSS.stopPlaingGSDD()
+    }
     
     var mudalGSDD: GSDDAbountUserinfo
     init( mudalGSDD: GSDDAbountUserinfo) {
@@ -103,6 +108,9 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
                     navivc.modalPresentationStyle = .fullScreen
                     self.present(navivc, animated: true)
                 }
+                
+                playingmuscioGSDD.isSelected = false
+                GSDDRecordingGussing.gussinSS.stopPlaingGSDD()
             }else{
                 
                 gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please enter the song name you guessed!")

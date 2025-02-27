@@ -247,7 +247,7 @@ class GSDDEmaillogadComin: UIViewController {
                 GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
                 self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "log in successful ✔")
                 
-                
+                AppDelegate.canenterInForamtVC()
             }
             
             
@@ -280,18 +280,18 @@ class GSDDEmaillogadComin: UIViewController {
                 GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
                 GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uidCreateFS, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: self.judgeISconditionISOkay().1, gussUSerPayCount:"0")
                 self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "sign up successful ✔")
-                
+                AppDelegate.canenterInForamtVC()
                 
             }
             
-              
+            
             
         }
         
        
         
         
-        AppDelegate.canenterInForamtVC()
+       
     
     }
     

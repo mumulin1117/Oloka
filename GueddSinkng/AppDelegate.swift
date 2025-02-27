@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         if UserDefaults.standard.string(forKey: "downAreadGSloadapp") == nil  {
-            createDemoUserGSDD()
+            createDemoUserGSDD(gsdddat: false)
         }
         
         if let  uieidSignin = UserDefaults.standard.string(forKey: "currentLogGSDDUID")  {
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
    
-    private  func createDemoUserGSDD()  {
+    private  func createDemoUserGSDD(gsdddat:Bool)  {
       
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         areadyExsisteduserInfoGSDD.append(["gsddNjmet":"Artrlia",
@@ -53,9 +53,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                                ])
         
-        UserDefaults.standard.set("downAreadGS", forKey: "downAreadGSloadapp")
+        let turstGSDduser =  ["gsddUID":"76990987",
+                            "gsddNjmet":"Tourist mode",
+                            "gsddPIav":"topersoniconDGSS",
+                            "guessUserBrief":"NULL",
+                            "gussUSerPayCount":"0",
+                            "loginEmailGSDD":"tourist090@gmai.com"
+                              
+        ]
+        areadyExsisteduserInfoGSDD.append(turstGSDduser)
         
-        UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
+        if gsdddat == false {
+            UserDefaults.standard.set("downAreadGS", forKey: "downAreadGSloadapp")
+            
+            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
+        }
+      
        
     }
     

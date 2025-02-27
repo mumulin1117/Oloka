@@ -135,7 +135,7 @@
                                 <constraint firstAttribute="height" constant="54" id="Ye8-GN-ROr"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Star "/>
+                            <state key="normal" title="Contact us"/>
                             <connections>
                                 <action selector="satretGSDD:" destination="-1" eventType="touchUpInside" id="gAW-C8-8OQ"/>
                             </connections>

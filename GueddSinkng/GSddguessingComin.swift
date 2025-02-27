@@ -194,30 +194,36 @@ Contact email: Oloka@gmail.com
         }
         
         
-        
+        let creteuid = "76990987"
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         
         areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-        let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
         
-            let creteuid = "\(Int.random(in: 55...100))"
+        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ udhurGS in
+            return udhurGS["gsddUID"] == "76990987"
+        }).first {
+            GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
             UserDefaults.standard.set(creteuid, forKey: "currentLogGSDDUID")
+            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+        }
+//        let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
+        
+            
            
-            let createGSDduser =  ["gsddUID":creteuid,
-                                "gsddNjmet":"Tourist mode",
-                                "gsddPIav":"topersoniconDGSS",
-                                "guessUserBrief":bullftext,
-                                "gussUSerPayCount":"0",
-                                "loginEmailGSDD":"tourist090@gmai.com"
-                                  
-            ]
+           
+//            let createGSDduser =  ["gsddUID":"76990987",
+//                                "gsddNjmet":"Tourist mode",
+//                                "gsddPIav":"topersoniconDGSS",
+//                                "guessUserBrief":bullftext,
+//                                "gussUSerPayCount":"0",
+//                                "loginEmailGSDD":"tourist090@gmai.com"
+//                                  
+//            ]
             
-            areadyExsisteduserInfoGSDD.append(createGSDduser)
-            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
-        GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
-            
+//            areadyExsisteduserInfoGSDD.append(createGSDduser)
+//            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
        
-            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: creteuid, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")
+//        GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: creteuid, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")
               
             
         

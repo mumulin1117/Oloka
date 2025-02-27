@@ -138,7 +138,7 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
         CounytDiomend += current.CountGSDD
         
         self.dimonedGSDD.text = "\(CounytDiomend)"
-    
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gussUSerPayCount = "\(CounytDiomend)"
         GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: nil, briefGSDD: nil, xcoinID: "\(CounytDiomend)")
 
     }

@@ -407,16 +407,20 @@ extension GSDDMeGSDDComin{
     @objc func saveProfoleinfoGSDD()  {
         let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
         
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = self.editBootomVIew.entertYOuNAmeGSDD.text  ?? bullftext
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = self.editBootomVIew.entertYOuBriefGSDD.text  ?? bullftext
+        let usernamij = self.editBootomVIew.entertYOuNAmeGSDD.text  ?? bullftext
+        
+        let briefnamij = self.editBootomVIew.entertYOuBriefGSDD.text  ?? bullftext
+        
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = usernamij
+        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = briefnamij
         
         GSDDEmaillogadComin.logUserImageIcon =  self.editBootomVIew.usersefimgInager.image
     
-        GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: ckaobeiinonext.text ?? bullftext, briefGSDD: qiaminnext.text  ?? bullftext, xcoinID: nil)
+        GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: usernamij, briefGSDD: briefnamij, xcoinID: nil)
         
         
-        ckaobeiinonext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet
-        qiaminnext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief
+        ckaobeiinonext.text = usernamij
+        qiaminnext.text = briefnamij
         usersefimgInager.image =  GSDDEmaillogadComin.logUserImageIcon
       
         

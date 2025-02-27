@@ -126,7 +126,7 @@ class GSDDUserilcomine: UIViewController {
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                         self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "dTshoaonkkd jygoful vfqojrr dymodusrd hscujptehrcvfidswigoxnz.s zWsef lwoiwlblo hrveyvfizehwh ztihtea mdpibscebarshew stkrpeeaktemmeenrtt faesg vsaodolnt yausn tpmowspsxirbuleen!e m")
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "Thank you for your attentive supervision. We will verify the content and handle it as soon as possible")
                         self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: resultsullormate)
                         
                         
@@ -159,7 +159,7 @@ class GSDDUserilcomine: UIViewController {
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                         self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "dTshoaonkkd jygoful vfqojrr dymodusrd hscujptehrcvfidswigoxnz.s zWsef lwoiwlblo hrveyvfizehwh ztihtea mdpibscebarshew stkrpeeaktemmeenrtt faesg vsaodolnt yausn tpmowspsxirbuleen!e m")
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "Thank you for your attentive supervision. We will verify the content and handle it as soon as possible")
                         self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: resultsullormate)
                         
                         
@@ -193,7 +193,7 @@ class GSDDUserilcomine: UIViewController {
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                         self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "dTshoaonkkd jygoful vfqojrr dymodusrd hscujptehrcvfidswigoxnz.s zWsef lwoiwlblo hrveyvfizehwh ztihtea mdpibscebarshew stkrpeeaktemmeenrtt faesg vsaodolnt yausn tpmowspsxirbuleen!e m")
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "Thank you for your attentive supervision. We will verify the content and handle it as soon as possible")
                         self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: resultsullormate)
                         
                         
