@@ -126,6 +126,7 @@ The user obtains a non-exclusive, non-transferable limited license to use the Ol
 ﻿
 User-generated audio/video content retains ownership but grants Oloka a perpetual, irrevocable, worldwide license to host, moderate, and remove content at our sole discretion.
 All interface designs, algorithms, trademarks, and content moderation systems within the application are the exclusive property of Oloka.
+
 3. Content Moderation Policy 🌟
 ﻿
 3.1 Proactive Filtering
@@ -134,24 +135,28 @@ Oloka employs:
 AI-based automated filtering for hate speech, explicit content, and copyright violations
 Manual review team operating 24/7
 Hash-matching technology against known illegal content databases
+
 3.2 User Reporting Tools
 Users must:
 ﻿
 Immediately report objectionable content via in-app "Report" button
 Provide detailed justification for reports
 False reporting may result in account suspension
+
 3.3 Abuse Prevention
 Users may:
 ﻿
 Block abusive accounts through profile settings
 Restrict comments/duets from specific users
 Enable "Family Filter" to auto-hide mature content
+
 3.4 Enforcement Timeline
 Oloka guarantees:
 ﻿
 Initial response to reports within 4 hours
 Final resolution (removal/account action) within 24 hours
 Permanent ban for severe violations (hate speech, CSAM, etc.)
+
 4. Usage Restrictions
 ﻿
 Strictly Prohibited:
@@ -168,6 +173,7 @@ Violations will result in:
 Immediate content removal
 Permanent device/IP ban
 Legal referral for severe cases
+
 5. Termination
 ﻿
 Oloka reserves the right to terminate licenses without notice for:
@@ -175,6 +181,7 @@ Oloka reserves the right to terminate licenses without notice for:
 Repeated policy violations (≥3 confirmed reports)
 Evasion of moderation systems
 Commercial misuse of service
+
 6. Contact & Dispute
 ﻿
 Moderation Appeals:
@@ -207,15 +214,22 @@ Service provider: Oloka LLC
      
     }
 
+    var ifNots:Bool = false
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if ifNots == false && UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot") != true{
+            guesssELUA()
+            ifNots = true
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let staeuButon = view.viewWithTag(54) as? UIButton
-        
-        staeuButon?.isSelected = UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot")
-       
-        
+//        let staeuButon = view.viewWithTag(54) as? UIButton
+//        
+//        staeuButon?.isSelected = UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot")
+//       
+        updatePrivacyAgreeStatusped()
     }
     //quick login
     @objc  func QuickadNadOkayot() {
@@ -279,7 +293,7 @@ Service provider: Oloka LLC
     @objc func updatePrivacyAgreeStatusped() {
         let staeuButon = view.viewWithTag(54) as? UIButton
         
-        staeuButon?.isSelected = UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot")
+        staeuButon?.isSelected = (UserDefaults.standard.bool(forKey: "IhaveREadNadOkayot") == true)
         
     }
 
