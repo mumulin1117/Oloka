@@ -58,9 +58,19 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="colofulREdGSGG"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6a-Ua-6FA">
+                    <rect key="frame" x="252" y="314" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="4Ud-Nl-5Wn"/>
+                        <constraint firstAttribute="height" constant="36" id="7ew-RU-86G"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="heijkirepo"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="R6a-Ua-6FA" secondAttribute="trailing" constant="7" id="0PX-ul-ho5"/>
                 <constraint firstItem="2cy-9n-GMx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2sc-zb-pwD"/>
                 <constraint firstItem="xIB-Z3-KtD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5X4-v7-g1r"/>
                 <constraint firstItem="5KQ-A6-ZHm" firstAttribute="centerY" secondItem="RKH-bS-d2W" secondAttribute="centerY" id="6jI-ib-f6S"/>
@@ -69,6 +79,7 @@
                 <constraint firstItem="9AD-Cv-tOM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DzY-NO-m5N"/>
                 <constraint firstItem="zcl-0F-aLK" firstAttribute="top" secondItem="2cy-9n-GMx" secondAttribute="bottom" constant="28" id="Vv6-xD-Ke9"/>
                 <constraint firstItem="YVw-T0-lrI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a89-Y2-JjO"/>
+                <constraint firstAttribute="bottom" secondItem="R6a-Ua-6FA" secondAttribute="bottom" constant="6" id="faw-8a-xqe"/>
                 <constraint firstItem="5KQ-A6-ZHm" firstAttribute="leading" secondItem="RKH-bS-d2W" secondAttribute="trailing" constant="8" symbolic="YES" id="fcj-tV-3oV"/>
                 <constraint firstItem="RKH-bS-d2W" firstAttribute="top" secondItem="zcl-0F-aLK" secondAttribute="bottom" constant="26" id="h25-cW-XHE"/>
                 <constraint firstItem="RKH-bS-d2W" firstAttribute="leading" secondItem="zcl-0F-aLK" secondAttribute="leading" id="mbg-ha-gGH"/>
@@ -82,6 +93,7 @@
             <connections>
                 <outlet property="playingmuscioGSDD" destination="2cy-9n-GMx" id="JfK-oe-saa"/>
                 <outlet property="ranGSDDIcon" destination="RKH-bS-d2W" id="FZM-Lc-Fct"/>
+                <outlet property="repoiUtingGSDD" destination="R6a-Ua-6FA" id="BNh-Gd-4RC"/>
                 <outlet property="usGSDDPivc" destination="xIB-Z3-KtD" id="I3o-nu-1g8"/>
             </connections>
             <point key="canvasLocation" x="-583.96946564885491" y="404.22535211267609"/>
@@ -91,5 +103,6 @@
         <image name="aocaoui" width="200" height="200"/>
         <image name="colafubackBguier" width="250" height="290"/>
         <image name="colofulREdGSGG" width="68" height="68"/>
+        <image name="heijkirepo" width="36" height="36"/>
     </resources>
 </document>

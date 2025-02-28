@@ -271,7 +271,9 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         })
         
       
-        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
        
     }
     
@@ -293,11 +295,44 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
     @objc  func postSonenterinOkayot() {
         self.navigationController?.pushViewController(GSDDPoGusSonMokiotoer.init(), animated: true)
     }
-    
-    //发布chanllge
-//    @objc  func postchanllgeerinOkayot() {
-//        
-//    }
+    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    // MARK: - 举报MP3内容弹窗
+   @objc func showReportMP3AlertGSDD() {
+       
+       //MARK: - 暂停动画效果
+       threedShingView.autoscroll = 0
+        let alertGSDD = UIAlertController(
+            title: "Report audio content",
+            message: "Please select the reason for reporting",
+            preferredStyle: .actionSheet
+        )
+        
+        // 举报选项（视频特有原因）
+        let reasonsGSDD = ["Vulgar Content", "Blurred Image Quality", "Copyright Issues", "Dangerous Actions"]
+        reasonsGSDD.forEach { reason in
+            let action = UIAlertAction(title: reason, style: .default) { _ in
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+                    self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw.begin_GSDDAnimating()
+
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                        self.gsdd_loadActiveViw.end_GSDDAnimating()
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "Tchpamnpkr aywocul rfnoiru tycovuqrf yahtytvegnotxibvxez tshukpaetrgvrijsmilonng.m dWxed twvizlfll fvbeurtiafeyk ttmhtes ucxognttzemnktn yapnhdr vhgarnjdxlies yiqtg kafsm bsvoyoinj cansh bpkojssshiebolke")
+                        self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: resultsullormate)
+                        
+                        self.threedShingView.autoscroll = 0.5
+                    }
+                }))
+            }
+            
+            alertGSDD.addAction(action)
+        }
+       let quFormate = AppDelegate.descBABAString(upcaseGS: "cqadnncoexl")
+      alertGSDD.addAction(UIAlertAction(title: quFormate, style: .cancel, handler: { dlkiol in
+            self.threedShingView.autoscroll = 0.5
+        }))
+        self.present(alertGSDD, animated: true)
+    }
 
     
     func numberOfItems(in carousel: iCarousel) -> Int {
@@ -323,7 +358,7 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         
         itemView.ranGSDDIcon.layer.cornerRadius = 15
         itemView.ranGSDDIcon.layer.masksToBounds = true
-        
+        itemView.repoiUtingGSDD.addTarget(self, action: #selector(showReportMP3AlertGSDD), for: .touchUpInside)
         return itemView
     }
     

@@ -43,14 +43,45 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         gsddCEll.useringNAmeGS.text =
         self.changvlodeoGS[indexPath.row].gsddNjmet
         
-        
+        gsddCEll.ReporitgnVieoGSDD.addTarget(self, action: #selector(showReportVideoAlertGSDD), for: .touchUpInside)
         gsddCEll.zanGSDD.isSelected = self.changvlodeoGS[indexPath.row].toVidreStatusGSDD
         gsddCEll.liaortyGSDD.isSelected = self.changvlodeoGS[indexPath.row].ifCollVidre
         return gsddCEll
         
     }
     
-    
+   @objc func showReportVideoAlertGSDD() {
+        let alertGSDD = UIAlertController(
+            title: "Report video content",
+            message: "Please select the reason for reporting",
+            preferredStyle: .actionSheet
+        )
+        
+        // 举报选项（视频特有原因）
+        let reasonsGSDD = ["Vulgar content", "blurry image quality", "copyright issues","dangerous actions"]
+        reasonsGSDD.forEach { reason in
+            let action = UIAlertAction(title: reason, style: .default) { _ in
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+                    self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw.begin_GSDDAnimating()
+
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                        self.gsdd_loadActiveViw.end_GSDDAnimating()
+                        let resultsullormate = AppDelegate.descBABAString(upcaseGS: "Tchpamnpkr aywocul rfnoiru tycovuqrf yahtytvegnotxibvxez tshukpaetrgvrijsmilonng.m dWxed twvizlfll fvbeurtiafeyk ttmhtes ucxognttzemnktn yapnhdr vhgarnjdxlies yiqtg kafsm bsvoyoinj cansh bpkojssshiebolke")
+                        self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: resultsullormate)
+                        
+                        
+                    }
+                }))
+            }
+            
+            alertGSDD.addAction(action)
+        }
+        let quFormate = AppDelegate.descBABAString(upcaseGS: "cqadnncoexl")
+      
+        alertGSDD.addAction(UIAlertAction(title: quFormate, style: .cancel))
+        self.present(alertGSDD, animated: true)
+    }
     
     
 

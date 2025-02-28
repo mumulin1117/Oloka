@@ -116,27 +116,73 @@ class GSddguessingComin: UIViewController ,UITextViewDelegate{
 End User License Agreement (EULA)
 
 Effective Date: February 21, 2025
-Latest update: February 21, 2025
-
+Latest update: February 27, 2025
+﻿
 1. License Grant
+﻿
+The user obtains a non-exclusive, non-transferable limited license to use the Oloka application on personal devices, strictly limited to lawful non-commercial entertainment purposes only.
+﻿
+2. Content Ownership
+﻿
+User-generated audio/video content retains ownership but grants Oloka a perpetual, irrevocable, worldwide license to host, moderate, and remove content at our sole discretion.
+All interface designs, algorithms, trademarks, and content moderation systems within the application are the exclusive property of Oloka.
+3. Content Moderation Policy 🌟
+﻿
+3.1 Proactive Filtering
+Oloka employs:
+﻿
+AI-based automated filtering for hate speech, explicit content, and copyright violations
+Manual review team operating 24/7
+Hash-matching technology against known illegal content databases
+3.2 User Reporting Tools
+Users must:
+﻿
+Immediately report objectionable content via in-app "Report" button
+Provide detailed justification for reports
+False reporting may result in account suspension
+3.3 Abuse Prevention
+Users may:
+﻿
+Block abusive accounts through profile settings
+Restrict comments/duets from specific users
+Enable "Family Filter" to auto-hide mature content
+3.4 Enforcement Timeline
+Oloka guarantees:
+﻿
+Initial response to reports within 4 hours
+Final resolution (removal/account action) within 24 hours
+Permanent ban for severe violations (hate speech, CSAM, etc.)
+4. Usage Restrictions
+﻿
+Strictly Prohibited:
+﻿
+Uploading content containing:
+Hate speech targeting race/religion/gender identity (per UN definitions)
+Graphic violence or extremism
+Non-consensual intimate media
+Misinformation inciting harm
+Any attempt to bypass content filters through spelling variations, overlays, or metadata manipulation
+Creating multiple accounts to evade bans
+Violations will result in:
+﻿
+Immediate content removal
+Permanent device/IP ban
+Legal referral for severe cases
+5. Termination
+﻿
+Oloka reserves the right to terminate licenses without notice for:
+﻿
+Repeated policy violations (≥3 confirmed reports)
+Evasion of moderation systems
+Commercial misuse of service
+6. Contact & Dispute
+﻿
+Moderation Appeals:
+Email appeals with evidence to Oloka@gmail.com within 7 days of action.
+﻿
+Legal Notices:
+Service provider: Oloka LLC
 
-The user obtains a non exclusive, non transferable limited license to use the Oloka application on personal devices, limited to non-commercial entertainment purposes only.
-
-2. Content ownership
-
-The song clips/video content uploaded by users still belong to the original copyright owner
-User generated audio/video content retains ownership but grants Oloka a global distribution license
-All interface designs, algorithms, and trademarks within the application belong to Oloka
-3. Usage restrictions
-
-Prohibited:
-
-Upload infringing music or illegal content
-Crack/modify the core functions of the application
-Using automated scripts to disrupt and challenge fairness
-Posting hate/violent/pornographic and other illegal content
-
-Contact email: Oloka@gmail.com
 """
         
         let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "ELUA", texfReadShong: eluDetail)

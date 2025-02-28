@@ -20,6 +20,7 @@ class GSDDgussMainView: UIView {
     
     
     
+    @IBOutlet weak var repoiUtingGSDD: UIButton!
     
     class func loadFromNib() -> GSDDgussMainView {
         let bundle = Bundle(for: self)
