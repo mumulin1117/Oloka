@@ -1,4 +1,11 @@
 PODS:
+  - Alamofire (5.10.2)
+  - FBAEMKit (18.0.0):
+    - FBSDKCoreKit_Basics (= 18.0.0)
+  - FBSDKCoreKit (18.0.0):
+    - FBAEMKit (= 18.0.0)
+    - FBSDKCoreKit_Basics (= 18.0.0)
+  - FBSDKCoreKit_Basics (18.0.0)
   - Hero (1.6.4)
   - iCarousel (1.8.3)
   - IQKeyboardManager (6.5.19)
@@ -7,6 +14,8 @@ PODS:
   - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
+  - Alamofire
+  - FBSDKCoreKit
   - Hero
   - iCarousel
   - IQKeyboardManager
@@ -16,6 +25,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
     - Hero
     - iCarousel
     - IQKeyboardManager
@@ -24,6 +37,10 @@ SPEC REPOS:
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  FBAEMKit: e34530df538b8eb8aeb53c35867715ba6c63ef0c
+  FBSDKCoreKit: d3f479a69127acebb1c6aad91c1a33907bcf6c2f
+  FBSDKCoreKit_Basics: 017b6dc2a1862024815a8229e75661e627ac1e29
   Hero: 473a0143017e1371d050fcbedb67d317925097f2
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
@@ -31,6 +48,6 @@ SPEC CHECKSUMS:
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 3cdcfe97e5582c252f577b24a18a5b9f8692c11d
+PODFILE CHECKSUM: 07be6c978d7bc3bf798ce2267144fbfebb0b5c54
 
 COCOAPODS: 1.16.2

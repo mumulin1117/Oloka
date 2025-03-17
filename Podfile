@@ -12,7 +12,8 @@ pod "IQKeyboardManager"
 pod 'Hero'
 pod "Player"
 pod "SwiftyStoreKit"
-
+pod 'FBSDKCoreKit'
+pod 'Alamofire'
 end
 post_install do |installer|
   installer.pods_project.targets.each do |target|

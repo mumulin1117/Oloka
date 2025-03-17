@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042C51022D8815DB00880678 /* GSDDAluncherComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C51012D8815DB00880678 /* GSDDAluncherComin.swift */; };
+		042C51042D88166C00880678 /* GSDDLoafgerComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C51032D88166C00880678 /* GSDDLoafgerComin.swift */; };
+		042C51062D88169600880678 /* GSDDManghertAllComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C51052D88169600880678 /* GSDDManghertAllComin.swift */; };
+		042C51082D8816C700880678 /* GSDDWeahingAllComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C51072D8816C700880678 /* GSDDWeahingAllComin.swift */; };
 		048AA0B62D680E4400228F5F /* GSDDBinLinkS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */; };
 		048AA0BA2D68114A00228F5F /* You Need Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B92D68114A00228F5F /* You Need Love.mp3 */; };
 		048AA0BB2D68114A00228F5F /* We know？.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B82D68114A00228F5F /* We know？.mp3 */; };
@@ -67,6 +71,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042C51012D8815DB00880678 /* GSDDAluncherComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDAluncherComin.swift; sourceTree = "<group>"; };
+		042C51032D88166C00880678 /* GSDDLoafgerComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLoafgerComin.swift; sourceTree = "<group>"; };
+		042C51052D88169600880678 /* GSDDManghertAllComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDManghertAllComin.swift; sourceTree = "<group>"; };
+		042C51072D8816C700880678 /* GSDDWeahingAllComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDWeahingAllComin.swift; sourceTree = "<group>"; };
 		048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GSDDBinLinkS.plist; sourceTree = "<group>"; };
 		048AA0B82D68114A00228F5F /* We know？.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "We know？.mp3"; sourceTree = "<group>"; };
 		048AA0B92D68114A00228F5F /* You Need Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "You Need Love.mp3"; sourceTree = "<group>"; };
@@ -254,6 +262,10 @@
 				04A7E1FB2D6585BB004D5FB1 /* GSDDGSddReadComin.swift */,
 				04A7E1FD2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift */,
 				04A7E1FF2D65AD64004D5FB1 /* GSDDloadingComin.swift */,
+				042C51012D8815DB00880678 /* GSDDAluncherComin.swift */,
+				042C51032D88166C00880678 /* GSDDLoafgerComin.swift */,
+				042C51072D8816C700880678 /* GSDDWeahingAllComin.swift */,
+				042C51052D88169600880678 /* GSDDManghertAllComin.swift */,
 			);
 			path = GueddSinkng;
 			sourceTree = "<group>";
@@ -460,6 +472,7 @@
 				048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */,
 				04A7E1FC2D6585BB004D5FB1 /* GSDDGSddReadComin.swift in Sources */,
 				CE9E766D2D69C41A00ED180F /* GSDDRealtiongpminein.swift in Sources */,
+				042C51022D8815DB00880678 /* GSDDAluncherComin.swift in Sources */,
 				04A8DFE32D6C53D500876DCD /* GSDDUserPauioell.swift in Sources */,
 				CE9E766B2D69C38400ED180F /* GSDDWallentipminein.swift in Sources */,
 				04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */,
@@ -469,9 +482,12 @@
 				CE9E76632D69B8E000ED180F /* GSDDsetrtrtuipminein.swift in Sources */,
 				CED0E6352D6959D5004C968D /* GSDDOgthsdergtaoDComin.swift in Sources */,
 				CE9E765B2D69AE7D00ED180F /* GSDDCVioloiominein.swift in Sources */,
+				042C51042D88166C00880678 /* GSDDLoafgerComin.swift in Sources */,
+				042C51082D8816C700880678 /* GSDDWeahingAllComin.swift in Sources */,
 				048AA0D42D686B6200228F5F /* GSDDGuessNOMokiotoer.swift in Sources */,
 				04A7E2002D65AD64004D5FB1 /* GSDDloadingComin.swift in Sources */,
 				048AA0DB2D687C9D00228F5F /* GSDDBeginRecordView.swift in Sources */,
+				042C51062D88169600880678 /* GSDDManghertAllComin.swift in Sources */,
 				CE8FA5EB2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift in Sources */,
 				CE9E765F2D69AEC100ED180F /* GSDDCsatminein.swift in Sources */,
 				04A7E1FE2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift in Sources */,
@@ -499,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -508,6 +524,7 @@
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -520,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gueddsinkng.olada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -540,7 +557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -549,6 +566,7 @@
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -561,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gueddsinkng.olada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
