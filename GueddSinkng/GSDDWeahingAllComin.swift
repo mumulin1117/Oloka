@@ -10,19 +10,51 @@ import UIKit
 import Alamofire
 import SwiftyStoreKit
 import FBSDKCoreKit
+import AVFAudio
+import AVFoundation
+struct MusicVideo {
+    let videoURL: URL
+    let caption: String
+    var likes: Int
+    var comments: [String]
+    let creationDate: Date
+}
+
 
 class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var fmePlaungView:WKWebView?
+    var userChallenges: [Challenge] = []
+       
+    var activeChallenges: [Challenge] = []
+    var shortVideos: [MusicVideo] = []
+    var friendProfiles: [Dictionary<String,String>] = []
+    var privateMessages: [ChatMessage] = []
+    var currentAudioRecorder: AVAudioRecorder?
+    var challengeLeaderboard: [String: Int] = [:]
+    var musicClipLibrary: [String] = []
+    var selectedChallenge: Challenge?
+    var voiceRecognitionResults: [String] = []
+    var videoDrafts: [String] = []
+    var socialFeed: [String] = []
+    var audioWaveformData: [Float] = []
+    var challengeSubmissions: [String] = []
+    var currentVideoComposition: AVVideoComposition?
+    var challengeTimers: [String: Timer] = [:]
+    var musicMatchThreshold: Double = 0.75
+    var pendingNotifications: [String] = []
+    var activeVoiceSession: String?
+    var allTotoCaunt:Int = 0
+    
+    private var feedGSDD:WKWebView?
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     
     
-    private  var fmersousifgnin = false
+    private  var isGSDD = false
     private var okaeenteanceFME:String
     
-    init(wonderfulnowing:String,islogingpagepalt:Bool) {
-        okaeenteanceFME = wonderfulnowing
+    init(_okaeenteanceFME:String,_isGSDD:Bool) {
+        okaeenteanceFME = _okaeenteanceFME
         
-        fmersousifgnin = islogingpagepalt
+        isGSDD = _isGSDD
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,8 +64,8 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        fmePlaungView?.configuration.userContentController.add(self, name: "Pay")
-        fmePlaungView?.configuration.userContentController.add(self, name: "Close")
+        feedGSDD?.configuration.userContentController.add(self, name: "Pay")
+        feedGSDD?.configuration.userContentController.add(self, name: "Close")
         
     }
         
@@ -41,7 +73,7 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        fmePlaungView?.configuration.userContentController.removeAllScriptMessageHandlers()
+        feedGSDD?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
@@ -51,34 +83,34 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
         super.viewDidLoad()
        
         
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        matherlang.image = UIImage(named: "loginiONfGSDD")
-        view.addSubview(matherlang)
+        let weakbackg = UIImageView.init(frame:UIScreen.main.bounds)
+        weakbackg.contentMode = .scaleAspectFill
+        weakbackg.image = UIImage(named: "loginiONfGSDD")
+        view.addSubview(weakbackg)
         
         
-        let othiehtico = UIImageView(image: UIImage.init(named: "launiconBeg"))
-        othiehtico.contentMode = .scaleAspectFill
-        othiehtico.image = UIImage(named: "launiconBeg")
-        view.addSubview(othiehtico)
-        othiehtico.snp.makeConstraints { make in
+        let uinshgeing = UIImageView(image: UIImage.init(named: "launiconBeg"))
+        uinshgeing.contentMode = .scaleAspectFill
+        uinshgeing.image = UIImage(named: "launiconBeg")
+        view.addSubview(uinshgeing)
+        uinshgeing.snp.makeConstraints { make in
             make.width.equalTo(126)
             make.height.equalTo(209)
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-30)
         }
         
-        if fmersousifgnin == true {
-            let  lsignintouchHTL = UIButton.init()
-            lsignintouchHTL.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
+        if isGSDD == true {
+            let  burrtonDSDD = UIButton.init()
+            burrtonDSDD.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
            
-            lsignintouchHTL.setTitle("Quick Log", for: .normal)
-            lsignintouchHTL.setTitleColor(UIColor.black, for: .normal)
-            lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            burrtonDSDD.setTitle("Quick Log", for: .normal)
+            burrtonDSDD.setTitleColor(UIColor.black, for: .normal)
+            burrtonDSDD.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
             
-            view.addSubview(lsignintouchHTL)
-            lsignintouchHTL.isUserInteractionEnabled = false
-            lsignintouchHTL.snp.makeConstraints { make in
+            view.addSubview(burrtonDSDD)
+            burrtonDSDD.isUserInteractionEnabled = false
+            burrtonDSDD.snp.makeConstraints { make in
                 make.height.equalTo(52)
                 make.width.equalTo(275)
                 
@@ -90,36 +122,36 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
         
         
          
-        let fmeviewstys = WKWebViewConfiguration()
-        fmeviewstys.allowsAirPlayForMediaPlayback = false
-        fmeviewstys.allowsInlineMediaPlayback = true
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
-        fmeviewstys.mediaTypesRequiringUserActionForPlayback = []
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
+        let configurationrweb = WKWebViewConfiguration()
+        configurationrweb.allowsAirPlayForMediaPlayback = false
+        configurationrweb.allowsInlineMediaPlayback = true
+        configurationrweb.preferences.javaScriptCanOpenWindowsAutomatically = true
+        configurationrweb.mediaTypesRequiringUserActionForPlayback = []
+        configurationrweb.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
-        fmePlaungView = WKWebView.init(frame: UIScreen.main.bounds, configuration: fmeviewstys)
-        fmePlaungView?.isHidden = true
-        fmePlaungView?.translatesAutoresizingMaskIntoConstraints = false
-        fmePlaungView?.scrollView.alwaysBounceVertical = false
+        feedGSDD = WKWebView.init(frame: UIScreen.main.bounds, configuration: configurationrweb)
+        feedGSDD?.isHidden = true
+        feedGSDD?.translatesAutoresizingMaskIntoConstraints = false
+        feedGSDD?.scrollView.alwaysBounceVertical = false
         
-        fmePlaungView?.scrollView.contentInsetAdjustmentBehavior = .never
-        fmePlaungView?.navigationDelegate = self
+        feedGSDD?.scrollView.contentInsetAdjustmentBehavior = .never
+        feedGSDD?.navigationDelegate = self
         
-        fmePlaungView?.uiDelegate = self
-        fmePlaungView?.allowsBackForwardNavigationGestures = true
+        feedGSDD?.uiDelegate = self
+        feedGSDD?.allowsBackForwardNavigationGestures = true
    
-        if let urewlinsdfme = URL.init(string: okaeenteanceFME) {
-            fmePlaungView?.load(NSURLRequest.init(url:urewlinsdfme) as URLRequest)
+        if let uerokol = URL.init(string: okaeenteanceFME) {
+            feedGSDD?.load(NSURLRequest.init(url:uerokol) as URLRequest)
         }
-        self.view.addSubview(fmePlaungView!)
+        self.view.addSubview(feedGSDD!)
         
         gsdd_loadActiveViw.center = self.view.center
         gsdd_loadActiveViw.isHidden = true
         
         view.addSubview(gsdd_loadActiveViw)
         
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(fmersousifgnin == true ? "log in....." : "" )
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(isGSDD == true ? "log in....." : "" )
             
         self.gsdd_loadActiveViw.begin_GSDDAnimating()
       
@@ -157,46 +189,46 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
     
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        fmePlaungView?.isHidden = false
+        feedGSDD?.isHidden = false
         
         self.gsdd_loadActiveViw.end_GSDDAnimating()
        
         
-        if fmersousifgnin == true {
+        if isGSDD == true {
             self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Login successful")
             
-            fmersousifgnin = false
+            isGSDD = false
             
         }
-       
+        let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
 #if DEBUG
-        let adventurepatherFME = "/api/device/save"
-         let versationParamFME: [String: Any] = [
+        let engeClip = "/api/device/save"
+         let PlaybackF: [String: Any] = [
             "appVersion": "1.1.0",
              "channel":"APPSTORE",
             "osType":UIDevice.current.systemName,
              "osVersion":UIDevice.current.systemVersion,
              "deviceType" : "iPhone",
-            "deviceNo" :GSDDManghertAllComin.pnolyert.onlyidduserFME,
-            "pushToken" :AppDelegate.appUITPushToken,
+            "deviceNo" :GSDDManghertAllComin.pnolyert.uuiadGSDD,
+            "pushToken" :pushTokeng,
 
          ]
         #else
-        let adventurepatherFME = "/octave/aiVocal/identityY"
+        let engeClip = "/octave/aiVocal/identityY"
         
       
-         let versationParamFME: [String: Any] = [
+         let PlaybackF: [String: Any] = [
             "verCadence": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
              "chMelody":"APPSTORE",
             "osTempo":UIDevice.current.systemName,
              "osPitch":UIDevice.current.systemVersion,
              "devHarmony" : "iPhone",
-            "seqNo" :UITLoakerinder.pnolyert.onlyidduserFME,
-            "pushChord" :AppDelegate.appUITPushToken,
+            "seqNo" :UITLoakerinder.pnolyert.uuiadGSDD,
+            "pushChord" :pushTokeng,
          
          ]
 #endif
-        GSDDManghertAllComin.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME)
+        GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( engeClip, inputGSDD: PlaybackF)
        
     }
     
@@ -206,18 +238,18 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
        
       
        
-        let angagingFME =  "payload****transactionId****type****direct****Pay****Close".components(separatedBy: "****")
-        let oertpinkFME =  "No have receipt****/api/ios/v2/pay****The purchase was successful!".components(separatedBy: "****")
+        let loadingjDSDD =  "payload&::::::&transactionId&::::::&type&::::::&direct&::::::&Pay&::::::&Close".components(separatedBy: "&::::::&")
+        let loaerinbDSDD =  "No have receipt&::::::&/api/ios/v2/pay&::::::&The purchase was successful!".components(separatedBy: "&::::::&")
        
-        if message.name == angagingFME[4],
-            let mesgidhFME = message.body as? String {
+        if message.name == loadingjDSDD[4],
+            let meadfffPou = message.body as? String {
          
 
             view.isUserInteractionEnabled = false
             
             gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("")
             gsdd_loadActiveViw.begin_GSDDAnimating()
-            let alllPayblaIDlist = [
+            let zadelier = [
                 PayingGSDDIte.init(idGSTDD: "ijnosehunymqmpnw", CountGSDD: 400, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$u0n.g9j9")),
                                 
                 PayingGSDDIte.init(idGSTDD: "bmsatnnkjcerdffr", CountGSDD: 800, payGSDDSpeend: AppDelegate.descBABAString(upcaseGS: "$l1v.b9h9")),
@@ -236,14 +268,14 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                 PayingGSDDIte.init(idGSTDD: "euvijcgngourojpq", CountGSDD: 49000, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$h9n9g.h9w9") )]
         
       
-//            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
+//            if  let paygetingItemFME =  zadelier.filter({ lovercoolFME in
 //                lovercoolFME.idGSTDD == mesgidhFME
 //            }).first {
 //                
 //               
 //            }
 //            
-            SwiftyStoreKit.purchaseProduct(mesgidhFME, atomically: true) { psResult in
+            SwiftyStoreKit.purchaseProduct(meadfffPou, atomically: true) { psResult in
                 self.gsdd_loadActiveViw.end_GSDDAnimating()
                 if case .success(let psPurch) = psResult {
                     let psdownloads = psPurch.transaction.downloads
@@ -264,31 +296,31 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                     guard let ticketData = SwiftyStoreKit.localReceiptData,
                           let gettransID = psPurch.transaction.transactionIdentifier else {
                      
-                        self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: oertpinkFME[0])
+                        self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: loaerinbDSDD[0])
                         return
                       }
                     
 
-                    GSDDManghertAllComin.pnolyert.installEnterRemallLastNetiFME( oertpinkFME[1], stallParFME: [
-                        angagingFME[0]:ticketData.base64EncodedString(),
-                        angagingFME[1]:gettransID,
-                        angagingFME[2]:angagingFME[3]
+                    GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( loaerinbDSDD[1], inputGSDD: [
+                        loadingjDSDD[0]:ticketData.base64EncodedString(),
+                        loadingjDSDD[1]:gettransID,
+                        loadingjDSDD[2]:loadingjDSDD[3]
                     ]) { result in
                        
                         self.view.isUserInteractionEnabled = true
                         
                         switch result{
                         case .success(_):
-                            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
-                                lovercoolFME.idGSTDD == mesgidhFME
+                            if  let hxiu =  zadelier.filter({ numadwsx in
+                                numadwsx.idGSTDD == meadfffPou
                             }).first {
-                                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : paygetingItemFME.CountGSDD,AppEvents.ParameterName.init("currency"):"USD"])
-                                var spendMoney = paygetingItemFME.payGSDDSpeend
+                                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : hxiu.CountGSDD,AppEvents.ParameterName.init("currency"):"USD"])
+                                var spendMoney = hxiu.payGSDDSpeend
                                 spendMoney.removeFirst()
                                 AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("totalPrice") : spendMoney,AppEvents.ParameterName.init("currency"):"USD"])
                             }
                            
-                            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: oertpinkFME[2])
+                            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: loaerinbDSDD[2])
                            
                         case .failure(let error):
                             self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Error")
@@ -316,25 +348,16 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                 }
             }
             
-        }else if message.name == angagingFME[5] {
+        }else if message.name == loadingjDSDD[5] {
           
-            UserDefaults.standard.set(nil, forKey: "femuserlogidectoken")// 清除本地token
+            UserDefaults.standard.set(nil, forKey: "useringTwemng")// 清除本地token
            
-            let anoreallRoold = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-            anoreallRoold.navigationBar.isHidden = true
+            let nhgjk = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+            nhgjk.navigationBar.isHidden = true
             
-            var windowtoye:UIWindow?
-            if let window = (UIApplication.shared.connectedScenes
-                .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
-                .windows
-                .first(where: \.isKeyWindow)  {
-                windowtoye = window
-                
-            }else{
-                windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
-            }
             
-            windowtoye?.rootViewController = anoreallRoold
+            
+            windowtoye?.rootViewController = nhgjk
         }
     }
     

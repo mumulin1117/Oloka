@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
    
     
     static var appUITPushToken:String = ""
+    
     let statusLabel = UILabel()
     var window: UIWindow?
     lazy var entetViewsVioer: UITextField = {
@@ -22,14 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
-            if okayufir {
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-            }
-        }
+        
+        
+        
+        
+        refreshSocialFeed()
+        addlayert()
         
         if UserDefaults.standard.string(forKey: "downAreadGSloadapp") == nil  {
             createDemoUserGSDD(gsdddat: false)
@@ -66,6 +65,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+    
+    func refreshSocialFeed() {
+        UNUserNotificationCenter.current().delegate = self
+        
+    }
     func  addlayert()  {
         
         statusLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
@@ -75,13 +79,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         statusLabel.numberOfLines = 0
         // 自动布局配置
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
-        UIApplication.topViewController()?.view.addSubview(statusLabel)
-        
-        statusLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(12)
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
+            if okayufir {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
         }
-              
               
         // 圆角效果
         statusLabel.layer.cornerRadius = 14
@@ -111,9 +115,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-       
-       
-        AppDelegate.appUITPushToken = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        let nertopush = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        UserDefaults.standard.set(nertopush, forKey: "PushTokenGSDD")
+        
     }
    
     

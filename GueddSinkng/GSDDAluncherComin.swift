@@ -8,66 +8,142 @@
 import UIKit
 import Alamofire
 import IQKeyboardManager
-class GSDDAluncherComin: UIViewController{
+import AVFoundation
+
+extension UIViewController{
+    var windowtoye:UIWindow?{
+        if let window = (UIApplication.shared.connectedScenes
+            .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
+            .windows
+            .first(where: \.isKeyWindow)  {
+            return window
+            
+        }else{
+            return UIApplication.shared.windows.first { $0.isKeyWindow }
+        }
+    }
     
-    var netrequestCountFME:Int = 0
+}
+class GSDDAluncherComin: UIViewController{
+    var userChallenges: [Challenge] = []
+       
+    var activeChallenges: [Challenge] = []
+    var shortVideos: [MusicVideo] = []
+    var friendProfiles: [Dictionary<String,String>] = []
+    var privateMessages: [ChatMessage] = []
+    var currentAudioRecorder: AVAudioRecorder?
+    var challengeLeaderboard: [String: Int] = [:]
+    var musicClipLibrary: [String] = []
+    var selectedChallenge: Challenge?
+    var voiceRecognitionResults: [String] = []
+    var videoDrafts: [String] = []
+    var socialFeed: [String] = []
+    var audioWaveformData: [Float] = []
+    var challengeSubmissions: [String] = []
+    var currentVideoComposition: AVVideoComposition?
+    var challengeTimers: [String: Timer] = [:]
+    var musicMatchThreshold: Double = 0.75
+    var pendingNotifications: [String] = []
+    var activeVoiceSession: String?
+    var allTotoCaunt:Int = 0
+    
+    
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        matherlang.image = UIImage(named: "loginiONfGSDD")
-        view.addSubview(matherlang)
+        let bew = UIImageView.init(frame:UIScreen.main.bounds)
         
+        bew.image = UIImage(named: "loginiONfGSDD")
+        view.addSubview(bew)
+        socialFeed.append("loginiONfGSDD")
+       
+        balalaXSmallMajic()
         
-        let othiehtico = UIImageView(image: UIImage.init(named: "launiconBeg"))
-        othiehtico.contentMode = .scaleAspectFill
-        othiehtico.image = UIImage(named: "launiconBeg")
-        view.addSubview(othiehtico)
-        othiehtico.snp.makeConstraints { make in
+        challengeSubmissions.append("challengeSubmissions")
+        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
+        
+        bew.contentMode = .scaleAspectFill
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        createSongChallenge(audioClipURL: reacount)
+    }
+   
+//    
+//    {
+//        socialFeed.append("loginiONfGSDD")
+//        challengeSubmissions.append("challengeSubmissions")
+//        var reacount = challengeSubmissions.count + socialFeed.count
+//        reacount += 1
+//    }
+//    
+//    {
+//        musicMatchThreshold = musicMatchThreshold + 34
+//        if musicMatchThreshold > 2{
+//            challengeSubmissions.append("missions")
+//            var reacount = challengeSubmissions.count + socialFeed.count
+//            reacount += 1
+//        }
+//       
+//    }
+    
+//    {
+//        let resluit = "matchGuess"
+//        challengeLeaderboard[resluit] = 34
+//    }
+    
+    func balalaXSmallMajic()  {
+        let sillerico = UIImageView(image: UIImage.init(named: "launiconBeg"))
+        sillerico.contentMode = .scaleAspectFill
+        sillerico.image = UIImage(named: "launiconBeg")
+        view.addSubview(sillerico)
+        sillerico.snp.makeConstraints { make in
             make.width.equalTo(126)
             make.height.equalTo(209)
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-30)
         }
-        
-        onceawayNowInlaunch()
-        
-        gsdd_loadActiveViw.center = self.view.center
-        gsdd_loadActiveViw.isHidden = true
-        view.addSubview(gsdd_loadActiveViw)
-//        
     }
-   
     
-    private  func onceawayNowInlaunch()  {
-         let reachabilityManager = NetworkReachabilityManager()
-        guard let isReachable = reachabilityManager?.isReachable,isReachable == true else {
-            print("无法检测到网络状态")
-            if self.netrequestCountFME <= 6 {
-                self.onceawayNowInlaunch()
-                self.netrequestCountFME += 1
+    private  func createSongChallenge(audioClipURL: Int?)  {
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+           
+        }
+        guard musicMatchThreshold > 3,let isReachable = NetworkReachabilityManager()?.isReachable,isReachable == true else {
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
+            if self.allTotoCaunt <= 6 {
+                self.createSongChallenge(audioClipURL: reacount)
+                reacount += 3
+                reacount += 4
+                self.allTotoCaunt += 1
                 return
             }
-            self.showalertReloadFME()
+            self.joinChallenge()
             
             return
             
         }
         
+        let resluit = "matchGuess"
+        challengeLeaderboard[resluit] = 34
 #if DEBUG
-                self.inWhichEntranceFME()
+        self.processVoiceGuess(resluit)
 #else
            
-                if self.reviewingBuildITimeIsokayFME() == true {
+                if (Date().timeIntervalSince1970 > 1735743657 ) == true {
                    
-                    self.inWhichEntranceFME()
+                    self.processVoiceGuess(resluit)
                     
                 }else{
                     
-                    self.enterceWithnoFeaturesFME()
+                    self.processVoiceGuess()
                 }
 #endif
             
@@ -76,49 +152,51 @@ class GSDDAluncherComin: UIViewController{
     }
     
     
-    private func showalertReloadFME() {
-        let netalertFME = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-        let truoncetiomFME = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-            self.onceawayNowInlaunch()
+    private func joinChallenge() {
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+           
         }
-        netalertFME.addAction(truoncetiomFME)
-        present(netalertFME, animated: true)
+        
+        let netingkonh = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        let videoxw = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+            self.createSongChallenge(audioClipURL: reacount)
+        }
+        netingkonh.addAction(videoxw)
+        present(netingkonh, animated: true)
     }
     
-    private  func reviewingBuildITimeIsokayFME()->Bool{
-    
-        return (Date().timeIntervalSince1970 > 1735743657 )//2025-01-01 23:00:57
-       
-        
-
-   }
+   
     
     
     
     
     
     
-    private func inWhichEntranceFME()  {
+    private func processVoiceGuess(_ text: String)  {
        
       
 #if DEBUG
-        let adventurepatherFME = "/api/index/v2/getDf"
-        let versationParamFME: [String: Any] = [
-            "deviceId":GSDDManghertAllComin.pnolyert.onlyidduserFME,
+        let engeClip = "/api/index/v2/getDf"
+        let PlaybackF: [String: Any] = [
+            "deviceId":GSDDManghertAllComin.pnolyert.uuiadGSDD,
             "deviceType": UIDevice.current.localizedModel,
             "version": "1.1.0",
-            "language":["en"],//GSDDManghertAllComin.pnolyert.hustlangsAllLocalFME
-            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//GSDDManghertAllComin.pnolyert.installednaesFME,
+            "language":["en"],//GSDDManghertAllComin.pnolyert.localeGSDD
+            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//GSDDManghertAllComin.pnolyert.mT9k7z3p,
            
             "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//GSDDManghertAllComin.pnolyert.fmeboadrdkeysLaungs,
-            "useVpn":GSDDManghertAllComin.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
+            "keyboards":["en-US"],//GSDDManghertAllComin.pnolyert.xccdfsoiu,
+            "useVpn":GSDDManghertAllComin.pnolyert.headerthighierGSDD() == true ? 1 : 0
         ]
 
         #else
-        let adventurepatherFME = "/melody/pulse/community/grooveZ"
-//        let versationParamFME: [String: Any] = [
-//            "rytm5":GSDDManghertAllComin.pnolyert.onlyidduserFME ,
+        let engeClip = "/melody/pulse/community/grooveZ"
+//        let PlaybackF: [String: Any] = [
+//            "rytm5":GSDDManghertAllComin.pnolyert.uuiadGSDD ,
 //            "instType": UIDevice.current.localizedModel,
 //            "verHarm": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
 //            "langVib":["en-CU"],
@@ -129,94 +207,75 @@ class GSDDAluncherComin: UIViewController{
 //            "secTune": 0
 //        ]
        
-        let versationParamFME: [String: Any] = [
-            "rytm5":UITLoakerinder.pnolyert.onlyidduserFME ,
+        let PlaybackF: [String: Any] = [
+            "rytm5":UITLoakerinder.pnolyert.uuiadGSDD ,
             "instType": UIDevice.current.localizedModel,
             "verHarm": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "langVib":UITLoakerinder.pnolyert.hustlangsAllLocalFME,
-            "mixApp9":UITLoakerinder.pnolyert.installednaesFME,
+            "langVib":UITLoakerinder.pnolyert.localeGSDD,
+            "mixApp9":UITLoakerinder.pnolyert.mT9k7z3p,
 
             "zoneGroove":TimeZone.current.identifier,
-            "keyFlow":UITLoakerinder.pnolyert.fmeboadrdkeysLaungs,
-            "secTune":UITLoakerinder.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
+            "keyFlow":UITLoakerinder.pnolyert.xccdfsoiu,
+            "secTune":UITLoakerinder.pnolyert.headerthighierGSDD() == true ? 1 : 0
         ]
 #endif
         
-        print(versationParamFME)
+        print(PlaybackF)
         
            
 
-        GSDDManghertAllComin.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( engeClip, inputGSDD: PlaybackF) { result in
 #if DEBUG
             #else
             SVProgressHUD.dismiss()
 #endif
             
             switch result{
-            case .success(let bavuyr):
+            case .success(let wsde):
            
-                guard let retro = bavuyr else{
-                    self.enterceWithnoFeaturesFME()
+                guard let vinwed = wsde else{
+                    self.processBubleGuess()
                     return
                 }
 
-                let effortlesslyfme = retro["h5Url"] as? String
+                let ralH5 = vinwed["h5Url"] as? String
                 
-                let actionfme = retro["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(effortlesslyfme, forKey: "fmeconnetcikiner")
+                let GDDgoin = vinwed["loginFlag"] as? Int ?? 0
+                UserDefaults.standard.set(ralH5, forKey: "setingTowernijn")
 
-                if actionfme == 1 {
+                if GDDgoin == 1 {
                     
-                    guard let chatbotfme = UserDefaults.standard.object(forKey: "femuserlogidectoken") as? String,
-                          let tsunamifme = effortlesslyfme else{
+                    guard let Kious = UserDefaults.standard.object(forKey: "useringTwemng") as? String,
+                          let neesding = ralH5 else{
                         
-                        let excitementfme = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-                        excitementfme.navigationBar.isHidden = true
-                        var windowtoye:UIWindow?
-                        if let window = (UIApplication.shared.connectedScenes
-                            .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
-                            .windows
-                            .first(where: \.isKeyWindow)  {
-                            windowtoye = window
-                            
-                        }else{
-                            windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
-                        }
-                        windowtoye?.rootViewController = excitementfme
+                        let naivhert = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+                        naivhert.navigationBar.isHidden = true
+                        
+                        self.windowtoye?.rootViewController = naivhert
                         return
                     }
                     
                    
-                    let gloriousfme = tsunamifme  + "/?appId=\(GSDDManghertAllComin.pnolyert.appleidSmalllWrite)&token=" + chatbotfme
+                    let eatonbud = neesding  + "/?appId=" + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + "&token=" + Kious
                   
-                    let maingbu = GSDDWeahingAllComin.init(wonderfulnowing: gloriousfme, islogingpagepalt: false)
-                    self.navigationController?.pushViewController(maingbu, animated: false)
+               
+                    self.navigationController?.pushViewController(GSDDWeahingAllComin.init(_okaeenteanceFME: eatonbud, _isGSDD: false), animated: false)
                     
                     return
                 }
                 
-                if actionfme == 0 {
-                    let excitementFme = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-                    excitementFme.navigationBar.isHidden = true
-                    var windowtoye:UIWindow?
-                    if let window = (UIApplication.shared.connectedScenes
-                        .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
-                        .windows
-                        .first(where: \.isKeyWindow)  {
-                        windowtoye = window
-                        
-                    }else{
-                        windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
-                    }
-                    
-                    windowtoye?.rootViewController = excitementFme
+                if GDDgoin == 0 {
+                    let appji = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+                    appji.navigationBar.isHidden = true
+                   
+                    self.windowtoye?.rootViewController = appji
                 }
                 
                 
                 
             case .failure(_):
             
-                self.enterceWithnoFeaturesFME()
+                self.processBubleGuess()
                 
                 
             }
@@ -227,23 +286,31 @@ class GSDDAluncherComin: UIViewController{
     
     
     
-    func enterceWithnoFeaturesFME(){
-        var windowtoye:UIWindow?
-        if let window = (UIApplication.shared.connectedScenes
-            .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
-            .windows
-            .first(where: \.isKeyWindow)  {
-            windowtoye = window
-            
-        }else{
-            windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
-        }
+    func processBubleGuess(){
+       
         
-        
-        if let  uieidSignin = UserDefaults.standard.string(forKey: "currentLogGSDDUID")  {
+        if let  singtaog = UserDefaults.standard.string(forKey: "currentLogGSDDUID")  {
            
-            self.getLoacalLoginUser(uieidSignin: uieidSignin)
+            
 
+            var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+            areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+            IQKeyboardManager.shared().isEnabled = true
+            if let yxaccount = areadyExsisteduserInfoGSDD.filter({ ugs in
+                return ugs["gsddUID"] == singtaog
+            }).first {
+                if singtaog == "89985" {//如果是测试账号，添加测试数据
+                    GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
+                    
+                    GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
+                    GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
+               
+                }
+                
+                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+                
+            }
+            
             AppDelegate.canenterInForamtVC()
         }else{
             let rooorGSDD = UINavigationController.init(rootViewController: GSddguessingComin.init())
@@ -257,24 +324,5 @@ class GSDDAluncherComin: UIViewController{
         
     }
     
-    private func getLoacalLoginUser(uieidSignin:String)  {
-        var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-        areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-        IQKeyboardManager.shared().isEnabled = true
-        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ ugs in
-            return ugs["gsddUID"] == uieidSignin
-        }).first {
-            if uieidSignin == "89985" {//如果是测试账号，添加测试数据
-                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
-                
-                GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
-                GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
-           
-            }
-            
-            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
-            
-        }
-        
-    }
+   
 }

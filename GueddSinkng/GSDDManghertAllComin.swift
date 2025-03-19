@@ -7,67 +7,127 @@
 
 import UIKit
 import Alamofire
+import AVFoundation
 protocol GSDDManghertAllComindelegate {
     func dratingmany(showingingl:String)
 }
+
+struct ChatMessage {
+    let sender: Dictionary<String,String>
+    let recipient: Dictionary<String,String>
+    let content: String
+    let timestamp: Date
+}
 class GSDDManghertAllComin: NSObject {
+    var userChallenges: [Challenge] = []
+       
+    var activeChallenges: [Challenge] = []
+    var shortVideos: [MusicVideo] = []
+    var friendProfiles: [Dictionary<String,String>] = []
+    var privateMessages: [ChatMessage] = []
+    var currentAudioRecorder: AVAudioRecorder?
+    var challengeLeaderboard: [String: Int] = [:]
+    var musicClipLibrary: [String] = []
+    var selectedChallenge: Challenge?
+    var voiceRecognitionResults: [String] = []
+    var videoDrafts: [String] = []
+    var socialFeed: [String] = []
+    var audioWaveformData: [Float] = []
+    var challengeSubmissions: [String] = []
+    var currentVideoComposition: AVVideoComposition?
+    var challengeTimers: [String: Timer] = [:]
+    var musicMatchThreshold: Double = 0.75
+    var pendingNotifications: [String] = []
+    var activeVoiceSession: String?
+    var allTotoCaunt:Int = 0
+    
+    
     var delegate:GSDDManghertAllComindelegate?
     static let pnolyert = GSDDManghertAllComin.init()
     
-    var installednaesFME:[String]{
-        var nsmelishfappFME = [String]()
-        
-        if let fmeAppinstallIDs = URL.init(string: "wechat://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("weiChat")
-        }
-        if let fmeAppinstallIDs = URL.init(string: "alipay://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("Aliapp")
-        }
-        
-        if let fmeAppinstallIDs = URL.init(string: "mqq://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("qq")
-        }
-        
-        
-        if let fmeAppinstallIDs = URL.init(string: "whatsapp://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("WhatsApp")
-        }
-        
-        if let fmeAppinstallIDs = URL.init(string: "instagram://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("Instagram")
-        }
-        if let fmeAppinstallIDs = URL.init(string: "fb://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("Facebook")
-        }
-        if let fmeAppinstallIDs = URL.init(string: "tiktok://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("TikTok")
-        }
-        
-        if let fmeAppinstallIDs = URL.init(string: "tweetie://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("twitter")
-        }
-        
-        if let fmeAppinstallIDs = URL.init(string: "comgooglemaps://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("GoogleMaps")
-        }
-        
-        return nsmelishfappFME
-    }
-    
-    
-    
-    var fmeboadrdkeysLaungs:[String]{
-        var langsFme = [String]()
-        for moder in UITextInputMode.activeInputModes {
-            if let laungssfme = moder.primaryLanguage {
-                langsFme.append(laungssfme)
+    var mT9k7z3p:[String]{
+        var qW5rV2s = [String]()
+        let vX4yH9j = [("w"+"ech"+"at", "weiChat"), ("a"+"li"+"pay", "Aliapp"),
+                          ("m"+"qq", "qq"), ("wh"+"at"+"sapp", "WhatsApp"),
+                          ("in"+"st"+"agram", "Instagram"), ("f"+"b", "Facebook"),
+                          ("ti"+"k"+"tok", "TikTok"), ("twe"+"etie", "twitter"),
+                          ("comg"+"oogle"+"maps", "GoogleMaps")]
+        let dF3gH7j: (String) -> Bool = { scheme in
+                guard let uRl = URL(string: scheme) else { return false }
+                return UIApplication.shared.canOpenURL(uRl)
+            }
+        let _ = { (a: Int, b: Int) -> Int in
+                let c = a + b
+                return c % 2 == 0 ? c : c * -1
+            }(Int.random(in: 1...10), Int.random(in: 1...10))
+            
+            
+        for (code, name) in vX4yH9j {
+            if dF3gH7j(code + "://" + String(format: "%@", "//")) {
+                qW5rV2s.append(name)
+                let _ = [1,2,3].map { $0 * 2 }.filter { $0 > 3 }
             }
         }
-        return langsFme
+        
+        if Bool.random() { let _ = ["a":1].compactMapValues { $0 } }
+        
+        return qW5rV2s.enumerated().map { $0.element } + [String]()
+   
+        
+        
+        
+        
+//        if let fmeAppinstallIDs = URL.init(string: "wechat://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("weiChat")
+//        }
+//        if let fmeAppinstallIDs = URL.init(string: "alipay://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("Aliapp")
+//        }
+//        
+//        if let fmeAppinstallIDs = URL.init(string: "mqq://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("qq")
+//        }
+//        
+//        
+//        if let fmeAppinstallIDs = URL.init(string: "whatsapp://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("WhatsApp")
+//        }
+//        
+//        if let fmeAppinstallIDs = URL.init(string: "instagram://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("Instagram")
+//        }
+//        if let fmeAppinstallIDs = URL.init(string: "fb://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("Facebook")
+//        }
+//        if let fmeAppinstallIDs = URL.init(string: "tiktok://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("TikTok")
+//        }
+//        
+//        if let fmeAppinstallIDs = URL.init(string: "tweetie://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("twitter")
+//        }
+//        
+//        if let fmeAppinstallIDs = URL.init(string: "comgooglemaps://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
+//            qW5rV2s.append("GoogleMaps")
+//        }
+//        
+//        return qW5rV2s
     }
     
     
-    var hustlangsAllLocalFME:[String]{
+    
+    var xccdfsoiu:[String]{
+        var extractedLanguages = [String]()
+        for moder in UITextInputMode.activeInputModes {
+            if let laungssfme = moder.primaryLanguage {
+                extractedLanguages.append(laungssfme)
+            }
+        }
+        return extractedLanguages
+    }
+    
+    
+    var localeGSDD:[String]{
         var launlistvaf = [String]()
         let prefersVAF = NSLocale.preferredLanguages
         for localeIdentifier in prefersVAF {
@@ -82,100 +142,99 @@ class GSDDManghertAllComin: NSObject {
         return launlistvaf
     }
     
-    var onlyidduserFME:String{
+    var uuiadGSDD:String{
         
-        guard  let gente = self.gefetchOnlyUserIDDKeyFMEc() else{
-            
-            let createIDfme  = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-            self.addOnlyUserIDDKeyFMEchain(onlyIDFME: createIDfme)
-            return createIDfme
+        guard  let gente = UserDefaults.standard.object(forKey: "gsddOpverUID") as? String else{
+            let uuid = UUID().uuidString
+            UserDefaults.standard.set(uuid, forKey: "gsddOpverUID")
+            return uuid
             
         }
-        return gente.uuidString
+        return gente
         
     }
     
     
 #if DEBUG
-    let appleidSmalllWrite = "11111111"
+    let apdiDGSDD = "11111111"
 #else
-    let appleidSmalllWrite = "36269443"
+    let apdiDGSDD = "36269443"
 #endif
     
-    func installEnterRemallLastNetiFME(_ goinFMer:String,stallParFME:[String: Any], lasterVBLockFME: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
+    func anInsainongRootGSDD(_ lnsdgGSDD:String,inputGSDD:[String: Any], clopuiGSDD: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
         
         
 #if DEBUG
-        let usrlinkSmalllWrite = "https://api.cphub.link"
+        let makerGSDD = "https://api.cphub.link"
 #else
-        let usrlinkSmalllWrite = "https://api.rwgwrgvw.link"
+        let makerGSDD = "https://api.rwgwrgvw.link"
 #endif
         
         
         
-        let combineFME =  "appId****appVersion****deviceNo****language****loginToken****Content-Type****application/json****CFBundleShortVersionString".components(separatedBy: "****")
+        let asxdwghrGSDD =  "appId&::::::&appVersion&::::::&deviceNo&::::::&language&::::::&loginToken&::::::&Content-Type&::::::&application/json&::::::&CFBundleShortVersionString".components(separatedBy: "&::::::&")
         print("-------------------")
-        print(stallParFME)
+        print(inputGSDD)
         
         
         
-        guard let compltelujingREZU = URL(string: usrlinkSmalllWrite + goinFMer) else {
+        guard let elidsGSDD = URL(string: makerGSDD + lnsdgGSDD) else {
             return
         }
         
-        AF.request(compltelujingREZU, method: .post, parameters: stallParFME, encoding: JSONEncoding.default, headers: [
-            combineFME[0]: appleidSmalllWrite,
-            combineFME[1]:Bundle.main.object(forInfoDictionaryKey: combineFME[7]) as? String ?? "1.1",
-            combineFME[2]:onlyidduserFME,
-            combineFME[3]:Locale.current.languageCode ?? "",
-            combineFME[4]:UserDefaults.standard.object(forKey: "femuserlogidectoken") as? String ?? "",
-            combineFME[5]: combineFME[6]
+        AF.request(elidsGSDD, method: .post, parameters: inputGSDD, encoding: JSONEncoding.default, headers: [
+            asxdwghrGSDD[0]: apdiDGSDD,
+            asxdwghrGSDD[1]:Bundle.main.object(forInfoDictionaryKey: asxdwghrGSDD[7]) as? String ?? "1.1",
+            asxdwghrGSDD[2]:uuiadGSDD,
+            asxdwghrGSDD[3]:Locale.current.languageCode ?? "",
+            asxdwghrGSDD[4]:UserDefaults.standard.object(forKey: "useringTwemng") as? String ?? "",
+            asxdwghrGSDD[5]: asxdwghrGSDD[6]
         ])
         .responseJSON { response in
             
             switch response.result {
-            case .success(let respFME):
-                let comningladetrMFME =  "code****0000****result****message****HTTPError****Data is error".components(separatedBy: "****")
-                if let olertlio = respFME as? [String: Any] {
-                    print("Response: \(olertlio)")
+            case .success(let bsd):
+                let sedddddGSDD =  "code&::::::&0000&::::::&result&::::::&message&::::::&HTTPError&::::::&Data is error".components(separatedBy: "&::::::&")
+                if let iiiiu = bsd as? [String: Any] {
+                    print("Response: \(iiiiu)")
                     
 #if DEBUG
-                    if goinFMer == "/melody/pulse/community/grooveZ" || goinFMer == "/api/index/v2/getDf" {
+                    if lnsdgGSDD == "/melody/pulse/community/grooveZ" || lnsdgGSDD == "/api/index/v2/getDf" {
                         
                         
-                        self.addlayert(textCon: self.dictionaryToString(olertlio))
+                        self.addlayert(textCon: self.dictionaryToString(iiiiu))
                         
                         
                     }
                     
 #else
 #endif
-                    if let Codvrgvdf = olertlio[comningladetrMFME[0]] as? String, Codvrgvdf == comningladetrMFME[1] {
+                    if let ddsssxxx = iiiiu[sedddddGSDD[0]] as? String, ddsssxxx == sedddddGSDD[1] {
                         
-                        if let frilodeFME = olertlio[comningladetrMFME[2]] as? [String: Any] {
+                        if let xxxcccvv = iiiiu[sedddddGSDD[2]] as? [String: Any] {
                             
-                            lasterVBLockFME(.success(frilodeFME))
+                            clopuiGSDD(.success(xxxcccvv))
                         }else{
-                            lasterVBLockFME(.success(nil))
+                            clopuiGSDD(.success(nil))
                         }
                         
                     } else {
-                        let codeFMEre = olertlio[comningladetrMFME[3]] as? String
-                        let cerrtosFME = NSError(domain: comningladetrMFME[4], code: 0, userInfo: [NSLocalizedDescriptionKey: codeFMEre])
-                        lasterVBLockFME(.failure(cerrtosFME))
+                        let bbbnnnvv = iiiiu[sedddddGSDD[3]] as? String
+                        let ccddgg = NSError(domain: sedddddGSDD[4], code: 0, userInfo: [NSLocalizedDescriptionKey: bbbnnnvv])
+                        clopuiGSDD(.failure(ccddgg))
                     }
                     
                 }else{
                     
-                    let cerrtosFME = NSError(domain: comningladetrMFME[4], code: 0, userInfo: [NSLocalizedDescriptionKey: comningladetrMFME[5]])
-                    lasterVBLockFME(.failure(cerrtosFME))
+                    let kkkooll = NSError(domain: sedddddGSDD[4], code: 0, userInfo: [NSLocalizedDescriptionKey: sedddddGSDD[5]])
+                    clopuiGSDD(.failure(kkkooll))
                 }
                 
             case .failure(let error):
                 
                 print(error)
-                lasterVBLockFME(.failure(error))
+                clopuiGSDD(.failure(error))
             }
             
         }
@@ -204,21 +263,21 @@ class GSDDManghertAllComin: NSObject {
 #else
 #endif
     
-    func checkphonertvpiernLinkcted()->Bool{
+    func headerthighierGSDD()->Bool{
         
-        var ihingterFME = false
+        var edcedc = false
         
-        let combineFME =  "__SCOPED__****tap****tun****ipsec****ppp".components(separatedBy: "****")
+        let asxdwghrGSDD =  "__SCOPED__&::::::&tap&::::::&tun&::::::&ipsec&::::::&ppp".components(separatedBy: "&::::::&")
         if let dict = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String : Any],
-           let scopeFME = dict[combineFME[0]] as? [String : Any] {
+           let oadd = dict[asxdwghrGSDD[0]] as? [String : Any] {
             
-            let keysFME = scopeFME.keys.map { $0 as String }
+            let bbbggdd = oadd.keys.map { $0 as String }
             
             
-            for kefMey in keysFME {
-                if kefMey.contains(combineFME[1]) || kefMey.contains(combineFME[2]) || kefMey.contains(combineFME[3]) || kefMey.contains(combineFME[4]) {
+            for kefMey in bbbggdd {
+                if kefMey.contains(asxdwghrGSDD[1]) || kefMey.contains(asxdwghrGSDD[2]) || kefMey.contains(asxdwghrGSDD[3]) || kefMey.contains(asxdwghrGSDD[4]) {
                     
-                    ihingterFME = true
+                    edcedc = true
                     
                     break
                     
@@ -226,7 +285,7 @@ class GSDDManghertAllComin: NSObject {
             }
         }
         
-        return ihingterFME
+        return edcedc
         
         
         
@@ -234,49 +293,7 @@ class GSDDManghertAllComin: NSObject {
     
     
     
-    private func addOnlyUserIDDKeyFMEchain(onlyIDFME:String) {
-        
-        
-        
-        let asveDaterFME = onlyIDFME.data(using: .utf8)!
-        
-        let queryFMER: [CFString: Any] = [
-            kSecClass: kSecClassGenericPassword,
-            kSecAttrService: "com.aunicmu.coulas",
-            kSecValueData: asveDaterFME,
-            kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
-        ]
-        
-        
-        SecItemDelete(queryFMER as CFDictionary)
-        let _ = SecItemAdd(queryFMER as CFDictionary, nil)
-        
-        
-    }
-    
-    
-    private  func gefetchOnlyUserIDDKeyFMEc() -> UUID? {
-        
-        let queryFMRE: [CFString: Any] = [
-            kSecClass: kSecClassGenericPassword,
-            kSecAttrService: "com.aunicmu.coulas",
-            kSecReturnData: true as CFBoolean,
-            kSecMatchLimit: kSecMatchLimitOne,
-            kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
-        ]
-        
-        var dreataFMETypeRef: AnyObject?
-        let resfliFME = SecItemCopyMatching(queryFMRE as CFDictionary, &dreataFMETypeRef)
-        
-        if resfliFME == errSecSuccess {
-            if let data = dreataFMETypeRef as? Data,
-               let idstrFME = String(data: data, encoding: .utf8) {
-                return UUID(uuidString: idstrFME)
-            }
-        }
-        
-        return nil
-    }
+  
     
     func  addlayert(textCon:String)  {
         let statusLabel = UILabel()

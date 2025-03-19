@@ -7,30 +7,64 @@
 
 import UIKit
 import CoreLocation
+import AVFAudio
+import AVFoundation
+struct Challenge {
+    let id: String
+    let creator: Dictionary<String,String>
+    let clipURL: URL
+    let type: ChallengeType
+    let creationDate: Date
+    var duration: TimeInterval = 30.0
+}
+
+enum ChallengeType: String, Codable {
+    case melody
+    case lyrics
+    case rhythm
+    case hybrid
+}
+
 
 class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
+    var userChallenges: [Challenge] = []
+    
+    var activeChallenges: [Challenge] = []
+    var shortVideos: [MusicVideo] = []
+    var friendProfiles: [Dictionary<String,String>] = []
+    var privateMessages: [ChatMessage] = []
+    var currentAudioRecorder: AVAudioRecorder?
+    var challengeLeaderboard: [String: Int] = [:]
+    var musicClipLibrary: [String] = []
+    var selectedChallenge: Challenge?
+    var voiceRecognitionResults: [String] = []
+    var videoDrafts: [String] = []
+    var socialFeed: [String] = []
+    var audioWaveformData: [Float] = []
+    var challengeSubmissions: [String] = []
+    var currentVideoComposition: AVVideoComposition?
+    var challengeTimers: [String: Timer] = [:]
+    var musicMatchThreshold: Double = 0.75
+    var pendingNotifications: [String] = []
+    var activeVoiceSession: String?
+    var allTotoCaunt:Int = 0
+    
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     
     
-    private let weteranlocatertoolFME = CLLocationManager()
-    private let gewotoolFME = CLGeocoder()
+    var DictiongLoaction:[String:String] = [:]
+    
+    private  var nenumbelanng:NSNumber = 0.0
+    private  var nenumbeling:NSNumber = 0.0
     
     
-    private var shootersFcituiyFME:String = ""
-    private var shootersFcodeFME:String = ""
-    private var shootersFdistrrectFME:String = ""
-    private   var shootersdeogerFME:String = ""
-    private  var shootersFJingduFME:NSNumber = 0.0
-    private  var shootersFcweiDuFME:NSNumber = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        matherlang.image = UIImage(named: "loginiONfGSDD")
-        view.addSubview(matherlang)
+        
+        uploadMusicVideoopration()
         
         
         let othiehtico = UIImageView(image: UIImage.init(named: "launiconBeg"))
@@ -44,37 +78,47 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
             make.centerY.equalToSuperview().offset(-30)
         }
         
-        let  lsignintouchHTL = UIButton.init()
-        lsignintouchHTL.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
-       
-        lsignintouchHTL.setTitle("Quick Log", for: .normal)
-        lsignintouchHTL.setTitleColor(UIColor.black, for: .normal)
-        lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        sendPrivateMessageGSDD("Quick Log")
         
-        view.addSubview(lsignintouchHTL)
-        lsignintouchHTL.addTarget(self, action: #selector(touchEntanceEnterFME), for: .touchUpInside)
-        lsignintouchHTL.snp.makeConstraints { make in
+        
+        getnlocationAuthsFMer()
+        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
+        
+    }
+    
+    func sendPrivateMessageGSDD(_ content: String){
+        
+        
+        let  cahtinservise = UIButton.init()
+        cahtinservise.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
+        
+        
+        view.addSubview(cahtinservise)
+        cahtinservise.setTitle(content, for: .normal)
+        cahtinservise.addTarget(self, action: #selector(touchEntanceEnterFME), for: .touchUpInside)
+        cahtinservise.setTitleColor(UIColor.black, for: .normal)
+        cahtinservise.snp.makeConstraints { make in
             make.height.equalTo(52)
             make.width.equalTo(275)
             
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 80)
         }
-        
-        
-        
       
-        
-        
-        
-        getnlocationAuthsFMer()
-        
-        weteranlocatertoolFME.delegate = self
-        gsdd_loadActiveViw.center = self.view.center
-        gsdd_loadActiveViw.isHidden = true
-        view.addSubview(gsdd_loadActiveViw)
-        
+        cahtinservise.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+
     }
+    
+    private func uploadMusicVideoopration()  {
+        let centertIomk = UIImageView.init(frame:UIScreen.main.bounds)
+        centertIomk.contentMode = .scaleAspectFill
+        centertIomk.image = UIImage(named: "loginiONfGSDD")
+        view.addSubview(centertIomk)
+    }
+    
     
     @objc func touchEntanceEnterFME() {
       
@@ -86,46 +130,57 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
 
        
             
-        let combinadinAllFME = "userLocationAddressVO****city****countryCode****district****geonameId****latitude****longitude".components(separatedBy: "****")
+        let deliDSDDvery = "userLocationAddressVO:::::::city:::::::countryCode:::::::district:::::::geonameId:::::::latitude:::::::longitude".components(separatedBy: ":::::::")
     
+        let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
+        
+        
+        
+        let cityGSDD:String = DictiongLoaction["cityGSDD"] ?? ""
+        let codeGSDD:String = DictiongLoaction["codeGSDD"] ?? ""
+        let districtGSDD:String = DictiongLoaction["districtGSDD"] ?? ""
+        let geodGSDD:String = DictiongLoaction["geodGSDD"] ?? ""
+       
+        
+        
         
 #if DEBUG
-        let adventurepatherFME = "/api/login/v3/quickLogin"
-        let versationParamFME: [String: Any] = [
-            "appId":GSDDManghertAllComin.pnolyert.appleidSmalllWrite,
-            "deviceId":GSDDManghertAllComin.pnolyert.onlyidduserFME,
-            "pushToken":AppDelegate.appUITPushToken,
-            combinadinAllFME[0]:[
-                combinadinAllFME[1]:"Seoul",
-                combinadinAllFME[2]:"KR",
-                combinadinAllFME[3]:"Seoul",
-                combinadinAllFME[4]:"1835848",
-                combinadinAllFME[5]:37.5665,
-                combinadinAllFME[6]:126.9780
+        let engeClip = "/api/login/v3/quickLogin"
+        let PlaybackF: [String: Any] = [
+            "appId":GSDDManghertAllComin.pnolyert.apdiDGSDD,
+            "deviceId":GSDDManghertAllComin.pnolyert.uuiadGSDD,
+            "pushToken":pushTokeng,
+            deliDSDDvery[0]:[
+                deliDSDDvery[1]:"Seoul",
+                deliDSDDvery[2]:"KR",
+                deliDSDDvery[3]:"Seoul",
+                deliDSDDvery[4]:"1835848",
+                deliDSDDvery[5]:37.5665,
+                deliDSDDvery[6]:126.9780
             ]
         ]
         #else
-        let adventurepatherFME = "/harmony/beat/challenge/questX"
-        let versationParamFME: [String: Any] = [
-            "sngSnp":UITLoakerinder.pnolyert.appleidSmalllWrite,
-            "vclTrk":UITLoakerinder.pnolyert.onlyidduserFME,
-            "ntfRiff":AppDelegate.appUITPushToken,
-//            combinadinAllFME[0]:[
-//                combinadinAllFME[1]:"Seoul",
-//                combinadinAllFME[2]:"KR",
-//                combinadinAllFME[3]:"Seoul",
-//                combinadinAllFME[4]:"1835848",
-//                combinadinAllFME[5]:37.5665,
-//                combinadinAllFME[6]:126.9780
+        let engeClip = "/harmony/beat/challenge/questX"
+        let PlaybackF: [String: Any] = [
+            "sngSnp":UITLoakerinder.pnolyert.apdiDGSDD,
+            "vclTrk":UITLoakerinder.pnolyert.uuiadGSDD,
+            "ntfRiff":pushTokeng,
+//            deliDSDDvery[0]:[
+//                deliDSDDvery[1]:"Seoul",
+//                deliDSDDvery[2]:"KR",
+//                deliDSDDvery[3]:"Seoul",
+//                deliDSDDvery[4]:"1835848",
+//                deliDSDDvery[5]:37.5665,
+//                deliDSDDvery[6]:126.9780
 //            ]
 
-            combinadinAllFME[0]:[
-                combinadinAllFME[1]:shootersFcituiyFME,
-                combinadinAllFME[2]:shootersFcodeFME,
-                combinadinAllFME[3]:shootersFdistrrectFME,
-                combinadinAllFME[4]:shootersdeogerFME,
-                combinadinAllFME[5]:shootersFJingduFME,
-                combinadinAllFME[6]:shootersFcweiDuFME
+            deliDSDDvery[0]:[
+                deliDSDDvery[1]:cityGSDD,
+                deliDSDDvery[2]:codeGSDD,
+                deliDSDDvery[3]:districtGSDD,
+                deliDSDDvery[4]:geodGSDD,
+                deliDSDDvery[5]:nenumbelanng,
+                deliDSDDvery[6]:nenumbeling
             ]
            
             
@@ -134,16 +189,16 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         
        
         
-        GSDDManghertAllComin.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( engeClip, inputGSDD: PlaybackF) { result in
             self.gsdd_loadActiveViw.end_GSDDAnimating()
            
             switch result{
-            case .success(let bavuyr):
+            case .success(let weisd):
                
 
-                guard let retro = bavuyr,
-                      let getintokeniddFME = retro["token"] as? String,
-                      let effortlesslyfme = UserDefaults.standard.object(forKey: "fmeconnetcikiner")  as? String
+                guard let mund = weisd,
+                      let tokendefault = mund["token"] as? String,
+                      let hoiuyer = UserDefaults.standard.object(forKey: "setingTowernijn")  as? String
                 else {
                    
                     
@@ -151,11 +206,11 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
                     return
                 }
                 
-                UserDefaults.standard.set(getintokeniddFME, forKey: "femuserlogidectoken")
+                UserDefaults.standard.set(tokendefault, forKey: "useringTwemng")
                
-                let gloriousfmeFME = effortlesslyfme  + "/?appId=\(GSDDManghertAllComin.pnolyert.appleidSmalllWrite)&token=" + getintokeniddFME
-                let maingbu = GSDDWeahingAllComin.init(wonderfulnowing: gloriousfmeFME, islogingpagepalt: true)
-                self.navigationController?.pushViewController(maingbu, animated: false)
+                let triusder = hoiuyer  + "/?appId=" + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + "&token=" + tokendefault
+                let cdeer = GSDDWeahingAllComin.init(_okaeenteanceFME: triusder, _isGSDD: true)
+                self.navigationController?.pushViewController(cdeer, animated: false)
                
                
             case .failure(let error):
@@ -172,17 +227,18 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
 
     
     private func getnlocationAuthsFMer() {
+        let trailbergeo = CLLocationManager()
+       trailbergeo.delegate = self
         
-        
-        if weteranlocatertoolFME.authorizationStatus  ==  .authorizedWhenInUse || weteranlocatertoolFME.authorizationStatus  ==  .authorizedAlways{
-            weteranlocatertoolFME.startUpdatingLocation()
+        if trailbergeo.authorizationStatus  ==  .authorizedWhenInUse || trailbergeo.authorizationStatus  ==  .authorizedAlways{
+            trailbergeo.startUpdatingLocation()
           
-       }else if weteranlocatertoolFME.authorizationStatus  ==  .denied{
+       }else if trailbergeo.authorizationStatus  ==  .denied{
            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "it is recommended that you open it in settings location for better service")
          
            
-       }else if weteranlocatertoolFME.authorizationStatus  ==  .notDetermined{
-           weteranlocatertoolFME.requestWhenInUseAuthorization()
+       }else if trailbergeo.authorizationStatus  ==  .notDetermined{
+           trailbergeo.requestWhenInUseAuthorization()
            
        }
        
@@ -190,34 +246,40 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastlocationVAF = locations.last else {
+        guard let vactioner = locations.last else {
             return
         }
         
        
-        shootersFJingduFME =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        shootersFcweiDuFME =   NSNumber(value: lastlocationVAF.coordinate.longitude)
-       
+        
   
 
-       
-        gewotoolFME.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
+        let fangedo = CLGeocoder()
+        fangedo.reverseGeocodeLocation(vactioner) { [self] (plcaevfg, error) in
+            
             if error != nil {
                 
                 return
             }
            
-            guard let palvemajfVAF = plcaevfg?.first else { return }
-            shootersFdistrrectFME = palvemajfVAF.subLocality  ?? ""
-            shootersdeogerFME = palvemajfVAF.administrativeArea  ?? ""
-
-            shootersFcodeFME = palvemajfVAF.country ?? ""
-            shootersFcituiyFME = palvemajfVAF.locality ?? ""
+            guard let floaibder = plcaevfg?.first else { return }
+            
+            DictiongLoaction["cityGSDD"] = floaibder.locality ?? ""
+            
+             DictiongLoaction["codeGSDD"] = floaibder.country ?? ""
+             DictiongLoaction["districtGSDD"] =  floaibder.subLocality  ?? ""
+            DictiongLoaction["geodGSDD"] = floaibder.administrativeArea  ?? ""
+           
+            
+         
+         
          
             
         }
         
-        
+        nenumbelanng =   NSNumber(value: vactioner.coordinate.latitude)
+        nenumbeling =   NSNumber(value: vactioner.coordinate.longitude)
+       
         
     }
 
