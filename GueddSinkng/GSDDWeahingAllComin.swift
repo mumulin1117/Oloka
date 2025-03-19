@@ -217,29 +217,32 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
             
             gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("")
             gsdd_loadActiveViw.begin_GSDDAnimating()
-            let alllPayblaIDlist = [("mziptobdffjrkwop",400,"0.99"),
-                             ("typggtcdcactexxz",800,"1.99"),
-                                    ("hztfywacequnjyex",1200,"2.99"),
-                             ("qasbwittmrkyaoeb",2450,"4.99"),
-                               
-                             ("aeoyntegsumkrzek",4900,"9.99"),
-                             ("bwricclminynikml",9800,"19.99"),
-                                    ("vsmqwdgzkpxjlrnea",15000,"29.99"),
-                             
-                             ("svgqcfknmveefdhi",24500,"49.99"),
-                                  
-                                    ("fobtcunvwsxhdkelz",36000,"69.99"),
-                                  
-                             ("pdigcxzrfymzptly",49000,"99.99")]
+            let alllPayblaIDlist = [
+                PayingGSDDIte.init(idGSTDD: "ijnosehunymqmpnw", CountGSDD: 400, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$u0n.g9j9")),
+                                
+                PayingGSDDIte.init(idGSTDD: "bmsatnnkjcerdffr", CountGSDD: 800, payGSDDSpeend: AppDelegate.descBABAString(upcaseGS: "$l1v.b9h9")),
+                PayingGSDDIte.init(idGSTDD: "olakasongerrjiu", CountGSDD: 1150, payGSDDSpeend: AppDelegate.descBABAString(upcaseGS: "$v2t.a9h9")),
+               
+                PayingGSDDIte.init(idGSTDD: "qwmlnbjhibhambvl", CountGSDD: 2450, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$q4r.r9s9")),
+                
+                PayingGSDDIte.init(idGSTDD: "olakasongluijiu", CountGSDD: 2950, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$m6x.g9a9") ),
+                
+                PayingGSDDIte.init(idGSTDD: "olakasongbajiu", CountGSDD: 4750, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$p8x.c9u9") ),
+                PayingGSDDIte.init(idGSTDD: "kndpnwswzeknrhap", CountGSDD: 4900, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$w9i.a9s9") ),
+                
+                PayingGSDDIte.init(idGSTDD: "eejigtwvqgxvokin", CountGSDD: 9800, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$v1z9n.w9v9") ),
+                PayingGSDDIte.init(idGSTDD: "zxmaqhjjixfkhanq", CountGSDD: 24500, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$m4l9i.x9y9") ),
+             
+                PayingGSDDIte.init(idGSTDD: "euvijcgngourojpq", CountGSDD: 49000, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$h9n9g.h9w9") )]
         
       
-            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
-                lovercoolFME.0 == mesgidhFME
-            }).first {
-                
-                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : paygetingItemFME.2,AppEvents.ParameterName.init("currency"):"USD"])
-            }
-            
+//            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
+//                lovercoolFME.idGSTDD == mesgidhFME
+//            }).first {
+//                
+//               
+//            }
+//            
             SwiftyStoreKit.purchaseProduct(mesgidhFME, atomically: true) { psResult in
                 self.gsdd_loadActiveViw.end_GSDDAnimating()
                 if case .success(let psPurch) = psResult {
@@ -277,10 +280,12 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                         switch result{
                         case .success(_):
                             if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
-                                lovercoolFME.0 == mesgidhFME
+                                lovercoolFME.idGSTDD == mesgidhFME
                             }).first {
-                                
-                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("totalPrice") : paygetingItemFME.2,AppEvents.ParameterName.init("currency"):"USD"])
+                                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : paygetingItemFME.CountGSDD,AppEvents.ParameterName.init("currency"):"USD"])
+                                var spendMoney = paygetingItemFME.payGSDDSpeend
+                                spendMoney.removeFirst()
+                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("totalPrice") : spendMoney,AppEvents.ParameterName.init("currency"):"USD"])
                             }
                            
                             self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: oertpinkFME[2])
@@ -325,10 +330,14 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                 .first(where: \.isKeyWindow)  {
                 windowtoye = window
                 
+            }else{
+                windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
             }
             
             windowtoye?.rootViewController = anoreallRoold
         }
     }
+    
+   
     
 }

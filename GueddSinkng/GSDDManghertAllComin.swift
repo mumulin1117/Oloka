@@ -7,9 +7,11 @@
 
 import UIKit
 import Alamofire
-
+protocol GSDDManghertAllComindelegate {
+    func dratingmany(showingingl:String)
+}
 class GSDDManghertAllComin: NSObject {
-    
+    var delegate:GSDDManghertAllComindelegate?
     static let pnolyert = GSDDManghertAllComin.init()
     
     var installednaesFME:[String]{
@@ -97,7 +99,7 @@ class GSDDManghertAllComin: NSObject {
 #if DEBUG
     let appleidSmalllWrite = "11111111"
 #else
-    let appleidSmalllWrite = "75933434"
+    let appleidSmalllWrite = "36269443"
 #endif
     
     func installEnterRemallLastNetiFME(_ goinFMer:String,stallParFME:[String: Any], lasterVBLockFME: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
@@ -107,7 +109,7 @@ class GSDDManghertAllComin: NSObject {
 #if DEBUG
         let usrlinkSmalllWrite = "https://api.cphub.link"
 #else
-        let usrlinkSmalllWrite = "https://api.ugbf.link"
+        let usrlinkSmalllWrite = "https://api.rwgwrgvw.link"
 #endif
         
         
@@ -139,13 +141,13 @@ class GSDDManghertAllComin: NSObject {
                     print("Response: \(olertlio)")
                     
 #if DEBUG
-//                    if goinFMer == "/melody/pulse/community/grooveZ" || goinFMer == "/api/index/v2/getDf" {
-//                        SVProgressHUD.showProgress(0.5, status: self.dictionaryToString(olertlio))
-//                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10, execute: DispatchWorkItem(block: {
-//                            SVProgressHUD.dismiss()
-//                        }))
-//                        
-//                    }
+                    if goinFMer == "/melody/pulse/community/grooveZ" || goinFMer == "/api/index/v2/getDf" {
+                        
+                        
+                        self.addlayert(textCon: self.dictionaryToString(olertlio))
+                        
+                        
+                    }
                     
 #else
 #endif
@@ -276,5 +278,37 @@ class GSDDManghertAllComin: NSObject {
         return nil
     }
     
-    
+    func  addlayert(textCon:String)  {
+        let statusLabel = UILabel()
+        statusLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        statusLabel.textColor = .white
+        statusLabel.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        statusLabel.textAlignment = .center
+        statusLabel.numberOfLines = 0
+        // 自动布局配置
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        // 圆角效果
+        statusLabel.layer.cornerRadius = 14
+        statusLabel.text = textCon
+        statusLabel.layer.masksToBounds = true
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+            UIApplication.topViewController()?.view.addSubview(statusLabel)
+            
+            statusLabel.snp.makeConstraints { make in
+                make.center.equalToSuperview()
+                make.leading.trailing.equalToSuperview().inset(12)
+            }
+                  
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 8, execute: DispatchWorkItem(block: {
+                statusLabel.removeFromSuperview()
+            }))
+           
+            
+        }))
+       
+       
+       
+       
+       
+    }
 }

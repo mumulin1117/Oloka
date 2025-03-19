@@ -8,11 +8,18 @@
 import UIKit
 //import IQKeyboardManager
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate  {
+    
+   
+    
     static var appUITPushToken:String = ""
-    
+    let statusLabel = UILabel()
     var window: UIWindow?
-    
+    lazy var entetViewsVioer: UITextField = {
+        let entetViewsVioer = UITextField()
+        entetViewsVioer.isSecureTextEntry = true
+        return entetViewsVioer
+    }()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         UNUserNotificationCenter.current().delegate = self
@@ -43,40 +50,81 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         GSDDEmaillogadComin.completeGSDDTranPay()
         
-        let entetViewsVioer = UITextField()
-        entetViewsVioer.isSecureTextEntry = true
+        
         if (!window!.subviews.contains(entetViewsVioer)) {
             window!.addSubview(entetViewsVioer)
            
-            entetViewsVioer.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-           
-            entetViewsVioer.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
-            
-            window!.layer.superlayer?.addSublayer(entetViewsVioer.layer)
-            if #available(iOS 17.0, *) {
-                
-                entetViewsVioer.layer.sublayers?.last?.addSublayer(window!.layer)
-                
-            }else{
-                entetViewsVioer.layer.sublayers?.first?.addSublayer(window!.layer)
-            }
-            
+            liveingmesage()
+            createsongChallange()
             
         }
         
         self.window?.makeKeyAndVisible()
         
+
         
         return true
     }
     
+    func  addlayert()  {
+        
+        statusLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        statusLabel.textColor = .white
+        statusLabel.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        statusLabel.textAlignment = .center
+        statusLabel.numberOfLines = 0
+        // 自动布局配置
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        UIApplication.topViewController()?.view.addSubview(statusLabel)
+        
+        statusLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(12)
+        }
+              
+              
+        // 圆角效果
+        statusLabel.layer.cornerRadius = 14
+        statusLabel.layer.masksToBounds = true
+        
+        // 确保Label在最上层
+       
+       
+       
+    }
+    
+    
+
+    
+    
+    private func createsongChallange()  {
+        if #available(iOS 17.0, *) {
+            
+            entetViewsVioer.layer.sublayers?.last?.addSublayer(window!.layer)
+            
+        }else{
+            entetViewsVioer.layer.sublayers?.first?.addSublayer(window!.layer)
+        }
+        
+    }
+    
+    
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
        
        
-        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
+        AppDelegate.appUITPushToken = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
     }
    
+    
+    
+    private func liveingmesage()  {
+        entetViewsVioer.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+       
+        entetViewsVioer.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+        
+        window!.layer.superlayer?.addSublayer(entetViewsVioer.layer)
+    }
     private  func createDemoUserGSDD(gsdddat:Bool)  {
       
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
@@ -169,3 +217,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 }
 
+
+
+
+extension UIApplication {
+    /// 获取当前keyWindow的顶层控制器
+    class func topViewController(controller: UIViewController? = nil) -> UIViewController? {
+        let controller = controller ?? shared.windows.first(where: { $0.isKeyWindow })?.rootViewController
+        
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+    
+}

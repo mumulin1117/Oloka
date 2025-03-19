@@ -8,7 +8,8 @@
 import UIKit
 import Alamofire
 import IQKeyboardManager
-class GSDDAluncherComin: UIViewController {
+class GSDDAluncherComin: UIViewController{
+    
     var netrequestCountFME:Int = 0
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     
@@ -37,13 +38,15 @@ class GSDDAluncherComin: UIViewController {
         gsdd_loadActiveViw.center = self.view.center
         gsdd_loadActiveViw.isHidden = true
         view.addSubview(gsdd_loadActiveViw)
+//        
     }
+   
     
     private  func onceawayNowInlaunch()  {
          let reachabilityManager = NetworkReachabilityManager()
         guard let isReachable = reachabilityManager?.isReachable,isReachable == true else {
             print("无法检测到网络状态")
-            if self.netrequestCountFME <= 3 {
+            if self.netrequestCountFME <= 6 {
                 self.onceawayNowInlaunch()
                 self.netrequestCountFME += 1
                 return
@@ -176,6 +179,8 @@ class GSDDAluncherComin: UIViewController {
                             .first(where: \.isKeyWindow)  {
                             windowtoye = window
                             
+                        }else{
+                            windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
                         }
                         windowtoye?.rootViewController = excitementfme
                         return
@@ -200,6 +205,8 @@ class GSDDAluncherComin: UIViewController {
                         .first(where: \.isKeyWindow)  {
                         windowtoye = window
                         
+                    }else{
+                        windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
                     }
                     
                     windowtoye?.rootViewController = excitementFme
@@ -228,6 +235,8 @@ class GSDDAluncherComin: UIViewController {
             .first(where: \.isKeyWindow)  {
             windowtoye = window
             
+        }else{
+            windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
         }
         
         

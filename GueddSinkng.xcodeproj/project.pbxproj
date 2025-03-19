@@ -524,7 +524,7 @@
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Oloka need access your location permissions to make use of the iCloud camera's location functionalities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -566,7 +566,7 @@
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Oloka need access your location permissions to make use of the iCloud camera's location functionalities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
