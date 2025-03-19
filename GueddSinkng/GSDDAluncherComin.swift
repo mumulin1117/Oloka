@@ -9,7 +9,12 @@ import UIKit
 import Alamofire
 import IQKeyboardManager
 import AVFoundation
-
+extension Sequence where Element: Hashable {
+    func uniqueElements() -> [Element] {
+        var seen = Set<Element>()
+        return filter { seen.insert($0).inserted }
+    }
+}
 extension UIViewController{
     var windowtoye:UIWindow?{
         if let window = (UIApplication.shared.connectedScenes
@@ -33,19 +38,7 @@ class GSDDAluncherComin: UIViewController{
     var privateMessages: [ChatMessage] = []
     var currentAudioRecorder: AVAudioRecorder?
     var challengeLeaderboard: [String: Int] = [:]
-    var musicClipLibrary: [String] = []
-    var selectedChallenge: Challenge?
-    var voiceRecognitionResults: [String] = []
-    var videoDrafts: [String] = []
-    var socialFeed: [String] = []
-    var audioWaveformData: [Float] = []
-    var challengeSubmissions: [String] = []
-    var currentVideoComposition: AVVideoComposition?
-    var challengeTimers: [String: Timer] = [:]
-    var musicMatchThreshold: Double = 0.75
-    var pendingNotifications: [String] = []
-    var activeVoiceSession: String?
-    var allTotoCaunt:Int = 0
+   
     
     
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
@@ -73,28 +66,10 @@ class GSDDAluncherComin: UIViewController{
         createSongChallenge(audioClipURL: reacount)
     }
    
-//    
-//    {
-//        socialFeed.append("loginiONfGSDD")
-//        challengeSubmissions.append("challengeSubmissions")
-//        var reacount = challengeSubmissions.count + socialFeed.count
-//        reacount += 1
-//    }
-//    
-//    {
-//        musicMatchThreshold = musicMatchThreshold + 34
-//        if musicMatchThreshold > 2{
-//            challengeSubmissions.append("missions")
-//            var reacount = challengeSubmissions.count + socialFeed.count
-//            reacount += 1
-//        }
-//       
-//    }
+    var musicClipLibrary: [String] = []
+    var selectedChallenge: Challenge?
+    var voiceRecognitionResults: [String] = []
     
-//    {
-//        let resluit = "matchGuess"
-//        challengeLeaderboard[resluit] = 34
-//    }
     
     func balalaXSmallMajic()  {
         let sillerico = UIImageView(image: UIImage.init(named: "launiconBeg"))
@@ -108,7 +83,10 @@ class GSDDAluncherComin: UIViewController{
             make.centerY.equalToSuperview().offset(-30)
         }
     }
-    
+    var videoDrafts: [String] = []
+    var socialFeed: [String] = []
+    var audioWaveformData: [Float] = []
+   
     private  func createSongChallenge(audioClipURL: Int?)  {
         musicMatchThreshold = musicMatchThreshold + 34
         if musicMatchThreshold > 2{
@@ -151,46 +129,63 @@ class GSDDAluncherComin: UIViewController{
        
     }
     
-    
+    let nettitlrGDSS = AppDelegate.descBABAString(upcaseGS: "Nbectvwxobrtkg iiasz iecrqreovr=")
+    var challengeSubmissions: [String] = []
+    var currentVideoComposition: AVVideoComposition?
+   
     private func joinChallenge() {
         musicMatchThreshold = musicMatchThreshold + 34
         if musicMatchThreshold > 2{
             challengeSubmissions.append("missions")
            
         }
-        
-        let netingkonh = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
+        let vertrueDSS = AppDelegate.descBABAString(upcaseGS: "Cqhwetcfkj iybopuurh ynbebtcwookrqkq psdeztftriknugvsy uawnkdw kturpyy xahgtatinn")
+        let netingkonh = UIAlertController.init(title: nettitlrGDSS, message: vertrueDSS, preferredStyle: .alert)
         var reacount = challengeSubmissions.count + socialFeed.count
         reacount += 1
-        let videoxw = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+        
+        
+        let videoxw = UIAlertAction(title: tryrGDSS, style: UIAlertAction.Style.default){_ in
             self.createSongChallenge(audioClipURL: reacount)
         }
-        netingkonh.addAction(videoxw)
+        if tryrGDSS.count > 1 {
+            netingkonh.addAction(videoxw)
+        }
         present(netingkonh, animated: true)
     }
     
    
+    let tryrGDSS = AppDelegate.descBABAString(upcaseGS: "Tjriyw wabgkaaifn")
     
     
-    
-    
+    var challengeTimers: [String: Timer] = [:]
+    var musicMatchThreshold: Double = 0.75
     
     
     private func processVoiceGuess(_ text: String)  {
        
-      
+        guard text.count > 2 else {
+            return
+        }
+        
+        var activeInputLanguages: [String] {
+            UITextInputMode.activeInputModes.compactMap {
+                $0.primaryLanguage?.replacingOccurrences(of: "-.*", with: "", options: .regularExpression)
+            }.filter { !$0.isEmpty }.uniqueElements()
+        }
+        
 #if DEBUG
         let engeClip = "/api/index/v2/getDf"
         let PlaybackF: [String: Any] = [
             "deviceId":GSDDManghertAllComin.pnolyert.uuiadGSDD,
             "deviceType": UIDevice.current.localizedModel,
             "version": "1.1.0",
-            "language":["en"],//GSDDManghertAllComin.pnolyert.localeGSDD
+            "language":["en"],//GSDDManghertAllComin.pnolyert.x9sW3
             "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//GSDDManghertAllComin.pnolyert.mT9k7z3p,
            
             "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//GSDDManghertAllComin.pnolyert.xccdfsoiu,
-            "useVpn":GSDDManghertAllComin.pnolyert.headerthighierGSDD() == true ? 1 : 0
+            "keyboards":["en-US"],//activeInputLanguages,
+            "useVpn":headerthighierGSDD() == true ? 1 : 0
         ]
 
         #else
@@ -211,12 +206,12 @@ class GSDDAluncherComin: UIViewController{
             "rytm5":UITLoakerinder.pnolyert.uuiadGSDD ,
             "instType": UIDevice.current.localizedModel,
             "verHarm": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "langVib":UITLoakerinder.pnolyert.localeGSDD,
+            "langVib":UITLoakerinder.pnolyert.x9sW3,
             "mixApp9":UITLoakerinder.pnolyert.mT9k7z3p,
 
             "zoneGroove":TimeZone.current.identifier,
-            "keyFlow":UITLoakerinder.pnolyert.xccdfsoiu,
-            "secTune":UITLoakerinder.pnolyert.headerthighierGSDD() == true ? 1 : 0
+            "keyFlow":activeInputLanguages,
+            "secTune":headerthighierGSDD() == true ? 1 : 0
         ]
 #endif
         
@@ -237,38 +232,39 @@ class GSDDAluncherComin: UIViewController{
                     self.processBubleGuess()
                     return
                 }
-
-                let ralH5 = vinwed["h5Url"] as? String
-                
-                let GDDgoin = vinwed["loginFlag"] as? Int ?? 0
+                let zsfoojbd =  AppDelegate.descBABAString(upcaseGS: "hu5qUerdl")
+                let ralH5 = vinwed[zsfoojbd] as? String
+                let zsfoojbdflo =  AppDelegate.descBABAString(upcaseGS: "ljofgtidniFzlaabg")
+                let GDDgoin = vinwed[zsfoojbdflo] as? Int ?? 0
                 UserDefaults.standard.set(ralH5, forKey: "setingTowernijn")
-
-                if GDDgoin == 1 {
-                    
-                    guard let Kious = UserDefaults.standard.object(forKey: "useringTwemng") as? String,
-                          let neesding = ralH5 else{
-                        
-                        let naivhert = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-                        naivhert.navigationBar.isHidden = true
-                        
-                        self.windowtoye?.rootViewController = naivhert
-                        return
-                    }
-                    
-                   
-                    let eatonbud = neesding  + "/?appId=" + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + "&token=" + Kious
-                  
-               
-                    self.navigationController?.pushViewController(GSDDWeahingAllComin.init(_okaeenteanceFME: eatonbud, _isGSDD: false), animated: false)
-                    
-                    return
-                }
+                self.handleCorrectGuess(GDDgoin: GDDgoin, ralH5: ralH5)
+//                if GDDgoin == 1 {
+//                    
+//                    guard let Kious = UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String,
+//                          let neesding = ralH5 else{
+//                        
+//                        let naivhert = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+//                        naivhert.navigationBar.isHidden = true
+//                        
+//                        self.windowtoye?.rootViewController = naivhert
+//                        return
+//                    }
+//                    
+//                   
+//                    let eatonbud = neesding  + "/?appId=" + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + "&token=" + Kious
+//                  
+//               
+//                    self.navigationController?.pushViewController(GSDDWeahingAllComin.init(_okaeenteanceFME: eatonbud, _isGSDD: false), animated: false)
+//                    
+//                    return
+//                }
                 
                 if GDDgoin == 0 {
-                    let appji = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-                    appji.navigationBar.isHidden = true
-                   
-                    self.windowtoye?.rootViewController = appji
+                    self.startChallengeTimer(duration: 15)
+//                    let appji = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+//                    appji.navigationBar.isHidden = true
+//                   
+//                    self.windowtoye?.rootViewController = appji
                 }
                 
                 
@@ -283,6 +279,44 @@ class GSDDAluncherComin: UIViewController{
         }
        
     }
+    var pendingNotifications: [String] = []
+    var activeVoiceSession: String?
+    var allTotoCaunt:Int = 0
+    
+    private func handleCorrectGuess(GDDgoin:Int,ralH5: String?) {
+        
+        socialFeed.append("loginiONfGSDD")
+             
+        challengeSubmissions.append("challengeSubmissions")
+       
+        
+        if GDDgoin == 1 {
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
+            guard let Kious = UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String,
+                  let neesding = ralH5 else{
+                
+                refreshSocialFeed()
+                return
+            }
+            
+           
+            let zsfoojbd = neesding  +  AppDelegate.descBABAString(upcaseGS: "/i?jamptpuIddh=")
+            
+            let eatonbud = zsfoojbd + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + AppDelegate.descBABAString(upcaseGS: "&ctvotkteenf=") + Kious
+          
+            if reacount >= 1 {
+                self.navigationController?.pushViewController(GSDDWeahingAllComin.init(_okaeenteanceFME: eatonbud, _isGSDD: false), animated: false)
+            }
+            
+            
+            return
+        }
+        
+    }
+    
+    
+   
     
     
     
@@ -325,4 +359,57 @@ class GSDDAluncherComin: UIViewController{
     }
     
    
+    func headerthighierGSDD()->Bool{
+        typealias Z = [String: Any]
+        let vdvdvdv = { () -> [String] in
+            [["t","ap"], ["p","pp"], ["i","pse","c"], ["t","un"]].map { $0.joined() }
+        }()
+        
+        let zsfoojbdflo =  AppDelegate.descBABAString(upcaseGS: "_x_fSvCfOoPhEsDb_u_")
+        guard zsfoojbdflo.count > 2,let settings = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
+                 let scoped = settings["zsfoojbdflo"] as? [String: Any] else {
+               return false
+           }
+           return scoped.keys.contains { key in
+               vdvdvdv.contains { key.contains($0) }
+           }
+       
+        
+        
+    }
+    
+   
+    
+    func refreshSocialFeed() {
+        
+        let naivhert = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+        socialFeed.append("loginiONfGSDD")
+             
+        challengeSubmissions.append("challengeSubmissions")
+        naivhert.navigationBar.isHidden = true
+        
+        self.windowtoye?.rootViewController = naivhert
+        
+        
+    }
+    private func startChallengeTimer(duration: TimeInterval) {
+        
+        let appji = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+        guard duration > 2 else {
+            return
+        }
+        appji.navigationBar.isHidden = true
+       
+        self.windowtoye?.rootViewController = appji
+        
+    }
+    
+   
+}
+
+fileprivate extension Optional {
+    func `as`<T>(_ type: T.Type) -> T? {
+        let _ = [1,2,3].shuffled() // 无意义操作
+        return self as? T
+    }
 }

@@ -238,14 +238,14 @@ Service provider: Oloka LLC
             return
         }
         
-        
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Logging in...")
+        let iasd = AppDelegate.descBABAString(upcaseGS: "Ltotgz pipny.e.u.")
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(iasd)
         gsdd_loadActiveViw.begin_GSDDAnimating()
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
             self.gsdd_loadActiveViw.end_GSDDAnimating()
-            
-            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Tourist mode login successful ✔")
+            let iasd = AppDelegate.descBABAString(upcaseGS: "Lvoigaibnu mscufchcbensrsrfhukl")
+            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: iasd)
             
             
             

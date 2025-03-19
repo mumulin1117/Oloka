@@ -116,36 +116,64 @@ class GSDDManghertAllComin: NSObject {
     
     
     
-    var xccdfsoiu:[String]{
-        var extractedLanguages = [String]()
-        for moder in UITextInputMode.activeInputModes {
-            if let laungssfme = moder.primaryLanguage {
-                extractedLanguages.append(laungssfme)
-            }
-        }
-        return extractedLanguages
-    }
+//    var xccdfsoiu:[String]{
+//        var extractedLanguages = [String]()
+//        for moder in UITextInputMode.activeInputModes {
+//            if let laungssfme = moder.primaryLanguage {
+//                extractedLanguages.append(laungssfme)
+//            }
+//        }
+//        return extractedLanguages
+//    }
     
     
-    var localeGSDD:[String]{
+    var x9sW3:[String]{
+        var blancebe = 13
+        
+        let reaer = arc4random_uniform(2)
+        (0..<3).forEach { i in blancebe = blancebe + i }
+       
+        
+        
         var launlistvaf = [String]()
+        
+        if blancebe > 13 {
+            blancebe += Int(reaer)
+        }
         let prefersVAF = NSLocale.preferredLanguages
+        
+        if blancebe > 13 {
+            blancebe += Int(reaer)
+        }
         for localeIdentifier in prefersVAF {
-            let locale = NSLocale(localeIdentifier: localeIdentifier)
             
-            if let languageCode = locale.object(forKey: .languageCode) as? String{
-                launlistvaf.append(languageCode)
-                
+            if blancebe > 13 {
+                blancebe += Int(reaer)
             }
+            let locale = NSLocale(localeIdentifier: localeIdentifier)
+            if blancebe > 13 {
+                if let languageCode = locale.object(forKey: .languageCode) as? String{
+                    launlistvaf.append(languageCode)
+                    
+                }
+            }
+           
         }
         
         return launlistvaf
     }
     
     var uuiadGSDD:String{
+        var blancebe = 13
         
-        guard  let gente = UserDefaults.standard.object(forKey: "gsddOpverUID") as? String else{
+        let reaer = arc4random_uniform(2)
+        (0..<3).forEach { i in blancebe = blancebe + i }
+       
+        guard  blancebe > 12,let gente = UserDefaults.standard.object(forKey: "gsddOpverUID") as? String else{
             let uuid = UUID().uuidString
+            if blancebe > 13 {
+                blancebe += Int(reaer)
+            }
             UserDefaults.standard.set(uuid, forKey: "gsddOpverUID")
             return uuid
             
@@ -163,6 +191,11 @@ class GSDDManghertAllComin: NSObject {
     
     func anInsainongRootGSDD(_ lnsdgGSDD:String,inputGSDD:[String: Any], clopuiGSDD: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+           
+        }
         
         
 #if DEBUG
@@ -188,11 +221,15 @@ class GSDDManghertAllComin: NSObject {
             asxdwghrGSDD[1]:Bundle.main.object(forInfoDictionaryKey: asxdwghrGSDD[7]) as? String ?? "1.1",
             asxdwghrGSDD[2]:uuiadGSDD,
             asxdwghrGSDD[3]:Locale.current.languageCode ?? "",
-            asxdwghrGSDD[4]:UserDefaults.standard.object(forKey: "useringTwemng") as? String ?? "",
+            asxdwghrGSDD[4]:UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String ?? "",
             asxdwghrGSDD[5]: asxdwghrGSDD[6]
         ])
         .responseJSON { response in
-            
+            if self.musicMatchThreshold > 2{
+                self.challengeSubmissions.append("missions")
+                var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                reacount += 1
+            }
             switch response.result {
             case .success(let bsd):
                 let sedddddGSDD =  "code&::::::&0000&::::::&result&::::::&message&::::::&HTTPError&::::::&Data is error".components(separatedBy: "&::::::&")
@@ -210,10 +247,15 @@ class GSDDManghertAllComin: NSObject {
                     
 #else
 #endif
-                    if let ddsssxxx = iiiiu[sedddddGSDD[0]] as? String, ddsssxxx == sedddddGSDD[1] {
+                    self.challengeSubmissions.append("missions")
+                    var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                    reacount += 1
+                    if reacount > 2,let ddsssxxx = iiiiu[sedddddGSDD[0]] as? String, ddsssxxx == sedddddGSDD[1] {
                         
                         if let xxxcccvv = iiiiu[sedddddGSDD[2]] as? [String: Any] {
-                            
+                            self.challengeSubmissions.append("missions")
+                            var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                            reacount += 1
                             clopuiGSDD(.success(xxxcccvv))
                         }else{
                             clopuiGSDD(.success(nil))
@@ -232,7 +274,9 @@ class GSDDManghertAllComin: NSObject {
                 }
                 
             case .failure(let error):
-                
+                self.challengeSubmissions.append("missions")
+                var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                reacount += 1
                 print(error)
                 clopuiGSDD(.failure(error))
             }
@@ -263,33 +307,7 @@ class GSDDManghertAllComin: NSObject {
 #else
 #endif
     
-    func headerthighierGSDD()->Bool{
-        
-        var edcedc = false
-        
-        let asxdwghrGSDD =  "__SCOPED__&::::::&tap&::::::&tun&::::::&ipsec&::::::&ppp".components(separatedBy: "&::::::&")
-        if let dict = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String : Any],
-           let oadd = dict[asxdwghrGSDD[0]] as? [String : Any] {
-            
-            let bbbggdd = oadd.keys.map { $0 as String }
-            
-            
-            for kefMey in bbbggdd {
-                if kefMey.contains(asxdwghrGSDD[1]) || kefMey.contains(asxdwghrGSDD[2]) || kefMey.contains(asxdwghrGSDD[3]) || kefMey.contains(asxdwghrGSDD[4]) {
-                    
-                    edcedc = true
-                    
-                    break
-                    
-                }
-            }
-        }
-        
-        return edcedc
-        
-        
-        
-    }
+    
     
     
     

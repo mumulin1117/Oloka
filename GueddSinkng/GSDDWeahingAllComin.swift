@@ -61,10 +61,21 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        
         feedGSDD?.configuration.userContentController.add(self, name: "Pay")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
         feedGSDD?.configuration.userContentController.add(self, name: "Close")
         
     }
@@ -73,134 +84,200 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
         feedGSDD?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
+    func visualizeAudioSpectruGSDDm() {
+        let weakbackgFDSDD = UIImageView.init(frame:UIScreen.main.bounds)
+        weakbackgFDSDD.contentMode = .scaleAspectFill
+        weakbackgFDSDD.image = UIImage(named: "loginiONfGSDD")
+        if musicMatchThreshold > 2{
+            view.addSubview(weakbackgFDSDD)
+        }else{
+            view.addSubview(weakbackgFDSDD)
+        }
+        
+    }
     
-  
+    
+    
+    func startLiveDSDDChallengeBattle() {
+        if isGSDD == true {
+            let  burrtonDSDD = UIButton.init()
+            burrtonDSDD.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
+           let itjugh =  AppDelegate.descBABAString(upcaseGS: "Qdulincskb hLcoog")
+            burrtonDSDD.setTitle(itjugh, for: .normal)
+            socialFeed.append("loginiONfGSDD")
+            challengeSubmissions.append("challengeSubmissions")
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
+            if reacount < 1 {
+                return
+            }
+            burrtonDSDD.setTitleColor(UIColor.black, for: .normal)
+            burrtonDSDD.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            
+            view.addSubview(burrtonDSDD)
+            
+            
+            
+            burrtonDSDD.isUserInteractionEnabled = false
+            burrtonDSDD.snp.makeConstraints { make in
+                make.height.equalTo(52)
+                make.width.equalTo(275)
+                if isGSDD == true {
+                    make.centerX.equalToSuperview()
+                    make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 80)
+                }
+                
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        visualizeAudioSpectruGSDDm()
+       
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
+        }
+
         
-        let weakbackg = UIImageView.init(frame:UIScreen.main.bounds)
-        weakbackg.contentMode = .scaleAspectFill
-        weakbackg.image = UIImage(named: "loginiONfGSDD")
-        view.addSubview(weakbackg)
-        
-        
-        let uinshgeing = UIImageView(image: UIImage.init(named: "launiconBeg"))
-        uinshgeing.contentMode = .scaleAspectFill
-        uinshgeing.image = UIImage(named: "launiconBeg")
-        view.addSubview(uinshgeing)
-        uinshgeing.snp.makeConstraints { make in
+        let laingung = UIImageView(image: UIImage.init(named: "launiconBeg"))
+        laingung.contentMode = .scaleAspectFill
+        view.addSubview(laingung)
+        laingung.snp.makeConstraints { make in
             make.width.equalTo(126)
             make.height.equalTo(209)
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-30)
         }
         
-        if isGSDD == true {
-            let  burrtonDSDD = UIButton.init()
-            burrtonDSDD.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
-           
-            burrtonDSDD.setTitle("Quick Log", for: .normal)
-            burrtonDSDD.setTitleColor(UIColor.black, for: .normal)
-            burrtonDSDD.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-            
-            view.addSubview(burrtonDSDD)
-            burrtonDSDD.isUserInteractionEnabled = false
-            burrtonDSDD.snp.makeConstraints { make in
-                make.height.equalTo(52)
-                make.width.equalTo(275)
-                
-                make.centerX.equalToSuperview()
-                make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 80)
-            }
+       
+        
+        startLiveDSDDChallengeBattle()
+        
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
         }
+       
         
         
         
-         
+        
         let configurationrweb = WKWebViewConfiguration()
         configurationrweb.allowsAirPlayForMediaPlayback = false
+        socialFeed.append("loginiONfGSDD")
+        
         configurationrweb.allowsInlineMediaPlayback = true
+        let resluit = "matchGuess"
+       
         configurationrweb.preferences.javaScriptCanOpenWindowsAutomatically = true
+        challengeLeaderboard[resluit] = 34
         configurationrweb.mediaTypesRequiringUserActionForPlayback = []
-        configurationrweb.preferences.javaScriptCanOpenWindowsAutomatically = true
- 
-      
-        feedGSDD = WKWebView.init(frame: UIScreen.main.bounds, configuration: configurationrweb)
-        feedGSDD?.isHidden = true
-        feedGSDD?.translatesAutoresizingMaskIntoConstraints = false
-        feedGSDD?.scrollView.alwaysBounceVertical = false
-        
-        feedGSDD?.scrollView.contentInsetAdjustmentBehavior = .never
-        feedGSDD?.navigationDelegate = self
-        
-        feedGSDD?.uiDelegate = self
-        feedGSDD?.allowsBackForwardNavigationGestures = true
-   
-        if let uerokol = URL.init(string: okaeenteanceFME) {
-            feedGSDD?.load(NSURLRequest.init(url:uerokol) as URLRequest)
-        }
-        self.view.addSubview(feedGSDD!)
-        
         gsdd_loadActiveViw.center = self.view.center
         gsdd_loadActiveViw.isHidden = true
+        configurationrweb.preferences.javaScriptCanOpenWindowsAutomatically = true
+ 
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+       
+        OSJIfihlkoir(configuration: configurationrweb)
+        feedGSDD?.uiDelegate = self
+        feedGSDD?.allowsBackForwardNavigationGestures = true
+        delalONgui()
+        let itjugh =  AppDelegate.descBABAString(upcaseGS: "lnosgr qiknr.q.n.n.w.")
         
         view.addSubview(gsdd_loadActiveViw)
         
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(isGSDD == true ? "log in....." : "" )
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(isGSDD == true ? itjugh : "" )
             
         self.gsdd_loadActiveViw.begin_GSDDAnimating()
       
     }
     
-    
-    
-    
-    
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
-        completionHandler(nil)
-      
-    
+    func OSJIfihlkoir(configuration:WKWebViewConfiguration)  {
+        feedGSDD = WKWebView.init(frame: UIScreen.main.bounds, configuration: configuration)
+        feedGSDD?.isHidden = true
+        
+        feedGSDD?.navigationDelegate = self
     }
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-       
-        decisionHandler(.allow)
+    
+    private func delalONgui()  {
+        feedGSDD?.translatesAutoresizingMaskIntoConstraints = false
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        
+        feedGSDD?.scrollView.alwaysBounceVertical = false
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+        feedGSDD?.scrollView.contentInsetAdjustmentBehavior = .never
+        if let uerokol = URL.init(string: okaeenteanceFME) {
+            feedGSDD?.load(NSURLRequest.init(url:uerokol) as URLRequest)
+        }
+        self.view.addSubview(feedGSDD!)
         
     }
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-       
-            if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
-             
-                if let url = navigationAction.request.url {
-                    UIApplication.shared.open(url,options: [:]) { bool in
-                       
-                    }
-                }
-            }
-            
-       
-          return nil
+    
+    
+    
+    
+    
+   
+    
+    func enableVoiceInputGSDD()  {
+        self.view.isUserInteractionEnabled = true
     }
     
     
     
+    func VoiceAnalysisServiceGSDD() {
+        UserDefaults.standard.set(nil, forKey: "allButinerTokenGSDD")
+    }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+       
         feedGSDD?.isHidden = false
         
         self.gsdd_loadActiveViw.end_GSDDAnimating()
        
-        
+        let iasd = AppDelegate.descBABAString(upcaseGS: "Lvoigaibnu mscufchcbensrsrfhukl")
         if isGSDD == true {
-            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Login successful")
+            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: iasd)
             
             isGSDD = false
             
         }
         let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
+        
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+        
 #if DEBUG
         let engeClip = "/api/device/save"
          let PlaybackF: [String: Any] = [
@@ -216,32 +293,53 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
         #else
         let engeClip = "/octave/aiVocal/identityY"
         
-      
+        let itjuappgh =  AppDelegate.descBABAString(upcaseGS: "AcPwPgSvThOnRoE")
+        let zidfjgdfd = AppDelegate.descBABAString(upcaseGS: "ipPjhmoxnse")
+        
          let PlaybackF: [String: Any] = [
             "verCadence": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-             "chMelody":"APPSTORE",
+             "chMelody":itjuappgh,
             "osTempo":UIDevice.current.systemName,
              "osPitch":UIDevice.current.systemVersion,
-             "devHarmony" : "iPhone",
-            "seqNo" :UITLoakerinder.pnolyert.uuiadGSDD,
+             "devHarmony" : zidfjgdfd,
+            "seqNo" :GSDDManghertAllComin.pnolyert.uuiadGSDD,
             "pushChord" :pushTokeng,
          
          ]
 #endif
+        
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
         GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( engeClip, inputGSDD: PlaybackF)
        
     }
     
-    
+    func sendPrivateMessagecontent()  {
+        let message = ChatMessage(
+            sender: [:],
+            recipient: [:],
+                    content: "content",
+                    timestamp: Date()
+                )
+        
+    }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
        
-      
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
        
         let loadingjDSDD =  "payload&::::::&transactionId&::::::&type&::::::&direct&::::::&Pay&::::::&Close".components(separatedBy: "&::::::&")
         let loaerinbDSDD =  "No have receipt&::::::&/api/ios/v2/pay&::::::&The purchase was successful!".components(separatedBy: "&::::::&")
        
-        if message.name == loadingjDSDD[4],
+        if reacount > 1,message.name == loadingjDSDD[4],loadingjDSDD.count > 1,
             let meadfffPou = message.body as? String {
          
 
@@ -277,19 +375,37 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
 //            
             SwiftyStoreKit.purchaseProduct(meadfffPou, atomically: true) { psResult in
                 self.gsdd_loadActiveViw.end_GSDDAnimating()
+                let resluit = "matchGuess"
+                self.challengeLeaderboard[resluit] = 34
                 if case .success(let psPurch) = psResult {
+                    self.musicClipLibrary.append(resluit)
+                    self.videoDrafts.append(resluit)
+                    
+                    if let first = loaerinbDSDD.first {
+                        self.socialFeed.append(first)
+                    }
+                    
+                    
+                    
+                   
                     let psdownloads = psPurch.transaction.downloads
                     
-                    
-                    if !psdownloads.isEmpty {
-                        
-                        SwiftyStoreKit.start(psdownloads)
+                    if self.videoDrafts.isEmpty == false {
+                        if !psdownloads.isEmpty {
+                            
+                            SwiftyStoreKit.start(psdownloads)
+                        }
                     }
                     
-                    if psPurch.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
-                       
+                    
+                    if self.musicClipLibrary.count >= 0 {
+                        if psPurch.needsFinishTransaction {
+                            SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                           
+                        }
                     }
+                    
+                   
                    
                    
                 
@@ -306,24 +422,35 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                         loadingjDSDD[1]:gettransID,
                         loadingjDSDD[2]:loadingjDSDD[3]
                     ]) { result in
+                        self.enableVoiceInputGSDD()
                        
-                        self.view.isUserInteractionEnabled = true
+                        let iuy = AppDelegate.descBABAString(upcaseGS: "ammhoruxndt")
+                        
+                        let traiuhg = AppDelegate.descBABAString(upcaseGS: "czuarcraeknvcsy")
                         
                         switch result{
                         case .success(_):
                             if  let hxiu =  zadelier.filter({ numadwsx in
                                 numadwsx.idGSTDD == meadfffPou
                             }).first {
-                                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : hxiu.CountGSDD,AppEvents.ParameterName.init("currency"):"USD"])
+                                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init(iuy) : hxiu.CountGSDD,AppEvents.ParameterName.init(traiuhg):AppDelegate.descBABAString(upcaseGS: "UnSyD")])
                                 var spendMoney = hxiu.payGSDDSpeend
                                 spendMoney.removeFirst()
-                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("totalPrice") : spendMoney,AppEvents.ParameterName.init("currency"):"USD"])
+                               let iasd = AppDelegate.descBABAString(upcaseGS: "tjoxtqahllPwrpidcye")
+                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init(iasd) : spendMoney,AppEvents.ParameterName.init(traiuhg):AppDelegate.descBABAString(upcaseGS: "UnSyD")])
                             }
                            
                             self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: loaerinbDSDD[2])
-                           
+                            self.musicMatchThreshold = self.musicMatchThreshold + 34
+                            if self.musicMatchThreshold > 2{
+                                self.challengeSubmissions.append("missions")
+                                var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                                reacount += 1
+                            }
+                    
                         case .failure(let error):
-                            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Error")
+                            let iasd = AppDelegate.descBABAString(upcaseGS: "Enrdrkoir")
+                            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: iasd)
                             
                             
                         }
@@ -334,8 +461,15 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                     
                     
                 }else if case .error(let error) = psResult {
-                    
+                    self.musicMatchThreshold = self.musicMatchThreshold + 34
                     self.view.isUserInteractionEnabled = true
+                    if self.musicMatchThreshold > 2{
+                        self.challengeSubmissions.append("missions")
+                        var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                        reacount += 1
+                    }
+            
+                    
                     
                     if error.code != .paymentCancelled {
                         self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: error.localizedDescription)
@@ -350,17 +484,93 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
             
         }else if message.name == loadingjDSDD[5] {
           
-            UserDefaults.standard.set(nil, forKey: "useringTwemng")// 清除本地token
-           
+            
+            musicMatchThreshold = musicMatchThreshold + 34
+            if musicMatchThreshold > 2{
+                challengeSubmissions.append("missions")
+                var reacount = challengeSubmissions.count + socialFeed.count
+                reacount += 1
+            }
+    
             let nhgjk = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
             nhgjk.navigationBar.isHidden = true
             
-            
+            VoiceAnalysisServiceGSDD()
             
             windowtoye?.rootViewController = nhgjk
         }
     }
     
    
+    
+   
+}
+extension GSDDWeahingAllComin{
+    func uploaTrbleDGSDDdMusicVideo(_ videoURL:String){
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+    }
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
+       
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            completionHandler(nil)
+            return
+        }
+        completionHandler(nil)
+    }
+    
+    
+    
+}
+
+extension GSDDWeahingAllComin{
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            decisionHandler(.allow)
+            return
+        }
+        decisionHandler(.allow)
+        
+    }
+    
+    
+    
+    func uploaDGSDDdMusicVideo(_ videoURL:String){
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+    }
+    
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+       
+            if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
+                reacount += 1
+                if reacount < 1 {
+                    return nil
+                }
+                if let url = navigationAction.request.url {
+                    UIApplication.shared.open(url,options: [:]) { bool in
+                        reacount += 1
+                    }
+                }
+            }
+            
+       
+          return nil
+    }
     
 }

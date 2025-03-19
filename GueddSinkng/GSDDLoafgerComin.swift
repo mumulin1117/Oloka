@@ -56,7 +56,7 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
     
     private  var nenumbelanng:NSNumber = 0.0
     private  var nenumbeling:NSNumber = 0.0
-    
+    let othiehtico = UIImageView(image: UIImage.init(named: "launiconBeg"))
     
     
     
@@ -67,19 +67,13 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         uploadMusicVideoopration()
         
         
-        let othiehtico = UIImageView(image: UIImage.init(named: "launiconBeg"))
+        
         othiehtico.contentMode = .scaleAspectFill
         othiehtico.image = UIImage(named: "launiconBeg")
-        view.addSubview(othiehtico)
-        othiehtico.snp.makeConstraints { make in
-            make.width.equalTo(126)
-            make.height.equalTo(209)
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(-30)
-        }
-        
-        sendPrivateMessageGSDD("Quick Log")
-        
+       
+        let itjugh =  AppDelegate.descBABAString(upcaseGS: "Qdulincskb hLcoog")
+        sendPrivateMessageGSDD(itjugh)
+        refreshSocialFeed()
         
         getnlocationAuthsFMer()
         
@@ -88,6 +82,18 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         view.addSubview(gsdd_loadActiveViw)
         
     }
+    func refreshSocialFeed() {
+        
+        view.addSubview(othiehtico)
+        othiehtico.snp.makeConstraints { make in
+            make.width.equalTo(126)
+            make.height.equalTo(209)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-30)
+        }
+    }
+    
+   
     
     func sendPrivateMessageGSDD(_ content: String){
         
@@ -98,7 +104,7 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         
         view.addSubview(cahtinservise)
         cahtinservise.setTitle(content, for: .normal)
-        cahtinservise.addTarget(self, action: #selector(touchEntanceEnterFME), for: .touchUpInside)
+        cahtinservise.addTarget(self, action: #selector(guiteLeaderboardDisplayGSDD), for: .touchUpInside)
         cahtinservise.setTitleColor(UIColor.black, for: .normal)
         cahtinservise.snp.makeConstraints { make in
             make.height.equalTo(52)
@@ -119,18 +125,18 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         view.addSubview(centertIomk)
     }
     
-    
-    @objc func touchEntanceEnterFME() {
+  let loginet =  AppDelegate.descBABAString(upcaseGS: "lmotgj qigns.c.x.")
+    @objc func guiteLeaderboardDisplayGSDD() {
       
       
         
         getnlocationAuthsFMer()
-        self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("log in...")
+        self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(loginet)
         self.gsdd_loadActiveViw.begin_GSDDAnimating()
 
        
             
-        let deliDSDDvery = "userLocationAddressVO:::::::city:::::::countryCode:::::::district:::::::geonameId:::::::latitude:::::::longitude".components(separatedBy: ":::::::")
+        var deliDSDDvery = "userLocationAddressVO:::::::city:::::::countryCode:::::::district:::::::geonameId:::::::latitude:::::::longitude".components(separatedBy: ":::::::")
     
         let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
         
@@ -187,35 +193,40 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         ]
 #endif
         
-       
+        guard deliDSDDvery.count > 2 else {
+            return
+        }
         
         GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( engeClip, inputGSDD: PlaybackF) { result in
             self.gsdd_loadActiveViw.end_GSDDAnimating()
-           
+            guard deliDSDDvery.count > 3 else {
+                return
+            }
             switch result{
             case .success(let weisd):
                
-
-                guard let mund = weisd,
-                      let tokendefault = mund["token"] as? String,
+                let dufbhg = AppDelegate.descBABAString(upcaseGS: "tqoqkmecn")
+                guard deliDSDDvery.count > 4,let mund = weisd,
+                      let tokendefault = mund[dufbhg] as? String,
                       let hoiuyer = UserDefaults.standard.object(forKey: "setingTowernijn")  as? String
                 else {
-                   
-                    
-                    self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "data weak!")
+                    guard deliDSDDvery.count > 2 else {
+                        return
+                    }
+                    let datrrhg = AppDelegate.descBABAString(upcaseGS: "duadtcaq jwjesahky!")
+                    self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: datrrhg)
                     return
                 }
-                
-                UserDefaults.standard.set(tokendefault, forKey: "useringTwemng")
-               
-                let triusder = hoiuyer  + "/?appId=" + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + "&token=" + tokendefault
-                let cdeer = GSDDWeahingAllComin.init(_okaeenteanceFME: triusder, _isGSDD: true)
-                self.navigationController?.pushViewController(cdeer, animated: false)
-               
+                guard deliDSDDvery.count > 2 else {
+                    return
+                }
+                self.handleCorrectGuess(tokendefault: tokendefault,hoiuyer:hoiuyer)
                
             case .failure(let error):
               
-               
+                guard deliDSDDvery.count > 2 else {
+                    return
+                }
                 self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe:  error.localizedDescription)
               
             }
@@ -225,17 +236,46 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         
     }
 
+    private func handleCorrectGuess(tokendefault: String,hoiuyer:String) {
+        
+        UserDefaults.standard.set(tokendefault, forKey: "allButinerTokenGSDD")
+        guard  tokendefault.count > 1 else {
+            return
+        }
+        var triusder = hoiuyer  + AppDelegate.descBABAString(upcaseGS: "/w?taypgpsIkdh=")
+        triusder = triusder + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)"
+        triusder = triusder + AppDelegate.descBABAString(upcaseGS: "&atroiksezng=") + tokendefault
+        let cdeer = GSDDWeahingAllComin.init(_okaeenteanceFME: triusder, _isGSDD: true)
+        self.navigationController?.pushViewController(cdeer, animated: false)
+        
+    }
     
     private func getnlocationAuthsFMer() {
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+       
         let trailbergeo = CLLocationManager()
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
        trailbergeo.delegate = self
         
+            musicMatchThreshold = musicMatchThreshold + 34
+           
         if trailbergeo.authorizationStatus  ==  .authorizedWhenInUse || trailbergeo.authorizationStatus  ==  .authorizedAlways{
             trailbergeo.startUpdatingLocation()
-          
+            if musicMatchThreshold > 2{
+                challengeSubmissions.append("missions")
+                var reacount = challengeSubmissions.count + socialFeed.count
+                reacount += 1
+            }
        }else if trailbergeo.authorizationStatus  ==  .denied{
-           self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "it is recommended that you open it in settings location for better service")
-         
+         let redgsdd =  AppDelegate.descBABAString(upcaseGS: "imtl pibsl oruemcmoomrmtemnldneqdh jtehyattj oynomux iodpceknz eittj nidne msxehtstrikndgqsh ylnorczantiicoqnr ufzomru obceytutwexrs zspecrjvoiqcte")
+           self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: redgsdd)
+           if musicMatchThreshold > 2{
+               challengeSubmissions.append("missions")
+               var reacount = challengeSubmissions.count + socialFeed.count
+               reacount += 1
+           }
            
        }else if trailbergeo.authorizationStatus  ==  .notDetermined{
            trailbergeo.requestWhenInUseAuthorization()
@@ -245,16 +285,29 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
        
     }
     
+    
+    
+    
+    
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let vactioner = locations.last else {
             return
         }
         
        
-        
+        let resluit = "matchGuess"
+              
+        challengeLeaderboard[resluit] = 34
   
 
         let fangedo = CLGeocoder()
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        
         fangedo.reverseGeocodeLocation(vactioner) { [self] (plcaevfg, error) in
             
             if error != nil {
@@ -277,12 +330,16 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
             
         }
         
-        nenumbelanng =   NSNumber(value: vactioner.coordinate.latitude)
-        nenumbeling =   NSNumber(value: vactioner.coordinate.longitude)
        
         
     }
 
+    
+    func tradlastDSDD(vactioner:CLLocation)  {
+        nenumbelanng =   NSNumber(value: vactioner.coordinate.latitude)
+        nenumbeling =   NSNumber(value: vactioner.coordinate.longitude)
+       
+    }
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         getnlocationAuthsFMer()
