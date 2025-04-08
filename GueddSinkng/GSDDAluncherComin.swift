@@ -249,7 +249,7 @@ class GSDDAluncherComin: UIViewController{
             }
             
            
-            let zsfoojbd = neesding  +  AppDelegate.descBABAString(upcaseGS: "/i?jamptpuIddh=")
+            let zsfoojbd = neesding + "/" +  AppDelegate.descBABAString(upcaseGS: "/i?jamptpuIddh=")
             
             let eatonbud = zsfoojbd + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + AppDelegate.descBABAString(upcaseGS: "&ctvotkteenf=") + Kious
           

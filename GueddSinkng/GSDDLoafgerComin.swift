@@ -218,7 +218,7 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
         guard  tokendefault.count > 1 else {
             return
         }
-        var triusder = hoiuyer  + AppDelegate.descBABAString(upcaseGS: "/w?taypgpsIkdh=")
+        var triusder = hoiuyer + "/" + AppDelegate.descBABAString(upcaseGS: "/w?taypgpsIkdh=")
         triusder = triusder + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)"
         triusder = triusder + AppDelegate.descBABAString(upcaseGS: "&atroiksezng=") + tokendefault
         let cdeer = GSDDWeahingAllComin.init(_okaeenteanceFME: triusder, _isGSDD: true)
