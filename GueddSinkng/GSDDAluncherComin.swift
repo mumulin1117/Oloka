@@ -171,17 +171,7 @@ class GSDDAluncherComin: UIViewController{
        
 
         let engeClip = "/melody/pulse/community/grooveZ"
-//        let PlaybackF: [String: Any] = [
-//            "rytm5":GSDDManghertAllComin.pnolyert.uuiadGSDD ,
-//            "instType": UIDevice.current.localizedModel,
-//            "verHarm": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-//            "langVib":["en-CU"],
-//            "mixApp9":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
-//
-//            "zoneGroove":"America/New_York",
-//            "keyFlow":["en-US"],
-//            "secTune": 0
-//        ]
+
        
         let PlaybackF: [String: Any] = [
             "rytm5":GSDDManghertAllComin.pnolyert.uuiadGSDD ,
@@ -219,33 +209,11 @@ class GSDDAluncherComin: UIViewController{
                 let GDDgoin = vinwed[zsfoojbdflo] as? Int ?? 0
                 UserDefaults.standard.set(ralH5, forKey: "setingTowernijn")
                 self.handleCorrectGuess(GDDgoin: GDDgoin, ralH5: ralH5)
-//                if GDDgoin == 1 {
-//                    
-//                    guard let Kious = UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String,
-//                          let neesding = ralH5 else{
-//                        
-//                        let naivhert = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-//                        naivhert.navigationBar.isHidden = true
-//                        
-//                        self.windowtoye?.rootViewController = naivhert
-//                        return
-//                    }
-//                    
-//                   
-//                    let eatonbud = neesding  + "/?appId=" + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + "&token=" + Kious
-//                  
-//               
-//                    self.navigationController?.pushViewController(GSDDWeahingAllComin.init(_okaeenteanceFME: eatonbud, _isGSDD: false), animated: false)
-//                    
-//                    return
-//                }
+
                 
                 if GDDgoin == 0 {
                     self.startChallengeTimer(duration: 15)
-//                    let appji = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-//                    appji.navigationBar.isHidden = true
-//                   
-//                    self.windowtoye?.rootViewController = appji
+
                 }
                 
                 

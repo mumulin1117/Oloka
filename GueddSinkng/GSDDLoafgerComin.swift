@@ -155,14 +155,6 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
             "sngSnp":GSDDManghertAllComin.pnolyert.apdiDGSDD,
             "vclTrk":GSDDManghertAllComin.pnolyert.uuiadGSDD,
             "ntfRiff":pushTokeng,
-//            deliDSDDvery[0]:[
-//                deliDSDDvery[1]:"Seoul",
-//                deliDSDDvery[2]:"KR",
-//                deliDSDDvery[3]:"Seoul",
-//                deliDSDDvery[4]:"1835848",
-//                deliDSDDvery[5]:37.5665,
-//                deliDSDDvery[6]:126.9780
-//            ]
 
             deliDSDDvery[0]:[
                 deliDSDDvery[1]:cityGSDD,
