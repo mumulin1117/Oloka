@@ -6,10 +6,10 @@
 //
 
 import UIKit
-
+import WebKit
 import Alamofire
 import SwiftyStoreKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 import AVFAudio
 import AVFoundation
 struct MusicVideo {
@@ -430,17 +430,17 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
                         
                         switch result{
                         case .success(_):
-                            if  let hxiu =  zadelier.filter({ numadwsx in
-                                numadwsx.idGSTDD == meadfffPou
-                            }).first {
-                                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init(iuy) : hxiu.CountGSDD,AppEvents.ParameterName.init(traiuhg):AppDelegate.descBABAString(upcaseGS: "UnSyD")])
-                                var spendMoney = hxiu.payGSDDSpeend
-                                spendMoney.removeFirst()
-                               let iasd = AppDelegate.descBABAString(upcaseGS: "tjoxtqahllPwrpidcye")
-                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init(iasd) : spendMoney,AppEvents.ParameterName.init(traiuhg):AppDelegate.descBABAString(upcaseGS: "UnSyD")])
-                            }
-                           
-                            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: loaerinbDSDD[2])
+//                            if  let hxiu =  zadelier.filter({ numadwsx in
+//                                numadwsx.idGSTDD == meadfffPou
+//                            }).first {
+//                                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init(iuy) : hxiu.CountGSDD,AppEvents.ParameterName.init(traiuhg):AppDelegate.descBABAString(upcaseGS: "UnSyD")])
+//                                var spendMoney = hxiu.payGSDDSpeend
+//                                spendMoney.removeFirst()
+//                               let iasd = AppDelegate.descBABAString(upcaseGS: "tjoxtqahllPwrpidcye")
+//                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init(iasd) : spendMoney,AppEvents.ParameterName.init(traiuhg):AppDelegate.descBABAString(upcaseGS: "UnSyD")])
+//                            }
+                            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: loaerinbDSDD[2])
+//                            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: loaerinbDSDD[2])
                             self.musicMatchThreshold = self.musicMatchThreshold + 34
                             if self.musicMatchThreshold > 2{
                                 self.challengeSubmissions.append("missions")

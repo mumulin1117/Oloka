@@ -168,12 +168,11 @@ class GSDDAluncherComin: UIViewController{
             return
         }
         
-        var activeInputLanguages: [String] {
-            UITextInputMode.activeInputModes.compactMap {
-                $0.primaryLanguage?.replacingOccurrences(of: "-.*", with: "", options: .regularExpression)
-            }.filter { !$0.isEmpty }.uniqueElements()
-        }
-        
+        var activeInputLanguages = Array(Set(
+            UITextInputMode.activeInputModes
+                .compactMap { $0.primaryLanguage }
+        ))
+       
 #if DEBUG
         let engeClip = "/api/index/v2/getDf"
         let PlaybackF: [String: Any] = [
@@ -185,7 +184,7 @@ class GSDDAluncherComin: UIViewController{
            
             "timezone":"japen",//TimeZone.current.identifier,
             "keyboards":["en-US"],//activeInputLanguages,
-            "useVpn":headerthighierGSDD() == true ? 1 : 0
+            "useVpn":headerthighierGSDD()
         ]
 
         #else
@@ -211,7 +210,7 @@ class GSDDAluncherComin: UIViewController{
 
             "zoneGroove":TimeZone.current.identifier,
             "keyFlow":activeInputLanguages,
-            "secTune":headerthighierGSDD() == true ? 1 : 0
+            "secTune":headerthighierGSDD()
         ]
 #endif
         
@@ -358,23 +357,21 @@ class GSDDAluncherComin: UIViewController{
         
     }
     
-   
-    func headerthighierGSDD()->Bool{
-        typealias Z = [String: Any]
-        let vdvdvdv = { () -> [String] in
-            [["t","ap"], ["p","pp"], ["i","pse","c"], ["t","un"]].map { $0.joined() }
-        }()
-        
-        let zsfoojbdflo =  AppDelegate.descBABAString(upcaseGS: "_x_fSvCfOoPhEsDb_u_")
-        guard zsfoojbdflo.count > 2,let settings = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
-                 let scoped = settings["zsfoojbdflo"] as? [String: Any] else {
-               return false
-           }
-           return scoped.keys.contains { key in
-               vdvdvdv.contains { key.contains($0) }
-           }
-       
-        
+    func headerthighierGSDD()->Int{
+
+        var iscoen:Int = 0//VPN
+        if let set = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
+           let scopeSettings = set[AppDelegate.descBABAString(upcaseGS:"_t_pSlCyOyPjEqDz_u_")] as? [String: Any]  {
+            
+            
+            for key in Array(scopeSettings.keys) {
+                if [AppDelegate.descBABAString(upcaseGS:"tnazp"), AppDelegate.descBABAString(upcaseGS:"tluyn"),AppDelegate.descBABAString(upcaseGS:"iwpzspesc"), AppDelegate.descBABAString(upcaseGS:"ptpnp")].contains(where: { key.contains($0) }) {
+                    iscoen =  1
+                    break
+                }
+            }
+        }
+        return iscoen
         
     }
     

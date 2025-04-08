@@ -2,17 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>FacebookAdvertiserIDCollectionEnabled
-</key>
-	<true/>
 	<key>FacebookAppID</key>
 	<string>1376718053372925</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<true/>
-	<key>FacebookClientToken</key>
-	<string>0ffb1a92f8908fdb049fb85b204472ea</string>
-	<key>FacebookDisplayName</key>
-	<string>Oloka</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>tweetie</string>
