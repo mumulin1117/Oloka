@@ -278,19 +278,7 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
             return
         }
         
-#if DEBUG
-        let engeClip = "/api/device/save"
-         let PlaybackF: [String: Any] = [
-            "appVersion": "1.1.0",
-             "channel":"APPSTORE",
-            "osType":UIDevice.current.systemName,
-             "osVersion":UIDevice.current.systemVersion,
-             "deviceType" : "iPhone",
-            "deviceNo" :GSDDManghertAllComin.pnolyert.uuiadGSDD,
-            "pushToken" :pushTokeng,
 
-         ]
-        #else
         let engeClip = "/octave/aiVocal/identityY"
         
         let itjuappgh =  AppDelegate.descBABAString(upcaseGS: "AcPwPgSvThOnRoE")
@@ -306,8 +294,7 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
             "pushChord" :pushTokeng,
          
          ]
-#endif
-        
+ 
         reacount += 1
         if reacount < 1 {
             return

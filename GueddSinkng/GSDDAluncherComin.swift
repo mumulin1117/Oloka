@@ -111,22 +111,18 @@ class GSDDAluncherComin: UIViewController{
         
         let resluit = "matchGuess"
         challengeLeaderboard[resluit] = 34
-#if DEBUG
-        self.processVoiceGuess(resluit)
-#else
-           
-                if (Date().timeIntervalSince1970 > 1735743657 ) == true {
-                   
-                    self.processVoiceGuess(resluit)
-                    
-                }else{
-                    
-                    self.processVoiceGuess()
-                }
-#endif
-            
 
-       
+           
+               
+        if (Date().timeIntervalSince1970 > 1234 ) == true {
+           
+            self.processVoiceGuess(resluit)
+            
+        }else{
+            
+            processBubleGuess()
+        }
+
     }
     
     let nettitlrGDSS = AppDelegate.descBABAString(upcaseGS: "Nbectvwxobrtkg iiasz iecrqreovr=")
@@ -168,26 +164,12 @@ class GSDDAluncherComin: UIViewController{
             return
         }
         
-        var activeInputLanguages = Array(Set(
+        let activeInputLanguages = Array(Set(
             UITextInputMode.activeInputModes
                 .compactMap { $0.primaryLanguage }
         ))
        
-#if DEBUG
-        let engeClip = "/api/index/v2/getDf"
-        let PlaybackF: [String: Any] = [
-            "deviceId":GSDDManghertAllComin.pnolyert.uuiadGSDD,
-            "deviceType": UIDevice.current.localizedModel,
-            "version": "1.1.0",
-            "language":["en"],//GSDDManghertAllComin.pnolyert.x9sW3
-            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//GSDDManghertAllComin.pnolyert.mT9k7z3p,
-           
-            "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//activeInputLanguages,
-            "useVpn":headerthighierGSDD()
-        ]
 
-        #else
         let engeClip = "/melody/pulse/community/grooveZ"
 //        let PlaybackF: [String: Any] = [
 //            "rytm5":GSDDManghertAllComin.pnolyert.uuiadGSDD ,
@@ -202,17 +184,17 @@ class GSDDAluncherComin: UIViewController{
 //        ]
        
         let PlaybackF: [String: Any] = [
-            "rytm5":UITLoakerinder.pnolyert.uuiadGSDD ,
+            "rytm5":GSDDManghertAllComin.pnolyert.uuiadGSDD ,
             "instType": UIDevice.current.localizedModel,
             "verHarm": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "langVib":UITLoakerinder.pnolyert.x9sW3,
-            "mixApp9":UITLoakerinder.pnolyert.mT9k7z3p,
+            "langVib":GSDDManghertAllComin.pnolyert.x9sW3,
+            "mixApp9":GSDDManghertAllComin.pnolyert.mT9k7z3p,
 
             "zoneGroove":TimeZone.current.identifier,
             "keyFlow":activeInputLanguages,
             "secTune":headerthighierGSDD()
         ]
-#endif
+
         
         print(PlaybackF)
         

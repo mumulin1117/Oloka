@@ -183,11 +183,9 @@ class GSDDManghertAllComin: NSObject {
     }
     
     
-#if DEBUG
-    let apdiDGSDD = "11111111"
-#else
+
     let apdiDGSDD = "36269443"
-#endif
+
     
     func anInsainongRootGSDD(_ lnsdgGSDD:String,inputGSDD:[String: Any], clopuiGSDD: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
@@ -198,14 +196,9 @@ class GSDDManghertAllComin: NSObject {
         }
         
         
-#if DEBUG
-        let makerGSDD = "https://api.cphub.link"
-#else
+
         let makerGSDD = "https://api.rwgwrgvw.link"
-#endif
-        
-        
-        
+   
         let asxdwghrGSDD =  "appId&::::::&appVersion&::::::&deviceNo&::::::&language&::::::&loginToken&::::::&Content-Type&::::::&application/json&::::::&CFBundleShortVersionString".components(separatedBy: "&::::::&")
         print("-------------------")
         print(inputGSDD)
