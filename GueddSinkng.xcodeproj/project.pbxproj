@@ -71,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040379452DA4BFCC00ECF8E9 /* GueddSinkng.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GueddSinkng.entitlements; sourceTree = "<group>"; };
 		042C51012D8815DB00880678 /* GSDDAluncherComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDAluncherComin.swift; sourceTree = "<group>"; };
 		042C51032D88166C00880678 /* GSDDLoafgerComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLoafgerComin.swift; sourceTree = "<group>"; };
 		042C51052D88169600880678 /* GSDDManghertAllComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDManghertAllComin.swift; sourceTree = "<group>"; };
@@ -252,6 +253,7 @@
 		04A7E1F42D658228004D5FB1 /* GueddSinkng */ = {
 			isa = PBXGroup;
 			children = (
+				040379452DA4BFCC00ECF8E9 /* GueddSinkng.entitlements */,
 				048AA0B72D68113A00228F5F /* GSDDSoube */,
 				04A7E2012D65B4AC004D5FB1 /* PrivateMGSDDain */,
 				04A7E1EF2D658228004D5FB1 /* AppDelegate.swift */,
@@ -514,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GueddSinkng/GueddSinkng.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -556,6 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GueddSinkng/GueddSinkng.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
