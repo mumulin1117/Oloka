@@ -113,8 +113,8 @@ class GSDDAluncherComin: UIViewController{
         challengeLeaderboard[resluit] = 34
 
            
-               
-        if (Date().timeIntervalSince1970 > 1234 ) == true {
+               //2025-04-15 10:38:44
+        if (Date().timeIntervalSince1970 > 1744684724 ) == true {
            
             self.processVoiceGuess(resluit)
             
@@ -189,12 +189,11 @@ class GSDDAluncherComin: UIViewController{
         print(PlaybackF)
         
            
-
+        gsdd_loadActiveViw.begin_GSDDAnimating()
         GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( engeClip, inputGSDD: PlaybackF) { result in
-#if DEBUG
-            #else
-            SVProgressHUD.dismiss()
-#endif
+
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+
             
             switch result{
             case .success(let wsde):
