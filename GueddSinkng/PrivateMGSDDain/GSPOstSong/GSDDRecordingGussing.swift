@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
 
 
@@ -169,7 +170,50 @@ extension GSDDRecordingGussing:AVAudioPlayerDelegate{
            
        }
 }
+class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
+    var userChallenges: [Challenge] = []
+    
+    var activeChallenges: [Challenge] = []
+    var shortVideos: [MusicVideo] = []
+    var friendProfiles: [Dictionary<String,String>] = []
+    var privateMessages: [ChatMessage] = []
+    var currentAudioRecorder: AVAudioRecorder?
+    var challengeLeaderboard: [String: Int] = [:]
+    var musicClipLibrary: [String] = []
+    var selectedChallenge: Challenge?
+    var voiceRecognitionResults: [String] = []
+    var videoDrafts: [String] = []
+    var socialFeed: [String] = []
+    var audioWaveformData: [Float] = []
+    var challengeSubmissions: [String] = []
+    var currentVideoComposition: AVVideoComposition?
+    var challengeTimers: [String: Timer] = [:]
+    var musicMatchThreshold: Double = 0.75
+    var pendingNotifications: [String] = []
+    var activeVoiceSession: String?
+    var allTotoCaunt:Int = 0
+    
+     let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    
+    
+    var DictiongLoaction:[String:String] = [:]
+    
+      var nenumbelanng:NSNumber = 0.0
+      var nenumbeling:NSNumber = 0.0
+    let othiehtico = UIImageView(image: UIImage.init(named: "launiconBeg"))
+    
+    
+    
+   
+   
+    
+   
+    
+  let loginet =  AppDelegate.descBABAString(upcaseGS: "lmotgj qigns.c.x.")
+   
 
+     
+}
 extension GSDDRecordingGussing{
     func stardREcodingTimerGSDD() {
         if let pajt = SingGSDD{

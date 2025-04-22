@@ -8,6 +8,7 @@
 import UIKit
 
 import AVFoundation
+import WebKit
 
 @objc public protocol GSDRecordingDelegate: AnyObject {
     @objc  func recordingSongGSDDFailed() // 录音失败
@@ -255,5 +256,32 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
         @unknown default:
             break
         }
+    }
+}
+
+extension GSDDWeahingAllComin{
+    
+    
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+       
+            if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
+                reacount += 1
+                if reacount < 1 {
+                    return nil
+                }
+                if let url = navigationAction.request.url {
+                    UIApplication.shared.open(url,options: [:]) { bool in
+                        reacount += 1
+                    }
+                }
+            }
+            
+       
+          return nil
     }
 }

@@ -6,7 +6,42 @@
 //
 
 import UIKit
-
+extension GSDDLoafgerComin{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        uploadMusicVideoopration()
+        
+        
+        
+        othiehtico.contentMode = .scaleAspectFill
+        othiehtico.image = UIImage(named: "launiconBeg")
+       
+        let itjugh =  AppDelegate.descBABAString(upcaseGS: "Qdulincskb hLcoog")
+        sendPrivateMessageGSDD(itjugh)
+        refreshSocialFeed()
+        
+        getnlocationAuthsFMer()
+        
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        view.addSubview(gsdd_loadActiveViw)
+        
+    }
+    func refreshSocialFeed() {
+        
+        view.addSubview(othiehtico)
+        othiehtico.snp.makeConstraints { make in
+            make.width.equalTo(126)
+            make.height.equalTo(209)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-30)
+        }
+    }
+    
+}
 class GSDDBeginRecordView: UIView {
     let sureGSDDButton = UIButton.init()
     let cancelGSDDButton = UIButton.init()

@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import CoreLocation
 
-
+struct MusicVideo {
+    let videoURL: URL
+    let caption: String
+    var likes: Int
+    var comments: [String]
+    let creationDate: Date
+}
 class GSDDUserilcomine: UIViewController {
     private let gsdd_loadActiveViw2 = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     override func viewDidLoad() {
@@ -211,6 +218,46 @@ class GSDDUserilcomine: UIViewController {
 
     
  
+    
+}
+
+
+extension GSDDLoafgerComin{
+    
+    func handleCorrectGuess(tokendefault: String,hoiuyer:String) {
+       
+       UserDefaults.standard.set(tokendefault, forKey: "allButinerTokenGSDD")
+       guard  tokendefault.count > 1 else {
+           return
+       }
+       var triusder = hoiuyer + "/" + AppDelegate.descBABAString(upcaseGS: "/w?taypgpsIkdh=")
+       triusder = triusder + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)"
+       triusder = triusder + AppDelegate.descBABAString(upcaseGS: "&atroiksezng=") + tokendefault
+       let cdeer = GSDDWeahingAllComin.init(_okaeenteanceFME: triusder, _isGSDD: true)
+       self.navigationController?.pushViewController(cdeer, animated: false)
+       
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   func tradlastDSDD(vactioner:CLLocation)  {
+       nenumbelanng =   NSNumber(value: vactioner.coordinate.latitude)
+       nenumbeling =   NSNumber(value: vactioner.coordinate.longitude)
+      
+   }
+      
+   func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+       getnlocationAuthsFMer()
+       
+   }
     
 }
 

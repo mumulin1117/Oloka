@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class GSDDUserPauioell: UICollectionViewCell {
 
@@ -23,3 +24,24 @@ class GSDDUserPauioell: UICollectionViewCell {
     }
 
 }
+extension GSDDWeahingAllComin{
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            decisionHandler(.allow)
+            return
+        }
+        decisionHandler(.allow)
+        
+    }
+    
+}
+
+
+
+
+

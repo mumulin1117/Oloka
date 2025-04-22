@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 /// 自定义loading
 class GSDDloadingComin: UIView {
@@ -105,6 +106,46 @@ class GSDDloadingComin: UIView {
     private func endSElFALert() {
         end_GSDDAnimating()
         self.isHidden = true
+        
+    }
+}
+extension GSDDAluncherComin{
+    
+    func processBubleGuess(){
+       
+        
+        if let  singtaog = UserDefaults.standard.string(forKey: "currentLogGSDDUID")  {
+           
+            
+
+            var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+            areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+            IQKeyboardManager.shared().isEnabled = true
+            if let yxaccount = areadyExsisteduserInfoGSDD.filter({ ugs in
+                return ugs["gsddUID"] == singtaog
+            }).first {
+                if singtaog == "89985" {//如果是测试账号，添加测试数据
+                    GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
+                    
+                    GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
+                    GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
+               
+                }
+                
+                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+                
+            }
+            
+            AppDelegate.canenterInForamtVC()
+        }else{
+            let rooorGSDD = UINavigationController.init(rootViewController: GSddguessingComin.init())
+            rooorGSDD.navigationBar.isHidden = true
+            
+            windowtoye?.rootViewController = rooorGSDD
+          
+        }
+        
+       
         
     }
 }

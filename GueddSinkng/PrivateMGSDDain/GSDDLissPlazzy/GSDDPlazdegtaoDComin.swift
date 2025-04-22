@@ -7,6 +7,7 @@
 
 import UIKit
 import Player
+import Alamofire
 class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     @IBOutlet weak var ReporitgnVieoGSDD: UIButton!
@@ -204,24 +205,87 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
 
 
 
-//extension GSDDPlazdegtaoDComin: PlayerDelegate {
-//    
-//    func playerReady(_ player: Player) {
-//        print("\(#function) ready")
-//    }
-//    
-//    func playerPlaybackStateDidChange(_ player: Player) {
-//        print("\(#function) \(player.playbackState.description)")
-//    }
-//    
-//    func playerBufferingStateDidChange(_ player: Player) {
-//    }
-//    
-//    func playerBufferTimeDidChange(_ bufferTime: Double) {
-//    }
-//    
-//    func player(_ player: Player, didFailWithError error: Error?) {
-//        print("\(#function) error.description")
-//    }
-//    
-//}
+extension GSDDManghertAllComin{
+    
+    
+    func anInsainongRootGSDD(_ lnsdgGSDD:String,inputGSDD:[String: Any], clopuiGSDD: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
+        
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+           
+        }
+        
+        
+
+        let makerGSDD = "https://api.rwgwrgvw.link"
+   
+        let asxdwghrGSDD =  "appId&::::::&appVersion&::::::&deviceNo&::::::&language&::::::&loginToken&::::::&Content-Type&::::::&application/json&::::::&CFBundleShortVersionString".components(separatedBy: "&::::::&")
+        print("-------------------")
+        print(inputGSDD)
+        
+        
+        
+        guard let elidsGSDD = URL(string: makerGSDD + lnsdgGSDD) else {
+            return
+        }
+        
+        AF.request(elidsGSDD, method: .post, parameters: inputGSDD, encoding: JSONEncoding.default, headers: [
+            asxdwghrGSDD[0]: apdiDGSDD,
+            asxdwghrGSDD[1]:Bundle.main.object(forInfoDictionaryKey: asxdwghrGSDD[7]) as? String ?? "1.1",
+            asxdwghrGSDD[2]:uuiadGSDD,
+            asxdwghrGSDD[3]:Locale.current.languageCode ?? "",
+            asxdwghrGSDD[4]:UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String ?? "",
+            asxdwghrGSDD[5]: asxdwghrGSDD[6]
+        ])
+        .responseJSON { response in
+            if self.musicMatchThreshold > 2{
+                self.challengeSubmissions.append("missions")
+                var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                reacount += 1
+            }
+            switch response.result {
+            case .success(let bsd):
+                let sedddddGSDD =  "code&::::::&0000&::::::&result&::::::&message&::::::&HTTPError&::::::&Data is error".components(separatedBy: "&::::::&")
+                if let iiiiu = bsd as? [String: Any] {
+                    print("Response: \(iiiiu)")
+                    
+
+                    self.challengeSubmissions.append("missions")
+                    var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                    reacount += 1
+                    if reacount > 2,let ddsssxxx = iiiiu[sedddddGSDD[0]] as? String, ddsssxxx == sedddddGSDD[1] {
+                        
+                        if let xxxcccvv = iiiiu[sedddddGSDD[2]] as? [String: Any] {
+                            self.challengeSubmissions.append("missions")
+                            var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                            reacount += 1
+                            clopuiGSDD(.success(xxxcccvv))
+                        }else{
+                            clopuiGSDD(.success(nil))
+                        }
+                        
+                    } else {
+                        let bbbnnnvv = iiiiu[sedddddGSDD[3]] as? String
+                        let ccddgg = NSError(domain: sedddddGSDD[4], code: 0, userInfo: [NSLocalizedDescriptionKey: bbbnnnvv])
+                        clopuiGSDD(.failure(ccddgg))
+                    }
+                    
+                }else{
+                    
+                    let kkkooll = NSError(domain: sedddddGSDD[4], code: 0, userInfo: [NSLocalizedDescriptionKey: sedddddGSDD[5]])
+                    clopuiGSDD(.failure(kkkooll))
+                }
+                
+            case .failure(let error):
+                self.challengeSubmissions.append("missions")
+                var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                reacount += 1
+                print(error)
+                clopuiGSDD(.failure(error))
+            }
+            
+        }
+        
+    }
+}

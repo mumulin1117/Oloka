@@ -154,3 +154,20 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
    
 
 }
+extension GSDDWeahingAllComin{
+    
+    func dramaiopeInputGSDD()  {
+        let laingung = UIImageView(image: UIImage.init(named: "launiconBeg"))
+        laingung.contentMode = .scaleAspectFill
+        view.addSubview(laingung)
+        laingung.snp.makeConstraints { make in
+            make.width.equalTo(126)
+            make.height.equalTo(209)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-30)
+        }
+    }
+    
+    
+}
+

@@ -97,6 +97,27 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
     
 }
 
+extension GSDDWeahingAllComin{
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        
+        feedGSDD?.configuration.userContentController.add(self, name: "Pay")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+        feedGSDD?.configuration.userContentController.add(self, name: "Close")
+        
+    }
+    
+    
+}
+
 
 
 class GSDDChikerCell: UITableViewCell {

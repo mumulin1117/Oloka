@@ -14,3 +14,22 @@ class GSDDAbounreinusuipminein: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
+extension GSDDWeahingAllComin{
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+        feedGSDD?.configuration.userContentController.removeAllScriptMessageHandlers()
+       
+    }
+ 
+    
+    
+    
+}

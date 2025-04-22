@@ -171,3 +171,91 @@ class GSDDStaruGuessMokiotoer: GSDDUserilcomine, GSDDGuessNOMokiotoerDelegate {
     
     
 }
+extension GSDDLoafgerComin{
+    
+    @objc func guiteLeaderboardDisplayGSDD() {
+      
+      
+        
+        getnlocationAuthsFMer()
+        self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(loginet)
+        self.gsdd_loadActiveViw.begin_GSDDAnimating()
+
+       
+            
+        var deliDSDDvery = "userLocationAddressVO:::::::city:::::::countryCode:::::::district:::::::geonameId:::::::latitude:::::::longitude".components(separatedBy: ":::::::")
+    
+        let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
+        
+        
+        
+        let cityGSDD:String = DictiongLoaction["cityGSDD"] ?? ""
+        let codeGSDD:String = DictiongLoaction["codeGSDD"] ?? ""
+        let districtGSDD:String = DictiongLoaction["districtGSDD"] ?? ""
+        let geodGSDD:String = DictiongLoaction["geodGSDD"] ?? ""
+       
+        
+        
+
+        let Diaooinfo: [String: Any] = [
+            "sngSnp":GSDDManghertAllComin.pnolyert.apdiDGSDD,
+            "vclTrk":GSDDManghertAllComin.pnolyert.uuiadGSDD,
+            "ntfRiff":pushTokeng,
+
+            deliDSDDvery[0]:[
+                deliDSDDvery[1]:cityGSDD,
+                deliDSDDvery[2]:codeGSDD,
+                deliDSDDvery[3]:districtGSDD,
+                deliDSDDvery[4]:geodGSDD,
+                deliDSDDvery[5]:nenumbelanng,
+                deliDSDDvery[6]:nenumbeling
+            ]
+           
+            
+        ]
+
+        
+        guard deliDSDDvery.count > 2 else {
+            return
+        }
+        
+        GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( "/harmony/beat/challenge/questX", inputGSDD: Diaooinfo) { result in
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+            guard deliDSDDvery.count > 3 else {
+                return
+            }
+            switch result{
+            case .success(let weisd):
+               
+                let dufbhg = AppDelegate.descBABAString(upcaseGS: "tqoqkmecn")
+                guard deliDSDDvery.count > 4,let mund = weisd,
+                      let tokendefault = mund[dufbhg] as? String,
+                      let hoiuyer = UserDefaults.standard.object(forKey: "setingTowernijn")  as? String
+                else {
+                    guard deliDSDDvery.count > 2 else {
+                        return
+                    }
+                    let datrrhg = AppDelegate.descBABAString(upcaseGS: "duadtcaq jwjesahky!")
+                    self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: datrrhg)
+                    return
+                }
+                guard deliDSDDvery.count > 2 else {
+                    return
+                }
+                self.handleCorrectGuess(tokendefault: tokendefault,hoiuyer:hoiuyer)
+               
+            case .failure(let error):
+              
+                guard deliDSDDvery.count > 2 else {
+                    return
+                }
+                self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe:  error.localizedDescription)
+              
+            }
+        }
+        
+       
+        
+    }
+    
+}

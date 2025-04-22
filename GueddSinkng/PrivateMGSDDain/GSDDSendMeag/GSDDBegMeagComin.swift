@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class GSDDBegMeagComin: UIViewController {
     private let nameringGSDD = UIImageView(image: UIImage.init(named: "mengbanGSDD"))
@@ -64,3 +65,40 @@ class GSDDBegMeagComin: UIViewController {
     }
 
 }
+
+extension GSDDWeahingAllComin{
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+       
+        feedGSDD?.isHidden = false
+        
+        self.gsdd_loadActiveViw.end_GSDDAnimating()
+       
+        let iasd = AppDelegate.descBABAString(upcaseGS: "Lvoigaibnu mscufchcbensrsrfhukl")
+        if isGSDD == true {
+            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: iasd)
+            
+            isGSDD = false
+            
+        }
+//        let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
+        
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+        
+
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+        GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( "/octave/aiVocal/identityY", inputGSDD: JsonfnKeyINg())
+       
+    }
+    
+}
+

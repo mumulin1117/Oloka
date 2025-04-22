@@ -7,7 +7,38 @@
 
 import UIKit
 import PhotosUI
-
+import WebKit
+extension GSDDWeahingAllComin{
+    
+    func Sdvlisnui()  {
+        let configurationrweb = WKWebViewConfiguration()
+        configurationrweb.allowsAirPlayForMediaPlayback = false
+        socialFeed.append("loginiONfGSDD")
+        
+        configurationrweb.allowsInlineMediaPlayback = true
+        let resluit = "matchGuess"
+       
+        configurationrweb.preferences.javaScriptCanOpenWindowsAutomatically = true
+        challengeLeaderboard[resluit] = 34
+        configurationrweb.mediaTypesRequiringUserActionForPlayback = []
+        gsdd_loadActiveViw.center = self.view.center
+        gsdd_loadActiveViw.isHidden = true
+        configurationrweb.preferences.javaScriptCanOpenWindowsAutomatically = true
+ 
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+       
+        OSJIfihlkoir(configuration: configurationrweb)
+        feedGSDD?.uiDelegate = self
+        feedGSDD?.allowsBackForwardNavigationGestures = true
+    }
+    
+    
+}
 class GSDDMeGSDDComin: UIViewController {
     
     let avifOkaStatus = AVCaptureDevice.authorizationStatus(for: .video)

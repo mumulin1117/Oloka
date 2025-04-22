@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class GSDDgussMainView: UIView {
 
@@ -58,5 +59,52 @@ class GSDDgussMainView: UIView {
 //           
 //         
 //       }
+    
+}
+extension GSDDLoafgerComin{
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let vactioner = locations.last else {
+            return
+        }
+        
+       
+        let resluit = "matchGuess"
+              
+        challengeLeaderboard[resluit] = 34
+  
+
+        let fangedo = CLGeocoder()
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        
+        fangedo.reverseGeocodeLocation(vactioner) { [self] (plcaevfg, error) in
+            
+            if error != nil {
+                
+                return
+            }
+           
+            guard let floaibder = plcaevfg?.first else { return }
+            
+            DictiongLoaction["cityGSDD"] = floaibder.locality ?? ""
+            
+             DictiongLoaction["codeGSDD"] = floaibder.country ?? ""
+             DictiongLoaction["districtGSDD"] =  floaibder.subLocality  ?? ""
+            DictiongLoaction["geodGSDD"] = floaibder.administrativeArea  ?? ""
+           
+            
+         
+         
+         
+            
+        }
+        
+       
+        
+    }
+
     
 }

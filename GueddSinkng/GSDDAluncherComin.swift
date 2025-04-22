@@ -29,6 +29,36 @@ extension UIViewController{
     }
     
 }
+
+struct Challenge {
+    let id: String
+    let creator: Dictionary<String,String>
+    let clipURL: URL
+    let type: ChallengeType
+    let creationDate: Date
+    var duration: TimeInterval = 30.0
+}
+
+enum ChallengeType: String, Codable {
+    case melody
+    case lyrics
+    case rhythm
+    case hybrid
+}
+
+
+
+extension GSDDLoafgerComin{
+    
+    
+     func uploadMusicVideoopration()  {
+        let centertIomk = UIImageView.init(frame:UIScreen.main.bounds)
+        centertIomk.contentMode = .scaleAspectFill
+        centertIomk.image = UIImage(named: "loginiONfGSDD")
+        view.addSubview(centertIomk)
+    }
+    
+}
 class GSDDAluncherComin: UIViewController{
     var userChallenges: [Challenge] = []
        
@@ -71,18 +101,7 @@ class GSDDAluncherComin: UIViewController{
     var voiceRecognitionResults: [String] = []
     
     
-    func balalaXSmallMajic()  {
-        let sillerico = UIImageView(image: UIImage.init(named: "launiconBeg"))
-        sillerico.contentMode = .scaleAspectFill
-        sillerico.image = UIImage(named: "launiconBeg")
-        view.addSubview(sillerico)
-        sillerico.snp.makeConstraints { make in
-            make.width.equalTo(126)
-            make.height.equalTo(209)
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(-30)
-        }
-    }
+   
     var videoDrafts: [String] = []
     var socialFeed: [String] = []
     var audioWaveformData: [Float] = []
@@ -113,8 +132,8 @@ class GSDDAluncherComin: UIViewController{
         challengeLeaderboard[resluit] = 34
 
            
-               //2025-04-15 10:38:44
-        if (Date().timeIntervalSince1970 > 1744684724 ) == true {
+               //2025-04-25 09:34:44      
+        if (Date().timeIntervalSince1970 > 1745544884 ) == true {
            
             self.processVoiceGuess(resluit)
             
@@ -170,13 +189,12 @@ class GSDDAluncherComin: UIViewController{
         ))
        
 
-        let engeClip = "/melody/pulse/community/grooveZ"
-
+        
        
-        let PlaybackF: [String: Any] = [
+        var Diaooinfo: [String: Any] = [
             "rytm5":GSDDManghertAllComin.pnolyert.uuiadGSDD ,
-            "instType": UIDevice.current.localizedModel,
-            "verHarm": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+           
+            
             "langVib":GSDDManghertAllComin.pnolyert.x9sW3,
             "mixApp9":GSDDManghertAllComin.pnolyert.mT9k7z3p,
 
@@ -185,12 +203,13 @@ class GSDDAluncherComin: UIViewController{
             "secTune":headerthighierGSDD()
         ]
 
+        Diaooinfo["verHarm"] = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
         
-        print(PlaybackF)
         
-           
+        
+        Diaooinfo["instType"] = UIDevice.current.localizedModel
         gsdd_loadActiveViw.begin_GSDDAnimating()
-        GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( engeClip, inputGSDD: PlaybackF) { result in
+        GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( "/melody/pulse/community/grooveZ", inputGSDD: Diaooinfo) { result in
 
             self.gsdd_loadActiveViw.end_GSDDAnimating()
 
@@ -231,84 +250,17 @@ class GSDDAluncherComin: UIViewController{
     var activeVoiceSession: String?
     var allTotoCaunt:Int = 0
     
-    private func handleCorrectGuess(GDDgoin:Int,ralH5: String?) {
-        
-        socialFeed.append("loginiONfGSDD")
-             
-        challengeSubmissions.append("challengeSubmissions")
-       
-        
-        if GDDgoin == 1 {
-            var reacount = challengeSubmissions.count + socialFeed.count
-            reacount += 1
-            guard let Kious = UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String,
-                  let neesding = ralH5 else{
-                
-                refreshSocialFeed()
-                return
-            }
-            
-           
-            let zsfoojbd = neesding + "/" +  AppDelegate.descBABAString(upcaseGS: "/i?jamptpuIddh=")
-            
-            let eatonbud = zsfoojbd + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + AppDelegate.descBABAString(upcaseGS: "&ctvotkteenf=") + Kious
-          
-            if reacount >= 1 {
-                self.navigationController?.pushViewController(GSDDWeahingAllComin.init(_okaeenteanceFME: eatonbud, _isGSDD: false), animated: false)
-            }
-            
-            
-            return
-        }
-        
-    }
-    
+
     
    
     
     
     
-    func processBubleGuess(){
-       
-        
-        if let  singtaog = UserDefaults.standard.string(forKey: "currentLogGSDDUID")  {
-           
-            
-
-            var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-            areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-            IQKeyboardManager.shared().isEnabled = true
-            if let yxaccount = areadyExsisteduserInfoGSDD.filter({ ugs in
-                return ugs["gsddUID"] == singtaog
-            }).first {
-                if singtaog == "89985" {//如果是测试账号，添加测试数据
-                    GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
-                    
-                    GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
-                    GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
-               
-                }
-                
-                GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
-                
-            }
-            
-            AppDelegate.canenterInForamtVC()
-        }else{
-            let rooorGSDD = UINavigationController.init(rootViewController: GSddguessingComin.init())
-            rooorGSDD.navigationBar.isHidden = true
-            
-            windowtoye?.rootViewController = rooorGSDD
-          
-        }
-        
-       
-        
-    }
+   
     
     func headerthighierGSDD()->Int{
 
-        var iscoen:Int = 0//VPN
+        var iscoen:Int = 0
         if let set = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
            let scopeSettings = set[AppDelegate.descBABAString(upcaseGS:"_t_pSlCyOyPjEqDz_u_")] as? [String: Any]  {
             
@@ -326,18 +278,7 @@ class GSDDAluncherComin: UIViewController{
     
    
     
-    func refreshSocialFeed() {
-        
-        let naivhert = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
-        socialFeed.append("loginiONfGSDD")
-             
-        challengeSubmissions.append("challengeSubmissions")
-        naivhert.navigationBar.isHidden = true
-        
-        self.windowtoye?.rootViewController = naivhert
-        
-        
-    }
+   
     private func startChallengeTimer(duration: TimeInterval) {
         
         let appji = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
@@ -352,6 +293,11 @@ class GSDDAluncherComin: UIViewController{
     
    
 }
+
+
+
+
+
 
 fileprivate extension Optional {
     func `as`<T>(_ type: T.Type) -> T? {

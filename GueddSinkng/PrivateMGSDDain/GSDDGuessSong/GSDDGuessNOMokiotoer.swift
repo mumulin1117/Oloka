@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import WebKit
+import SwiftyStoreKit
 protocol GSDDGuessNOMokiotoerDelegate {
     func ifSppendToCheckGSDD(boif:Bool)
 }
@@ -89,5 +91,157 @@ class GSDDGuessNOMokiotoer: UIViewController {
         
         self.dismiss(animated: true)
     }
+    
+}
+extension GSDDWeahingAllComin{
+    func uploaTrbleDGSDDdMusicVideo(_ videoURL:String){
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+    }
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+       
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            return
+        }
+       
+        let loadingjDSDD =  "payload&::::::&transactionId&::::::&type&::::::&direct&::::::&Pay&::::::&Close".components(separatedBy: "&::::::&")
+        let loaerinbDSDD =  "No have receipt&::::::&/api/ios/v2/pay&::::::&The purchase was successful!".components(separatedBy: "&::::::&")
+       
+        if reacount > 1,message.name == loadingjDSDD[4],loadingjDSDD.count > 1,
+            let meadfffPou = message.body as? String {
+         
+
+            view.isUserInteractionEnabled = false
+            
+            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("")
+            gsdd_loadActiveViw.begin_GSDDAnimating()
+
+            SwiftyStoreKit.purchaseProduct(meadfffPou, atomically: true) { psResult in
+                self.gsdd_loadActiveViw.end_GSDDAnimating()
+                let resluit = "matchGuess"
+                self.challengeLeaderboard[resluit] = 34
+                if case .success(let psPurch) = psResult {
+                    self.musicClipLibrary.append(resluit)
+                    self.videoDrafts.append(resluit)
+                    
+                    if let first = loaerinbDSDD.first {
+                        self.socialFeed.append(first)
+                    }
+                    
+                    
+                    
+                   
+                    let psdownloads = psPurch.transaction.downloads
+                    
+                    if self.videoDrafts.isEmpty == false {
+                        if !psdownloads.isEmpty {
+                            
+                            SwiftyStoreKit.start(psdownloads)
+                        }
+                    }
+                    
+                    
+                    if self.musicClipLibrary.count >= 0 {
+                        if psPurch.needsFinishTransaction {
+                            SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                           
+                        }
+                    }
+                    
+                   
+                   
+                   
+                
+                    guard let ticketData = SwiftyStoreKit.localReceiptData,
+                          let gettransID = psPurch.transaction.transactionIdentifier else {
+                     
+                        self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: loaerinbDSDD[0])
+                        return
+                      }
+                    
+
+                    GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( loaerinbDSDD[1], inputGSDD: [
+                        loadingjDSDD[0]:ticketData.base64EncodedString(),
+                        loadingjDSDD[1]:gettransID,
+                        loadingjDSDD[2]:loadingjDSDD[3]
+                    ]) { result in
+                        self.enableVoiceInputGSDD()
+                       
+                        let iuy = AppDelegate.descBABAString(upcaseGS: "ammhoruxndt")
+                        
+                        let traiuhg = AppDelegate.descBABAString(upcaseGS: "czuarcraeknvcsy")
+                        
+                        switch result{
+                        case .success(_):
+
+                            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: loaerinbDSDD[2])
+
+                            self.musicMatchThreshold = self.musicMatchThreshold + 34
+                            if self.musicMatchThreshold > 2{
+                                self.challengeSubmissions.append("missions")
+                                var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                                reacount += 1
+                            }
+                    
+                        case .failure(let error):
+                            let iasd = AppDelegate.descBABAString(upcaseGS: "Enrdrkoir")
+                            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: iasd)
+                            
+                            
+                        }
+                    }
+                    
+           
+                   
+                    
+                    
+                }else if case .error(let error) = psResult {
+                    self.musicMatchThreshold = self.musicMatchThreshold + 34
+                    self.view.isUserInteractionEnabled = true
+                    if self.musicMatchThreshold > 2{
+                        self.challengeSubmissions.append("missions")
+                        var reacount = self.challengeSubmissions.count + self.socialFeed.count
+                        reacount += 1
+                    }
+            
+                    
+                    
+                    if error.code != .paymentCancelled {
+                        self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: error.localizedDescription)
+                        
+                       
+                        return
+                    }
+                    
+                 
+                }
+            }
+            
+        }else if message.name == loadingjDSDD[5] {
+          
+            
+            musicMatchThreshold = musicMatchThreshold + 34
+            if musicMatchThreshold > 2{
+                challengeSubmissions.append("missions")
+                var reacount = challengeSubmissions.count + socialFeed.count
+                reacount += 1
+            }
+    
+            let nhgjk = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+            nhgjk.navigationBar.isHidden = true
+            
+            VoiceAnalysisServiceGSDD()
+            
+            windowtoye?.rootViewController = nhgjk
+        }
+    }
+    
+    
     
 }

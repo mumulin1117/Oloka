@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class GSDDLisstingPlazyAvtoCell: UICollectionViewCell {
     let gsddAvotp = UIImageView()
@@ -28,4 +29,20 @@ class GSDDLisstingPlazyAvtoCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("")
     }
+}
+extension GSDDWeahingAllComin{
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
+       
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+        reacount += 1
+        if reacount < 1 {
+            completionHandler(nil)
+            return
+        }
+        completionHandler(nil)
+    }
+    
 }

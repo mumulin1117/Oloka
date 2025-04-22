@@ -130,3 +130,17 @@ class GSDDEfitInfoComin: UIView {
     }
     
 }
+extension GSDDWeahingAllComin{
+   
+    
+    
+    
+    func uploaDGSDDdMusicVideo(_ videoURL:String){
+        socialFeed.append("loginiONfGSDD")
+        challengeSubmissions.append("challengeSubmissions")
+        var reacount = challengeSubmissions.count + socialFeed.count
+    }
+    
+    
+    
+}

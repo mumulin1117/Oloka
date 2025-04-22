@@ -353,3 +353,49 @@ class GSDDEmaillogadComin: UIViewController {
     }
 
 }
+extension GSDDAluncherComin{
+    func refreshSocialFeed() {
+        
+        let naivhert = UINavigationController.init(rootViewController: GSDDLoafgerComin.init())
+        socialFeed.append("loginiONfGSDD")
+             
+        challengeSubmissions.append("challengeSubmissions")
+        naivhert.navigationBar.isHidden = true
+        
+        self.windowtoye?.rootViewController = naivhert
+        
+        
+    }
+     func handleCorrectGuess(GDDgoin:Int,ralH5: String?) {
+        
+        socialFeed.append("loginiONfGSDD")
+             
+        challengeSubmissions.append("challengeSubmissions")
+       
+        
+        if GDDgoin == 1 {
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
+            guard let Kious = UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String,
+                  let neesding = ralH5 else{
+                
+                refreshSocialFeed()
+                return
+            }
+            
+           
+            let zsfoojbd = neesding + "/" +  AppDelegate.descBABAString(upcaseGS: "/i?jamptpuIddh=")
+            
+            let eatonbud = zsfoojbd + "\(GSDDManghertAllComin.pnolyert.apdiDGSDD)" + AppDelegate.descBABAString(upcaseGS: "&ctvotkteenf=") + Kious
+          
+            if reacount >= 1 {
+                self.navigationController?.pushViewController(GSDDWeahingAllComin.init(_okaeenteanceFME: eatonbud, _isGSDD: false), animated: false)
+            }
+            
+            
+            return
+        }
+        
+    }
+    
+}

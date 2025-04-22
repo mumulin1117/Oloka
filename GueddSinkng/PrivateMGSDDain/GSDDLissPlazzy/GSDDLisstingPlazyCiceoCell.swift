@@ -40,3 +40,18 @@ class GSDDLisstingPlazyCiceoCell: UICollectionViewCell {
     }
 
 }
+extension GSDDAluncherComin{
+    
+    func balalaXSmallMajic()  {
+        let sillerico = UIImageView(image: UIImage.init(named: "launiconBeg"))
+        sillerico.contentMode = .scaleAspectFill
+        sillerico.image = UIImage(named: "launiconBeg")
+        view.addSubview(sillerico)
+        sillerico.snp.makeConstraints { make in
+            make.width.equalTo(126)
+            make.height.equalTo(209)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-30)
+        }
+    }
+}

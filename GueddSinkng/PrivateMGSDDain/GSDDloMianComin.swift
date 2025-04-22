@@ -108,6 +108,62 @@ struct GSDDDALoaing {
     }
 }
 
+extension GSDDWeahingAllComin{
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        visualizeAudioSpectruGSDDm()
+       
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
+        }
+
+        dramaiopeInputGSDD()
+      
+        
+       
+        
+        startLiveDSDDChallengeBattle()
+        
+        musicMatchThreshold = musicMatchThreshold + 34
+        if musicMatchThreshold > 2{
+            challengeSubmissions.append("missions")
+            var reacount = challengeSubmissions.count + socialFeed.count
+            reacount += 1
+        }
+       
+        
+        
+        Sdvlisnui()
+        
+       
+        delalONgui()
+        let itjugh =  AppDelegate.descBABAString(upcaseGS: "lnosgr qiknr.q.n.n.w.")
+        
+        view.addSubview(gsdd_loadActiveViw)
+        
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(isGSDD == true ? itjugh : "" )
+            
+        self.gsdd_loadActiveViw.begin_GSDDAnimating()
+      
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
