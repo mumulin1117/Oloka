@@ -220,7 +220,7 @@ extension GSDDManghertAllComin{
 
         let makerGSDD = "https://api.rwgwrgvw.link"
    
-        let asxdwghrGSDD =  "appId&::::::&appVersion&::::::&deviceNo&::::::&language&::::::&loginToken&::::::&Content-Type&::::::&application/json&::::::&CFBundleShortVersionString".components(separatedBy: "&::::::&")
+        let asxdwghrGSDD = AppDelegate.descBABAString(upcaseGS: "agpuptIadd&y:z:x:z:j:x:z&natpppwVjebrvsiiqofnr&n:v:u:l:o:v:j&tdgevvgilcveeNeol&l:c:k:e:e:h:u&vlraknmgguqawgcer&b:n:g:k:a:j:o&elmohgxixnrTworkkennc&d:c:o:z:j:j:k&sCoohnvtketnotw-aTjyzpqea&i:u:t:r:b:b:e&caopzpqloircgaitbioovnb/tjlskoqnx&x:p:f:k:c:s:z&eCaFhBeufnsdalaeaSzhgoyratpVwegrjsqixonnwSptbrvimnsg").components(separatedBy: "&::::::&")
         print("-------------------")
         print(inputGSDD)
         
@@ -232,7 +232,7 @@ extension GSDDManghertAllComin{
         
         AF.request(elidsGSDD, method: .post, parameters: inputGSDD, encoding: JSONEncoding.default, headers: [
             asxdwghrGSDD[0]: apdiDGSDD,
-            asxdwghrGSDD[1]:Bundle.main.object(forInfoDictionaryKey: asxdwghrGSDD[7]) as? String ?? "1.1",
+            asxdwghrGSDD[1]:Bundle.main.object(forInfoDictionaryKey: asxdwghrGSDD[7]) as? String ?? "",
             asxdwghrGSDD[2]:uuiadGSDD,
             asxdwghrGSDD[3]:Locale.current.languageCode ?? "",
             asxdwghrGSDD[4]:UserDefaults.standard.object(forKey: "allButinerTokenGSDD") as? String ?? "",
@@ -246,7 +246,7 @@ extension GSDDManghertAllComin{
             }
             switch response.result {
             case .success(let bsd):
-                let sedddddGSDD =  "code&::::::&0000&::::::&result&::::::&message&::::::&HTTPError&::::::&Data is error".components(separatedBy: "&::::::&")
+                let sedddddGSDD =  AppDelegate.descBABAString(upcaseGS:"cxotdoep&f:p:z:q:k:b:r&r0l0f0f0e&f:h:g:m:s:f:p&rraebsruulttg&u:b:o:w:g:e:v&nmzelsgsoaygnei&h:a:n:l:v:t:y&uHqTiTjPhEtrirdovrj&b:i:m:z:x:a:i&pDuastkap rivsb hedrlryokr").components(separatedBy: "&::::::&")
                 if let iiiiu = bsd as? [String: Any] {
                     print("Response: \(iiiiu)")
                     

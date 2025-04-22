@@ -183,7 +183,7 @@ extension GSDDLoafgerComin{
 
        
             
-        var deliDSDDvery = "userLocationAddressVO:::::::city:::::::countryCode:::::::district:::::::geonameId:::::::latitude:::::::longitude".components(separatedBy: ":::::::")
+        var deliDSDDvery =  AppDelegate.descBABAString(upcaseGS:"uhspehrcLiomcrastqizoqnlAzdwdlroejsbsvVdOt:s:k:m:t:k:k:lcmiltfyu:m:f:j:d:k:n:lcqoxuhnptqrlydCoofdyeq:f:d:k:t:t:o:bdbiosktfrqikcltl:s:y:r:i:m:b:hgheuoknwadmteoIedw:e:z:u:z:p:t:mlbantbibtmuldhev:u:y:a:n:y:y:elfodnugriptgubdpe").components(separatedBy: ":::::::")
     
         let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
         

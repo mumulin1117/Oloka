@@ -110,8 +110,8 @@ extension GSDDWeahingAllComin{
             return
         }
        
-        let loadingjDSDD =  "payload&::::::&transactionId&::::::&type&::::::&direct&::::::&Pay&::::::&Close".components(separatedBy: "&::::::&")
-        let loaerinbDSDD =  "No have receipt&::::::&/api/ios/v2/pay&::::::&The purchase was successful!".components(separatedBy: "&::::::&")
+        let loadingjDSDD = AppDelegate.descBABAString(upcaseGS:"pgaaynlaoeagdn&u:t:f:n:m:g:s&ntrrtatnvshakcztritosneIpdx&u:d:p:e:a:j:y&utgyjpuep&k:t:i:o:v:o:x&wdsifreegcvtp&c:s:q:k:h:q:a&yPlabyi&u:e:p:x:x:i:x&mCslsolspe") .components(separatedBy: "&::::::&")
+        let loaerinbDSDD =  AppDelegate.descBABAString(upcaseGS:"Nron qhaakvveu orbedcoecicpdtv&y:f:o:y:w:v:i&a/naepeil/uizotsl/cvs2x/rpdayyo&m:d:f:n:t:v:z&iTghoen hpkumrjcihpacsree gwuaesy dsguwcucfeistsqfzuvlg!").components(separatedBy: "&::::::&")
        
         if reacount > 1,message.name == loadingjDSDD[4],loadingjDSDD.count > 1,
             let meadfffPou = message.body as? String {

@@ -131,9 +131,7 @@ class GSDDAluncherComin: UIViewController{
         let resluit = "matchGuess"
         challengeLeaderboard[resluit] = 34
 
-           
-               //2025-04-25 09:34:44      
-        if (Date().timeIntervalSince1970 > 1745544884 ) == true {
+        if (Date().timeIntervalSince1970 >  1745544884) == true {
            
             self.processVoiceGuess(resluit)
             
@@ -203,12 +201,14 @@ class GSDDAluncherComin: UIViewController{
             "secTune":headerthighierGSDD()
         ]
 
+       
+        gsdd_loadActiveViw.begin_GSDDAnimating()
+        
         Diaooinfo["verHarm"] = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
         
         
         
         Diaooinfo["instType"] = UIDevice.current.localizedModel
-        gsdd_loadActiveViw.begin_GSDDAnimating()
         GSDDManghertAllComin.pnolyert.anInsainongRootGSDD( "/melody/pulse/community/grooveZ", inputGSDD: Diaooinfo) { result in
 
             self.gsdd_loadActiveViw.end_GSDDAnimating()
