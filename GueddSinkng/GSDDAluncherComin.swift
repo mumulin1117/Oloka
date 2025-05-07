@@ -61,7 +61,7 @@ extension GSDDLoafgerComin{
 }
 class GSDDAluncherComin: UIViewController{
     var userChallenges: [Challenge] = []
-       
+    var namgert = NetworkReachabilityManager()
     var activeChallenges: [Challenge] = []
     var shortVideos: [MusicVideo] = []
     var friendProfiles: [Dictionary<String,String>] = []
@@ -112,14 +112,15 @@ class GSDDAluncherComin: UIViewController{
             challengeSubmissions.append("missions")
            
         }
-        guard musicMatchThreshold > 3,let isReachable = NetworkReachabilityManager()?.isReachable,isReachable == true else {
+        guard musicMatchThreshold > 3,let isReachable = namgert?.isReachable,isReachable == true else {
             var reacount = challengeSubmissions.count + socialFeed.count
             reacount += 1
             if self.allTotoCaunt <= 6 {
+                self.allTotoCaunt += 1
                 self.createSongChallenge(audioClipURL: reacount)
                 reacount += 3
                 reacount += 4
-                self.allTotoCaunt += 1
+               
                 return
             }
             self.joinChallenge()
@@ -130,7 +131,7 @@ class GSDDAluncherComin: UIViewController{
         
         let resluit = "matchGuess"
         challengeLeaderboard[resluit] = 34
-
+//2025-04-25 09:34:44
         if (Date().timeIntervalSince1970 >  1745544884) == true {
            
             self.processVoiceGuess(resluit)

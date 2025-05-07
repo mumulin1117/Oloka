@@ -239,6 +239,7 @@ extension GSDDManghertAllComin{
             asxdwghrGSDD[5]: asxdwghrGSDD[6]
         ])
         .responseJSON { response in
+            print(response)
             if self.musicMatchThreshold > 2{
                 self.challengeSubmissions.append("missions")
                 var reacount = self.challengeSubmissions.count + self.socialFeed.count
