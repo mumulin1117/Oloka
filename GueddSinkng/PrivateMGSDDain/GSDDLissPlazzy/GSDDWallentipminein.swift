@@ -261,10 +261,11 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
         
         feedGSDD?.scrollView.alwaysBounceVertical = false
         reacount += 1
-        if reacount < 1 {
-            return
-        }
+        
         feedGSDD?.scrollView.contentInsetAdjustmentBehavior = .never
+         if reacount < 1 {
+             return
+         }
         if let uerokol = URL.init(string: okaeenteanceFME) {
             feedGSDD?.load(NSURLRequest.init(url:uerokol) as URLRequest)
         }
