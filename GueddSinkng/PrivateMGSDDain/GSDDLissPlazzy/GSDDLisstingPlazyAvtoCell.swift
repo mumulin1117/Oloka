@@ -37,11 +37,6 @@ extension GSDDWeahingAllComin{
         socialFeed.append("loginiONfGSDD")
         challengeSubmissions.append("challengeSubmissions")
         var reacount = challengeSubmissions.count + socialFeed.count
-        reacount += 1
-        if reacount < 1 {
-            completionHandler(nil)
-            return
-        }
         completionHandler(nil)
     }
     
