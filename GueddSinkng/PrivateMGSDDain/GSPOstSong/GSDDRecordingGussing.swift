@@ -174,19 +174,19 @@ class GSDDLoafgerComin: UIViewController ,CLLocationManagerDelegate {
     var userChallenges: [Challenge] = []
     
     var activeChallenges: [Challenge] = []
-    var shortVideos: [MusicVideo] = []
+    var beatDetective: [SongSleuth] = []
     var friendProfiles: [Dictionary<String,String>] = []
-    var privateMessages: [ChatMessage] = []
+    var privateMessages: [PitchPursuit] = []
     var currentAudioRecorder: AVAudioRecorder?
     var challengeLeaderboard: [String: Int] = [:]
     var musicClipLibrary: [String] = []
     var selectedChallenge: Challenge?
     var voiceRecognitionResults: [String] = []
-    var videoDrafts: [String] = []
+    var clipGuessing: [String] = []
     var socialFeed: [String] = []
     var audioWaveformData: [Float] = []
     var challengeSubmissions: [String] = []
-    var currentVideoComposition: AVVideoComposition?
+    var acousticMindGame: AVVideoComposition?
     var challengeTimers: [String: Timer] = [:]
     var musicMatchThreshold: Double = 0.75
     var pendingNotifications: [String] = []

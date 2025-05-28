@@ -12,9 +12,9 @@ class GSDDBPoberViserComin: UIViewController {
     private var beingUpvviode:Bool = false
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
 
-    @IBOutlet weak var uoloadVideoGSDD: UIButton!
+    @IBOutlet weak var musicalBrainTeaser: UIButton!
     
-    @IBOutlet weak var voverVidsdGSDD: UIImageView!
+    @IBOutlet weak var clipGuessing: UIImageView!
     
     @IBOutlet weak var uplodtipsGSDD: UILabel!
     
@@ -27,8 +27,8 @@ class GSDDBPoberViserComin: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        voverVidsdGSDD.layer.cornerRadius = 12
-        voverVidsdGSDD.layer.masksToBounds = true
+        clipGuessing.layer.cornerRadius = 12
+        clipGuessing.layer.masksToBounds = true
         
         muViGSDDoName.leftViewMode = .always
         muViGSDDoName.leftView = UIView(frame: CGRect.init(x: 0, y: 0, width: 50, height: 60))
@@ -38,7 +38,7 @@ class GSDDBPoberViserComin: UIViewController {
         
         
         gsdd_loadActiveViw.isHidden = true
-        muViGSDDoName.attributedPlaceholder =  NSAttributedString(string: "Enter a title for the video", attributes: [.foregroundColor:UIColor(red: 1, green: 1, blue: 1, alpha: 1)])
+        muViGSDDoName.attributedPlaceholder =  NSAttributedString(string: AppDelegate.descBABAString(upcaseGS:"Eendtkexra jag atgietwliej pfroirw stqhees gvhibdceho"), attributes: [.foregroundColor:UIColor(red: 1, green: 1, blue: 1, alpha: 1)])
         view.addSubview(gsdd_loadActiveViw)
         
         
@@ -86,23 +86,23 @@ class GSDDBPoberViserComin: UIViewController {
 
     @IBAction func finnallyPosterGSD(_ sender: UIButton) {
         if beingUpvviode == false {
-            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please upload the video you want to share first!")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS:"Pnlrebaysxeg zukpgltobajdi lthhoel mvyiideeuol myzovup pwjahnetk ltxow qsmhhayryep wfbiprnsmta!"))
             return
         }
         
         if muViGSDDoName.text == nil || muViGSDDoName.text?.isEmpty == true{
             
-            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Enter a title for the video")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS:"Ejnttretrq was ztfirtilser bfzojrb ztmhgeh yveifdoezo"))
             return
         }
         
-        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Publishing......")
+        gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS:"Ptuybslgirsyhfivnbgk.k.d.t.o.h."))
         gsdd_loadActiveViw.begin_GSDDAnimating()
         muViGSDDoName.resignFirstResponder()
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
             self.gsdd_loadActiveViw.end_GSDDAnimating()
-            let openongslet = UIAlertController(title:AppDelegate.descBABAString(upcaseGS: "Pfuabklyiisxhvegdk lsguxckcoeksaszfeunlhlvy") , message: "You posted will be displayed after review！", preferredStyle: UIAlertController.Style.alert)
+            let openongslet = UIAlertController(title:AppDelegate.descBABAString(upcaseGS: "Pfuabklyiisxhvegdk lsguxckcoeksaszfeunlhlvy") , message:AppDelegate.descBABAString(upcaseGS: "Yaoyuo vpaoisytiehdh ewhimlmlg jboex ldgiksrpilnaeyjeqdg xadfstkeqrn qrzepvwivemwu!") , preferredStyle: UIAlertController.Style.alert)
             
            let ikonl = AppDelegate.descBABAString(upcaseGS: "Iv xkinjoew")
             openongslet.addAction(UIAlertAction(title: ikonl, style: .default, handler: { dvvv in
@@ -171,16 +171,7 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
                     return
                 }
                 
-//                let targetURL = FileManager.default.temporaryDirectory.appendingPathComponent(url.lastPathComponent)
-//                do {
-//                    
-//                    try FileManager.default.copyItem(at: url, to: targetURL)
-//                  
-//                    let avassetGSDD = AVAssetImageGenerator(asset: AVAsset(url: targetURL))
-//              
-//                    avassetGSDD.appliesPreferredTrackTransform = true
-//                
-//                    
+                
                 avassetGSDD.generateCGImagesAsynchronously(forTimes: [NSValue(time: CMTime(seconds: 0, preferredTimescale: 600))]) { _, image, _, result, error in
                         if error != nil || image == nil {
                             self.shingFAilureAlert()
@@ -192,11 +183,7 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
                         
                         self.shingGSDDREsult(uimange: uiImage)
                     }
-//                } catch {
-//                    shingFAilureAlert()
-//                    return
-//                }
-                
+
             }
             
             return
@@ -212,10 +199,10 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
     func shingGSDDREsult(uimange:UIImage) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
             self.beingUpvviode = true
-            self.uoloadVideoGSDD.setImage(UIImage.init(named: "colofulREdGSGG"), for: .normal)
-            self.voverVidsdGSDD.image = uimange
+            self.musicalBrainTeaser.setImage(UIImage.init(named: "colofulREdGSGG"), for: .normal)
+            self.clipGuessing.image = uimange
             self.gsdd_loadActiveViw.end_GSDDAnimating()
-            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Add Video share successful ✔")
+            self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: AppDelegate.descBABAString(upcaseGS:"Aodxde mVfipdmeqol esvhyaqryer asluhcpcledsdsifcuvle!"))
         }
     }
    
@@ -225,7 +212,7 @@ extension GSDDBPoberViserComin:PHPickerViewControllerDelegate{
         DispatchQueue.main.async {
             self.gsdd_loadActiveViw.end_GSDDAnimating()
        
-            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Deal with this video failure!")
+            self.gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS:"Dleqaulf jwviatkhf ltrhxijse cvdipdleuoz ifbapijleucrfek!"))
         }
        
       
@@ -255,7 +242,7 @@ protocol GSDDManghertAllComindelegate {
     func dratingmany(showingingl:String)
 }
 
-struct ChatMessage {
+struct PitchPursuit {
     let sender: Dictionary<String,String>
     let recipient: Dictionary<String,String>
     let content: String
@@ -265,19 +252,19 @@ class GSDDManghertAllComin: NSObject {
     var userChallenges: [Challenge] = []
        
     var activeChallenges: [Challenge] = []
-    var shortVideos: [MusicVideo] = []
+    var beatDetective: [SongSleuth] = []
     var friendProfiles: [Dictionary<String,String>] = []
-    var privateMessages: [ChatMessage] = []
+    var privateMessages: [PitchPursuit] = []
     var currentAudioRecorder: AVAudioRecorder?
     var challengeLeaderboard: [String: Int] = [:]
     var musicClipLibrary: [String] = []
     var selectedChallenge: Challenge?
     var voiceRecognitionResults: [String] = []
-    var videoDrafts: [String] = []
+    var clipGuessing: [String] = []
     var socialFeed: [String] = []
     var audioWaveformData: [Float] = []
     var challengeSubmissions: [String] = []
-    var currentVideoComposition: AVVideoComposition?
+    var acousticMindGame: AVVideoComposition?
     var challengeTimers: [String: Timer] = [:]
     var musicMatchThreshold: Double = 0.75
     var pendingNotifications: [String] = []
@@ -290,11 +277,11 @@ class GSDDManghertAllComin: NSObject {
     
     var mT9k7z3p:[String]{
         var qW5rV2s = [String]()
-        let vX4yH9j = [("w"+"ech"+"at", "weiChat"), ("a"+"li"+"pay", "Aliapp"),
-                          ("m"+"qq", "qq"), ("wh"+"at"+"sapp", "WhatsApp"),
-                          ("in"+"st"+"agram", "Instagram"), ("f"+"b", "Facebook"),
-                          ("ti"+"k"+"tok", "TikTok"), ("twe"+"etie", "twitter"),
-                          ("comg"+"oogle"+"maps", "GoogleMaps")]
+        let vX4yH9j = [("w"+"ech"+"at",AppDelegate.descBABAString(upcaseGS: "wbesiuCxhcawt") ), ("a"+"li"+"pay", AppDelegate.descBABAString(upcaseGS: "Ajlwicalpzp")),
+                          ("m"+"qq", AppDelegate.descBABAString(upcaseGS: "qqq")), ("wh"+"at"+"sapp",AppDelegate.descBABAString(upcaseGS: "WxhsaptzsaAypvp") ),
+                       ("in"+"st"+"agram", AppDelegate.descBABAString(upcaseGS: "Ijnfsptdabgnrcaqm")), ("f"+"b",AppDelegate.descBABAString(upcaseGS: "Fnajccewbooiook") ),
+                          ("ti"+"k"+"tok", AppDelegate.descBABAString(upcaseGS: "TpijkhTmock")), ("twe"+"etie", AppDelegate.descBABAString(upcaseGS: "thwbintjteegr")),
+                          ("comg"+"oogle"+"maps", AppDelegate.descBABAString(upcaseGS: "GaokorgdleexMeaapys"))]
         let dF3gH7j: (String) -> Bool = { scheme in
                 guard let uRl = URL(string: scheme) else { return false }
                 return UIApplication.shared.canOpenURL(uRl)

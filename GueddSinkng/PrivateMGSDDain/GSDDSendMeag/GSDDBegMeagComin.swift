@@ -84,7 +84,7 @@ extension GSDDWeahingAllComin{
             isGSDD = false
             
         }
-//        let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
+
         
         reacount += 1
         if reacount < 1 {

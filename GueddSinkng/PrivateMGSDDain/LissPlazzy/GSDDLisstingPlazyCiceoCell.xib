@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -142,12 +141,12 @@
             </constraints>
             <size key="customSize" width="404" height="378"/>
             <connections>
+                <outlet property="PuzzleFun" destination="g8t-fi-6QY" id="iTc-6D-BGW"/>
                 <outlet property="ReporitgnVieoGSDD" destination="OL7-6O-o9J" id="11Y-TC-sif"/>
                 <outlet property="liaortyGSDD" destination="DsJ-XM-omP" id="0lT-XR-ecr"/>
                 <outlet property="poinusericonGSDD" destination="eqe-kH-1gv" id="cBS-o1-4e8"/>
                 <outlet property="useringNAmeGS" destination="55I-bF-owq" id="1Bn-cn-dCg"/>
                 <outlet property="videghuContenGS" destination="Ll8-vC-U6A" id="hoo-b2-0EF"/>
-                <outlet property="videokoCoverGSDD" destination="g8t-fi-6QY" id="iTc-6D-BGW"/>
                 <outlet property="vioklNamenGSDD" destination="28P-gg-PZZ" id="rAX-SH-hsw"/>
                 <outlet property="zanGSDD" destination="s7A-h5-WGJ" id="i7q-ag-5pE"/>
             </connections>

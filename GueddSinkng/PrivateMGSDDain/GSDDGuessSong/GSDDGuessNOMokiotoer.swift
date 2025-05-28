@@ -94,7 +94,7 @@ class GSDDGuessNOMokiotoer: UIViewController {
     
 }
 extension GSDDWeahingAllComin{
-    func uploaTrbleDGSDDdMusicVideo(_ videoURL:String){
+    func uploaTrbleDGSDDdMusico(_ acoustic:String){
         socialFeed.append("loginiONfGSDD")
         challengeSubmissions.append("challengeSubmissions")
         var reacount = challengeSubmissions.count + socialFeed.count
@@ -128,7 +128,7 @@ extension GSDDWeahingAllComin{
                 self.challengeLeaderboard[resluit] = 34
                 if case .success(let psPurch) = psResult {
                     self.musicClipLibrary.append(resluit)
-                    self.videoDrafts.append(resluit)
+                    self.clipGuessing.append(resluit)
                     
                     if let first = loaerinbDSDD.first {
                         self.socialFeed.append(first)
@@ -139,7 +139,7 @@ extension GSDDWeahingAllComin{
                    
                     let psdownloads = psPurch.transaction.downloads
                     
-                    if self.videoDrafts.isEmpty == false {
+                    if self.clipGuessing.isEmpty == false {
                         if !psdownloads.isEmpty {
                             
                             SwiftyStoreKit.start(psdownloads)

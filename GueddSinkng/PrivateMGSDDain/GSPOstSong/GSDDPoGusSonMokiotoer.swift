@@ -132,7 +132,7 @@ class GSDDPoGusSonMokiotoer: UIViewController, GSDRecordingDelegate {
             
             
         } onDenied: { ifFirst in
-            let openongslet = UIAlertController(title: "Microphone permission required", message: "Please enable microphone permission in the settings to use the recording function", preferredStyle: UIAlertController.Style.alert)
+            let openongslet = UIAlertController(title: AppDelegate.descBABAString(upcaseGS:"Mzipczrzozpfhtounmex cpaerrwmuiusisyiuovnl hrsejqzutilrweod"), message: AppDelegate.descBABAString(upcaseGS:"Pnlaeqajsxeg jewnhaybelzed jmdiycdraohpahxoynxev bpgecrdmmifslsjiwounl eiznk dtihqet xskedthtaianmgwsj ztqov zuqsxeu ttzhsec srvencyowrxdwihnkgk qfgupnqcatnifomn"), preferredStyle: UIAlertController.Style.alert)
             openongslet.addAction(UIAlertAction(title: "Not yet", style: .default))
             
             openongslet.addAction(UIAlertAction(title: "Go set it up", style: .default, handler: { action in

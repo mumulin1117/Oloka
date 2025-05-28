@@ -124,7 +124,7 @@ The user obtains a non-exclusive, non-transferable limited license to use the Ol
 ﻿
 2. Content Ownership
 ﻿
-User-generated audio/video content retains ownership but grants Oloka a perpetual, irrevocable, worldwide license to host, moderate, and remove content at our sole discretion.
+User-generated audio/file content retains ownership but grants Oloka a perpetual, irrevocable, worldwide license to host, moderate, and remove content at our sole discretion.
 All interface designs, algorithms, trademarks, and content moderation systems within the application are the exclusive property of Oloka.
 
 3. Content Moderation Policy 🌟
@@ -299,13 +299,13 @@ Service provider: Oloka LLC
 
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-            if URL.scheme == "privacy" {
+            if URL.scheme == AppDelegate.descBABAString(upcaseGS:"pareipveaacjy") {
                 let eluDetail = """
         Effective Date: February 21, 2025
 
         1. Types of information collected
 
-        Required data: account information (email/third-party login), device ID, audio/video content
+        Required data: account information (email/third-party login), device ID, audio/file content
         Optional data: Geographic location (for local challenges), Address book (recommended by friends)
         Automatic collection: using logs, clicking on heatmaps, crash reports
         2. Data usage scenarios
@@ -333,7 +333,7 @@ Service provider: Oloka LLC
             }
         
         
-        if URL.scheme == "terms" {
+        if URL.scheme == AppDelegate.descBABAString(upcaseGS:"tgejrkmks") {
             let eluDetail = """
     Effective Date: February 21, 2025
 
@@ -344,7 +344,7 @@ Service provider: Oloka LLC
     Real name reporting of illegal content can earn credit rewards
     2. Content standards
 
-    Short videos must not contain unauthorized commercial advertisements
+    Short files must not contain unauthorized commercial advertisements
     Private message content is monitored by a 24-hour automatic anti harassment system
     The longest quoted song in the challenge should not exceed 15 seconds
     3. Virtual currency rules

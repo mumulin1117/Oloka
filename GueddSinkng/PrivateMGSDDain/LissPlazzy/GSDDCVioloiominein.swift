@@ -77,7 +77,7 @@ class GSDDCVioloiominein: GSDDUserilcomine {
     
     @IBAction func GSddRepPothweyuing(_ sender: UIButton) {
         
-        gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: " The  phone is not connected yet, please try again later！")
+        gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS:"Tkhleb a cpshcofnoey ridsz inyojto gcooondnsegcwtqeodv qymeltx,b cphleecadshen gtmrnyq margwayivnr tlmawtmefrh!"))
         
     }
 

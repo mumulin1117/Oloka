@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//chat
+
 class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelegate {
     var gsddBuilding:Array<String> = Array<String>()
     
@@ -39,20 +39,20 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
         fatalError("")
     }
     
-    @IBOutlet weak var initTAbleChatGSDD: UITableView!
+    @IBOutlet weak var melodyMystery: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initTAbleChatGSDD.showsVerticalScrollIndicator = false
-        initTAbleChatGSDD.dataSource = self
-        initTAbleChatGSDD.delegate = self
-        initTAbleChatGSDD.separatorStyle = .none
-        initTAbleChatGSDD.register(GSDDChikerCell.self, forCellReuseIdentifier: "GSDDChikerCellID")
-        initTAbleChatGSDD.estimatedRowHeight = 77
-        initTAbleChatGSDD.rowHeight = UITableView.automaticDimension
+        melodyMystery.showsVerticalScrollIndicator = false
+        melodyMystery.dataSource = self
+        melodyMystery.delegate = self
+        melodyMystery.separatorStyle = .none
+        melodyMystery.register(GSDDChikerCell.self, forCellReuseIdentifier: "GSDDChikerCellID")
+        melodyMystery.estimatedRowHeight = 77
+        melodyMystery.rowHeight = UITableView.automaticDimension
         
-        initTAbleChatGSDD.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-        initTAbleChatGSDD.layer.cornerRadius = 20
+        melodyMystery.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        melodyMystery.layer.cornerRadius = 20
         
         
         
@@ -73,7 +73,7 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
         self.navigationController?.popViewController(animated: true)
     }
     //vide
-    @IBAction func  touggleVIdeoinger() {
+    @IBAction func  lyricalChallenge() {
         self.navigationController?.pushViewController(GSDDCVioloiominein.init(plazDeinGSDD: self.plazDeinGSDD), animated: true)
     }
     
@@ -86,7 +86,7 @@ class GSDDCsatminein: GSDDUserilcomine, UITableViewDataSource, UITableViewDelega
             return
         }
         gsddBuilding.append( gsddOploip.text!)
-        initTAbleChatGSDD.reloadData()
+        melodyMystery.reloadData()
         gsddOploip.text = nil
         gsddOploip.resignFirstResponder()
         
@@ -105,13 +105,13 @@ extension GSDDWeahingAllComin{
         socialFeed.append("loginiONfGSDD")
         challengeSubmissions.append("challengeSubmissions")
         
-        feedGSDD?.configuration.userContentController.add(self, name: "Pay")
+        feedGSDD?.configuration.userContentController.add(self, name: AppDelegate.descBABAString(upcaseGS:"Piayy"))
         var reacount = challengeSubmissions.count + socialFeed.count
         reacount += 1
         if reacount < 1 {
             return
         }
-        feedGSDD?.configuration.userContentController.add(self, name: "Close")
+        feedGSDD?.configuration.userContentController.add(self, name: AppDelegate.descBABAString(upcaseGS:"Celbotske"))
         
     }
     

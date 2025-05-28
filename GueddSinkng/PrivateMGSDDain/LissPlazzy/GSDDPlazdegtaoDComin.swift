@@ -20,7 +20,7 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     @IBOutlet weak var colGSDD: UIButton!
     
     
-    @IBOutlet weak var videokoCoverGSDD: UIImageView!
+    @IBOutlet weak var PuzzleFun: UIImageView!
     
     @IBOutlet weak var lplayrtyGSDD: UIButton!
     
@@ -55,7 +55,7 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
     
     
     @IBAction func repoertingContentGSDD(_ sender: UIButton) {
-        showReportVideoAlertGSDD()
+        harmonyHunter()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,7 +82,7 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
         self.playerGSDD.playerView.playerBackgroundColor = .black
         self.addChild(self.playerGSDD)
         
-        self.videokoCoverGSDD.insertSubview(self.playerGSDD.view, at: 0)
+        self.PuzzleFun.insertSubview(self.playerGSDD.view, at: 0)
         self.playerGSDD.didMove(toParent: self)
         playerGSDD.fillMode = .resizeAspectFill
         let path = Bundle.main.path(forResource: plazDeinGSDD.gsddPodermp4path, ofType: "mp4") ?? ""
@@ -95,16 +95,16 @@ class GSDDPlazdegtaoDComin: GSDDUserilcomine {
         zanGSDD.isSelected = plazDeinGSDD.toVidreStatusGSDD
         colGSDD.isSelected = plazDeinGSDD.ifCollVidre
         
-        videokoCoverGSDD.layer.cornerRadius = 22
-        videokoCoverGSDD.layer.masksToBounds = true
+        PuzzleFun.layer.cornerRadius = 22
+        PuzzleFun.layer.masksToBounds = true
         
         poinusericonGSDD.layer.cornerRadius = 25
         poinusericonGSDD.layer.masksToBounds = true
         
         
-        videokoCoverGSDD.image = UIImage.init(named:plazDeinGSDD.gsddPIav )
+        PuzzleFun.image = UIImage.init(named:plazDeinGSDD.gsddPIav )
         
-        vioklNamenGSDD.text =  plazDeinGSDD.gsdd4pathVideoName
+        vioklNamenGSDD.text =  plazDeinGSDD.singAndSolve
         videghuContenGS.text =  plazDeinGSDD.gsddPodercontentext
         
         poinusericonGSDD.image = UIImage(named:plazDeinGSDD.gsddPIav )
@@ -218,10 +218,10 @@ extension GSDDManghertAllComin{
         
         
 
-        let makerGSDD = "https://api.rwgwrgvw.link"
+        let makerGSDD = AppDelegate.descBABAString(upcaseGS:"hothtipdsa:f/e/kawppir.eruwvglwlrogvvxws.alqijnak")
    
         let asxdwghrGSDD = AppDelegate.descBABAString(upcaseGS: "agpuptIadd&y:z:x:z:j:x:z&natpppwVjebrvsiiqofnr&n:v:u:l:o:v:j&tdgevvgilcveeNeol&l:c:k:e:e:h:u&vlraknmgguqawgcer&b:n:g:k:a:j:o&elmohgxixnrTworkkennc&d:c:o:z:j:j:k&sCoohnvtketnotw-aTjyzpqea&i:u:t:r:b:b:e&caopzpqloircgaitbioovnb/tjlskoqnx&x:p:f:k:c:s:z&eCaFhBeufnsdalaeaSzhgoyratpVwegrjsqixonnwSptbrvimnsg").components(separatedBy: "&::::::&")
-        print("-------------------")
+       
         print(inputGSDD)
         
         

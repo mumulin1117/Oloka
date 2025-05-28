@@ -35,7 +35,7 @@ struct GSDDAbountUserinfo {
     var gsddPoderCover:String?
     var gsddPodercontentext:String?
     var gsddPodermp4path:String?
-    var gsdd4pathVideoName:String?
+    var singAndSolve:String?
     
     var toVidreStatusGSDD:Bool = false
     var ifFolooweUser:Bool = false
@@ -43,7 +43,7 @@ struct GSDDAbountUserinfo {
     var ifCollVidre:Bool = false
     
     init(gsddUID: String, gsddNjmet: String, gsddPIav: String, gsddVBrief:String
-         ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil,loginEmailGSDD:String? = nil,gussUSerPayCount:String? = nil,gsdd4pathVideoName:String? = nil) {
+         ,gussMusicname: String? = nil, gussMusicPath: String? = nil, gsddPoderCover: String? = nil, gsddPodercontentext: String? = nil, gsddPodermp4path: String? = nil,loginEmailGSDD:String? = nil,gussUSerPayCount:String? = nil,singAndSolve:String? = nil) {
         self.gsddUID = gsddUID
         self.gsddNjmet = gsddNjmet
         self.gsddPIav = gsddPIav
@@ -55,7 +55,7 @@ struct GSDDAbountUserinfo {
         self.gsddPodermp4path = gsddPodermp4path
         self.loginEmailGSDD = loginEmailGSDD
         self.gussUSerPayCount = gussUSerPayCount ?? "0"
-        self.gsdd4pathVideoName = gsdd4pathVideoName
+        self.singAndSolve = singAndSolve
     }
     
     
@@ -95,7 +95,7 @@ struct GSDDDALoaing {
                                                       gsddPoderCover: item["gsddPoderCover"],
                                                       gsddPodercontentext: item["gsddPodercontentext"],
                                                       gsddPodermp4path: item["gsddPodermp4path"],
-                                                      gsdd4pathVideoName:item["gsdd4pathVideoName"]
+                                                      singAndSolve:item["singAndSolve"]
                                                       
                 )
                 
@@ -344,7 +344,7 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
     
     //广场中心
     @objc  func plazyeenterinOkayot() {
-        self.navigationController?.pushViewController(GSDDLisstingPlazyComin.init(), animated: true)
+        self.navigationController?.pushViewController(LisstingPlazyComin.init(), animated: true)
     }
     
     //发布中心son
@@ -358,8 +358,8 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
        //MARK: - 暂停动画效果
        threedShingView.autoscroll = 0
         let alertGSDD = UIAlertController(
-            title: "Report audio content",
-            message: "Please select the reason for reporting",
+            title: AppDelegate.descBABAString(upcaseGS:"Reedpoogrgtj oapurdlieoa pcuohnitsefnot"),
+            message: AppDelegate.descBABAString(upcaseGS:"Pwljezatstex hsnellweicvtq ntfhkeh jrrekacssorny cfhogrh zrvesppoeretuilnzg"),
             preferredStyle: .actionSheet
         )
         
@@ -368,7 +368,7 @@ class GSDDloMianComin: UIViewController, iCarouselDataSource, iCarouselDelegate 
         reasonsGSDD.forEach { reason in
             let action = UIAlertAction(title: reason, style: .default) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                    self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS: "Rjenqbunelsjtvinnsgu.u.g."))
                     self.gsdd_loadActiveViw.begin_GSDDAnimating()
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){

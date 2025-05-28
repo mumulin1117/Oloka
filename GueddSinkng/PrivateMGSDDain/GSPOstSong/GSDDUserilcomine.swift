@@ -8,8 +8,8 @@
 import UIKit
 import CoreLocation
 
-struct MusicVideo {
-    let videoURL: URL
+struct SongSleuth {
+    let bratHatQuest: URL
     let caption: String
     var likes: Int
     var comments: [String]
@@ -36,13 +36,13 @@ class GSDDUserilcomine: UIViewController {
     // MARK: - 显示拉黑/举报弹窗
     func showBlockOrReportAlert(targeGSDDIUID: String) {
         let alertGSDD = UIAlertController(
-            title: "Operation options",
-            message: "Please select the operation for the user",
+            title: AppDelegate.descBABAString(upcaseGS:"Oupleirtamttimobnb mojptttigoznds"),
+            message: AppDelegate.descBABAString(upcaseGS:"Plljetaxshek bsjenlsetcftt etohcen houpqedrwadtiijoqng zfcomrg stqhfea wuzsdeqr"),
             preferredStyle: .actionSheet
         )
         let quFormate = AppDelegate.descBABAString(upcaseGS: "cqadnncoexl")
         alertGSDD.addAction(UIAlertAction(
-            title: "Block users",
+            title: AppDelegate.descBABAString(upcaseGS:"Bylfobctkn guzsgehris"),
             style: .destructive
         ) { [self] _ in
             confirmGSDDBlock_User(userGSDDIDD: targeGSDDIUID)
@@ -50,7 +50,7 @@ class GSDDUserilcomine: UIViewController {
         
       
         alertGSDD.addAction(UIAlertAction(
-            title: "Report user",
+            title: AppDelegate.descBABAString(upcaseGS:"Rwehpgocrqtt kucstepr"),
             style: .default
         ) { [self] _ in
             show_GSDDReport_Options()
@@ -70,14 +70,14 @@ class GSDDUserilcomine: UIViewController {
     // MARK: - 二次确认拉黑弹窗
     private func confirmGSDDBlock_User(userGSDDIDD: String) {
         let alertGSDD = UIAlertController(
-            title: "Confirm to block?",
-            message: "After being blacklisted, messages from the user will no longer be received, and both parties will not be able to view each other's updates",
+            title: AppDelegate.descBABAString(upcaseGS: "Cuounqfriersmw rtpov ibqlsoscvkj?"),
+            message: AppDelegate.descBABAString(upcaseGS: "Aefctgepre ybweeicnlgs ybblharchkilsihsxtjeudo,j pmvelsqshaygcehss xfnroozmx ltrhjeh puksgejrp lwgiylglq wnzog yluojnzgoeord qbmei vryexcdegisvreqdo,e iaynsdv ibnoztyhn npfajrutqihewso fwdiolmlp wnzohtl tbaew qaybflfee xtwov wvgilecwz beiagckhi toltohyevrh'usd buepbdfaxtdejs"),
             preferredStyle: .alert
         )
         
-        alertGSDD.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        alertGSDD.addAction(UIAlertAction(title: AppDelegate.descBABAString(upcaseGS:"coaunfclezl"), style: .cancel))
         alertGSDD.addAction(UIAlertAction(
-            title: "Confirm to block",
+            title: AppDelegate.descBABAString(upcaseGS:"Cmoanqftiwrems ltooi abulqomcjk"),
             style: .destructive
         ) { _ in
         
@@ -86,11 +86,11 @@ class GSDDUserilcomine: UIViewController {
                     GSDDDALoaing.chanGSDD.loafingDaGSDD.remove(at: obn)
                 }
             }
-            self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+            self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS:"Rmeaqfuceusjtcidndgk.u.o."))
             self.gsdd_loadActiveViw2.begin_GSDDAnimating()
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
                 self.gsdd_loadActiveViw2.end_GSDDAnimating()
-                self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: "Block successful ✔")
+                self.gsdd_loadActiveViw2.showGSDDSuccess(messageGSDD: AppDelegate.descBABAString(upcaseGS:"Bsllozcrkw lsfuocqcbezsasmfluzl"))
 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                     
@@ -112,8 +112,8 @@ class GSDDUserilcomine: UIViewController {
     // MARK: - 举报选项弹窗
     private func show_GSDDReport_Options() {
         let alertGSDD = UIAlertController(
-            title: "Reason for reporting",
-            message: "Please select the reason for reporting this user",
+            title: AppDelegate.descBABAString(upcaseGS:"Rcehawsvoqnz vffoyrd yrlefpaoardtgiwnxg"),
+            message: AppDelegate.descBABAString(upcaseGS:"Pfllevaosoeo zslepldelcctz atahreq vryezaqsyownc lfjoerf hrieyptodrptdipnhgc ytyhqidsq kujsgerr"),
             preferredStyle: .actionSheet
         )
   
@@ -128,7 +128,7 @@ class GSDDUserilcomine: UIViewController {
                 style: .default
             ) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS:"Rbenqkuxeisjtyiinlgl.r.o."))
                     self.gsdd_loadActiveViw2.begin_GSDDAnimating()
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
@@ -149,10 +149,10 @@ class GSDDUserilcomine: UIViewController {
     }
 
     // MARK: - 举报视频内容弹窗
-    func showReportVideoAlertGSDD() {
+    func harmonyHunter() {
         let alertGSDD = UIAlertController(
-            title: "Report video content",
-            message: "Please select the reason for reporting",
+            title: AppDelegate.descBABAString(upcaseGS:"Rwedprobrgte uvbifdseiol xcooznbtfefnxt"),
+            message: AppDelegate.descBABAString(upcaseGS:"Pulcefaisiev zsyeolyecchth ztyhaea hrpenapsbotnj yfgobrf drneppeodrttritnzg"),
             preferredStyle: .actionSheet
         )
         
@@ -161,7 +161,7 @@ class GSDDUserilcomine: UIViewController {
         reasonsGSDD.forEach { reason in
             let action = UIAlertAction(title: reason, style: .default) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS: "Rlexqtuqezsctsidntgw.o.l."))
                     self.gsdd_loadActiveViw2.begin_GSDDAnimating()
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
@@ -185,8 +185,8 @@ class GSDDUserilcomine: UIViewController {
     // MARK: - 举报MP3内容弹窗
     func showReportMP3AlertGSDD() {
         let alertGSDD = UIAlertController(
-            title: "Report audio content",
-            message: "Please select the reason for reporting",
+            title: AppDelegate.descBABAString(upcaseGS:"Rreappopretf satuldfizod lcaoangtlexndt"),
+            message: AppDelegate.descBABAString(upcaseGS:"Pylbeoayskea bsseelxeicstz ktxhhed vrgesaesuoane cftomrv mrfevppojrptyienwg"),
             preferredStyle: .actionSheet
         )
         
@@ -195,7 +195,7 @@ class GSDDUserilcomine: UIViewController {
         reasonsGSDD.forEach { reason in
             let action = UIAlertAction(title: reason, style: .default) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw2.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS: "Rrelqnuaetsntnicnkgu.x.c."))
                     self.gsdd_loadActiveViw2.begin_GSDDAnimating()
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){

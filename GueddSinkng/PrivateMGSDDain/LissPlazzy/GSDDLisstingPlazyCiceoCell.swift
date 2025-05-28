@@ -17,7 +17,7 @@ class GSDDLisstingPlazyCiceoCell: UICollectionViewCell {
     @IBOutlet weak var zanGSDD: UIButton!
     
     
-    @IBOutlet weak var videokoCoverGSDD: UIImageView!
+    @IBOutlet weak var PuzzleFun: UIImageView!
     
     @IBOutlet weak var liaortyGSDD: UIButton!
     
@@ -31,8 +31,8 @@ class GSDDLisstingPlazyCiceoCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
       
-        videokoCoverGSDD.layer.cornerRadius = 22
-        videokoCoverGSDD.layer.masksToBounds = true
+        PuzzleFun.layer.cornerRadius = 22
+        PuzzleFun.layer.masksToBounds = true
         
         poinusericonGSDD.layer.cornerRadius = 25
         poinusericonGSDD.layer.masksToBounds = true

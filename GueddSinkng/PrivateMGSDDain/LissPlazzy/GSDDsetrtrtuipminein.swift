@@ -61,7 +61,7 @@ Effective Date: February 21, 2025
 
 1. Types of information collected
 
-Required data: account information (email/third-party login), device ID, audio/video content
+Required data: account information (email/third-party login), device ID, audio content
 Optional data: Geographic location (for local challenges), Address book (recommended by friends)
 Automatic collection: using logs, clicking on heatmaps, crash reports
 2. Data usage scenarios
@@ -99,7 +99,7 @@ Must be at least 13 years old (or the legal age in the jurisdiction)
 Real name reporting of illegal content can earn credit rewards
 2. Content standards
 
-Short videos must not contain unauthorized commercial advertisements
+Short music file must not contain unauthorized commercial advertisements
 Private message content is monitored by a 24-hour automatic anti harassment system
 The longest quoted song in the challenge should not exceed 15 seconds
 3. Virtual currency rules
@@ -133,7 +133,7 @@ Complaints and Suggestions: Oloka@gmail.com
     
     @IBAction func gsddDeleter(_ sender: UIButton) {
         
-        let deleteacconutGSDDAlera = UIAlertController(title: "Permanently delete account", message: "This operation will permanently delete all your data, including personal information, history, and purchased content. This operation is irrevocable", preferredStyle:.alert)
+        let deleteacconutGSDDAlera = UIAlertController(title: AppDelegate.descBABAString(upcaseGS:"Pheirbmgasnnelnntglfym qdgeoldettrex tapcmcaoeubnnt"), message: AppDelegate.descBABAString(upcaseGS:"Tchnihsp xorpxegrqaatfihonnz fwgihlqlu nptetrgmwasnyevnotqlyyn kdgeclpevtrel kacltld kygoouprk hdpabthau,q fitnzcylhuidyiunwgk rpmekrhskornoaxlm wignofmogrxmpaftziootno,k hhhiqsmtqocrbyx,l oahnrdi ppkuqrccbhxajscerdj ecvonnbtpernxtt.q mTchiixsr nohpnesraaotyikopno ticsn riyrbrbefvfoaccaybwlre"), preferredStyle:.alert)
         let loadinftext = AppDelegate.descBABAString(upcaseGS: "cpomncfzilremo ydgeulveytliioun")
         deleteacconutGSDDAlera.addAction(UIAlertAction(title: loadinftext, style: .default, handler: { ddtion in
             
@@ -159,13 +159,13 @@ Complaints and Suggestions: Oloka@gmail.com
             let rooorGSDD = UINavigationController.init(rootViewController: GSddguessingComin.init())
             rooorGSDD.navigationBar.isHidden = true
             
-            self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("deleteing in...")
+            self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS:"dcejlmeetjelibnkgw hilnq.w.e."))
             self.gsdd_loadActiveViw.begin_GSDDAnimating()
 
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                 self.gsdd_loadActiveViw.end_GSDDAnimating()
                 
-                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Account has been deleted successful ✔")
+                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: AppDelegate.descBABAString(upcaseGS:"Alcrceowusnutf dhtazsm bbdejecnw ldoeblpeutyebdl tsgumcwceezslsofyufli!"))
                 
                 ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rooorGSDD
             }
@@ -174,7 +174,7 @@ Complaints and Suggestions: Oloka@gmail.com
             
         }))
         
-        deleteacconutGSDDAlera.addAction(UIAlertAction(title: "Keep account", style: .default))
+        deleteacconutGSDDAlera.addAction(UIAlertAction(title: AppDelegate.descBABAString(upcaseGS:"Kweoeapz gamcicjohuqnyt"), style: .default))
         self.present(deleteacconutGSDDAlera, animated: true)
     }
     
@@ -193,7 +193,7 @@ Complaints and Suggestions: Oloka@gmail.com
     
     @IBAction func satretGSDD(_ sender: UIButton) {
 
-        guard let webUrl = URL(string: "https://app.rwgwrgvw.link") else { return }
+        guard let webUrl = URL(string: AppDelegate.descBABAString(upcaseGS:"hctetfpisu:s/i/badpbpz.zrjwvgowvrsgevxwe.lliiknjk")) else { return }
         UIApplication.shared.open(webUrl, options: [:], completionHandler: nil)
         
     }

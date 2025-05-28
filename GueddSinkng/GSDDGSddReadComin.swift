@@ -48,14 +48,14 @@ class GSDDGSddReadComin: UIViewController {
         texfresad.backgroundColor = .clear
         view.addSubview(texfresad)
         
-        if  !titlerGSDDShing.contains("ELUA") {
+        if  !titlerGSDDShing.contains(AppDelegate.descBABAString(upcaseGS:"EbLsUaA")) {
             
             return
         }
         
         let iagreendGSDD = UIButton.init()
         iagreendGSDD.backgroundColor = UIColor(red: 0.68, green: 0.34, blue: 0.98, alpha: 1)
-        iagreendGSDD.setTitle("I agree", for: .normal)
+        iagreendGSDD.setTitle(AppDelegate.descBABAString(upcaseGS:"It padgwrteke"), for: .normal)
         iagreendGSDD.setTitleColor(.white, for: .normal)
         iagreendGSDD.layer.masksToBounds = true
         iagreendGSDD.layer.cornerRadius = 10
@@ -71,7 +71,7 @@ class GSDDGSddReadComin: UIViewController {
         
         let ianoagreeGSDD = UIButton.init()
         ianoagreeGSDD.backgroundColor = .black
-        ianoagreeGSDD.setTitle("Cancel", for: .normal)
+        ianoagreeGSDD.setTitle(AppDelegate.descBABAString(upcaseGS:"Cnaonpcweal"), for: .normal)
         ianoagreeGSDD.setTitleColor(.white, for: .normal)
         ianoagreeGSDD.layer.masksToBounds = true
         ianoagreeGSDD.layer.cornerRadius = 10

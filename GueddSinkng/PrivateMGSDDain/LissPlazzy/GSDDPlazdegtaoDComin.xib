@@ -11,13 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSDDPlazdegtaoDComin" customModule="GueddSinkng" customModuleProvider="target">
             <connections>
+                <outlet property="PuzzleFun" destination="5bw-gL-9NM" id="cvx-gh-ips"/>
                 <outlet property="ReporitgnVieoGSDD" destination="GAw-fd-lY9" id="QwL-c9-Gmf"/>
                 <outlet property="colGSDD" destination="TRl-Zz-tzC" id="AEg-S9-grP"/>
                 <outlet property="lplayrtyGSDD" destination="SYe-Pt-bul" id="R1o-lS-9Vt"/>
                 <outlet property="poinusericonGSDD" destination="MuJ-ew-Dzk" id="Jrb-3l-a4p"/>
                 <outlet property="useringNAmeGS" destination="KLg-f4-WlB" id="ho4-Go-OvY"/>
                 <outlet property="videghuContenGS" destination="mYE-6a-1V6" id="cr0-i0-m3w"/>
-                <outlet property="videokoCoverGSDD" destination="5bw-gL-9NM" id="cvx-gh-ips"/>
                 <outlet property="view" destination="UqK-oJ-rrO" id="uQx-dj-Llh"/>
                 <outlet property="vioklNamenGSDD" destination="vnh-Bh-T86" id="RRd-Wh-BD5"/>
                 <outlet property="zanGSDD" destination="C0Y-4m-aVm" id="rFQ-s7-xCi"/>

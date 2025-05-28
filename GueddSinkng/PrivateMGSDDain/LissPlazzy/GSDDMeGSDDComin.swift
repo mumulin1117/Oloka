@@ -90,12 +90,12 @@ class GSDDMeGSDDComin: UIViewController {
         
         let relaiony = GSDDRealtiongpminein.init()
         if vmi.tag == 45 {
-            relaiony.relaitonStrFS = "Fans"
+            relaiony.relaitonStrFS = AppDelegate.descBABAString(upcaseGS:"Fhaonbs")
             relaiony.ModelgGSDD = GSDDEmaillogadComin.fancertListGSDD
         }
         
         if vmi.tag == 46 {
-            relaiony.relaitonStrFS = "Follow"
+            relaiony.relaitonStrFS = AppDelegate.descBABAString(upcaseGS:"Fzomldlzoww")
             relaiony.ModelgGSDD = GSDDEmaillogadComin.follwercertListGSDD
         }
         self.navigationController?.pushViewController(relaiony, animated: true)
@@ -129,7 +129,7 @@ extension GSDDMeGSDDComin{
         
         
         let emionext = UILabel.init()
-        emionext.text = "Profile"
+        emionext.text = AppDelegate.descBABAString(upcaseGS:"Pkryozfrielee")
         emionext.textColor = .white
         emionext.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         view.addSubview(emionext)
@@ -271,7 +271,7 @@ extension GSDDMeGSDDComin{
             make.centerX.equalToSuperview()
         }
         let settextntnext = UILabel.init()
-        settextntnext.text = "Setup"
+        settextntnext.text = AppDelegate.descBABAString(upcaseGS:"Szectnuhp")
         settextntnext.textColor = .white
         settextntnext.textAlignment = .center
         settextntnext.font = UIFont.systemFont(ofSize: 14.x_GSDD, weight: .medium)
@@ -315,7 +315,7 @@ extension GSDDMeGSDDComin{
         }
        
         let fancntnext = UILabel.init()
-        fancntnext.text = "Fans"
+        fancntnext.text = AppDelegate.descBABAString(upcaseGS:"Fcaenws")
         fancntnext.textColor = .white
         fancntnext.textAlignment = .center
         fancntnext.font = UIFont.systemFont(ofSize: 14.x_GSDD, weight: .medium)
@@ -376,7 +376,7 @@ extension GSDDMeGSDDComin{
         
         
         let Postswdentnext = UILabel.init()
-        Postswdentnext.text = "Posts"
+        Postswdentnext.text = AppDelegate.descBABAString(upcaseGS:"Ptolsotes")
         Postswdentnext.textColor = .white
         Postswdentnext.textAlignment = .center
         Postswdentnext.font = UIFont.systemFont(ofSize: 20, weight: .bold)

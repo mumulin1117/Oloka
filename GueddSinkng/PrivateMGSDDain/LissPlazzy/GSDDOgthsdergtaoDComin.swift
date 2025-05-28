@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// 他人中心
+
 class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     var plazDeinGSDD:GSDDAbountUserinfo
     init(plazDeinGSDD: GSDDAbountUserinfo) {
@@ -27,7 +27,7 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
         self.navigationController?.popViewController(animated: true)
     }
     
-    //举报拉嘿
+   
     @IBAction func GSddRepPoprationNoing(_ sender: UIButton) {
       
         self.showBlockOrReportAlert(targeGSDDIUID: plazDeinGSDD.gsddUID)
@@ -36,14 +36,12 @@ class GSDDOgthsdergtaoDComin: GSDDUserilcomine {
     
     
     
-    //chat
-    @IBAction func  touggleChatinginger() {
+  
+    @IBAction func  creativePitch() {
         self.navigationController?.pushViewController(GSDDCsatminein.init(plazDeinGSDD: self.plazDeinGSDD), animated: true)
     }
 
-    
-    //vide
-    @IBAction func  touggleVIdeoinger() {
+    @IBAction func  lyricalChallenge() {
         self.navigationController?.pushViewController(GSDDCVioloiominein.init(plazDeinGSDD: self.plazDeinGSDD), animated: true)
     }
     

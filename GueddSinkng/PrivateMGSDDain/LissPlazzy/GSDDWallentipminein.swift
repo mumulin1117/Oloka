@@ -14,9 +14,9 @@ import AVFoundation
 import CoreLocation
 struct PayingGSDDIte{
     var idGSTDD:String
-    var CountGSDD:Int
+    var CountGSDD:String
     var payGSDDSpeend:String
-    init(idGSTDD: String, CountGSDD: Int, payGSDDSpeend: String) {
+    init(idGSTDD: String, CountGSDD: String, payGSDDSpeend: String) {
         self.idGSTDD = idGSTDD
         self.CountGSDD = CountGSDD
         self.payGSDDSpeend = payGSDDSpeend
@@ -61,7 +61,7 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
                 }
                 self.changepayiedResultwedGSDD(current: current)
 
-                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "Pay successful ✔")
+                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: AppDelegate.descBABAString(upcaseGS:"Poaiyk qstuscaceeisgsxfauel"))
             }else if case .error(let error) = psResult {
                 self.view.isUserInteractionEnabled = true
                 
@@ -84,22 +84,22 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
    
 
     var allPayGSDDINf = [
-        PayingGSDDIte.init(idGSTDD: "ijnosehunymqmpnw", CountGSDD: 400, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$u0n.g9j9")),
+        PayingGSDDIte.init(idGSTDD: "ijnosehunymqmpnw", CountGSDD: AppDelegate.descBABAString(upcaseGS: "4g0a0") , payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$u0n.g9j9")),
                         
-        PayingGSDDIte.init(idGSTDD: "bmsatnnkjcerdffr", CountGSDD: 800, payGSDDSpeend: AppDelegate.descBABAString(upcaseGS: "$l1v.b9h9")),
-        PayingGSDDIte.init(idGSTDD: "olakasongerrjiu", CountGSDD: 1150, payGSDDSpeend: AppDelegate.descBABAString(upcaseGS: "$v2t.a9h9")),
+        PayingGSDDIte.init(idGSTDD: "bmsatnnkjcerdffr", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "8j0h0"), payGSDDSpeend: AppDelegate.descBABAString(upcaseGS: "$l1v.b9h9")),
+        PayingGSDDIte.init(idGSTDD: "olakasongerrjiu", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "1o1h5y0"), payGSDDSpeend: AppDelegate.descBABAString(upcaseGS: "$v2t.a9h9")),
        
-        PayingGSDDIte.init(idGSTDD: "qwmlnbjhibhambvl", CountGSDD: 2450, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$q4r.r9s9")),
+        PayingGSDDIte.init(idGSTDD: "qwmlnbjhibhambvl", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "2r4b5v0"), payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$q4r.r9s9")),
         
-        PayingGSDDIte.init(idGSTDD: "olakasongluijiu", CountGSDD: 2950, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$m6x.g9a9") ),
+        PayingGSDDIte.init(idGSTDD: "olakasongluijiu", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "2j9a5y0"), payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$m6x.g9a9") ),
         
-        PayingGSDDIte.init(idGSTDD: "olakasongbajiu", CountGSDD: 4750, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$p8x.c9u9") ),
-        PayingGSDDIte.init(idGSTDD: "kndpnwswzeknrhap", CountGSDD: 4900, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$w9i.a9s9") ),
+        PayingGSDDIte.init(idGSTDD: "olakasongbajiu", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "4j7p5o0"), payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$p8x.c9u9") ),
+        PayingGSDDIte.init(idGSTDD: "kndpnwswzeknrhap", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "4e9g0r0"), payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$w9i.a9s9") ),
         
-        PayingGSDDIte.init(idGSTDD: "eejigtwvqgxvokin", CountGSDD: 9800, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$v1z9n.w9v9") ),
-        PayingGSDDIte.init(idGSTDD: "zxmaqhjjixfkhanq", CountGSDD: 24500, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$m4l9i.x9y9") ),
+        PayingGSDDIte.init(idGSTDD: "eejigtwvqgxvokin", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "9r8h0l0"), payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$v1z9n.w9v9") ),
+        PayingGSDDIte.init(idGSTDD: "zxmaqhjjixfkhanq", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "2z4v5g0d0"), payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$m4l9i.x9y9") ),
      
-        PayingGSDDIte.init(idGSTDD: "euvijcgngourojpq", CountGSDD: 49000, payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$h9n9g.h9w9") )]
+        PayingGSDDIte.init(idGSTDD: "euvijcgngourojpq", CountGSDD:  AppDelegate.descBABAString(upcaseGS: "4a9o0n0b0"), payGSDDSpeend:AppDelegate.descBABAString(upcaseGS: "$h9n9g.h9w9") )]
     
     
     override func viewDidLoad() {
@@ -142,7 +142,7 @@ class GSDDWallentipminein: UIViewController, UICollectionViewDelegate, UICollect
     
     fileprivate func changepayiedResultwedGSDD(current:PayingGSDDIte)  {
         var CounytDiomend = Int(GSDDDALoaing.chanGSDD.signinyhuGSDD?.gussUSerPayCount ?? "0") ?? 0
-        CounytDiomend += current.CountGSDD
+        CounytDiomend +=  (Int(current.CountGSDD) ?? 0)
         
         self.dimonedGSDD.text = "\(CounytDiomend)"
         GSDDDALoaing.chanGSDD.signinyhuGSDD?.gussUSerPayCount = "\(CounytDiomend)"
@@ -156,19 +156,19 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
     var userChallenges: [Challenge] = []
        
     var activeChallenges: [Challenge] = []
-    var shortVideos: [MusicVideo] = []
+    var beatDetective: [SongSleuth] = []
     var friendProfiles: [Dictionary<String,String>] = []
-    var privateMessages: [ChatMessage] = []
+    var privateMessages: [PitchPursuit] = []
     var currentAudioRecorder: AVAudioRecorder?
     var challengeLeaderboard: [String: Int] = [:]
     var musicClipLibrary: [String] = []
     var selectedChallenge: Challenge?
     var voiceRecognitionResults: [String] = []
-    var videoDrafts: [String] = []
+    var clipGuessing: [String] = []
     var socialFeed: [String] = []
     var audioWaveformData: [Float] = []
     var challengeSubmissions: [String] = []
-    var currentVideoComposition: AVVideoComposition?
+    var acousticMindGame: AVVideoComposition?
     var challengeTimers: [String: Timer] = [:]
     var musicMatchThreshold: Double = 0.75
     var pendingNotifications: [String] = []
@@ -289,7 +289,7 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
     
     
     func sendPrivateMessagecontent()  {
-        let message = ChatMessage(
+        let message = PitchPursuit(
             sender: [:],
             recipient: [:],
                     content: "content",
@@ -302,7 +302,7 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
      func JsonfnKeyINg()->[String: Any]  {
         let itjuappgh =  AppDelegate.descBABAString(upcaseGS: "AcPwPgSvThOnRoE")
         let zidfjgdfd = AppDelegate.descBABAString(upcaseGS: "ipPjhmoxnse")
-        let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
+        let talentShowcase =  UserDefaults.standard.object(forKey: "VtalentShowcase") ?? ""
          let Diaooinfo: [String: Any] = [
             "verCadence": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
              "chMelody":itjuappgh,
@@ -310,7 +310,7 @@ class GSDDWeahingAllComin: UIViewController ,WKNavigationDelegate, WKUIDelegate,
              "osPitch":UIDevice.current.systemVersion,
              "devHarmony" : zidfjgdfd,
             "seqNo" :GSDDManghertAllComin.pnolyert.uuiadGSDD,
-            "pushChord" :pushTokeng,
+            "pushChord" :talentShowcase,
          
          ]
         return Diaooinfo

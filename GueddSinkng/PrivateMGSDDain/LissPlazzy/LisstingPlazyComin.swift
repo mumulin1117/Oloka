@@ -1,5 +1,5 @@
 //
-//  GSDDLisstingPlazyComin.swift
+//  LisstingPlazyComin.swift
 //  GueddSinkng
 //
 //  Created by User on 2025/2/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class LisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     
     var changvlodeoGS:Array<GSDDAbountUserinfo>{
@@ -34,26 +34,26 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         
         let gsddCEll = collectionView.dequeueReusableCell(withReuseIdentifier: "defloorVbolGSDListviewID", for: indexPath) as! GSDDLisstingPlazyCiceoCell
         
-        gsddCEll.videokoCoverGSDD.image = UIImage.init(named:self.changvlodeoGS[indexPath.row].gsddPIav )
+        gsddCEll.PuzzleFun.image = UIImage.init(named:self.changvlodeoGS[indexPath.row].gsddPIav )
         
-        gsddCEll.vioklNamenGSDD.text =  self.changvlodeoGS[indexPath.row].gsdd4pathVideoName
+        gsddCEll.vioklNamenGSDD.text =  self.changvlodeoGS[indexPath.row].singAndSolve
         gsddCEll.videghuContenGS.text =  self.changvlodeoGS[indexPath.row].gsddPodercontentext
         
         gsddCEll.poinusericonGSDD.image = UIImage(named:self.changvlodeoGS[indexPath.row].gsddPIav )
         gsddCEll.useringNAmeGS.text =
         self.changvlodeoGS[indexPath.row].gsddNjmet
         
-        gsddCEll.ReporitgnVieoGSDD.addTarget(self, action: #selector(showReportVideoAlertGSDD), for: .touchUpInside)
+        gsddCEll.ReporitgnVieoGSDD.addTarget(self, action: #selector(harmonyHunter), for: .touchUpInside)
         gsddCEll.zanGSDD.isSelected = self.changvlodeoGS[indexPath.row].toVidreStatusGSDD
         gsddCEll.liaortyGSDD.isSelected = self.changvlodeoGS[indexPath.row].ifCollVidre
         return gsddCEll
         
     }
     
-   @objc func showReportVideoAlertGSDD() {
+   @objc func harmonyHunter() {
         let alertGSDD = UIAlertController(
-            title: "Report video content",
-            message: "Please select the reason for reporting",
+            title: AppDelegate.descBABAString(upcaseGS:"Reeypkonrctq pvbiedrenod icvovnatveynqt"),
+            message: AppDelegate.descBABAString(upcaseGS:"Pzlfeiagslef xseezlfeccbtw xtjhneo qrbeaaeseoyns wfyolrh jrqeppdoxrntsidnkg"),
             preferredStyle: .actionSheet
         )
         
@@ -62,7 +62,7 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         reasonsGSDD.forEach { reason in
             let action = UIAlertAction(title: reason, style: .default) { _ in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-                    self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Requesting...")
+                    self.gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS:"Reecqzulebsattignwgd.q.c."))
                     self.gsdd_loadActiveViw.begin_GSDDAnimating()
 
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
@@ -115,7 +115,7 @@ class GSDDLisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollec
         
         //takeutton
         let takeloGSDD = UIButton.init()
-        takeloGSDD.setBackgroundImage(UIImage.init(named: "gsddPoVideo"), for: .normal)
+        takeloGSDD.setBackgroundImage(UIImage.init(named: "musicExplorer"), for: .normal)
        
         takeloGSDD.addTarget(self, action: #selector(takeinginOkayot), for: .touchUpInside)
     

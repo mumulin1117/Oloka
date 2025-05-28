@@ -116,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let nertopush = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        UserDefaults.standard.set(nertopush, forKey: "PushTokenGSDD")
+        UserDefaults.standard.set(nertopush, forKey: "VtalentShowcase")
         
     }
    
@@ -161,28 +161,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
 
-    
-//    private func getLoacalLoginUser(uieidSignin:String)  {
-//        var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-//        areadyExsisteduserInfoGSDD =  UserDefaults.standard.object(forKey: "ExsisteduserInfoGSDD") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-//        IQKeyboardManager.shared().isEnabled = true
-//        if let yxaccount = areadyExsisteduserInfoGSDD.filter({ ugs in
-//            return ugs["gsddUID"] == uieidSignin
-//        }).first {
-//            if uieidSignin == "89985" {//如果是测试账号，添加测试数据
-//                GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named: "jiokljertGs")
-//                
-//                GSDDEmaillogadComin.fancertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().prefix(2))
-//                GSDDEmaillogadComin.follwercertListGSDD = Array(GSDDDALoaing.chanGSDD.loafingDaGSDD.shuffled().suffix(1))
-//           
-//            }
-//            
-//            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
-//            
-//        }
-//        
-//    }
-    
     
     class func canenterInForamtVC()  {
         let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())

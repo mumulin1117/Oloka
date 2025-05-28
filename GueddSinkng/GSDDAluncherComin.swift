@@ -51,7 +51,7 @@ enum ChallengeType: String, Codable {
 extension GSDDLoafgerComin{
     
     
-     func uploadMusicVideoopration()  {
+     func singAlongFun()  {
         let centertIomk = UIImageView.init(frame:UIScreen.main.bounds)
         centertIomk.contentMode = .scaleAspectFill
         centertIomk.image = UIImage(named: "loginiONfGSDD")
@@ -63,9 +63,9 @@ class GSDDAluncherComin: UIViewController{
     var userChallenges: [Challenge] = []
     var namgert = NetworkReachabilityManager()
     var activeChallenges: [Challenge] = []
-    var shortVideos: [MusicVideo] = []
+    var beatDetective: [SongSleuth] = []
     var friendProfiles: [Dictionary<String,String>] = []
-    var privateMessages: [ChatMessage] = []
+    var privateMessages: [PitchPursuit] = []
     var currentAudioRecorder: AVAudioRecorder?
     var challengeLeaderboard: [String: Int] = [:]
    
@@ -102,7 +102,7 @@ class GSDDAluncherComin: UIViewController{
     
     
    
-    var videoDrafts: [String] = []
+    var clipGuessing: [String] = []
     var socialFeed: [String] = []
     var audioWaveformData: [Float] = []
    
@@ -145,7 +145,7 @@ class GSDDAluncherComin: UIViewController{
     
     let nettitlrGDSS = AppDelegate.descBABAString(upcaseGS: "Nbectvwxobrtkg iiasz iecrqreovr=")
     var challengeSubmissions: [String] = []
-    var currentVideoComposition: AVVideoComposition?
+    var acousticMindGame: AVVideoComposition?
    
     private func joinChallenge() {
         musicMatchThreshold = musicMatchThreshold + 34
@@ -159,11 +159,11 @@ class GSDDAluncherComin: UIViewController{
         reacount += 1
         
         
-        let videoxw = UIAlertAction(title: tryrGDSS, style: UIAlertAction.Style.default){_ in
+        let performanceShowcase = UIAlertAction(title: tryrGDSS, style: UIAlertAction.Style.default){_ in
             self.createSongChallenge(audioClipURL: reacount)
         }
         if tryrGDSS.count > 1 {
-            netingkonh.addAction(videoxw)
+            netingkonh.addAction(performanceShowcase)
         }
         present(netingkonh, animated: true)
     }

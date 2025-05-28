@@ -135,7 +135,7 @@ extension GSDDWeahingAllComin{
     
     
     
-    func uploaDGSDDdMusicVideo(_ videoURL:String){
+    func musicalJourney(_ Adven:String){
         socialFeed.append("loginiONfGSDD")
         challengeSubmissions.append("challengeSubmissions")
         var reacount = challengeSubmissions.count + socialFeed.count

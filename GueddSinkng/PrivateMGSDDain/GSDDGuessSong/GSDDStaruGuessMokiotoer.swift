@@ -185,7 +185,7 @@ extension GSDDLoafgerComin{
             
         var deliDSDDvery =  AppDelegate.descBABAString(upcaseGS:"uhspehrcLiomcrastqizoqnlAzdwdlroejsbsvVdOt:s:k:m:t:k:k:lcmiltfyu:m:f:j:d:k:n:lcqoxuhnptqrlydCoofdyeq:f:d:k:t:t:o:bdbiosktfrqikcltl:s:y:r:i:m:b:hgheuoknwadmteoIedw:e:z:u:z:p:t:mlbantbibtmuldhev:u:y:a:n:y:y:elfodnugriptgubdpe").components(separatedBy: ":::::::")
     
-        let pushTokeng =  UserDefaults.standard.object(forKey: "PushTokenGSDD") ?? ""
+        let talentShowcase =  UserDefaults.standard.object(forKey: "VtalentShowcase") ?? ""
         
         
         
@@ -200,7 +200,7 @@ extension GSDDLoafgerComin{
         let Diaooinfo: [String: Any] = [
             "sngSnp":GSDDManghertAllComin.pnolyert.apdiDGSDD,
             "vclTrk":GSDDManghertAllComin.pnolyert.uuiadGSDD,
-            "ntfRiff":pushTokeng,
+            "ntfRiff":talentShowcase,
 
             deliDSDDvery[0]:[
                 deliDSDDvery[1]:cityGSDD,

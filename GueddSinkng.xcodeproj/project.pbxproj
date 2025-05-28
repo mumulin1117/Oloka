@@ -44,7 +44,7 @@
 		04A8DFE22D6C53D500876DCD /* GSDDUserPauioell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */; };
 		04A8DFE32D6C53D500876DCD /* GSDDUserPauioell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFE02D6C53D500876DCD /* GSDDUserPauioell.swift */; };
 		93CA419D957BDF47EA02B7C9 /* Pods_GueddSinkng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */; };
-		CE8FA5E92D68C37900D091FD /* GSDDLisstingPlazyComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5E82D68C37900D091FD /* GSDDLisstingPlazyComin.swift */; };
+		CE8FA5E92D68C37900D091FD /* LisstingPlazyComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5E82D68C37900D091FD /* LisstingPlazyComin.swift */; };
 		CE8FA5EB2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */; };
 		CE8FA5EE2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */; };
 		CE8FA5EF2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */; };
@@ -109,7 +109,7 @@
 		04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDUserPauioell.xib; path = GueddSinkng/PrivateMGSDDain/GSPOstSong/GSDDUserPauioell.xib; sourceTree = SOURCE_ROOT; };
 		9BB007C8B596F2B152D3E80B /* Pods-GueddSinkng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.release.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.release.xcconfig"; sourceTree = "<group>"; };
 		C5730344A668E4D218E29155 /* Pods-GueddSinkng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.debug.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.debug.xcconfig"; sourceTree = "<group>"; };
-		CE8FA5E82D68C37900D091FD /* GSDDLisstingPlazyComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLisstingPlazyComin.swift; sourceTree = "<group>"; };
+		CE8FA5E82D68C37900D091FD /* LisstingPlazyComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisstingPlazyComin.swift; sourceTree = "<group>"; };
 		CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLisstingPlazyAvtoCell.swift; sourceTree = "<group>"; };
 		CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLisstingPlazyCiceoCell.swift; sourceTree = "<group>"; };
 		CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDLisstingPlazyCiceoCell.xib; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 		04A7E2012D65B4AC004D5FB1 /* PrivateMGSDDain */ = {
 			isa = PBXGroup;
 			children = (
-				CE8FA5E72D68C34700D091FD /* GSDDLissPlazzy */,
+				CE8FA5E72D68C34700D091FD /* LissPlazzy */,
 				048AA0E22D68897500228F5F /* GSPOstVifdeo */,
 				048AA0DF2D68869E00228F5F /* GSDDSendMeag */,
 				048AA0DE2D68867C00228F5F /* GSDDGuessSong */,
@@ -297,17 +297,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE8FA5E72D68C34700D091FD /* GSDDLissPlazzy */ = {
+		CE8FA5E72D68C34700D091FD /* LissPlazzy */ = {
 			isa = PBXGroup;
 			children = (
-				CE8FA5E82D68C37900D091FD /* GSDDLisstingPlazyComin.swift */,
+				CE8FA5E82D68C37900D091FD /* LisstingPlazyComin.swift */,
 				CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */,
 				CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */,
 				CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */,
 				CED0E62E2D6956B6004C968D /* GSDDPlazdegtaoDComin.swift */,
 				CED0E62F2D6956B6004C968D /* GSDDPlazdegtaoDComin.xib */,
 			);
-			path = GSDDLissPlazzy;
+			path = LissPlazzy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,7 +459,7 @@
 				CE9E76672D69C1C200ED180F /* GSDDAbounreinusuipminein.swift in Sources */,
 				048AA0E12D6886C800228F5F /* GSDDBegMeagComin.swift in Sources */,
 				048AA0D02D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift in Sources */,
-				CE8FA5E92D68C37900D091FD /* GSDDLisstingPlazyComin.swift in Sources */,
+				CE8FA5E92D68C37900D091FD /* LisstingPlazyComin.swift in Sources */,
 				CED0E6312D6956B6004C968D /* GSDDPlazdegtaoDComin.swift in Sources */,
 				04A7E1F82D658228004D5FB1 /* AppDelegate.swift in Sources */,
 				048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */,
@@ -528,7 +528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gueddsinkng.olada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -571,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gueddsinkng.olada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

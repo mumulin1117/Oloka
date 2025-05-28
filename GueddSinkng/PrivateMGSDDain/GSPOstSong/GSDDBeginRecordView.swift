@@ -12,7 +12,7 @@ extension GSDDLoafgerComin{
         super.viewDidLoad()
         
         
-        uploadMusicVideoopration()
+        singAlongFun()
         
         
         

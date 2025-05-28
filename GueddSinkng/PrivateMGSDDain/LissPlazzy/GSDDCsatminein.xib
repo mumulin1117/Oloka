@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSDDCsatminein" customModule="GueddSinkng" customModuleProvider="target">
             <connections>
                 <outlet property="gsddOploip" destination="5c8-Eq-kN4" id="1xh-xl-3E7"/>
-                <outlet property="initTAbleChatGSDD" destination="rS1-iu-0L6" id="cMI-hx-smP"/>
+                <outlet property="melodyMystery" destination="rS1-iu-0L6" id="cMI-hx-smP"/>
                 <outlet property="nameingjhtinhGSDD" destination="4FI-SA-fC8" id="Vwd-UT-tfr"/>
                 <outlet property="sizeGSDDUserpIC" destination="SnT-z0-g8D" id="6Hp-WX-adg"/>
                 <outlet property="view" destination="dcH-Fh-Xyb" id="qBD-yb-L5a"/>
@@ -69,10 +69,10 @@
                         <constraint firstAttribute="height" constant="64" id="pSc-aq-kTm"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="chatvierGSDD"/>
+                    <state key="normal" image="rhythmReveal"/>
                     <state key="selected" image="palyingninGSDD"/>
                     <connections>
-                        <action selector="touggleVIdeoinger" destination="-1" eventType="touchUpInside" id="HX1-CE-Xx9"/>
+                        <action selector="lyricalChallenge" destination="-1" eventType="touchUpInside" id="a31-1V-lzD"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H44-e9-mMz">
@@ -136,10 +136,10 @@
     </objects>
     <resources>
         <image name="GSDFKKLSEnd" width="24" height="24"/>
-        <image name="chatvierGSDD" width="64" height="64"/>
         <image name="heijkirepo" width="36" height="36"/>
         <image name="palyingninGSDD" width="68" height="68"/>
         <image name="redBackiOn" width="46" height="46"/>
+        <image name="rhythmReveal" width="64" height="64"/>
         <image name="shaingKaiohMebhg" width="1125" height="2880"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

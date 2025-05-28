@@ -92,7 +92,7 @@ class GSDDEmaillogadComin: UIViewController {
         //login
         let iagreendGSDD = UIButton.init()
        
-        iagreendGSDD.setTitle("Login", for: .normal)
+        iagreendGSDD.setTitle(AppDelegate.descBABAString(upcaseGS:"Ldokgbiwn"), for: .normal)
         iagreendGSDD.setBackgroundImage(UIImage.init(named: "clikckVieGSDD"), for: .normal)
         iagreendGSDD.layer.masksToBounds = true
         iagreendGSDD.layer.cornerRadius = 25
@@ -110,13 +110,13 @@ class GSDDEmaillogadComin: UIViewController {
         emialDGSS.textColor = .white
         passwordlDGSS.textColor = .white
         
-        passwordlDGSS.placeholder = "Please enter password"
+        passwordlDGSS.placeholder = AppDelegate.descBABAString(upcaseGS:"Polvegaisley feunfthemrv ypcausmsswkoirsd")
         passwordlDGSS.font = UIFont.systemFont(ofSize: 19, weight: .medium)
         passwordlDGSS.textAlignment = .center
         passwordlDGSS.background  = UIImage.init(named: "texfiledBAck")
         passwordlDGSS.isSecureTextEntry = true
         
-        emialDGSS.placeholder = "Please enter email"
+        emialDGSS.placeholder = AppDelegate.descBABAString(upcaseGS:"Pflveuawsaeq jelnjtperrd kedmsadirl")
         emialDGSS.font = UIFont.systemFont(ofSize: 19, weight: .medium)
         emialDGSS.textAlignment = .center
         emialDGSS.background  = UIImage.init(named: "texfiledBAck")
@@ -147,7 +147,7 @@ class GSDDEmaillogadComin: UIViewController {
         }
         
         let emionext = UILabel.init()
-        emionext.text = "Email"
+        emionext.text = AppDelegate.descBABAString(upcaseGS:"Exmcacirl")
         emionext.textColor = .white
         emionext.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         emialIconbg.addSubview(emionext)
@@ -166,7 +166,7 @@ class GSDDEmaillogadComin: UIViewController {
         }
         
         let paswernext = UILabel.init()
-        paswernext.text = "Password"
+        paswernext.text = AppDelegate.descBABAString(upcaseGS:"Psacsmsdwiograd")
         paswernext.textColor = .white
         paswernext.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         epswdalIconbg.addSubview(paswernext)
@@ -215,7 +215,7 @@ class GSDDEmaillogadComin: UIViewController {
         
     
         if emaFormatJudge.evaluate(with: judgeISconditionISOkay().1) == false {
-            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "The email format entered is incorrect")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS:"Tchged gelmfaoiwlt wfcobramsaetq yeunwtjeurceudi tiisg ciqnucxoyrarleucpt"))
            
             return
         }
@@ -239,13 +239,13 @@ class GSDDEmaillogadComin: UIViewController {
             
             UserDefaults.standard.set(uGSDDid, forKey: "currentLogGSDDUID")
             
-            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("Logging in...")
+            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS: "Lyocgjgfifnjgs tivnc.s.s."))
             gsdd_loadActiveViw.begin_GSDDAnimating()
 
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
                 self.gsdd_loadActiveViw.end_GSDDAnimating()
                 GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
-                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "log in successful ✔")
+                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: AppDelegate.descBABAString(upcaseGS: "lxoggh liono gsyuccpcgeqscsqfzuxl"))
                 
                 AppDelegate.canenterInForamtVC()
             }
@@ -253,7 +253,7 @@ class GSDDEmaillogadComin: UIViewController {
             
         }else{
           //没注册就是创建，
-            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage("sign up....")
+            gsdd_loadActiveViw.setActiveindicatore_GSDDMessage(AppDelegate.descBABAString(upcaseGS: "sjiogznd qurpi.x.k.z."))
            
             let uidCreateFS = "\(Int.random(in: 355555...455555))"
             gsdd_loadActiveViw.begin_GSDDAnimating()
@@ -279,7 +279,7 @@ class GSDDEmaillogadComin: UIViewController {
                 self.gsdd_loadActiveViw.end_GSDDAnimating()
                 GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
                 GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: uidCreateFS, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: self.judgeISconditionISOkay().1, gussUSerPayCount:"0")
-                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: "sign up successful ✔")
+                self.gsdd_loadActiveViw.showGSDDSuccess(messageGSDD: AppDelegate.descBABAString(upcaseGS: "shidgbnz munpu nseugcbcmeaskscfquyl"))
                 AppDelegate.canenterInForamtVC()
                 
             }
@@ -341,11 +341,11 @@ class GSDDEmaillogadComin: UIViewController {
         let pafwGSDD = passwordlDGSS.text,
               !mailGSDD.isEmpty,
         !pafwGSDD.isEmpty else {
-            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "Please enter your login password and email first!")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS:"Pllnegapsyel yefnhttebrg zyhosuhrg ylpojgxilno vpqassbshwnoprsdc laknqde aewmpajiela pfsiwrhstty!"))
             return (false,"")
         }
         if pafwGSDD.count < 6 || pafwGSDD.count > 12 {
-            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "The password must be between 6 and 12 digits")
+            gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: AppDelegate.descBABAString(upcaseGS:"Tdhqet cpsarsvsnwyomrudt wmtunsltx abpep bbdeutuwoeoevnv c6h iasnkdy h1p2b bdkirggittds"))
             return (false,mailGSDD)
         }
         
