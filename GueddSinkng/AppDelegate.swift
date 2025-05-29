@@ -40,14 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //
 //            AppDelegate.canenterInForamtVC()
 //        }else{
-            let rooorGSDD = UINavigationController.init(rootViewController: GSDDAluncherComin.init())
+            let rooorGSDD = UINavigationController.init(rootViewController: EMasterAluncherComin.init())
             rooorGSDD.navigationBar.isHidden = true
 //            
             self.window?.rootViewController = rooorGSDD
 //          
 //        }
         
-        GSDDEmaillogadComin.completeGSDDTranPay()
+        MusicalEmailMindTeaser.completeGSDDTranGetingmine()
         
         
         if (!window!.subviews.contains(entetViewsVioer)) {
@@ -134,7 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         var areadyExsisteduserInfoGSDD:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
         areadyExsisteduserInfoGSDD.append(["gsddNjmet":"Artrlia",
                                 "gsddPIav":"jiokljertGs",
-                                "gussUSerPayCount":"0",
+                                "gussUSeruserHaningCount":"0",
                                 "loginEmailGSDD":"Oloka@gmail.com",
                                 "guessUserBrief":"I love guessing songs!",
                                 "gsddUID":"89985"
@@ -145,7 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                             "gsddNjmet":"Tourist mode",
                             "gsddPIav":"topersoniconDGSS",
                             "guessUserBrief":"NULL",
-                            "gussUSerPayCount":"0",
+                            "gussUSeruserHaningCount":"0",
                             "loginEmailGSDD":"tourist090@gmai.com"
                               
         ]
@@ -163,7 +163,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     
     class func canenterInForamtVC()  {
-        let rooorGSDD = UINavigationController.init(rootViewController: GSDDloMianComin.init())
+        let rooorGSDD = UINavigationController.init(rootViewController: VocalPuzzleAll.init())
         
         rooorGSDD.navigationBar.isHidden = true
         

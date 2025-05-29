@@ -8,7 +8,7 @@
 import UIKit
 
 class GSddguessingComin: UIViewController ,UITextViewDelegate{
-    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    private let gsdd_loadActiveViw = DrhythmPursloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     
     
     override func viewDidLoad() {
@@ -192,7 +192,7 @@ Service provider: Oloka LLC
 
 """
         
-        let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "ELUA", texfReadShong: eluDetail)
+        let kiopGDSS =  CreativeMelodyJourney.init(titleGSDDrShing: "ELUA", texfReadShong: eluDetail)
         self.present(kiopGDSS, animated: true)
     }
     
@@ -210,7 +210,7 @@ Service provider: Oloka LLC
             gsdd_loadActiveViw.shawGSDDFailure(messagGSDDe: "please read and agree to our privacy and terms at first!!!")
             return
         }
-        self.navigationController?.pushViewController(GSDDEmaillogadComin.init(), animated: true)
+        self.navigationController?.pushViewController(MusicalEmailMindTeaser.init(), animated: true)
      
     }
 
@@ -262,9 +262,9 @@ Service provider: Oloka LLC
         if let yxaccount = areadyExsisteduserInfoGSDD.filter({ udhurGS in
             return udhurGS["gsddUID"] == "76990987"
         }).first {
-            GSDDEmaillogadComin.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
+            MusicalEmailMindTeaser.logUserImageIcon = UIImage.init(named:"topersoniconDGSS" )
             UserDefaults.standard.set(creteuid, forKey: "currentLogGSDDUID")
-            GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(defauletUser: yxaccount)
+            DiscoveryHubALoaing.chanGSDD.signinyhuGSDD = UserformanceShowcase.init(defauletUser: yxaccount)
         }
 //        let bullftext = AppDelegate.descBABAString(upcaseGS: "NbUhLbL")
         
@@ -275,7 +275,7 @@ Service provider: Oloka LLC
 //                                "gsddNjmet":"Tourist mode",
 //                                "gsddPIav":"topersoniconDGSS",
 //                                "guessUserBrief":bullftext,
-//                                "gussUSerPayCount":"0",
+//                                "gussUSeruserHaningCount":"0",
 //                                "loginEmailGSDD":"tourist090@gmai.com"
 //                                  
 //            ]
@@ -283,7 +283,7 @@ Service provider: Oloka LLC
 //            areadyExsisteduserInfoGSDD.append(createGSDduser)
 //            UserDefaults.standard.set(areadyExsisteduserInfoGSDD, forKey: "ExsisteduserInfoGSDD")
        
-//        GSDDDALoaing.chanGSDD.signinyhuGSDD = GSDDAbountUserinfo.init(gsddUID: creteuid, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: "tourist090@gmai.com", gussUSerPayCount:"0")
+//        GSDDDALoaing.chanGSDD.signinyhuGSDD = UserformanceShowcase.init(gsddUID: creteuid, gsddNjmet: bullftext, gsddPIav: "topersoniconDGSS", gsddVBrief: bullftext,loginEmailGSDD: "tourist090@gmai.com", gussUSeruserHaningCount:"0")
               
             
         
@@ -327,7 +327,7 @@ Service provider: Oloka LLC
 
         Data Protection Officer Email: Oloka@gmail.com
         """
-                let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: "Privacy Policy", texfReadShong: eluDetail)
+                let kiopGDSS =  CreativeMelodyJourney.init(titleGSDDrShing: "Privacy Policy", texfReadShong: eluDetail)
                 self.present(kiopGDSS, animated: true)
                 return false
             }
@@ -349,7 +349,7 @@ Service provider: Oloka LLC
     The longest quoted song in the challenge should not exceed 15 seconds
     3. Virtual currency rules
 
-    The purchased gold coins cannot be exchanged for cash/refunded
+    The  blance cannot be exchanged for cash/refunded
     The coins obtained through the challenge have an anti fraud mechanism
     When an account is banned, virtual assets will be automatically reset to zero
     4. Disclaimer
@@ -365,7 +365,7 @@ Service provider: Oloka LLC
     Protocol update notification method: In app pop-up announcement
     Complaints and Suggestions: Oloka@gmail.com
     """
-            let kiopGDSS =  GSDDGSddReadComin.init(titleGSDDrShing: " Terms  of  Service ", texfReadShong: eluDetail)
+            let kiopGDSS =  CreativeMelodyJourney.init(titleGSDDrShing: " Terms  of  Service ", texfReadShong: eluDetail)
             self.present(kiopGDSS, animated: true)
             return false
         }

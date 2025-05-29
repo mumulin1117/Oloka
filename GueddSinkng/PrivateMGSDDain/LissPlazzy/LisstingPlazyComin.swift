@@ -8,10 +8,10 @@
 import UIKit
 
 class LisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    private let gsdd_loadActiveViw = DrhythmPursloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     
-    var changvlodeoGS:Array<GSDDAbountUserinfo>{
-        return  GSDDDALoaing.chanGSDD.loafingDaGSDD.filter { DictionGSDD in
+    var changvlodeoGS:Array<UserformanceShowcase>{
+        return  DiscoveryHubALoaing.chanGSDD.loafingDaGSDD.filter { DictionGSDD in
             return DictionGSDD.gsddPodermp4path != nil
         }
     }
@@ -20,19 +20,19 @@ class LisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollection
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.upfloorGSDListview {
-            return GSDDDALoaing.chanGSDD.loafingDaGSDD.count
+            return DiscoveryHubALoaing.chanGSDD.loafingDaGSDD.count
         }
         return changvlodeoGS.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.upfloorGSDListview {
-            let gsddCEll = collectionView.dequeueReusableCell(withReuseIdentifier: "upfloorGSDListviewCEllID", for: indexPath) as! GSDDLisstingPlazyAvtoCell
-            gsddCEll.gsddAvotp.image = UIImage(named: GSDDDALoaing.chanGSDD.loafingDaGSDD[indexPath.row].gsddPIav)
+            let gsddCEll = collectionView.dequeueReusableCell(withReuseIdentifier: "upfloorGSDListviewCEllID", for: indexPath) as! LisstingPlazyAvtoCell
+            gsddCEll.gsddAvotp.image = UIImage(named: DiscoveryHubALoaing.chanGSDD.loafingDaGSDD[indexPath.row].gsddPIav)
             return gsddCEll
         }
         
-        let gsddCEll = collectionView.dequeueReusableCell(withReuseIdentifier: "defloorVbolGSDListviewID", for: indexPath) as! GSDDLisstingPlazyCiceoCell
+        let gsddCEll = collectionView.dequeueReusableCell(withReuseIdentifier: "defloorVbolGSDListviewID", for: indexPath) as! LisstingPlazyCiceoCell
         
         gsddCEll.PuzzleFun.image = UIImage.init(named:self.changvlodeoGS[indexPath.row].gsddPIav )
         
@@ -149,7 +149,7 @@ class LisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollection
         upfloorGSDListview?.delegate = self
         upfloorGSDListview?.backgroundColor = .clear
         upfloorGSDListview?.dataSource = self
-        upfloorGSDListview?.register(GSDDLisstingPlazyAvtoCell.self, forCellWithReuseIdentifier: "upfloorGSDListviewCEllID")
+        upfloorGSDListview?.register(LisstingPlazyAvtoCell.self, forCellWithReuseIdentifier: "upfloorGSDListviewCEllID")
         
         view.addSubview(upfloorGSDListview!)
         upfloorGSDListview?.snp.makeConstraints({ make in
@@ -171,7 +171,7 @@ class LisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollection
         defloorVbolGSDListview?.delegate = self
         defloorVbolGSDListview?.backgroundColor = .clear
         defloorVbolGSDListview?.dataSource = self
-        defloorVbolGSDListview?.register(UINib.init(nibName: "GSDDLisstingPlazyCiceoCell", bundle: nil), forCellWithReuseIdentifier: "defloorVbolGSDListviewID")
+        defloorVbolGSDListview?.register(UINib.init(nibName: "LisstingPlazyCiceoCell", bundle: nil), forCellWithReuseIdentifier: "defloorVbolGSDListviewID")
         defloorVbolGSDListview?.isHidden = true
         view.addSubview(defloorVbolGSDListview!)
         defloorVbolGSDListview?.snp.makeConstraints({ make in
@@ -203,7 +203,7 @@ class LisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollection
 
     @objc  func takeinginOkayot() {
         
-        let takeing = GSDDBPoberViserComin.init()
+        let takeing = BaeatBrainTeaser.init()
         
         self.navigationController?.pushViewController(takeing, animated: true
         )
@@ -217,10 +217,10 @@ class LisstingPlazyComin: UIViewController,UICollectionViewDelegate,UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.upfloorGSDListview {
-            self.navigationController?.pushViewController(GSDDOgthsdergtaoDComin.init(plazDeinGSDD: GSDDDALoaing.chanGSDD.loafingDaGSDD[indexPath.row]), animated: true)
+            self.navigationController?.pushViewController(AcoustthsdergtaoDComin.init(plazDeinGSDD: DiscoveryHubALoaing.chanGSDD.loafingDaGSDD[indexPath.row]), animated: true)
             return
         }
-        let enterGSDDPlazin = GSDDPlazdegtaoDComin.init(plazDeinGSDD: self.changvlodeoGS[indexPath.row])
+        let enterGSDDPlazin = MPlazdegtaoDComin.init(plazDeinGSDD: self.changvlodeoGS[indexPath.row])
         
         self.navigationController?.pushViewController(enterGSDDPlazin, animated: true)
         

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		042C51022D8815DB00880678 /* GSDDAluncherComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C51012D8815DB00880678 /* GSDDAluncherComin.swift */; };
+		042C51022D8815DB00880678 /* EMasterAluncherComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C51012D8815DB00880678 /* EMasterAluncherComin.swift */; };
 		048AA0B62D680E4400228F5F /* GSDDBinLinkS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */; };
 		048AA0BA2D68114A00228F5F /* You Need Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B92D68114A00228F5F /* You Need Love.mp3 */; };
 		048AA0BB2D68114A00228F5F /* We know？.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0B82D68114A00228F5F /* We know？.mp3 */; };
@@ -19,57 +19,57 @@
 		048AA0C92D68157900228F5F /* gsddPodermppath15173.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C22D68157900228F5F /* gsddPodermppath15173.mp4 */; };
 		048AA0CA2D68157900228F5F /* gsddPodermppath15175.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C42D68157900228F5F /* gsddPodermppath15175.mp4 */; };
 		048AA0CB2D68157900228F5F /* gsddPodermppath15174.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0C32D68157900228F5F /* gsddPodermppath15174.mp4 */; };
-		048AA0CD2D681E3400228F5F /* GSDDgussMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0CC2D681E3400228F5F /* GSDDgussMainView.xib */; };
-		048AA0D02D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0CE2D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift */; };
-		048AA0D12D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0CF2D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib */; };
-		048AA0D42D686B6200228F5F /* GSDDGuessNOMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0D22D686B6200228F5F /* GSDDGuessNOMokiotoer.swift */; };
-		048AA0D52D686B6200228F5F /* GSDDGuessNOMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0D32D686B6200228F5F /* GSDDGuessNOMokiotoer.xib */; };
-		048AA0D82D68780600228F5F /* GSDDPoGusSonMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0D72D68780600228F5F /* GSDDPoGusSonMokiotoer.xib */; };
-		048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0D62D68780600228F5F /* GSDDPoGusSonMokiotoer.swift */; };
-		048AA0DB2D687C9D00228F5F /* GSDDBeginRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0DA2D687C9D00228F5F /* GSDDBeginRecordView.swift */; };
-		048AA0E12D6886C800228F5F /* GSDDBegMeagComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0E02D6886C800228F5F /* GSDDBegMeagComin.swift */; };
-		048AA0E52D68898E00228F5F /* GSDDBPoberViserComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0E32D68898E00228F5F /* GSDDBPoberViserComin.swift */; };
-		048AA0E62D68898E00228F5F /* GSDDBPoberViserComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0E42D68898E00228F5F /* GSDDBPoberViserComin.xib */; };
+		048AA0CD2D681E3400228F5F /* SingAndSolveQuest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0CC2D681E3400228F5F /* SingAndSolveQuest.xib */; };
+		048AA0D02D682DE600228F5F /* MelodyManiaMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0CE2D682DE600228F5F /* MelodyManiaMokiotoer.swift */; };
+		048AA0D12D682DE600228F5F /* MelodyManiaMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0CF2D682DE600228F5F /* MelodyManiaMokiotoer.xib */; };
+		048AA0D42D686B6200228F5F /* GuessNOMokiotoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0D22D686B6200228F5F /* GuessNOMokiotoer.swift */; };
+		048AA0D52D686B6200228F5F /* GuessNOMokiotoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0D32D686B6200228F5F /* GuessNOMokiotoer.xib */; };
+		048AA0D82D68780600228F5F /* SongHuntertoer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0D72D68780600228F5F /* SongHuntertoer.xib */; };
+		048AA0D92D68780600228F5F /* SongHuntertoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0D62D68780600228F5F /* SongHuntertoer.swift */; };
+		048AA0DB2D687C9D00228F5F /* TalentSingShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0DA2D687C9D00228F5F /* TalentSingShowcase.swift */; };
+		048AA0E12D6886C800228F5F /* OloPitchPursuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0E02D6886C800228F5F /* OloPitchPursuit.swift */; };
+		048AA0E52D68898E00228F5F /* BaeatBrainTeaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AA0E32D68898E00228F5F /* BaeatBrainTeaser.swift */; };
+		048AA0E62D68898E00228F5F /* BaeatBrainTeaser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048AA0E42D68898E00228F5F /* BaeatBrainTeaser.xib */; };
 		04A7E1F52D658228004D5FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A7E1F02D658228004D5FB1 /* Assets.xcassets */; };
 		04A7E1F72D658228004D5FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A7E1F32D658228004D5FB1 /* LaunchScreen.storyboard */; };
 		04A7E1F82D658228004D5FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1EF2D658228004D5FB1 /* AppDelegate.swift */; };
 		04A7E1FA2D6582DE004D5FB1 /* GSddguessingComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1F92D6582DE004D5FB1 /* GSddguessingComin.swift */; };
-		04A7E1FC2D6585BB004D5FB1 /* GSDDGSddReadComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FB2D6585BB004D5FB1 /* GSDDGSddReadComin.swift */; };
-		04A7E1FE2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FD2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift */; };
-		04A7E2002D65AD64004D5FB1 /* GSDDloadingComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FF2D65AD64004D5FB1 /* GSDDloadingComin.swift */; };
-		04A7E2032D65B4E8004D5FB1 /* GSDDloMianComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E2022D65B4E8004D5FB1 /* GSDDloMianComin.swift */; };
-		04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */; };
-		04A8DFDD2D6C0B7900876DCD /* GSDDRecordingGussing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFDC2D6C0B7900876DCD /* GSDDRecordingGussing.swift */; };
-		04A8DFDF2D6C1D9300876DCD /* GSDDUserilcomine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFDE2D6C1D9300876DCD /* GSDDUserilcomine.swift */; };
-		04A8DFE22D6C53D500876DCD /* GSDDUserPauioell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */; };
-		04A8DFE32D6C53D500876DCD /* GSDDUserPauioell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFE02D6C53D500876DCD /* GSDDUserPauioell.swift */; };
-		04E6C8E72DE71C660068BC79 /* GSDDWallentipminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8E52DE71C660068BC79 /* GSDDWallentipminein.swift */; };
-		04E6C8E82DE71C660068BC79 /* GSDDWallentipminein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8E62DE71C660068BC79 /* GSDDWallentipminein.xib */; };
+		04A7E1FC2D6585BB004D5FB1 /* CreativeMelodyJourney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FB2D6585BB004D5FB1 /* CreativeMelodyJourney.swift */; };
+		04A7E1FE2D65ABF7004D5FB1 /* MusicalEmailMindTeaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FD2D65ABF7004D5FB1 /* MusicalEmailMindTeaser.swift */; };
+		04A7E2002D65AD64004D5FB1 /* DrhythmPursloadingComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E1FF2D65AD64004D5FB1 /* DrhythmPursloadingComin.swift */; };
+		04A7E2032D65B4E8004D5FB1 /* VocalPuzzleAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E2022D65B4E8004D5FB1 /* VocalPuzzleAll.swift */; };
+		04A7E2092D66D086004D5FB1 /* SingAndSolveQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E2072D66D086004D5FB1 /* SingAndSolveQuest.swift */; };
+		04A8DFDD2D6C0B7900876DCD /* SingOlRecordingGussing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8DFDC2D6C0B7900876DCD /* SingOlRecordingGussing.swift */; };
+		04E6C8E72DE71C660068BC79 /* HarmonyClipQuestipminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8E52DE71C660068BC79 /* HarmonyClipQuestipminein.swift */; };
+		04E6C8E82DE71C660068BC79 /* HarmonyClipQuestipminein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8E62DE71C660068BC79 /* HarmonyClipQuestipminein.xib */; };
 		04E6C8EA2DE71C7D0068BC79 /* GSDDMeGSDDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8E92DE71C7D0068BC79 /* GSDDMeGSDDComin.swift */; };
-		04E6C8ED2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8EB2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.swift */; };
-		04E6C8EE2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8EC2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.xib */; };
-		04E6C8F02DE71CEA0068BC79 /* GSDDEfitInfoComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8EF2DE71CEA0068BC79 /* GSDDEfitInfoComin.swift */; };
-		04E6C8F32DE71D020068BC79 /* GSDDCsatminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8F12DE71D020068BC79 /* GSDDCsatminein.swift */; };
-		04E6C8F42DE71D020068BC79 /* GSDDCsatminein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8F22DE71D020068BC79 /* GSDDCsatminein.xib */; };
-		04E6C8F72DE71D150068BC79 /* GSDDCVioloiominein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8F52DE71D150068BC79 /* GSDDCVioloiominein.swift */; };
-		04E6C8F82DE71D150068BC79 /* GSDDCVioloiominein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8F62DE71D150068BC79 /* GSDDCVioloiominein.xib */; };
-		04E6C8FB2DE71D350068BC79 /* GSDDsetrtrtuipminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8F92DE71D350068BC79 /* GSDDsetrtrtuipminein.swift */; };
-		04E6C8FC2DE71D350068BC79 /* GSDDsetrtrtuipminein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8FA2DE71D350068BC79 /* GSDDsetrtrtuipminein.xib */; };
-		04E6C8FF2DE71D460068BC79 /* GSDDAbounreinusuipminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8FD2DE71D460068BC79 /* GSDDAbounreinusuipminein.swift */; };
-		04E6C9002DE71D460068BC79 /* GSDDAbounreinusuipminein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8FE2DE71D460068BC79 /* GSDDAbounreinusuipminein.xib */; };
-		04E6C9022DE71D610068BC79 /* GSDDRealtiongpminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C9012DE71D610068BC79 /* GSDDRealtiongpminein.swift */; };
+		04E6C8ED2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8EB2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.swift */; };
+		04E6C8EE2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8EC2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.xib */; };
+		04E6C8F02DE71CEA0068BC79 /* EfitInfoComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8EF2DE71CEA0068BC79 /* EfitInfoComin.swift */; };
+		04E6C8F32DE71D020068BC79 /* SongMindQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8F12DE71D020068BC79 /* SongMindQuest.swift */; };
+		04E6C8F42DE71D020068BC79 /* SongMindQuest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8F22DE71D020068BC79 /* SongMindQuest.xib */; };
+		04E6C8F72DE71D150068BC79 /* SoundCVioloiominein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8F52DE71D150068BC79 /* SoundCVioloiominein.swift */; };
+		04E6C8F82DE71D150068BC79 /* SoundCVioloiominein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8F62DE71D150068BC79 /* SoundCVioloiominein.xib */; };
+		04E6C8FB2DE71D350068BC79 /* MusiccMindJourney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8F92DE71D350068BC79 /* MusiccMindJourney.swift */; };
+		04E6C8FC2DE71D350068BC79 /* MusiccMindJourney.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8FA2DE71D350068BC79 /* MusiccMindJourney.xib */; };
+		04E6C8FF2DE71D460068BC79 /* Abounreinusuipminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C8FD2DE71D460068BC79 /* Abounreinusuipminein.swift */; };
+		04E6C9002DE71D460068BC79 /* Abounreinusuipminein.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C8FE2DE71D460068BC79 /* Abounreinusuipminein.xib */; };
+		04E6C9022DE71D610068BC79 /* CubeRealtiongpminein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C9012DE71D610068BC79 /* CubeRealtiongpminein.swift */; };
+		04E6C9062DE7F2B90068BC79 /* MusicalExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C9052DE7F2B90068BC79 /* MusicalExplorer.xib */; };
+		04E6C9072DE7F2B90068BC79 /* MelodyUserMindQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C9032DE7F2B90068BC79 /* MelodyUserMindQuest.swift */; };
+		04E6C9082DE7F2B90068BC79 /* MusicalExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C9042DE7F2B90068BC79 /* MusicalExplorer.swift */; };
 		93CA419D957BDF47EA02B7C9 /* Pods_GueddSinkng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */; };
 		CE8FA5E92D68C37900D091FD /* LisstingPlazyComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5E82D68C37900D091FD /* LisstingPlazyComin.swift */; };
-		CE8FA5EB2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */; };
-		CE8FA5EE2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */; };
-		CE8FA5EF2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */; };
-		CED0E6302D6956B6004C968D /* GSDDPlazdegtaoDComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED0E62F2D6956B6004C968D /* GSDDPlazdegtaoDComin.xib */; };
-		CED0E6312D6956B6004C968D /* GSDDPlazdegtaoDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0E62E2D6956B6004C968D /* GSDDPlazdegtaoDComin.swift */; };
+		CE8FA5EB2D68C89B00D091FD /* LisstingPlazyAvtoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EA2D68C89B00D091FD /* LisstingPlazyAvtoCell.swift */; };
+		CE8FA5EE2D68C9C400D091FD /* LisstingPlazyCiceoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FA5ED2D68C9C400D091FD /* LisstingPlazyCiceoCell.xib */; };
+		CE8FA5EF2D68C9C400D091FD /* LisstingPlazyCiceoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA5EC2D68C9C400D091FD /* LisstingPlazyCiceoCell.swift */; };
+		CED0E6302D6956B6004C968D /* MPlazdegtaoDComin.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED0E62F2D6956B6004C968D /* MPlazdegtaoDComin.xib */; };
+		CED0E6312D6956B6004C968D /* MPlazdegtaoDComin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0E62E2D6956B6004C968D /* MPlazdegtaoDComin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		040379452DA4BFCC00ECF8E9 /* GueddSinkng.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GueddSinkng.entitlements; sourceTree = "<group>"; };
-		042C51012D8815DB00880678 /* GSDDAluncherComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDAluncherComin.swift; sourceTree = "<group>"; };
+		042C51012D8815DB00880678 /* EMasterAluncherComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMasterAluncherComin.swift; sourceTree = "<group>"; };
 		048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GSDDBinLinkS.plist; sourceTree = "<group>"; };
 		048AA0B82D68114A00228F5F /* We know？.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "We know？.mp3"; sourceTree = "<group>"; };
 		048AA0B92D68114A00228F5F /* You Need Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "You Need Love.mp3"; sourceTree = "<group>"; };
@@ -81,55 +81,55 @@
 		048AA0C42D68157900228F5F /* gsddPodermppath15175.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15175.mp4; sourceTree = "<group>"; };
 		048AA0C52D68157900228F5F /* gsddPodermppath15176.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15176.mp4; sourceTree = "<group>"; };
 		048AA0C62D68157900228F5F /* gsddPodermppath15177.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gsddPodermppath15177.mp4; sourceTree = "<group>"; };
-		048AA0CC2D681E3400228F5F /* GSDDgussMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDgussMainView.xib; sourceTree = "<group>"; };
-		048AA0CE2D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDStaruGuessMokiotoer.swift; sourceTree = "<group>"; };
-		048AA0CF2D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDStaruGuessMokiotoer.xib; sourceTree = "<group>"; };
-		048AA0D22D686B6200228F5F /* GSDDGuessNOMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDGuessNOMokiotoer.swift; sourceTree = "<group>"; };
-		048AA0D32D686B6200228F5F /* GSDDGuessNOMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDGuessNOMokiotoer.xib; sourceTree = "<group>"; };
-		048AA0D62D68780600228F5F /* GSDDPoGusSonMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDPoGusSonMokiotoer.swift; sourceTree = "<group>"; };
-		048AA0D72D68780600228F5F /* GSDDPoGusSonMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDPoGusSonMokiotoer.xib; sourceTree = "<group>"; };
-		048AA0DA2D687C9D00228F5F /* GSDDBeginRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDBeginRecordView.swift; sourceTree = "<group>"; };
-		048AA0E02D6886C800228F5F /* GSDDBegMeagComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDBegMeagComin.swift; sourceTree = "<group>"; };
-		048AA0E32D68898E00228F5F /* GSDDBPoberViserComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDBPoberViserComin.swift; sourceTree = "<group>"; };
-		048AA0E42D68898E00228F5F /* GSDDBPoberViserComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDBPoberViserComin.xib; sourceTree = "<group>"; };
+		048AA0CC2D681E3400228F5F /* SingAndSolveQuest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingAndSolveQuest.xib; sourceTree = "<group>"; };
+		048AA0CE2D682DE600228F5F /* MelodyManiaMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyManiaMokiotoer.swift; sourceTree = "<group>"; };
+		048AA0CF2D682DE600228F5F /* MelodyManiaMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MelodyManiaMokiotoer.xib; sourceTree = "<group>"; };
+		048AA0D22D686B6200228F5F /* GuessNOMokiotoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNOMokiotoer.swift; sourceTree = "<group>"; };
+		048AA0D32D686B6200228F5F /* GuessNOMokiotoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuessNOMokiotoer.xib; sourceTree = "<group>"; };
+		048AA0D62D68780600228F5F /* SongHuntertoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongHuntertoer.swift; sourceTree = "<group>"; };
+		048AA0D72D68780600228F5F /* SongHuntertoer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongHuntertoer.xib; sourceTree = "<group>"; };
+		048AA0DA2D687C9D00228F5F /* TalentSingShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentSingShowcase.swift; sourceTree = "<group>"; };
+		048AA0E02D6886C800228F5F /* OloPitchPursuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OloPitchPursuit.swift; sourceTree = "<group>"; };
+		048AA0E32D68898E00228F5F /* BaeatBrainTeaser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeatBrainTeaser.swift; sourceTree = "<group>"; };
+		048AA0E42D68898E00228F5F /* BaeatBrainTeaser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaeatBrainTeaser.xib; sourceTree = "<group>"; };
 		04A7E1D72D657F6D004D5FB1 /* GueddSinkng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GueddSinkng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A7E1EF2D658228004D5FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A7E1F02D658228004D5FB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A7E1F12D658228004D5FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A7E1F22D658228004D5FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A7E1F92D6582DE004D5FB1 /* GSddguessingComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSddguessingComin.swift; sourceTree = "<group>"; };
-		04A7E1FB2D6585BB004D5FB1 /* GSDDGSddReadComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDGSddReadComin.swift; sourceTree = "<group>"; };
-		04A7E1FD2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDEmaillogadComin.swift; sourceTree = "<group>"; };
-		04A7E1FF2D65AD64004D5FB1 /* GSDDloadingComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDloadingComin.swift; sourceTree = "<group>"; };
-		04A7E2022D65B4E8004D5FB1 /* GSDDloMianComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDloMianComin.swift; sourceTree = "<group>"; };
-		04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDgussMainView.swift; sourceTree = "<group>"; };
-		04A8DFDC2D6C0B7900876DCD /* GSDDRecordingGussing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDRecordingGussing.swift; sourceTree = "<group>"; };
-		04A8DFDE2D6C1D9300876DCD /* GSDDUserilcomine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDUserilcomine.swift; path = GueddSinkng/PrivateMGSDDain/GSPOstSong/GSDDUserilcomine.swift; sourceTree = SOURCE_ROOT; };
-		04A8DFE02D6C53D500876DCD /* GSDDUserPauioell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDUserPauioell.swift; path = GueddSinkng/PrivateMGSDDain/GSPOstSong/GSDDUserPauioell.swift; sourceTree = SOURCE_ROOT; };
-		04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDUserPauioell.xib; path = GueddSinkng/PrivateMGSDDain/GSPOstSong/GSDDUserPauioell.xib; sourceTree = SOURCE_ROOT; };
-		04E6C8E52DE71C660068BC79 /* GSDDWallentipminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDWallentipminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDWallentipminein.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8E62DE71C660068BC79 /* GSDDWallentipminein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDWallentipminein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDWallentipminein.xib; sourceTree = SOURCE_ROOT; };
+		04A7E1FB2D6585BB004D5FB1 /* CreativeMelodyJourney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativeMelodyJourney.swift; sourceTree = "<group>"; };
+		04A7E1FD2D65ABF7004D5FB1 /* MusicalEmailMindTeaser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalEmailMindTeaser.swift; sourceTree = "<group>"; };
+		04A7E1FF2D65AD64004D5FB1 /* DrhythmPursloadingComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrhythmPursloadingComin.swift; sourceTree = "<group>"; };
+		04A7E2022D65B4E8004D5FB1 /* VocalPuzzleAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalPuzzleAll.swift; sourceTree = "<group>"; };
+		04A7E2072D66D086004D5FB1 /* SingAndSolveQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingAndSolveQuest.swift; sourceTree = "<group>"; };
+		04A8DFDC2D6C0B7900876DCD /* SingOlRecordingGussing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingOlRecordingGussing.swift; sourceTree = "<group>"; };
+		04E6C8E52DE71C660068BC79 /* HarmonyClipQuestipminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HarmonyClipQuestipminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/HarmonyClipQuestipminein.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8E62DE71C660068BC79 /* HarmonyClipQuestipminein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HarmonyClipQuestipminein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/HarmonyClipQuestipminein.xib; sourceTree = SOURCE_ROOT; };
 		04E6C8E92DE71C7D0068BC79 /* GSDDMeGSDDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDMeGSDDComin.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDMeGSDDComin.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8EB2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDOgthsdergtaoDComin.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDOgthsdergtaoDComin.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8EC2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDOgthsdergtaoDComin.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDOgthsdergtaoDComin.xib; sourceTree = SOURCE_ROOT; };
-		04E6C8EF2DE71CEA0068BC79 /* GSDDEfitInfoComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDEfitInfoComin.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDEfitInfoComin.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8F12DE71D020068BC79 /* GSDDCsatminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDCsatminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDCsatminein.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8F22DE71D020068BC79 /* GSDDCsatminein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDCsatminein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDCsatminein.xib; sourceTree = SOURCE_ROOT; };
-		04E6C8F52DE71D150068BC79 /* GSDDCVioloiominein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDCVioloiominein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDCVioloiominein.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8F62DE71D150068BC79 /* GSDDCVioloiominein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDCVioloiominein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDCVioloiominein.xib; sourceTree = SOURCE_ROOT; };
-		04E6C8F92DE71D350068BC79 /* GSDDsetrtrtuipminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDsetrtrtuipminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDsetrtrtuipminein.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8FA2DE71D350068BC79 /* GSDDsetrtrtuipminein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDsetrtrtuipminein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDsetrtrtuipminein.xib; sourceTree = SOURCE_ROOT; };
-		04E6C8FD2DE71D460068BC79 /* GSDDAbounreinusuipminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDAbounreinusuipminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDAbounreinusuipminein.swift; sourceTree = SOURCE_ROOT; };
-		04E6C8FE2DE71D460068BC79 /* GSDDAbounreinusuipminein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GSDDAbounreinusuipminein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDAbounreinusuipminein.xib; sourceTree = SOURCE_ROOT; };
-		04E6C9012DE71D610068BC79 /* GSDDRealtiongpminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GSDDRealtiongpminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/GSDDRealtiongpminein.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8EB2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AcoustthsdergtaoDComin.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/AcoustthsdergtaoDComin.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8EC2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AcoustthsdergtaoDComin.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/AcoustthsdergtaoDComin.xib; sourceTree = SOURCE_ROOT; };
+		04E6C8EF2DE71CEA0068BC79 /* EfitInfoComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EfitInfoComin.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/EfitInfoComin.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8F12DE71D020068BC79 /* SongMindQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SongMindQuest.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/SongMindQuest.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8F22DE71D020068BC79 /* SongMindQuest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SongMindQuest.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/SongMindQuest.xib; sourceTree = SOURCE_ROOT; };
+		04E6C8F52DE71D150068BC79 /* SoundCVioloiominein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SoundCVioloiominein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/SoundCVioloiominein.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8F62DE71D150068BC79 /* SoundCVioloiominein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SoundCVioloiominein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/SoundCVioloiominein.xib; sourceTree = SOURCE_ROOT; };
+		04E6C8F92DE71D350068BC79 /* MusiccMindJourney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusiccMindJourney.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/MusiccMindJourney.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8FA2DE71D350068BC79 /* MusiccMindJourney.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MusiccMindJourney.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/MusiccMindJourney.xib; sourceTree = SOURCE_ROOT; };
+		04E6C8FD2DE71D460068BC79 /* Abounreinusuipminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Abounreinusuipminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/Abounreinusuipminein.swift; sourceTree = SOURCE_ROOT; };
+		04E6C8FE2DE71D460068BC79 /* Abounreinusuipminein.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Abounreinusuipminein.xib; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/Abounreinusuipminein.xib; sourceTree = SOURCE_ROOT; };
+		04E6C9012DE71D610068BC79 /* CubeRealtiongpminein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CubeRealtiongpminein.swift; path = GueddSinkng/PrivateMGSDDain/LissPlazzy/CubeRealtiongpminein.swift; sourceTree = SOURCE_ROOT; };
+		04E6C9032DE7F2B90068BC79 /* MelodyUserMindQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyUserMindQuest.swift; sourceTree = "<group>"; };
+		04E6C9042DE7F2B90068BC79 /* MusicalExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalExplorer.swift; sourceTree = "<group>"; };
+		04E6C9052DE7F2B90068BC79 /* MusicalExplorer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicalExplorer.xib; sourceTree = "<group>"; };
 		9BB007C8B596F2B152D3E80B /* Pods-GueddSinkng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.release.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.release.xcconfig"; sourceTree = "<group>"; };
 		C5730344A668E4D218E29155 /* Pods-GueddSinkng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GueddSinkng.debug.xcconfig"; path = "Target Support Files/Pods-GueddSinkng/Pods-GueddSinkng.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8FA5E82D68C37900D091FD /* LisstingPlazyComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisstingPlazyComin.swift; sourceTree = "<group>"; };
-		CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLisstingPlazyAvtoCell.swift; sourceTree = "<group>"; };
-		CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDLisstingPlazyCiceoCell.swift; sourceTree = "<group>"; };
-		CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDLisstingPlazyCiceoCell.xib; sourceTree = "<group>"; };
-		CED0E62E2D6956B6004C968D /* GSDDPlazdegtaoDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDDPlazdegtaoDComin.swift; sourceTree = "<group>"; };
-		CED0E62F2D6956B6004C968D /* GSDDPlazdegtaoDComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSDDPlazdegtaoDComin.xib; sourceTree = "<group>"; };
+		CE8FA5EA2D68C89B00D091FD /* LisstingPlazyAvtoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisstingPlazyAvtoCell.swift; sourceTree = "<group>"; };
+		CE8FA5EC2D68C9C400D091FD /* LisstingPlazyCiceoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisstingPlazyCiceoCell.swift; sourceTree = "<group>"; };
+		CE8FA5ED2D68C9C400D091FD /* LisstingPlazyCiceoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LisstingPlazyCiceoCell.xib; sourceTree = "<group>"; };
+		CED0E62E2D6956B6004C968D /* MPlazdegtaoDComin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlazdegtaoDComin.swift; sourceTree = "<group>"; };
+		CED0E62F2D6956B6004C968D /* MPlazdegtaoDComin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPlazdegtaoDComin.xib; sourceTree = "<group>"; };
 		F72BCB0A6405CB4662CD26C5 /* Pods_GueddSinkng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GueddSinkng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,43 +162,43 @@
 			path = GSDDSoube;
 			sourceTree = "<group>";
 		};
-		048AA0DD2D68864C00228F5F /* GSPOstSong */ = {
+		048AA0DD2D68864C00228F5F /* TreasureSongPost */ = {
 			isa = PBXGroup;
 			children = (
-				048AA0D62D68780600228F5F /* GSDDPoGusSonMokiotoer.swift */,
-				048AA0D72D68780600228F5F /* GSDDPoGusSonMokiotoer.xib */,
-				048AA0DA2D687C9D00228F5F /* GSDDBeginRecordView.swift */,
-				04A8DFDC2D6C0B7900876DCD /* GSDDRecordingGussing.swift */,
+				048AA0D62D68780600228F5F /* SongHuntertoer.swift */,
+				048AA0D72D68780600228F5F /* SongHuntertoer.xib */,
+				048AA0DA2D687C9D00228F5F /* TalentSingShowcase.swift */,
+				04A8DFDC2D6C0B7900876DCD /* SingOlRecordingGussing.swift */,
 			);
-			path = GSPOstSong;
+			path = TreasureSongPost;
 			sourceTree = "<group>";
 		};
-		048AA0DE2D68867C00228F5F /* GSDDGuessSong */ = {
+		048AA0DE2D68867C00228F5F /* GuessSong */ = {
 			isa = PBXGroup;
 			children = (
-				048AA0D22D686B6200228F5F /* GSDDGuessNOMokiotoer.swift */,
-				048AA0D32D686B6200228F5F /* GSDDGuessNOMokiotoer.xib */,
-				048AA0CE2D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift */,
-				048AA0CF2D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib */,
+				048AA0D22D686B6200228F5F /* GuessNOMokiotoer.swift */,
+				048AA0D32D686B6200228F5F /* GuessNOMokiotoer.xib */,
+				048AA0CE2D682DE600228F5F /* MelodyManiaMokiotoer.swift */,
+				048AA0CF2D682DE600228F5F /* MelodyManiaMokiotoer.xib */,
 			);
-			path = GSDDGuessSong;
+			path = GuessSong;
 			sourceTree = "<group>";
 		};
-		048AA0DF2D68869E00228F5F /* GSDDSendMeag */ = {
+		048AA0DF2D68869E00228F5F /* PuzzleJourney */ = {
 			isa = PBXGroup;
 			children = (
-				048AA0E02D6886C800228F5F /* GSDDBegMeagComin.swift */,
+				048AA0E02D6886C800228F5F /* OloPitchPursuit.swift */,
 			);
-			path = GSDDSendMeag;
+			path = PuzzleJourney;
 			sourceTree = "<group>";
 		};
-		048AA0E22D68897500228F5F /* GSPOstVifdeo */ = {
+		048AA0E22D68897500228F5F /* PuzzleFun */ = {
 			isa = PBXGroup;
 			children = (
-				048AA0E32D68898E00228F5F /* GSDDBPoberViserComin.swift */,
-				048AA0E42D68898E00228F5F /* GSDDBPoberViserComin.xib */,
+				048AA0E32D68898E00228F5F /* BaeatBrainTeaser.swift */,
+				048AA0E42D68898E00228F5F /* BaeatBrainTeaser.xib */,
 			);
-			path = GSPOstVifdeo;
+			path = PuzzleFun;
 			sourceTree = "<group>";
 		};
 		04A7E1CE2D657F6D004D5FB1 = {
@@ -230,10 +230,10 @@
 				04A7E1F12D658228004D5FB1 /* Info.plist */,
 				04A7E1F32D658228004D5FB1 /* LaunchScreen.storyboard */,
 				04A7E1F92D6582DE004D5FB1 /* GSddguessingComin.swift */,
-				04A7E1FB2D6585BB004D5FB1 /* GSDDGSddReadComin.swift */,
-				04A7E1FD2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift */,
-				04A7E1FF2D65AD64004D5FB1 /* GSDDloadingComin.swift */,
-				042C51012D8815DB00880678 /* GSDDAluncherComin.swift */,
+				04A7E1FB2D6585BB004D5FB1 /* CreativeMelodyJourney.swift */,
+				04A7E1FD2D65ABF7004D5FB1 /* MusicalEmailMindTeaser.swift */,
+				04A7E1FF2D65AD64004D5FB1 /* DrhythmPursloadingComin.swift */,
+				042C51012D8815DB00880678 /* EMasterAluncherComin.swift */,
 			);
 			path = GueddSinkng;
 			sourceTree = "<group>";
@@ -242,14 +242,14 @@
 			isa = PBXGroup;
 			children = (
 				CE8FA5E72D68C34700D091FD /* LissPlazzy */,
-				048AA0E22D68897500228F5F /* GSPOstVifdeo */,
-				048AA0DF2D68869E00228F5F /* GSDDSendMeag */,
-				048AA0DE2D68867C00228F5F /* GSDDGuessSong */,
-				048AA0DD2D68864C00228F5F /* GSPOstSong */,
+				048AA0E22D68897500228F5F /* PuzzleFun */,
+				048AA0DF2D68869E00228F5F /* PuzzleJourney */,
+				048AA0DE2D68867C00228F5F /* GuessSong */,
+				048AA0DD2D68864C00228F5F /* TreasureSongPost */,
 				048AA0B52D680E4400228F5F /* GSDDBinLinkS.plist */,
-				04A7E2022D65B4E8004D5FB1 /* GSDDloMianComin.swift */,
-				04A7E2072D66D086004D5FB1 /* GSDDgussMainView.swift */,
-				048AA0CC2D681E3400228F5F /* GSDDgussMainView.xib */,
+				04A7E2022D65B4E8004D5FB1 /* VocalPuzzleAll.swift */,
+				04A7E2072D66D086004D5FB1 /* SingAndSolveQuest.swift */,
+				048AA0CC2D681E3400228F5F /* SingAndSolveQuest.xib */,
 			);
 			path = PrivateMGSDDain;
 			sourceTree = "<group>";
@@ -275,29 +275,29 @@
 			isa = PBXGroup;
 			children = (
 				CE8FA5E82D68C37900D091FD /* LisstingPlazyComin.swift */,
-				CE8FA5EA2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift */,
-				CE8FA5EC2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift */,
-				CE8FA5ED2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib */,
-				CED0E62E2D6956B6004C968D /* GSDDPlazdegtaoDComin.swift */,
-				CED0E62F2D6956B6004C968D /* GSDDPlazdegtaoDComin.xib */,
-				04E6C9012DE71D610068BC79 /* GSDDRealtiongpminein.swift */,
-				04E6C8FD2DE71D460068BC79 /* GSDDAbounreinusuipminein.swift */,
-				04E6C8FE2DE71D460068BC79 /* GSDDAbounreinusuipminein.xib */,
-				04E6C8F92DE71D350068BC79 /* GSDDsetrtrtuipminein.swift */,
-				04E6C8FA2DE71D350068BC79 /* GSDDsetrtrtuipminein.xib */,
-				04E6C8F52DE71D150068BC79 /* GSDDCVioloiominein.swift */,
-				04E6C8F62DE71D150068BC79 /* GSDDCVioloiominein.xib */,
-				04E6C8F12DE71D020068BC79 /* GSDDCsatminein.swift */,
-				04E6C8F22DE71D020068BC79 /* GSDDCsatminein.xib */,
-				04E6C8EF2DE71CEA0068BC79 /* GSDDEfitInfoComin.swift */,
-				04E6C8EB2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.swift */,
-				04E6C8EC2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.xib */,
+				CE8FA5EA2D68C89B00D091FD /* LisstingPlazyAvtoCell.swift */,
+				CE8FA5EC2D68C9C400D091FD /* LisstingPlazyCiceoCell.swift */,
+				CE8FA5ED2D68C9C400D091FD /* LisstingPlazyCiceoCell.xib */,
+				CED0E62E2D6956B6004C968D /* MPlazdegtaoDComin.swift */,
+				CED0E62F2D6956B6004C968D /* MPlazdegtaoDComin.xib */,
+				04E6C9012DE71D610068BC79 /* CubeRealtiongpminein.swift */,
+				04E6C8FD2DE71D460068BC79 /* Abounreinusuipminein.swift */,
+				04E6C8FE2DE71D460068BC79 /* Abounreinusuipminein.xib */,
+				04E6C8F92DE71D350068BC79 /* MusiccMindJourney.swift */,
+				04E6C8FA2DE71D350068BC79 /* MusiccMindJourney.xib */,
+				04E6C8F52DE71D150068BC79 /* SoundCVioloiominein.swift */,
+				04E6C8F62DE71D150068BC79 /* SoundCVioloiominein.xib */,
+				04E6C8F12DE71D020068BC79 /* SongMindQuest.swift */,
+				04E6C8F22DE71D020068BC79 /* SongMindQuest.xib */,
+				04E6C8EF2DE71CEA0068BC79 /* EfitInfoComin.swift */,
+				04E6C8EB2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.swift */,
+				04E6C8EC2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.xib */,
 				04E6C8E92DE71C7D0068BC79 /* GSDDMeGSDDComin.swift */,
-				04E6C8E52DE71C660068BC79 /* GSDDWallentipminein.swift */,
-				04E6C8E62DE71C660068BC79 /* GSDDWallentipminein.xib */,
-				04A8DFDE2D6C1D9300876DCD /* GSDDUserilcomine.swift */,
-				04A8DFE02D6C53D500876DCD /* GSDDUserPauioell.swift */,
-				04A8DFE12D6C53D500876DCD /* GSDDUserPauioell.xib */,
+				04E6C8E52DE71C660068BC79 /* HarmonyClipQuestipminein.swift */,
+				04E6C8E62DE71C660068BC79 /* HarmonyClipQuestipminein.xib */,
+				04E6C9032DE7F2B90068BC79 /* MelodyUserMindQuest.swift */,
+				04E6C9042DE7F2B90068BC79 /* MusicalExplorer.swift */,
+				04E6C9052DE7F2B90068BC79 /* MusicalExplorer.xib */,
 			);
 			path = LissPlazzy;
 			sourceTree = "<group>";
@@ -364,30 +364,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E6C8E82DE71C660068BC79 /* GSDDWallentipminein.xib in Resources */,
-				048AA0E62D68898E00228F5F /* GSDDBPoberViserComin.xib in Resources */,
+				04E6C8E82DE71C660068BC79 /* HarmonyClipQuestipminein.xib in Resources */,
+				048AA0E62D68898E00228F5F /* BaeatBrainTeaser.xib in Resources */,
 				048AA0B62D680E4400228F5F /* GSDDBinLinkS.plist in Resources */,
 				04A7E1F52D658228004D5FB1 /* Assets.xcassets in Resources */,
-				04A8DFE22D6C53D500876DCD /* GSDDUserPauioell.xib in Resources */,
-				048AA0D12D682DE600228F5F /* GSDDStaruGuessMokiotoer.xib in Resources */,
-				04E6C8F82DE71D150068BC79 /* GSDDCVioloiominein.xib in Resources */,
+				048AA0D12D682DE600228F5F /* MelodyManiaMokiotoer.xib in Resources */,
+				04E6C8F82DE71D150068BC79 /* SoundCVioloiominein.xib in Resources */,
 				04A7E1F72D658228004D5FB1 /* LaunchScreen.storyboard in Resources */,
 				048AA0BF2D68115000228F5F /* Golden Sunshine.mp3 in Resources */,
 				048AA0C02D68115000228F5F /* Baby Boy was Bad.mp3 in Resources */,
-				04E6C8F42DE71D020068BC79 /* GSDDCsatminein.xib in Resources */,
-				048AA0CD2D681E3400228F5F /* GSDDgussMainView.xib in Resources */,
-				CE8FA5EE2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.xib in Resources */,
+				04E6C8F42DE71D020068BC79 /* SongMindQuest.xib in Resources */,
+				048AA0CD2D681E3400228F5F /* SingAndSolveQuest.xib in Resources */,
+				CE8FA5EE2D68C9C400D091FD /* LisstingPlazyCiceoCell.xib in Resources */,
 				048AA0C12D68115000228F5F /* Feeling of Love.mp3 in Resources */,
-				04E6C9002DE71D460068BC79 /* GSDDAbounreinusuipminein.xib in Resources */,
-				048AA0D52D686B6200228F5F /* GSDDGuessNOMokiotoer.xib in Resources */,
+				04E6C9002DE71D460068BC79 /* Abounreinusuipminein.xib in Resources */,
+				048AA0D52D686B6200228F5F /* GuessNOMokiotoer.xib in Resources */,
 				048AA0BA2D68114A00228F5F /* You Need Love.mp3 in Resources */,
-				04E6C8EE2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.xib in Resources */,
+				04E6C8EE2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.xib in Resources */,
 				048AA0C72D68157900228F5F /* gsddPodermppath15176.mp4 in Resources */,
 				048AA0C82D68157900228F5F /* gsddPodermppath15177.mp4 in Resources */,
 				048AA0C92D68157900228F5F /* gsddPodermppath15173.mp4 in Resources */,
-				04E6C8FC2DE71D350068BC79 /* GSDDsetrtrtuipminein.xib in Resources */,
-				CED0E6302D6956B6004C968D /* GSDDPlazdegtaoDComin.xib in Resources */,
-				048AA0D82D68780600228F5F /* GSDDPoGusSonMokiotoer.xib in Resources */,
+				04E6C8FC2DE71D350068BC79 /* MusiccMindJourney.xib in Resources */,
+				CED0E6302D6956B6004C968D /* MPlazdegtaoDComin.xib in Resources */,
+				048AA0D82D68780600228F5F /* SongHuntertoer.xib in Resources */,
+				04E6C9062DE7F2B90068BC79 /* MusicalExplorer.xib in Resources */,
 				048AA0CA2D68157900228F5F /* gsddPodermppath15175.mp4 in Resources */,
 				048AA0CB2D68157900228F5F /* gsddPodermppath15174.mp4 in Resources */,
 				048AA0BB2D68114A00228F5F /* We know？.mp3 in Resources */,
@@ -443,36 +443,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E6C8ED2DE71CCA0068BC79 /* GSDDOgthsdergtaoDComin.swift in Sources */,
-				04A7E2032D65B4E8004D5FB1 /* GSDDloMianComin.swift in Sources */,
-				04E6C8F02DE71CEA0068BC79 /* GSDDEfitInfoComin.swift in Sources */,
-				04E6C8F72DE71D150068BC79 /* GSDDCVioloiominein.swift in Sources */,
-				04A8DFDD2D6C0B7900876DCD /* GSDDRecordingGussing.swift in Sources */,
-				048AA0E52D68898E00228F5F /* GSDDBPoberViserComin.swift in Sources */,
-				04E6C8FB2DE71D350068BC79 /* GSDDsetrtrtuipminein.swift in Sources */,
-				048AA0E12D6886C800228F5F /* GSDDBegMeagComin.swift in Sources */,
-				048AA0D02D682DE600228F5F /* GSDDStaruGuessMokiotoer.swift in Sources */,
+				04E6C8ED2DE71CCA0068BC79 /* AcoustthsdergtaoDComin.swift in Sources */,
+				04A7E2032D65B4E8004D5FB1 /* VocalPuzzleAll.swift in Sources */,
+				04E6C8F02DE71CEA0068BC79 /* EfitInfoComin.swift in Sources */,
+				04E6C8F72DE71D150068BC79 /* SoundCVioloiominein.swift in Sources */,
+				04A8DFDD2D6C0B7900876DCD /* SingOlRecordingGussing.swift in Sources */,
+				048AA0E52D68898E00228F5F /* BaeatBrainTeaser.swift in Sources */,
+				04E6C8FB2DE71D350068BC79 /* MusiccMindJourney.swift in Sources */,
+				048AA0E12D6886C800228F5F /* OloPitchPursuit.swift in Sources */,
+				048AA0D02D682DE600228F5F /* MelodyManiaMokiotoer.swift in Sources */,
 				CE8FA5E92D68C37900D091FD /* LisstingPlazyComin.swift in Sources */,
-				04E6C8FF2DE71D460068BC79 /* GSDDAbounreinusuipminein.swift in Sources */,
-				CED0E6312D6956B6004C968D /* GSDDPlazdegtaoDComin.swift in Sources */,
+				04E6C8FF2DE71D460068BC79 /* Abounreinusuipminein.swift in Sources */,
+				CED0E6312D6956B6004C968D /* MPlazdegtaoDComin.swift in Sources */,
 				04A7E1F82D658228004D5FB1 /* AppDelegate.swift in Sources */,
-				048AA0D92D68780600228F5F /* GSDDPoGusSonMokiotoer.swift in Sources */,
-				04E6C8F32DE71D020068BC79 /* GSDDCsatminein.swift in Sources */,
-				04E6C8E72DE71C660068BC79 /* GSDDWallentipminein.swift in Sources */,
-				04A7E1FC2D6585BB004D5FB1 /* GSDDGSddReadComin.swift in Sources */,
-				042C51022D8815DB00880678 /* GSDDAluncherComin.swift in Sources */,
-				04A8DFE32D6C53D500876DCD /* GSDDUserPauioell.swift in Sources */,
+				048AA0D92D68780600228F5F /* SongHuntertoer.swift in Sources */,
+				04E6C8F32DE71D020068BC79 /* SongMindQuest.swift in Sources */,
+				04E6C8E72DE71C660068BC79 /* HarmonyClipQuestipminein.swift in Sources */,
+				04A7E1FC2D6585BB004D5FB1 /* CreativeMelodyJourney.swift in Sources */,
+				042C51022D8815DB00880678 /* EMasterAluncherComin.swift in Sources */,
+				04E6C9072DE7F2B90068BC79 /* MelodyUserMindQuest.swift in Sources */,
+				04E6C9082DE7F2B90068BC79 /* MusicalExplorer.swift in Sources */,
 				04E6C8EA2DE71C7D0068BC79 /* GSDDMeGSDDComin.swift in Sources */,
-				04E6C9022DE71D610068BC79 /* GSDDRealtiongpminein.swift in Sources */,
-				04A7E2092D66D086004D5FB1 /* GSDDgussMainView.swift in Sources */,
+				04E6C9022DE71D610068BC79 /* CubeRealtiongpminein.swift in Sources */,
+				04A7E2092D66D086004D5FB1 /* SingAndSolveQuest.swift in Sources */,
 				04A7E1FA2D6582DE004D5FB1 /* GSddguessingComin.swift in Sources */,
-				CE8FA5EF2D68C9C400D091FD /* GSDDLisstingPlazyCiceoCell.swift in Sources */,
-				04A8DFDF2D6C1D9300876DCD /* GSDDUserilcomine.swift in Sources */,
-				048AA0D42D686B6200228F5F /* GSDDGuessNOMokiotoer.swift in Sources */,
-				04A7E2002D65AD64004D5FB1 /* GSDDloadingComin.swift in Sources */,
-				048AA0DB2D687C9D00228F5F /* GSDDBeginRecordView.swift in Sources */,
-				CE8FA5EB2D68C89B00D091FD /* GSDDLisstingPlazyAvtoCell.swift in Sources */,
-				04A7E1FE2D65ABF7004D5FB1 /* GSDDEmaillogadComin.swift in Sources */,
+				CE8FA5EF2D68C9C400D091FD /* LisstingPlazyCiceoCell.swift in Sources */,
+				048AA0D42D686B6200228F5F /* GuessNOMokiotoer.swift in Sources */,
+				04A7E2002D65AD64004D5FB1 /* DrhythmPursloadingComin.swift in Sources */,
+				048AA0DB2D687C9D00228F5F /* TalentSingShowcase.swift in Sources */,
+				CE8FA5EB2D68C89B00D091FD /* LisstingPlazyAvtoCell.swift in Sources */,
+				04A7E1FE2D65ABF7004D5FB1 /* MusicalEmailMindTeaser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,10 +506,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and post updates, take photos and upload avatars, and make calls. Oloka needs access to your camera permissions";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Oloka need access your location permissions to make use of the iCloud camera's location functionalities";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio  files, and make audio calls, Oloka needs to access your microphone permissions";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your photo permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -549,10 +549,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GueddSinkng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Oloka;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and publish videos, take photos to upload avatars, play video files, and make video calls. Oloka needs to access your camera permissions";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Shoot and post updates, take photos and upload avatars, and make calls. Oloka needs access to your camera permissions";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Oloka need access your location permissions to make use of the iCloud camera's location functionalities";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio and video files, and make audio calls, Oloka needs to access your microphone permissions";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your camera permissions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record, upload, and publish songs, play audio  files, and make audio calls, Oloka needs to access your microphone permissions";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uploading local avatars requires access to your photo permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

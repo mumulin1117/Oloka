@@ -8,7 +8,7 @@
 import UIKit
 import PhotosUI
 import WebKit
-extension GSDDWeahingAllComin{
+extension DWeahingAllComin{
     
     func Sdvlisnui()  {
         let configurationrweb = WKWebViewConfiguration()
@@ -43,9 +43,9 @@ class GSDDMeGSDDComin: UIViewController {
     
     let avifOkaStatus = AVCaptureDevice.authorizationStatus(for: .video)
     
-    lazy var editBootomVIew = GSDDEfitInfoComin.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 483))
+    lazy var editBootomVIew = EfitInfoComin.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 483))
     
-    private let gsdd_loadActiveViw = GSDDloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
+    private let gsdd_loadActiveViw = DrhythmPursloadingComin.init(frame: CGRect.init(x: 0, y: 0, width: 280, height: 180))
     let ckaobeiinonext = UILabel.init()//name
     
     let qiaminnext = UILabel.init()//brie
@@ -59,25 +59,25 @@ class GSDDMeGSDDComin: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ckaobeiinonext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet
-        qiaminnext.text = GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief
-        usersefimgInager.image =  GSDDEmaillogadComin.logUserImageIcon
+        ckaobeiinonext.text = DiscoveryHubALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet
+        qiaminnext.text = DiscoveryHubALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief
+        usersefimgInager.image =  MusicalEmailMindTeaser.logUserImageIcon
         
         
-        fancnCounttnext.text = "\(GSDDEmaillogadComin.fancertListGSDD.count)"
-        follreCounttnext.text = "\(GSDDEmaillogadComin.follwercertListGSDD.count)"
+        fancnCounttnext.text = "\(MusicalEmailMindTeaser.fancertListGSDD.count)"
+        follreCounttnext.text = "\(MusicalEmailMindTeaser.follwercertListGSDD.count)"
         
     }
     
     @objc func tougegleToWallent(ijbnm:UIButton)  {
         
-        self.navigationController?.pushViewController(GSDDWallentipminein.init(), animated: true)
+        self.navigationController?.pushViewController(HarmonyClipQuestipminein.init(), animated: true)
     }
     
     //set
     @objc func tougegleToSetup(ijbnm:UIButton)  {
         
-        self.navigationController?.pushViewController(GSDDsetrtrtuipminein.init(), animated: true)
+        self.navigationController?.pushViewController(MusiccMindJourney.init(), animated: true)
     }
     
 
@@ -88,15 +88,15 @@ class GSDDMeGSDDComin: UIViewController {
     
     @objc  func relationTokayot(vmi:UIButton) {
         
-        let relaiony = GSDDRealtiongpminein.init()
+        let relaiony = CubeRealtiongpminein.init()
         if vmi.tag == 45 {
             relaiony.relaitonStrFS = AppDelegate.descBABAString(upcaseGS:"Fhaonbs")
-            relaiony.ModelgGSDD = GSDDEmaillogadComin.fancertListGSDD
+            relaiony.ModelgGSDD = MusicalEmailMindTeaser.fancertListGSDD
         }
         
         if vmi.tag == 46 {
             relaiony.relaitonStrFS = AppDelegate.descBABAString(upcaseGS:"Fzomldlzoww")
-            relaiony.ModelgGSDD = GSDDEmaillogadComin.follwercertListGSDD
+            relaiony.ModelgGSDD = MusicalEmailMindTeaser.follwercertListGSDD
         }
         self.navigationController?.pushViewController(relaiony, animated: true)
     }
@@ -442,17 +442,17 @@ extension GSDDMeGSDDComin{
         
         let briefnamij = self.editBootomVIew.entertYOuBriefGSDD.text  ?? bullftext
         
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = usernamij
-        GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = briefnamij
+        DiscoveryHubALoaing.chanGSDD.signinyhuGSDD?.gsddNjmet = usernamij
+        DiscoveryHubALoaing.chanGSDD.signinyhuGSDD?.gsddVBrief = briefnamij
         
-        GSDDEmaillogadComin.logUserImageIcon =  self.editBootomVIew.usersefimgInager.image
+        MusicalEmailMindTeaser.logUserImageIcon =  self.editBootomVIew.usersefimgInager.image
     
-        GSDDEmaillogadComin.updateCurrentGSDDUsering(GSIDDD: GSDDDALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: usernamij, briefGSDD: briefnamij, xcoinID: nil)
+        MusicalEmailMindTeaser.updateCurrentGSDDUsering(GSIDDD: DiscoveryHubALoaing.chanGSDD.signinyhuGSDD?.gsddUID ?? "", nameGSDD: usernamij, briefGSDD: briefnamij, xcoinID: nil)
         
         
         ckaobeiinonext.text = usernamij
         qiaminnext.text = briefnamij
-        usersefimgInager.image =  GSDDEmaillogadComin.logUserImageIcon
+        usersefimgInager.image =  MusicalEmailMindTeaser.logUserImageIcon
       
         
         cancelGSDD()
