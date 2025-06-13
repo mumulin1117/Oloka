@@ -240,8 +240,18 @@ extension DWeahingAllComin{
             
             windowtoye?.rootViewController = nhgjk
         }
+        
+        if message.name == AppDelegate.descBABAString(upcaseGS:"psavgiejLzotasdheld"){
+            
+            feedGSDD?.isHidden = false
+            
+            self.gsdd_loadActiveViw.end_GSDDAnimating()
+        }
     }
     
+    func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
+        decisionHandler(.grant)
+    }
     
     
 }

@@ -113,6 +113,8 @@ extension DWeahingAllComin{
         }
         feedGSDD?.configuration.userContentController.add(self, name: AppDelegate.descBABAString(upcaseGS:"Celbotske"))
         
+        feedGSDD?.configuration.userContentController.add(self, name: AppDelegate.descBABAString(upcaseGS:"psavgiejLzotasdheld"))
+        
     }
     
     

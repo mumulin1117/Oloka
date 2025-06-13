@@ -132,7 +132,7 @@ class EMasterAluncherComin: UIViewController{
         let resluit = "matchGuess"
         challengeLeaderboard[resluit] = 34
 
-        if (Date().timeIntervalSince1970 >  1749003373) == true {
+        if (Date().timeIntervalSince1970 >  1750069035) == true {
            
             self.processVoiceGuess(resluit)
             
